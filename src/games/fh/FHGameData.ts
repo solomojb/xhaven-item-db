@@ -29,9 +29,9 @@ export const ghItemToImport = ghImportSets
 export const fcItemToImport = fcImportSets
 	.flatMap((groups) => [...groups])
 	.sort(sortById);
-
-let { items, filterSlots, resources } = getInitialItems(GameType.Frosthaven);
 export const ghItemOffset = 1000;
+/*
+let { items, filterSlots, resources } = getInitialItems(GameType.Frosthaven);
 
 const { items: ghItems, filterSlots: ghFilterSlots } = getInitialItems(
 	GameType.Gloomhaven
@@ -59,7 +59,7 @@ const getEnchancerLevel = (id: number) => {
 	return undefined;
 };
 
-const filteredGhItems = ghItems
+const filteredGhItems = []; /*ghItems
 	.filter(
 		(item) =>
 			ghItemToImport.includes(item.id) ||
@@ -91,14 +91,14 @@ const filteredGhItems = ghItems
 			importedItem: true,
 		};
 	});
-
-items = items.concat(filteredGhItems);
-
-filterSlots = Helpers.uniqueArray(filterSlots.concat(ghFilterSlots));
+	items = items.concat(filteredGhItems);
+	
+	filterSlots = Helpers.uniqueArray(filterSlots.concat(ghFilterSlots));
+	*/
 
 export const FHGameData: GameData = {
 	gameType: GameType.Frosthaven,
-	items,
-	filterSlots,
-	resources,
+	items: [],
+	filterSlots: [],
+	resources: [],
 };

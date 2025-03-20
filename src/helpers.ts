@@ -10,7 +10,8 @@ interface CreateParams {
 
 export const createWorldhavenString = (parms: CreateParams) => {
   const { game, folder = "general", subfolder = "", filename } = parms;
-  const src = require(`../worldhaven/images/${folder}/${game}/${subfolder}/${filename}.png`);
+  // const src = require(`../worldhaven/images/${folder}/${game}/${subfolder}/${filename}.png`);
+  const src = '';
   return `<img class="icon" src="${src}" alt="${filename}"/>`;
 };
 
@@ -41,16 +42,16 @@ const parseForIcon = (delimiter: string, text: string) => {
   if (matches) {
     matches.forEach((match) => {
       let filename = match.substring(1, match.length - 1);
-      let src;
+      let src = '';
       if (filename.startsWith("wfh-")) {
         filename = filename.substring(1);
         if (usesArt) {
-          src = require(`../worldhaven/images/art/frosthaven/icons/${folderName}/${filename}-color-icon.png`);
+          // src = require(`../worldhaven/images/art/frosthaven/icons/${folderName}/${filename}-color-icon.png`);
         } else {
-          src = require(`../worldhaven/images/tokens/frosthaven/${folderName}/${filename}.png`);
+          // src = require(`../worldhaven/images/tokens/frosthaven/${folderName}/${filename}.png`);
         }
       } else {
-        src = require(`./img/icons/${folderName}/${filename}.png`);
+        // src = require(`./img/icons/${folderName}/${filename}.png`);
       }
       text = text.replace(
         match,

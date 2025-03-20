@@ -57,8 +57,14 @@ export function useFirebase() {
 
 const { Provider } = FirebaseContext;
 const app = initializeApp(firebaseConfig);
+console.log(firebaseConfig);
+console.log(app);
 export const auth = getAuth(app);
-const db = getDatabase(app);
+console.log(auth);
+
+// const db = getDatabase(app);
+// console.log(db);
+
 
 const provider = new GoogleAuthProvider();
 
@@ -137,7 +143,7 @@ export const FirebaseProvider = ({ children }: Props) => {
         const updates = {
           [`spoilerFilter/${user.uid}`]: { configHash },
         };
-        update(ref(db), updates);
+        // update(ref(db), updates);
       } catch (e) {
         //@ts-ignore
         setError(e);
@@ -163,9 +169,9 @@ export const FirebaseProvider = ({ children }: Props) => {
     onAuthStateChanged(auth, (authUser) => {
       setUser(authUser || undefined);
       if (authUser) {
-        get(child(ref(db), `spoilerFilter/${authUser.uid}`)).then(
-          updateRemoteData
-        );
+        // get(child(ref(db), `spoilerFilter/${authUser.uid}`)).then(
+        //   updateRemoteData
+        // );
       } else {
         setRemoteData(undefined);
       }
@@ -179,19 +185,19 @@ export const FirebaseProvider = ({ children }: Props) => {
       return;
     }
 
-    onValue(ref(db, `spoilerFilter/${importUserId}`), (snapshot) => {
-      if (snapshot.val()) {
-        setImportHash(snapshot.val()["configHash"]);
-      }
-      return;
-    });
+    // onValue(ref(db, `spoilerFilter/${importUserId}`), (snapshot) => {
+    //   if (snapshot.val()) {
+    //     setImportHash(snapshot.val()["configHash"]);
+    //   }
+    //   return;
+    // });
   }, [setImportHash, user]);
 
   useEffect(() => {
     if (!user) {
       return;
     }
-    onValue(ref(db, `spoilerFilter/${user.uid}`), updateRemoteData);
+    // onValue(ref(db, `spoilerFilter/${user.uid}`), updateRemoteData);
   }, [user, updateRemoteData]);
 
   const value = useMemo(

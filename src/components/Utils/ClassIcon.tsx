@@ -17,7 +17,8 @@ export const getWorldHavenClass = (
 	game: string,
 	gamePrefix: string
 ) => {
-	return require(`../../../worldhaven/images/tokens/${game}/character-tokens/${gamePrefix}-${name}-token.png`);
+	return '';
+	// return require(`../../../worldhaven/images/tokens/${game}/character-tokens/${gamePrefix}-${name}-token.png`);
 };
 
 export const getCSClass = (name: string) => {
@@ -55,9 +56,9 @@ export const getClassIcon = (name: string) => {
 	let classPath = classIconFolder[name];
 	if (!classPath) {
 		try {
-			classPath = require(`../../img/class-tokens/${name.toLowerCase()}.png`);
+			// classPath = require(`../../img/class-tokens/${name.toLowerCase()}.png`);
 		} catch {
-			classPath = require(`../../img/classes/${name}.png`);
+			// classPath = require(`../../img/classes/${name}.png`);
 		}
 	}
 	return classPath;

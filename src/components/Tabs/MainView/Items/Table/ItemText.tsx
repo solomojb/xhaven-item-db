@@ -57,11 +57,10 @@ export const ItemText = (props: Props) => {
         <>
           <br />
           <span>
-            {`Add ${
-              minusOneCardsAdded < numberAmountToText.length
+            {`Add ${minusOneCardsAdded < numberAmountToText.length
                 ? numberAmountToText[minusOneCardsAdded]
                 : minusOneCardsAdded
-            } `}
+              } `}
             {gameType === GameType.Frosthaven ? (
               <GHIcon name={"modifier_minus_one_circle.png"} />
             ) : (
@@ -81,7 +80,7 @@ export const ItemText = (props: Props) => {
           content={faq}
         />
       )}
-      {faqImage && (
+      {/* {faqImage && (
         <Popup
           closeOnDocumentClick
           hideOnScroll
@@ -95,7 +94,7 @@ export const ItemText = (props: Props) => {
             ></img>
           }
         />
-      )}
+      )} */}
       {summon && <ItemSummon summon={summon} />}
     </>
   );

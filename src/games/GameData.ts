@@ -18,8 +18,9 @@ const deSpoilerItemSource = (source: string): string => {
 	});
 };
 
-export const getInitialItems = (gameType: GameType) => {
-	const items: GloomhavenItem[] = require(`./${gameType}/items.json`);
+export const getInitialItems = async (gameType: GameType) => {
+	const response = await import(`./${gameType}/items.json`);
+	const items: GloomhavenItem[] = response.default;
 	const filterSlots: GloomhavenItemSlot[] = [];
 	const resources: string[] = [];
 
@@ -66,14 +67,13 @@ const getItemFilename = (item: GloomhavenItem, backside?: boolean) => {
 		"0"
 	)}${imageSuffix || ""}`;
 	const itemFolder = folder ? folder + "/" : "";
-	return `${itemFolder}${prefix}-${itemNumber}-${filename}${
-		backside ? "-back" : ""
-	}.png`;
+	return `${itemFolder}${prefix}-${itemNumber}-${filename}${backside ? "-back" : ""
+		}.png`;
 };
 
 export const getItemPath = (item: GloomhavenItem, backside?: boolean) => {
 	const { gameType } = item;
 	const { folderName } = gameInfo[gameType];
 	const itemName = getItemFilename(item, backside);
-	return require(`../../worldhaven/images/items/${folderName}/${itemName}`);
-};
+	return ''; //`../../worldhaven/images/items/${folderName}/${itemName}`;
+}

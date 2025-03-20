@@ -115,7 +115,7 @@ export enum SpecialUnlockTypes {
 	EnvelopeV = "envelopeV",
 }
 
-export type SoloClasses = GHClasses | FCClasses | FHClasses | CSClasses;
+export type SoloClasses = GHClasses | FCClasses | FHClasses | CSClasses | CSAClasses | TOAClasses;
 
 export type ClassesInUse =
 	| GHClasses
@@ -150,8 +150,8 @@ export enum ResourceTypes {
 export interface Summon {
 	hp: number;
 	move: number;
-	attack: number;
-	range: number;
+	attack?: number;
+	range?: number;
 	desc?: string;
 }
 
@@ -183,11 +183,11 @@ interface Consumption {
 
 export interface GloomhavenItem {
 	id: number;
-	displayId: string;
+	displayId?: string | number;
 	gameType: AllGames;
 	name: string;
 	count: number;
-	cost: number;
+	cost?: number;
 	slot: GloomhavenItemSlot;
 	source: string;
 	spent?: boolean;
@@ -196,26 +196,28 @@ export interface GloomhavenItem {
 	minusOneCardsAdded?: number;
 	useSlots?: number;
 	desc: string;
-	backDesc: string;
-	descHTML: string;
-	backDescHTML: string;
+	backDesc?: string;
+	descHTML?: string;
+	backDescHTML?: string;
 	faq?: string;
 	faqImage?: string;
 	summon?: Summon;
 	soloItem?: SoloClasses;
-	folder: string;
-	unlockScenario: number;
-	unlockProsperity: number;
-	resources: Resources;
+	folder?: string;
+	unlockScenario?: number;
+	unlockProsperity?: number;
+	resources?: Resources;
 	imagePrefix?: string;
 	imageSuffix?: string;
 	specialUnlock?: SpecialUnlockTypes;
 	alwaysShown?: boolean;
-	unlockCrafstmanLevel: number;
-	unlockTradingPostLevel: number;
-	unlockJewelerLevel: number;
-	unlockEnhancerLevel: number;
+	unlockCrafstmanLevel?: number;
+	unlockTradingPostLevel?: number;
+	unlockJewelerLevel?: number;
+	unlockEnhancerLevel?: number;
 	consumption?: Consumption;
 	lockToClasses?: ClassesInUse[];
 	importedItem?: boolean;
+	consume?: boolean;
+	flippable?: boolean;
 }

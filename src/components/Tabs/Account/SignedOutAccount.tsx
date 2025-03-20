@@ -1,4 +1,4 @@
-import { EmailAuthProvider, GoogleAuthProvider } from "@firebase/auth";
+import { EmailAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React from "react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { Form } from "semantic-ui-react";

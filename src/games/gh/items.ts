@@ -15,6 +15,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 0,
 	},
 	{
 		"id": 2,
@@ -29,6 +31,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 2,
 	},
 	{
 		"id": 3,
@@ -45,6 +49,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 4,
 	},
 	{
 		"id": 4,
@@ -59,6 +65,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 6,
 	},
 	{
 		"id": 5,
@@ -72,6 +80,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 8,
 	},
 	{
 		"id": 6,
@@ -85,6 +95,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 10,
 	},
 	{
 		"id": 7,
@@ -97,6 +109,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 12,
 	},
 	{
 		"id": 8,
@@ -110,6 +124,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 14,
 	},
 	{
 		"id": 9,
@@ -123,6 +139,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 16,
 	},
 	{
 		"id": 10,
@@ -136,6 +154,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 18,
 	},
 	{
 		"id": 11,
@@ -149,6 +169,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 20,
 	},
 	{
 		"id": 12,
@@ -162,6 +184,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 22,
 	},
 	{
 		"id": 13,
@@ -176,6 +200,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 26,
 	},
 	{
 		"id": 14,
@@ -189,6 +215,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "1-14",
 		"unlockProsperity": 1,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 30,
 	},
 	{
 		"id": 15,
@@ -202,6 +230,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 34,
 	},
 	{
 		"id": 16,
@@ -214,6 +244,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 36,
 	},
 	{
 		"id": 17,
@@ -227,6 +259,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 38,
 	},
 	{
 		"id": 18,
@@ -240,6 +274,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 40,
 	},
 	{
 		"id": 19,
@@ -253,6 +289,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 42,
 	},
 	{
 		"id": 20,
@@ -266,6 +304,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 1,
+		imageNumber: 44,
 	},
 	{
 		"id": 21,
@@ -279,6 +319,8 @@ export const items: GloomhavenItem[] = [
 		"folder": "15-21",
 		"unlockProsperity": 2,
 		"gameType": GameType.Gloomhaven,
+		imgFileNumber: 2,
+		imageNumber: 0,
 	},
 	{
 		"id": 22,

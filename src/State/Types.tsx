@@ -220,4 +220,7 @@ export interface GloomhavenItem {
 	importedItem?: boolean;
 	consume?: boolean;
 	flippable?: boolean;
+
+	imgFileNumber?: number;
+	imageNumber?: number;
 }

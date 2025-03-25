@@ -123,6 +123,7 @@ export const ItemTable = (props: Props) => {
 						<ItemTableRow
 							key={`${item.id}-${item.imageSuffix}`}
 							item={item}
+							itemManagementType={itemManagementType}
 						/>
 					);
 				})}

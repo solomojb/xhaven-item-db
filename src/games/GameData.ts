@@ -72,7 +72,12 @@ const getItemFilename = (item: GloomhavenItem, backside?: boolean) => {
 };
 
 export const getItemPath = (item: GloomhavenItem, backside?: boolean) => {
-	const { gameType } = item;
+	const { gameType, imgFileNumber } = item;
+	if (imgFileNumber) {
+
+		return `items/${gameType}/${imgFileNumber}.jpg`;
+
+	}
 	const { folderName } = gameInfo[gameType];
 	const itemName = getItemFilename(item, backside);
 	return ''; //`../../worldhaven/images/items/${folderName}/${itemName}`;

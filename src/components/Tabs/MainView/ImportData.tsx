@@ -30,7 +30,7 @@ const parseHash = (importHash: string): any | undefined => {
   }
 };
 
-const getShareHash = (lockSpoilerPanel: boolean) => {
+export const getShareHash = (lockSpoilerPanel: boolean) => {
   // @ts-ignore
   const obj = {};
   Object.values(GameType).forEach((gt: GameType) => {

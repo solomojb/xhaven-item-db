@@ -52,7 +52,7 @@ const classIconFolder: Record<string, string> = {
 	[TOAClasses.TOA6]: getTOAClass("vanquisher"),
 };
 
-const getClassIcon = (name: string) => {
+export const getClassIcon = (name: string) => {
 	const classPath = classIconFolder[name];
 	if (!classPath) {
 		try {

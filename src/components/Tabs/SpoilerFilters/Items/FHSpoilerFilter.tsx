@@ -7,7 +7,7 @@ import {
   ghImportSets,
   fcImportSets,
   sortById,
-} from "../../../../games/fh/FHGameData";
+} from "../../../../games/fh/FHClass";
 import {
   buildingLevelState,
   includeGameState,

@@ -1,11 +1,9 @@
-import React, { useMemo, useState } from "react";
-import { GloomhavenItem, ItemManagementType } from "../../../../../State/Types";
-import { Label } from "semantic-ui-react";
+import { useState } from "react";
+import { GloomhavenItem } from "../../../../../State/Types";
 import { getItemPath } from "../../../../../games/GameData";
 import { GHIcon } from "../../../../Utils";
 import { getItemIdString } from "../../../../../helpers";
 import { ItemManagementContainer } from "../ItemManagement/ItemManagementContainer";
-import { NoItemManagement } from "../ItemManagement/NoItemManagement";
 
 import "./itemCard.scss";
 

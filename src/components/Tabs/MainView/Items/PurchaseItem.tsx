@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Form, Modal, Image, Segment } from "semantic-ui-react";
 import { ClassesInUse, ItemsOwnedBy } from "../../../../State/Types";
 import { ClassList } from "../../SpoilerFilters/Party/ClassList";
@@ -89,7 +89,7 @@ const PurchaseItem = () => {
 			open={true}
 			onClose={onClose}
 			className="purchase-dialog"
-			// style={{ width: "100%" }}
+		// style={{ width: "100%" }}
 		>
 			<Modal.Header>Change Owners</Modal.Header>
 			<Modal.Content>
@@ -98,10 +98,10 @@ const PurchaseItem = () => {
 						<Form.Group inline>
 							<label>Name:</label> {name}
 						</Form.Group>
-						{cost > 0  && <Form.Group inline>
-								<label>Cost:</label>{" "}
-								<ItemCost item={selectedItem} showDiscount={discount>0} hideDivider={true}/>
-							</Form.Group>
+						{(cost ?? 0) > 0 && <Form.Group inline>
+							<label>Cost:</label>{" "}
+							<ItemCost item={selectedItem} showDiscount={discount > 0} hideDivider={true} />
+						</Form.Group>
 						}
 						<Form.Group inline>
 							<label>Items Available:</label>{" "}

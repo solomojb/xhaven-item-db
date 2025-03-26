@@ -5,7 +5,7 @@ import { BaseGameClass } from "./BaseGameClass";
 import { AllGames, Expansions, GameType } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
-    return source.replace(/{(.{2,})}/, (m, m1) => {
+    return source.replace(/{(.{2,})}/, (_m, m1) => {
         const classPath = getClassIcon(m1);
         return `<img class="soloClass" src="${classPath}" alt="" />`;
     });
@@ -26,7 +26,9 @@ export abstract class GameClass<T> extends BaseGameClass<T> {
         public linkedGameTypes: Expansions[] = [],
         public soloClassesToInclude: AllGames[] = []) {
         super(title, folderName, prefix, leadingZeros)
-        this.getInitialItems(this.items);
+        const { filterSlots, resources } = this.getInitialItems(this.items);
+        this.filterSlots = filterSlots;
+        this.resources = resources;
     }
 
     getInitialItems = (items: GloomhavenItem[]) => {
@@ -62,7 +64,7 @@ export abstract class GameClass<T> extends BaseGameClass<T> {
                 });
             }
         });
-        return { items, filterSlots, resources };
+        return { filterSlots, resources };
     };
 
 }

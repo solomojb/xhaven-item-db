@@ -1,7 +1,6 @@
 import { atom, RecoilState, selector } from "recoil";
 import { gameTypeState } from ".";
 import { gameDataTypes, GameType } from "../games";
-import { gameInfo } from "../games/GameInfo";
 
 export const LOCAL_STORAGE_PREFIX = "ItemView:spoilerFilter_";
 
@@ -45,8 +44,7 @@ function storeValue<T>(gameType: GameType, name: string, value: T) {
 
 export function createState<T>(name: string, defaultValue: T) {
 	const atoms: AtomObject<T> = {};
-	Object.values(gameDataTypes).forEach(({ gameType }) => {
-		const gameName = gameInfo[gameType].title;
+	Object.values(gameDataTypes).forEach(({ gameType, title: gameName }) => {
 		atoms[gameType] = atom<T>({
 			key: `${gameName}-${name}-state`,
 			default: defaultValue,
@@ -73,8 +71,7 @@ export function createSpoilerState<T>(
 	fixUp?: FixUpFunction<T>
 ) {
 	const atoms: AtomObject<T> = {};
-	Object.values(gameDataTypes).forEach(({ gameType }) => {
-		const gameName = gameInfo[gameType].title;
+	Object.values(gameDataTypes).forEach(({ gameType, title: gameName }) => {
 		atoms[gameType] = atom<T>({
 			key: `${gameName}-${name}-state`,
 			default: getDefaultValue(gameType, name, defaultValue, fixUp),

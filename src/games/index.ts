@@ -9,4 +9,9 @@ const gameDataTypes = {
 	[GameType.Frosthaven]: new FHClass(),
 };
 
+export const gamePulldownOptions =
+	Object.values(gameDataTypes).map(({ title: text, gameType: value }) => (
+		{ text, value }
+	));
+
 export { gameDataTypes, GameType, Expansions };

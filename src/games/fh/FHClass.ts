@@ -67,7 +67,7 @@ export class FHClass extends GameClass<FHClasses> {
             3,
             items as GloomhavenItem[],
             [],
-            [],
+            [Expansions.FHSoloScenarios],
             [
                 Expansions.FHSoloScenarios,
                 Expansions.GHSoloScenarios,

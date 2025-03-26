@@ -5,18 +5,15 @@ import { getClassIcon } from "./components/Utils";
 
 interface FolderData {
   folderName: string;
-  usesArt?: boolean;
 }
 
 const folderMap: Record<string, FolderData> = {
   "\\@": {
     folderName: "elements",
-    usesArt: true,
   },
   "\\#": { folderName: "equipment_slot" },
   "\\$": {
     folderName: "conditions",
-    usesArt: true,
   },
   "\\^": { folderName: "general" },
   "\\*": { folderName: "multi_attack" },
@@ -24,26 +21,16 @@ const folderMap: Record<string, FolderData> = {
 };
 
 const parseForIcon = (delimiter: string, text: string) => {
-  const { folderName, usesArt } = folderMap[delimiter];
+  const { folderName } = folderMap[delimiter];
   const exp = new RegExp(`${delimiter}(.+?)${delimiter}`, "g");
   const matches = text.match(exp);
   if (matches) {
     matches.forEach((match) => {
       let filename = match.substring(1, match.length - 1);
-      const src = '';
-      if (filename.startsWith("wfh-")) {
-        filename = filename.substring(1);
-        if (usesArt) {
-          // src = require(`../worldhaven/images/art/frosthaven/icons/${folderName}/${filename}-color-icon.png`);
-        } else {
-          // src = require(`../worldhaven/images/tokens/frosthaven/${folderName}/${filename}.png`);
-        }
-      } else {
-        // src = require(`./img/icons/${folderName}/${filename}.png`);
-      }
+      const src = `icons/${folderName}/${filename}.png`;
       text = text.replace(
         match,
-        `<img class="icon" src="${src}" alt="${filename}"/>`
+        `<img class="icon" src="${src}" alt="${filename}" title="${filename}"/>`
       );
     });
   }

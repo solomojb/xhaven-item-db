@@ -1,19 +1,7 @@
 import qs from "qs";
 import { GloomhavenItem } from "./State";
+import { getClassIcon } from "./components/Utils";
 
-interface CreateParams {
-  filename: string;
-  folder: string;
-  game?: string;
-  subfolder?: string;
-}
-
-export const createWorldhavenString = (parms: CreateParams) => {
-  const { game, folder = "general", subfolder = "", filename } = parms;
-  // const src = require(`../worldhaven/images/${folder}/${game}/${subfolder}/${filename}.png`);
-  const src = '';
-  return `<img class="icon" src="${src}" alt="${filename}"/>`;
-};
 
 interface FolderData {
   folderName: string;
@@ -97,12 +85,7 @@ export class Helpers {
       const reg = new RegExp(`{${find}}`, "g");
       text = text.replace(
         reg,
-        createWorldhavenString({
-          folder: "tokens",
-          game: "crimson-scales",
-          subfolder: "character-tokens",
-          filename: find,
-        })
+        `<img class="icon" src="${getClassIcon("CS10")}" alt="${find}"/>`,
       );
     });
 

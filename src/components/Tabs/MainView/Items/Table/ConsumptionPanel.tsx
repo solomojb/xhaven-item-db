@@ -85,8 +85,8 @@ export const ConsumptionPanel = (props: Props) => {
 				)}
 				{elements.map(({ element, consume, colorize }, index) => {
 					const name = colorize
-						? `fh-${element}-icon.png`
-						: `fh-${element}.png`;
+						? `wfh-${element}-icon.png`
+						: `wfh-${element}.png`;
 					return (
 						<div key={`${element}-${index}`}>
 							<GHIcon
@@ -103,19 +103,18 @@ export const ConsumptionPanel = (props: Props) => {
 							/>
 							{consume && (
 								<GHIcon
-									name={"fh-consume.png"}
+									name={"wfh-consume.png"}
 									folder="elements"
 									style={{
 										height: "40%",
 										position: "absolute",
 										bottom: "11.5%",
 										left: !index
-											? `${
-													29 +
-													(elements.length > 2
-														? 0
-														: 37)
-											  }%`
+											? `${29 +
+											(elements.length > 2
+												? 0
+												: 37)
+											}%`
 											: undefined,
 										right: index ? "0%" : undefined,
 										border: "1px white solid",
@@ -131,9 +130,8 @@ export const ConsumptionPanel = (props: Props) => {
 				<div
 					style={{
 						margin: "5px 0 0 5px",
-						width: `calc(100% - ${
-							(iconSize + 1) * elements.length
-						}px)`,
+						width: `calc(100% - ${(iconSize + 1) * elements.length
+							}px)`,
 						height: "100%",
 						left: `${(iconSize + 1) * elements.length}px`,
 						position: "absolute",

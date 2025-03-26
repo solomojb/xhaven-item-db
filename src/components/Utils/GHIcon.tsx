@@ -18,13 +18,7 @@ export const GHIcon = (props: Props) => {
 	} = props;
 
 	let filename = name;
-	let src = '';
-	if (filename.startsWith("wfh-")) {
-		filename = filename.substring(1);
-		// src = require(`../../../worldhaven/images/tokens/frosthaven/${folder}/${filename}`);
-	} else {
-		src = `icons/${folder}/${name}`;
-	}
+	const src = `icons/${folder}/${name}`;
 
 	return (
 		<img
@@ -33,6 +27,7 @@ export const GHIcon = (props: Props) => {
 			alt={filename}
 			onClick={onClick}
 			style={style}
+			title={filename}
 		/>
 	);
 };

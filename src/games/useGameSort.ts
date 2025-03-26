@@ -9,7 +9,7 @@ export const useGameSort = () => {
 
 	return useMemo(() => {
 		const currentGameInfo = gameInfo[currentGameType];
-		let games = [
+		const games = [
 			currentGameType,
 			...(currentGameInfo.linkedGameTypes || []),
 		];

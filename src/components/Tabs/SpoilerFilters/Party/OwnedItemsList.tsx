@@ -19,7 +19,7 @@ type Props = {
   totalGold: string;
 };
 
-export const itemGoldValue = (item: GloomhavenItem) => {
+const itemGoldValue = (item: GloomhavenItem) => {
   let totalGold = 0;
   const { cost, resources } = item;
   if (cost) {

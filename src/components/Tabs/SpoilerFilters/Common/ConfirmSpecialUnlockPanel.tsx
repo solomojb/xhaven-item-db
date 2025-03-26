@@ -19,7 +19,7 @@ type Props = {
 	specialUnlockType: SpecialUnlockTypes;
 	children: ReactNode | ReactNode[];
 	title: string;
-	onConfirm?: () => {};
+	onConfirm?: () => void;
 };
 
 export const ConfirmSpecialUnlockPanel = (props: Props) => {

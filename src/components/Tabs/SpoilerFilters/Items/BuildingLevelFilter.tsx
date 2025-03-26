@@ -31,7 +31,7 @@ export const BuildingLevelFilter = (props: BuildingLevelFilterProps) => {
 	}
 
 	const currentLevel = buildingLevels[buildingKey];
-	let min = startBuildingLevel || 1;
+	const min = startBuildingLevel || 1;
 	let max = endBuildingLevel || min;
 	if (currentLevel < 0) {
 		max = 0;

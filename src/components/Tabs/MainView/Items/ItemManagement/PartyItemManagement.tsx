@@ -32,7 +32,7 @@ const OwnerButton = (props: OwnerProps) => {
 	const lockSpoilerPanel = useRecoilValue(lockSpoilerPanelState);
 
 	const { item, owner } = props;
-	let classNames = `ownerButton`;
+	const classNames = `ownerButton`;
 	const onClick = () => {
 		if (owner) {
 			removeItemsFromOwner(item.id, owner);

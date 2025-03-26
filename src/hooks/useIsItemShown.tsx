@@ -92,7 +92,7 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
           return false;
         }
       }
-      let show =
+      const show =
         all ||
         prosperity >= unlockProsperity ||
         scenarioCompleted.includes(unlockScenario) ||

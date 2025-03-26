@@ -42,7 +42,7 @@ const parseForIcon = (delimiter: string, text: string) => {
   if (matches) {
     matches.forEach((match) => {
       let filename = match.substring(1, match.length - 1);
-      let src = '';
+      const src = '';
       if (filename.startsWith("wfh-")) {
         filename = filename.substring(1);
         if (usesArt) {

@@ -12,7 +12,7 @@ type Props = {
 	onClick?: (name: ClassesInUse) => void;
 };
 
-export const getWorldHavenClass = (
+const getWorldHavenClass = (
 	name: string,
 	game: string,
 	gamePrefix: string
@@ -21,11 +21,11 @@ export const getWorldHavenClass = (
 	// return require(`../../../worldhaven/images/tokens/${game}/character-tokens/${gamePrefix}-${name}-token.png`);
 };
 
-export const getCSClass = (name: string) => {
+const getCSClass = (name: string) => {
 	return getWorldHavenClass(name, "crimson-scales", "cs");
 };
 
-export const getTOAClass = (name: string) => {
+const getTOAClass = (name: string) => {
 	return getWorldHavenClass(name, "trail-of-ashes", "toa");
 };
 
@@ -52,8 +52,8 @@ const classIconFolder: Record<string, string> = {
 	[TOAClasses.TOA6]: getTOAClass("vanquisher"),
 };
 
-export const getClassIcon = (name: string) => {
-	let classPath = classIconFolder[name];
+const getClassIcon = (name: string) => {
+	const classPath = classIconFolder[name];
 	if (!classPath) {
 		try {
 			// classPath = require(`../../img/class-tokens/${name.toLowerCase()}.png`);

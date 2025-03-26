@@ -25,12 +25,12 @@ const getImportHash = () => {
 const parseHash = (importHash: string): any | undefined => {
   try {
     return JSON.parse(atob(importHash));
-  } catch (e) {
+  } catch {
     return undefined;
   }
 };
 
-export const getShareHash = (lockSpoilerPanel: boolean) => {
+const getShareHash = (lockSpoilerPanel: boolean) => {
   // @ts-ignore
   const obj = {};
   Object.values(GameType).forEach((gt: GameType) => {
@@ -98,7 +98,7 @@ const ImportData = () => {
           }
         });
         setDataDirty(true);
-        if (hashConfig.hasOwnProperty("lockSpoilerPanel")) {
+        if (hashConfig["lockSpoilerPanel"]) {
           setLockSpoilerPanel(hashConfig.lockSpoilerPanel);
           localStorage.setItem(
             "lockSpoilerPanel",

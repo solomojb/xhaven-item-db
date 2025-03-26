@@ -46,7 +46,7 @@ const useItems = (): Array<GloomhavenItem> => {
         case SortProperty.Slot:
           value = compareItems(itemA.slot, itemB.slot);
           break;
-        case SortProperty.Cost:
+        case SortProperty.Cost: {
           if (itemA.cost && itemB.cost) {
             value = compareItems(itemA.cost, itemB.cost);
           } else if (itemA.cost) {
@@ -54,8 +54,9 @@ const useItems = (): Array<GloomhavenItem> => {
           } else {
             return 1;
           }
+        }
           break;
-        case SortProperty.Id:
+        case SortProperty.Id: {
           const itemAIndex = allGames.findIndex(
             (item) => item === itemA.gameType
           );
@@ -67,6 +68,7 @@ const useItems = (): Array<GloomhavenItem> => {
             value = compareItems(itemA.id, itemB.id);
           }
           break;
+        }
         case SortProperty.Use:
           value = compareItems(getItemUse(itemA), getItemUse(itemB));
           break;

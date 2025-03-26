@@ -59,7 +59,7 @@ const { Provider } = FirebaseContext;
 const app = initializeApp(firebaseConfig);
 console.log(firebaseConfig);
 console.log(app);
-export const auth = getAuth(app);
+const auth = getAuth(app);
 console.log(auth);
 
 // const db = getDatabase(app);

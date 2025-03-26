@@ -18,12 +18,12 @@ export const GHIcon = (props: Props) => {
 	} = props;
 
 	let filename = name;
-	const src = '';
+	let src = '';
 	if (filename.startsWith("wfh-")) {
 		filename = filename.substring(1);
 		// src = require(`../../../worldhaven/images/tokens/frosthaven/${folder}/${filename}`);
 	} else {
-		// src = require(`../../img/icons/${folder}/${name}`);
+		src = `icons/${folder}/${name}`;
 	}
 
 	return (

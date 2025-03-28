@@ -1,7 +1,6 @@
 import { AllGames } from "../games/GameType";
 import { createState } from "./CommonState";
 import {
-	ClassesInUse,
 	GloomhavenItemSlot,
 	ResourceTypes,
 	SortDirection,
@@ -15,10 +14,6 @@ export const resourcesState = createState<ResourceTypes[]>(
 );
 export const availableOnlyState = createState<boolean>("availableOnly", false);
 export const searchState = createState<string>("search", "");
-export const selectedClassState = createState<ClassesInUse | undefined>(
-	"selectedClass",
-	undefined
-);
 export const sortDirectionState = createState<SortDirection>(
 	"sortDirection",
 	SortDirection.ascending

@@ -1,4 +1,4 @@
-import { createContext, PropsWithChildren, ReactNode, useContext, useMemo } from "react"
+import { createContext, PropsWithChildren, ReactNode, useCallback, useContext, useMemo, useState } from "react"
 import { ClassesInUse, gameTypeState, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsOwnedBy, SpecialUnlockTypes } from "../../State";
 import { useRecoilValue } from "recoil";
 import { useLocalStateVariable } from "./LocalStateVariable";
@@ -44,6 +44,9 @@ interface Data {
     specialUnlocks: SpecialUnlockTypes[],
     setSpecialUnlocks: (newSpecialUnlocks: SpecialUnlockTypes[]) => void,
 
+    selectedClass: ClassesInUse | undefined;
+    setSelectedClass: (newClass: ClassesInUse | undefined) => void;
+
     items: GloomhavenItem[];
     filterSlots: GloomhavenItemSlot[];
     resources: string[];
@@ -69,9 +72,23 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
     const [classesInUse, setClassesInUse] = useLocalStateVariable<ClassesInUse[]>(gameType, "classesInUse", []);
     const [itemsOwnedBy, setItemsOwnedBy] = useLocalStateVariable<ItemsOwnedBy>(gameType, "itemsOwnedBy", {}, fixItemsOwnedBy);
     const [specialUnlocks, setSpecialUnlocks] = useLocalStateVariable<SpecialUnlockTypes[]>(gameType, "specialUnlocks", [], fixSpecialUnlocks);
+    const [selectedClassByGame, setSelectedClassByGame] = useState<Record<GameType, ClassesInUse | undefined>>({ fh: undefined, gh: undefined, jotl: undefined });
+
     const { items, resources, filterSlots } = useMemo(() => {
         return gameDataTypes[gameType];
     }, [gameType])
+
+    const selectedClass = useMemo(() => {
+        return selectedClassByGame[gameType];
+    }, [gameType])
+
+    const setSelectedClass = useCallback((newClass: ClassesInUse | undefined) => {
+        setSelectedClassByGame(current => {
+            const copy = { ...current };
+            copy[gameType] = newClass;
+            return copy
+        });
+    }, [gameType]);
 
     const value = useMemo(() => ({
         itemManagementType,
@@ -85,7 +102,9 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         filterSlots,
         specialUnlocks,
         setSpecialUnlocks,
-    }), [itemManagementType, setItemManagementType, classesInUse, setClassesInUse, specialUnlocks, setSpecialUnlocks, items])
+        selectedClass,
+        setSelectedClass,
+    }), [itemManagementType, setItemManagementType, classesInUse, setClassesInUse, specialUnlocks, setSpecialUnlocks, selectedClass, setSelectedClass, items])
 
     return <Provider value={value}>{children}</Provider>
 }

@@ -1,13 +1,12 @@
-import React from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { Button } from "semantic-ui-react";
 import { AllGames } from "../../../../games/GameType";
 import {
-	specialUnlocksState,
 	includeGameState,
 	confirmSpecialUnlockOpenState,
 	SpecialUnlockTypes,
 } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Props = {
 	specialUnlockType: SpecialUnlockTypes;
@@ -18,7 +17,7 @@ type Props = {
 export const SpecialUnlocksButton = (props: Props) => {
 	const { specialUnlockType, gameType, text } = props;
 	const includeGames = useRecoilValue(includeGameState);
-	const specialUnlocks = useRecoilValue(specialUnlocksState);
+	const { specialUnlocks } = useXHavenDB();
 	const specialUnlocked = specialUnlocks.includes(specialUnlockType);
 	const setConfirmSpecialUnlockOpen = useSetRecoilState(
 		confirmSpecialUnlockOpenState

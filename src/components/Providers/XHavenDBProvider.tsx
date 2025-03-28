@@ -1,8 +1,8 @@
 import { createContext, PropsWithChildren, ReactNode, useContext, useMemo } from "react"
-import { ClassesInUse, gameTypeState, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsOwnedBy } from "../../State";
+import { ClassesInUse, gameTypeState, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsOwnedBy, SpecialUnlockTypes } from "../../State";
 import { useRecoilValue } from "recoil";
 import { useLocalStateVariable } from "./LocalStateVariable";
-import { gameDataTypes } from "../../games";
+import { gameDataTypes, GameType } from "../../games";
 
 
 const fixItemsOwnedBy = (oldItemsOwnedBy: any) => {
@@ -17,6 +17,20 @@ const fixItemsOwnedBy = (oldItemsOwnedBy: any) => {
     }
     return oldItemsOwnedBy;
 };
+
+const fixSpecialUnlocks = (
+    oldSpecialUnlocks: any,
+    _gameType: GameType,
+    spoilerObj: any
+) => {
+    if (spoilerObj.envelopeX) {
+        delete spoilerObj.envelopeX;
+        return [SpecialUnlockTypes.EnvelopeX];
+    }
+    return oldSpecialUnlocks;
+};
+
+
 interface Data {
     itemManagementType: ItemManagementType;
     setItemManagementType: (type: ItemManagementType) => void;
@@ -26,6 +40,9 @@ interface Data {
 
     itemsOwnedBy: ItemsOwnedBy;
     setItemsOwnedBy: (newItems: ItemsOwnedBy) => void;
+
+    specialUnlocks: SpecialUnlockTypes[],
+    setSpecialUnlocks: (newSpecialUnlocks: SpecialUnlockTypes[]) => void,
 
     items: GloomhavenItem[];
     filterSlots: GloomhavenItemSlot[];
@@ -44,12 +61,14 @@ export const useXHavenDB = () => {
 
 const { Provider } = context;
 
+
 export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
     const { children } = props;
     const gameType = useRecoilValue(gameTypeState);
     const [itemManagementType, setItemManagementType] = useLocalStateVariable<ItemManagementType>(gameType, "itemManagmentType", ItemManagementType.None);
     const [classesInUse, setClassesInUse] = useLocalStateVariable<ClassesInUse[]>(gameType, "classesInUse", []);
     const [itemsOwnedBy, setItemsOwnedBy] = useLocalStateVariable<ItemsOwnedBy>(gameType, "itemsOwnedBy", {}, fixItemsOwnedBy);
+    const [specialUnlocks, setSpecialUnlocks] = useLocalStateVariable<SpecialUnlockTypes[]>(gameType, "specialUnlocks", [], fixSpecialUnlocks);
     const { items, resources, filterSlots } = useMemo(() => {
         return gameDataTypes[gameType];
     }, [gameType])
@@ -64,7 +83,9 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         items,
         resources,
         filterSlots,
-    }), [itemManagementType, setItemManagementType, classesInUse, setClassesInUse, items])
+        specialUnlocks,
+        setSpecialUnlocks,
+    }), [itemManagementType, setItemManagementType, classesInUse, setClassesInUse, specialUnlocks, setSpecialUnlocks, items])
 
     return <Provider value={value}>{children}</Provider>
 }

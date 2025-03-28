@@ -1,9 +1,8 @@
 import { useCallback, useMemo } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { gameInfo } from "../games/GameInfo";
 import { AllGames, Expansions, GameType } from "../games/GameType";
 import {
-  specialUnlocksState,
   selectedClassState,
 } from "../State";
 import {
@@ -15,9 +14,8 @@ import {
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
 
 export const useRemovePlayerUtils = () => {
-  const { classesInUse, setClassesInUse: setClassesInUseBy, itemsOwnedBy, setItemsOwnedBy, items } = useXHavenDB();
+  const { classesInUse, setClassesInUse: setClassesInUseBy, itemsOwnedBy, setItemsOwnedBy, specialUnlocks, items } = useXHavenDB();
   const [selectedClass, setSelectedClass] = useRecoilState(selectedClassState);
-  const specialUnlocks = useRecoilValue(specialUnlocksState);
   const envelopeX = specialUnlocks.includes(SpecialUnlockTypes.EnvelopeX);
   const envelopeV = specialUnlocks.includes(SpecialUnlockTypes.EnvelopeV);
 

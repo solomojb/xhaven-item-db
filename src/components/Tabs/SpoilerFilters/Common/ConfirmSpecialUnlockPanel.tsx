@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import { ReactNode, useState } from "react";
 import {
 	Button,
 	ListItem,
@@ -10,9 +10,9 @@ import {
 import { useRecoilState } from "recoil";
 import {
 	confirmSpecialUnlockOpenState,
-	specialUnlocksState,
 	SpecialUnlockTypes,
 } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Props = {
 	solutions: string[];
@@ -27,8 +27,7 @@ export const ConfirmSpecialUnlockPanel = (props: Props) => {
 	const [solutionCorrect, setSolutionCorrect] = useState(false);
 	const [confirmSpecialUnlockOpen, setConfirmSpecialUnlockOpen] =
 		useRecoilState(confirmSpecialUnlockOpenState);
-	const [specialUnlocks, setSpecialUnlocks] =
-		useRecoilState(specialUnlocksState);
+	const { specialUnlocks, setSpecialUnlocks } = useXHavenDB();
 
 	const onClose = () => {
 		setConfirmSpecialUnlockOpen(undefined);
@@ -42,9 +41,7 @@ export const ConfirmSpecialUnlockPanel = (props: Props) => {
 	const onApply = () => {
 		if (solutionCorrect) {
 			if (!specialUnlocks.includes(specialUnlockType)) {
-				setSpecialUnlocks((current) => {
-					return [...current, specialUnlockType];
-				});
+				setSpecialUnlocks([...specialUnlocks, specialUnlockType]);
 			}
 		}
 		onClose();

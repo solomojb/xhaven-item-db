@@ -8,7 +8,6 @@ import {
 	ItemsInUse,
 	ItemViewDisplayType,
 	JOTLClasses,
-	SpecialUnlockTypes,
 } from "./Types";
 
 export const allState = createSpoilerState<boolean>("all", false);
@@ -18,23 +17,6 @@ export const displayItemAsState = createSpoilerState<ItemViewDisplayType>(
 	ItemViewDisplayType.List
 );
 
-const fixSpecialUnlocks = (
-	oldSpecialUnlocks: any,
-	_gameType: GameType,
-	spoilerObj: any
-) => {
-	if (spoilerObj.envelopeX) {
-		delete spoilerObj.envelopeX;
-		return [SpecialUnlockTypes.EnvelopeX];
-	}
-	return oldSpecialUnlocks;
-};
-
-export const specialUnlocksState = createSpoilerState<SpecialUnlockTypes[]>(
-	"specialUnlocks",
-	[],
-	fixSpecialUnlocks
-);
 
 export const itemState = createSpoilerState<number[]>("item", []);
 

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { useRecoilValue } from "recoil";
 import { Form, ListItem, Segment } from "semantic-ui-react";
 import { gameInfo } from "../../../../games/GameInfo";
@@ -6,11 +6,11 @@ import { AllGames, Expansions, GameType } from "../../../../games/GameType";
 import {
   gameTypeState,
   includeGameState,
-  specialUnlocksState,
   SpecialUnlockTypes,
 } from "../../../../State";
 import { ConfirmSpecialUnlockPanel } from "../Common/ConfirmSpecialUnlockPanel";
 import { SpecialUnlocksButton } from "../Common/SpecialUnlockButton";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 interface SecretData {
   solutions: string[];
@@ -60,7 +60,7 @@ const secretAnswers: Record<SpecialUnlockTypes, SecretData> = {
 
 export const Secrets = () => {
   const includeGames = useRecoilValue(includeGameState);
-  const specialUnlocks = useRecoilValue(specialUnlocksState);
+  const { specialUnlocks } = useXHavenDB();
   const currentGameType = useRecoilValue(gameTypeState);
 
   const isButtonShown = (params: any) => {

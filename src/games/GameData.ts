@@ -8,10 +8,3 @@ export type GameData = {
 	resources?: string[];
 };
 
-export const getItemPath = (item: GloomhavenItem, backside?: boolean) => {
-	const { gameType, imgFileNumber } = item;
-	if (imgFileNumber) {
-		return `items/${gameType}/${imgFileNumber}.jpg`;
-	}
-	return '';
-}

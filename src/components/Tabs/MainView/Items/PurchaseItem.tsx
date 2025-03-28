@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { Button, Form, Modal, Image, Segment } from "semantic-ui-react";
+import { Button, Form, Modal, Segment } from "semantic-ui-react";
 import { ClassesInUse, ItemsOwnedBy } from "../../../../State/Types";
 import { ClassList } from "../../SpoilerFilters/Party/ClassList";
-import { getItemPath } from "../../../../games/GameData";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
 	classesInUseState,
@@ -11,6 +10,7 @@ import {
 	selectedItemState,
 } from "../../../../State";
 import { ItemCost } from "./Table/ItemCost";
+import { ItemCardImage } from "./Grid/ItemCardImage";
 
 const PurchaseItem = () => {
 	const classesInUse = useRecoilValue(classesInUseState);
@@ -122,10 +122,7 @@ const PurchaseItem = () => {
 						</Segment>
 					</Form>
 					<Form style={{ width: "50%" }}>
-						<Image
-							src={getItemPath(selectedItem)}
-							className={"purchase-card"}
-						/>
+						<ItemCardImage item={selectedItem} />
 					</Form>
 				</div>
 			</Modal.Content>

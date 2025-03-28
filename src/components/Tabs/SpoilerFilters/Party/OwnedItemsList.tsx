@@ -9,9 +9,9 @@ import {
   Popup,
   Icon,
 } from "semantic-ui-react";
-import { getItemPath } from "../../../../games/GameData";
 import { getItemIdString } from "../../../../helpers";
 import { GloomhavenItem } from "../../../../State";
+import { ItemCardImage } from "../../MainView/Items/Grid/ItemCardImage";
 
 type Props = {
   items: GloomhavenItem[];
@@ -68,11 +68,7 @@ export const OwnedItemList = (props: Props) => {
                       hideOnScroll
                       trigger={<Icon name={"info"} className={"black"} />}
                       content={
-                        <img
-                          className="faqImage"
-                          src={getItemPath(item)}
-                          alt={item.name}
-                        ></img>
+                        <ItemCardImage item={item} />
                       }
                     />
                     <label>{name}</label>

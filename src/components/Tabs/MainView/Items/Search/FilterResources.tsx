@@ -1,13 +1,14 @@
-import React, { useCallback } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useCallback } from "react";
+import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { gameDataState, resourcesState } from "../../../../../State";
+import { resourcesState } from "../../../../../State";
 import { ResourceTypes } from "../../../../../State/Types";
 import { GHIcon } from "../../../../Utils";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
-export const FilterResorces = () => {
+export const FilterResources = () => {
 	const [resources, setResourcesState] = useRecoilState(resourcesState);
-	const { resources: gameResource } = useRecoilValue(gameDataState);
+	const { resources: gameResource } = useXHavenDB();
 
 	const setFilterResource = useCallback(
 		(resource?: ResourceTypes) => {

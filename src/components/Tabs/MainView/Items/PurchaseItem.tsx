@@ -4,17 +4,15 @@ import { ClassesInUse, ItemsOwnedBy } from "../../../../State/Types";
 import { ClassList } from "../../SpoilerFilters/Party/ClassList";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
-	classesInUseState,
 	discountState,
-	itemsOwnedByState,
 	selectedItemState,
 } from "../../../../State";
 import { ItemCost } from "./Table/ItemCost";
 import { ItemCardImage } from "./Grid/ItemCardImage";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 const PurchaseItem = () => {
-	const classesInUse = useRecoilValue(classesInUseState);
-	const [itemsOwnedBy, setItemsOwnedBy] = useRecoilState(itemsOwnedByState);
+	const { classesInUse, itemsOwnedBy, setItemsOwnedBy } = useXHavenDB();
 	const [selectedItem, setSelectedItem] = useRecoilState(selectedItemState);
 	const [owners, setOwners] = useState<ClassesInUse[]>([]);
 	const discount = useRecoilValue(discountState);

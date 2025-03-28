@@ -3,7 +3,7 @@ import { Form, Segment } from "semantic-ui-react";
 import {
 	RenderAs,
 	FilterSlots,
-	FilterResorces,
+	FilterResources,
 	FindItemSearchBar,
 	FilterClass,
 	FilterAvailability,
@@ -17,7 +17,7 @@ const SearchOptions = () => {
 			<Segment>
 				<RenderAs />
 				<FilterSlots />
-				<FilterResorces />
+				<FilterResources />
 				<FindItemSearchBar />
 				<FilterClass />
 				<FilterAvailability />

@@ -6,7 +6,6 @@ import {
   availableOnlyState,
   selectedClassState,
   itemState,
-  itemsOwnedByState,
   allState,
   specialUnlocksState,
   prosperityState,
@@ -17,15 +16,16 @@ import {
   buildingLevelState,
 } from "../State";
 import { useCallback } from "react";
+import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
 
 export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
+  const { itemsOwnedBy } = useXHavenDB();
   const slots = useRecoilValue(slotsState);
   const resources = useRecoilValue(resourcesState);
   const searchString = useRecoilValue(searchState);
   const availableOnly = useRecoilValue(availableOnlyState);
   const selectedClass = useRecoilValue(selectedClassState);
   const item = useRecoilValue(itemState);
-  const itemsOwnedBy = useRecoilValue(itemsOwnedByState);
   const all = useRecoilValue(allState);
   const specialUnlocks = useRecoilValue(specialUnlocksState);
   const prosperity = useRecoilValue(prosperityState);

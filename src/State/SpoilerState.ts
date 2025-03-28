@@ -6,17 +6,12 @@ import {
 	FCClasses,
 	GHClasses,
 	ItemsInUse,
-	ItemsOwnedBy,
 	ItemViewDisplayType,
 	JOTLClasses,
 	SpecialUnlockTypes,
 } from "./Types";
 
 export const allState = createSpoilerState<boolean>("all", false);
-export const classesInUseState = createSpoilerState<ClassesInUse[]>(
-	"classesInUse",
-	[]
-);
 export const discountState = createSpoilerState<number>("discount", 0);
 export const displayItemAsState = createSpoilerState<ItemViewDisplayType>(
 	"displayAs",
@@ -25,7 +20,7 @@ export const displayItemAsState = createSpoilerState<ItemViewDisplayType>(
 
 const fixSpecialUnlocks = (
 	oldSpecialUnlocks: any,
-	gameType: GameType,
+	_gameType: GameType,
 	spoilerObj: any
 ) => {
 	if (spoilerObj.envelopeX) {
@@ -45,7 +40,7 @@ export const itemState = createSpoilerState<number[]>("item", []);
 
 const fixedItemsInUseCount = (
 	oldItemsInUseCount: ItemsInUse,
-	gameType: GameType,
+	_gameType: GameType,
 	spoilerObj?: any
 ) => {
 	const oldItemsInUse: ItemsInUse = spoilerObj["itemsInUse"];
@@ -78,24 +73,6 @@ export const itemsInUseCountState = createSpoilerState<ItemsInUse>(
 	"itemsInUseCount",
 	{},
 	fixedItemsInUseCount
-);
-
-const fixItemsOwnedBy = (oldItemsOwnedBy: any) => {
-	if (Array.isArray(oldItemsOwnedBy)) {
-		const newItemsOwnedBy: ItemsOwnedBy = {};
-		oldItemsOwnedBy.forEach((value, index) => {
-			if (value && value.length) {
-				newItemsOwnedBy[index] = value;
-			}
-		});
-		return newItemsOwnedBy;
-	}
-	return oldItemsOwnedBy;
-};
-export const itemsOwnedByState = createSpoilerState<ItemsOwnedBy>(
-	"itemsOwnedBy",
-	{},
-	fixItemsOwnedBy
 );
 export const prosperityState = createSpoilerState<number>("prosperity", 1);
 export const scenarioCompletedState = createSpoilerState<number[]>(

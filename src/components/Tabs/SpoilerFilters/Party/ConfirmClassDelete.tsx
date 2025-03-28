@@ -9,11 +9,12 @@ import {
 	Icon,
 } from "semantic-ui-react";
 import { ClassIcon } from "../../../Utils";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { classToDeleteState, gameDataState } from "../../../../State";
+import { useRecoilState } from "recoil";
+import { classToDeleteState } from "../../../../State";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { itemGoldValue, OwnedItemList } from "./OwnedItemsList";
 import { useIsItemShown } from "../../../../hooks/useIsItemShown";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ConfirmClassDelete = () => {
 	const { removeClasses, itemsOwnedByClass } = useRemovePlayerUtils();
@@ -22,7 +23,7 @@ export const ConfirmClassDelete = () => {
 		useRecoilState(classToDeleteState);
 	const [itemsOpen, setItemsOpen] = useState(false);
 
-	const { items } = useRecoilValue(gameDataState);
+	const { items } = useXHavenDB();
 
 	const onClose = () => {
 		setClassToDelete(undefined);
@@ -91,11 +92,10 @@ export const ConfirmClassDelete = () => {
 									}
 								>
 									<Icon name="dropdown" />
-									{`Items Owned - ${
-										itemsOpen
-											? "Click to hide"
-											: "Click to show"
-									} items`}
+									{`Items Owned - ${itemsOpen
+										? "Click to hide"
+										: "Click to show"
+										} items`}
 								</AccordionTitle>
 								<AccordionContent active={itemsOpen}>
 									<OwnedItemList

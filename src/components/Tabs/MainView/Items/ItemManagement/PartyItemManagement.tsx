@@ -1,15 +1,12 @@
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { useRemovePlayerUtils } from "../../../../../hooks/useRemovePlayer";
 import {
-	classesInUseState,
-	itemsOwnedByState,
 	lockSpoilerPanelState,
 	selectedItemState,
 } from "../../../../../State";
 import {
 	ClassesInUse,
 	GloomhavenItem,
-	ItemManagementType,
 } from "../../../../../State/Types";
 import { ClassIcon, GHIcon } from "../../../../Utils";
 
@@ -59,8 +56,8 @@ const OwnerButton = (props: OwnerProps) => {
 };
 
 export const PartyItemManagement = (props: Props) => {
-	const classesInUse = useRecoilValue(classesInUseState);
-	const itemsOwnedBy = useRecoilValue(itemsOwnedByState);
+	const { classesInUse, itemsOwnedBy } = useXHavenDB();
+
 	const { item } = props;
 
 	if (item.lockToClasses) {
@@ -81,12 +78,12 @@ export const PartyItemManagement = (props: Props) => {
 		classesAvailable.length > 0
 			? Math.min(item.count - ownersLength, 4)
 			: 0;
-	let buttonData: OwnerProps[] = owners.map((owner, index) => ({
+	let buttonData: OwnerProps[] = owners.map((owner) => ({
 		owner,
 		item,
 	}));
 	buttonData = buttonData.concat(
-		[...Array(addButtonsToShow).keys()].map((index) => ({
+		[...Array(addButtonsToShow).keys()].map(() => ({
 			item,
 			owner: undefined,
 		}))

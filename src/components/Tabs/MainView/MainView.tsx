@@ -13,6 +13,7 @@ import {
 	dataMismatchState,
 	lockSpoilerPanelState,
 } from "../../../State";
+import { XHavenDBProvider } from "../../Providers/XHavenDBProvider";
 
 // .git ignore vscode file
 // List mode looks crappy
@@ -74,19 +75,21 @@ const MainView = () => {
 		<>
 			<ImportData />
 			<div className={outlineClass}>
-				<Tab
-					panes={panes}
-					defaultActiveIndex={parseInt(
-						localStorage.getItem("lastTab") || "0",
-						10
-					)}
-					onTabChange={(_event, data) =>
-						localStorage.setItem(
-							"lastTab",
-							data.activeIndex ? data.activeIndex.toString() : "0"
-						)
-					}
-				/>
+				<XHavenDBProvider>
+					<Tab
+						panes={panes}
+						defaultActiveIndex={parseInt(
+							localStorage.getItem("lastTab") || "0",
+							10
+						)}
+						onTabChange={(_event, data) =>
+							localStorage.setItem(
+								"lastTab",
+								data.activeIndex ? data.activeIndex.toString() : "0"
+							)
+						}
+					/>
+				</XHavenDBProvider>
 			</div>
 			<em className={"pull-right ui text grey"}>
 				Gloomhaven and all related properties, images and text are owned

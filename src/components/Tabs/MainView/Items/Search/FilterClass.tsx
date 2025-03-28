@@ -1,16 +1,15 @@
-import React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import {
 	classesInUseState,
-	itemManagementTypeState,
 	selectedClassState,
 } from "../../../../../State";
 import { ClassesInUse, ItemManagementType } from "../../../../../State/Types";
 import { ClassList } from "../../../SpoilerFilters/Party/ClassList";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 export const FilterClass = () => {
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
+	const { itemManagementType } = useXHavenDB();
 	const classesInUse = useRecoilValue(classesInUseState);
 	const [selectedClass, setSelectedClass] =
 		useRecoilState(selectedClassState);

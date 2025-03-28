@@ -1,21 +1,24 @@
-import React from "react";
-import { GloomhavenItem } from "../../../../../State/Types";
+import { JSXElementConstructor } from "react";
+import { GloomhavenItem, ItemManagementType } from "../../../../../State/Types";
 import { NoItemManagement } from "./NoItemManagement";
 import { PartyItemManagement } from "./PartyItemManagement";
 import { SimpleItemManagement } from "./SimpleItemManagement";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 type Props = {
 	item: GloomhavenItem;
 };
 
-export const ItemManagementContainer = (props: Props) => {
-	const { item } = props;
+const managementComponents: Record<ItemManagementType, JSXElementConstructor<Props>> = {
+	[ItemManagementType.None]: NoItemManagement,
+	[ItemManagementType.Simple]: SimpleItemManagement,
+	[ItemManagementType.Party]: PartyItemManagement
+}
 
-	return (
-		<>
-			<SimpleItemManagement item={item} />
-			<PartyItemManagement item={item} />
-			<NoItemManagement item={item} />
-		</>
-	);
+
+export const ItemManagementContainer = (props: Props) => {
+	const { itemManagementType } = useXHavenDB();
+
+	const Component = managementComponents[itemManagementType];
+	return <Component {...props} />
 };

@@ -1,13 +1,9 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Form, Popup, Icon, List } from "semantic-ui-react";
-import { itemManagementTypeState } from "../../../../State";
 import { ItemManagementType } from "../../../../State/Types";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 const PartyManagementFilter = () => {
-	const [itemManagementType, setItemManagementType] = useRecoilState(
-		itemManagementTypeState
-	);
+	const { itemManagementType, setItemManagementType } = useXHavenDB();
 
 	const onChangeItemManagement = (value: ItemManagementType) => {
 		setItemManagementType(value);

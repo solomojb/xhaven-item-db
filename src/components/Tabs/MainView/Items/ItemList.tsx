@@ -1,4 +1,3 @@
-import React from "react";
 import { ItemManagementType } from "../../../../State/Types";
 import SearchOptions from "./Search/SearchOptions";
 import { Message, Icon } from "semantic-ui-react";
@@ -6,14 +5,14 @@ import PurchaseItem from "./PurchaseItem";
 import { useRecoilValue } from "recoil";
 import {
 	allState,
-	itemManagementTypeState,
 	dataMismatchState,
 } from "../../../../State";
 import { ItemsView } from "./ItemsView";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ItemList = () => {
 	const all = useRecoilValue(allState);
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
+	const { itemManagementType } = useXHavenDB();
 	const dataMismatch = useRecoilValue(dataMismatchState);
 
 	return (

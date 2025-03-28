@@ -1,16 +1,15 @@
-import React from "react";
-import { useRecoilValue } from "recoil";
 import { Form, Popup, Icon, Segment } from "semantic-ui-react";
 import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { useGameSort } from "../../../../games/useGameSort";
-import { itemManagementTypeState } from "../../../../State";
 import { ItemManagementType } from "../../../../State/Types";
 import PartyManagementFilter from "./PartyManagementFilter";
 import { PartySpoilerList } from "./PartySpoilerList";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const PartySpoiler = () => {
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
+
+	const { itemManagementType } = useXHavenDB();
 	const { allGames } = useGameSort();
 
 	return (

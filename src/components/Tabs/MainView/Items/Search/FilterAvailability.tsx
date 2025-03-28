@@ -1,11 +1,10 @@
-import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { Button, Form } from "semantic-ui-react";
 import {
 	availableOnlyState,
 	ItemManagementType,
-	itemManagementTypeState,
 } from "../../../../../State";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 type Props = {
 	available: boolean;
@@ -29,7 +28,7 @@ const FilterAvailabilityButton = (props: Props) => {
 };
 
 export const FilterAvailability = () => {
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
+	const { itemManagementType } = useXHavenDB();
 	if (itemManagementType === ItemManagementType.None) {
 		return null;
 	}

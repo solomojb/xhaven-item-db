@@ -1,4 +1,3 @@
-import React from "react";
 import {
 	GloomhavenItem,
 	ItemManagementType,
@@ -10,12 +9,12 @@ import {
 	sortPropertyState,
 	sortDirectionState,
 	discountState,
-	itemManagementTypeState,
 } from "../../../../../State";
 import { ItemTableRow } from "./ItemTableRow";
 import { useSetSorting } from "../../../../../hooks/useSetSorting";
 
 import "./itemTable.scss";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 type Props = {
 	items: GloomhavenItem[];
@@ -24,7 +23,7 @@ type Props = {
 export const ItemTable = (props: Props) => {
 	const sortProperty = useRecoilValue(sortPropertyState);
 	const sortDirection = useRecoilValue(sortDirectionState);
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
+	const { itemManagementType } = useXHavenDB();
 	const { items } = props;
 	const discount = useRecoilValue(discountState);
 	const setSorting = useSetSorting();
@@ -123,7 +122,6 @@ export const ItemTable = (props: Props) => {
 						<ItemTableRow
 							key={`${item.id}-${item.imageSuffix}`}
 							item={item}
-							itemManagementType={itemManagementType}
 						/>
 					);
 				})}

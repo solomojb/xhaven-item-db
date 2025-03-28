@@ -5,7 +5,6 @@ import {
 	ClassesInUse,
 	FCClasses,
 	GHClasses,
-	ItemManagementType,
 	ItemsInUse,
 	ItemsOwnedBy,
 	ItemViewDisplayType,
@@ -43,10 +42,6 @@ export const specialUnlocksState = createSpoilerState<SpecialUnlockTypes[]>(
 );
 
 export const itemState = createSpoilerState<number[]>("item", []);
-export const itemManagementTypeState = createSpoilerState<ItemManagementType>(
-	"itemManagementType",
-	ItemManagementType.None
-);
 
 const fixedItemsInUseCount = (
 	oldItemsInUseCount: ItemsInUse,

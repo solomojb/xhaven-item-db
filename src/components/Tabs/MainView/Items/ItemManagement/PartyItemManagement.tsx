@@ -1,9 +1,7 @@
-import React from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { useRemovePlayerUtils } from "../../../../../hooks/useRemovePlayer";
 import {
 	classesInUseState,
-	itemManagementTypeState,
 	itemsOwnedByState,
 	lockSpoilerPanelState,
 	selectedItemState,
@@ -16,6 +14,7 @@ import {
 import { ClassIcon, GHIcon } from "../../../../Utils";
 
 import "./partyItemManagement.scss";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 type Props = {
 	item: GloomhavenItem;
@@ -62,12 +61,7 @@ const OwnerButton = (props: OwnerProps) => {
 export const PartyItemManagement = (props: Props) => {
 	const classesInUse = useRecoilValue(classesInUseState);
 	const itemsOwnedBy = useRecoilValue(itemsOwnedByState);
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
 	const { item } = props;
-
-	if (itemManagementType !== ItemManagementType.Party) {
-		return null;
-	}
 
 	if (item.lockToClasses) {
 		const classesCount = item.lockToClasses.filter((c) =>

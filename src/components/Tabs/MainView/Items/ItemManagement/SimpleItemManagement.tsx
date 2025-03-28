@@ -1,12 +1,10 @@
-import React from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { Checkbox } from "semantic-ui-react";
 import {
-	itemManagementTypeState,
 	itemsInUseCountState,
 	lockSpoilerPanelState,
 } from "../../../../../State";
-import { GloomhavenItem, ItemManagementType } from "../../../../../State/Types";
+import { GloomhavenItem } from "../../../../../State/Types";
 
 import "./simpleItemManagement.scss";
 
@@ -18,12 +16,7 @@ export const SimpleItemManagement = (props: Props) => {
 	const [itemsInUseCount, setItemsInUseCount] =
 		useRecoilState(itemsInUseCountState);
 	const lockSpoilerPanel = useRecoilValue(lockSpoilerPanelState);
-	const itemManagementType = useRecoilValue(itemManagementTypeState);
 	const { item } = props;
-
-	if (itemManagementType !== ItemManagementType.Simple) {
-		return null;
-	}
 
 	const count = itemsInUseCount[item.id] || 0;
 

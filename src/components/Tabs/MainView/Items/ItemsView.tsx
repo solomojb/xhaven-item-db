@@ -1,4 +1,3 @@
-import React from "react";
 import { useRecoilValue } from "recoil";
 import { Message } from "semantic-ui-react";
 import useItems from "../../../../hooks/useItems";

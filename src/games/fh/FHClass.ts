@@ -55,7 +55,7 @@ const getEnchancerLevel = (id: number) => {
 };
 
 
-import items from "./items.json";
+import { items } from "./items.ts";
 import { items as ghItems } from "../gh/items.ts";
 
 export class FHClass extends GameClass<FHClasses> {

@@ -3546,8 +3546,8 @@ export const items: GloomhavenItem[] = [
 		gameType: Expansions.ForgottenCircles,
 		folder: "152-165",
 		specialUnlock: SpecialUnlockTypes.EnvelopeE,
-		"faqImage": "items/forgotten-circles/152-165/fc-1036-living-armor-reference.png",
-		"alwaysShown": true
+		faqImage: "FIXME",
+		alwaysShown: true
 	},
 	{
 		id: 281,

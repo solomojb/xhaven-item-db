@@ -1,4 +1,4 @@
-import React, { JSX, useMemo } from "react";
+import { JSX, useMemo } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import { AllGames } from "../../../../games/GameType";

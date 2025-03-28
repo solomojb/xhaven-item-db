@@ -1,10 +1,9 @@
 import React from "react";
 import { Table } from "semantic-ui-react";
 import { getItemIdString } from "../../../../../helpers";
-import { GloomhavenItem } from "../../../../../State/Types";
+import { GloomhavenItem, GloomhavenItemSlot } from "../../../../../State/Types";
 import { GHIcon } from "../../../../Utils";
 import { ItemManagementContainer } from "../ItemManagement/ItemManagementContainer";
-import { NoItemManagement } from "../ItemManagement/NoItemManagement";
 import { ItemCost } from "./ItemCost";
 import { ItemText } from "./ItemText";
 
@@ -25,7 +24,7 @@ export const ItemTableRow = (props: Props) => {
 			</Table.Cell>
 			<Table.Cell className={"name-col"}>{name}</Table.Cell>
 			<Table.Cell className={"slot-col"} textAlign={"center"}>
-				{slot && (
+				{slot && slot !== GloomhavenItemSlot.None && (
 					<GHIcon name={`${slot}.png`} folder={"equipment_slot"} />
 				)}
 			</Table.Cell>

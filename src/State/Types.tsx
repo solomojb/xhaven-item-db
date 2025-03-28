@@ -62,12 +62,12 @@ export enum JOTLClasses {
 }
 
 export enum FHClasses {
-	BB = "FH1",
-	BN = "FH2",
-	BO = "FH3",
-	DF = "FH4",
-	DW = "FH5",
-	GE = "FH6",
+	FH1 = "FH1",
+	FH2 = "FH2",
+	FH3 = "FH3",
+	FH4 = "FH4",
+	FH5 = "FH5",
+	FH6 = "FH6",
 	FH7 = "FH7",
 	FH8 = "FH8",
 	FH9 = "FH9",
@@ -133,6 +133,7 @@ export enum GloomhavenItemSlot {
 	OneHand = "1h",
 	TwoHands = "2h",
 	SmallItem = "small",
+	None = 'none',
 }
 
 export enum ResourceTypes {
@@ -177,8 +178,8 @@ export interface ElementData {
 
 interface Consumption {
 	elements: ElementData[];
-	effect: string;
-	effectHtml: string;
+	effect?: string;
+	effectHtml?: string;
 }
 
 export interface GloomhavenItem {

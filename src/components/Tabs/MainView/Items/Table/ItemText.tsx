@@ -44,7 +44,7 @@ export const ItemText = (props: Props) => {
       ) : (
         <span
           dangerouslySetInnerHTML={{
-            __html: descHTML,
+            __html: descHTML ?? '',
           }}
         />
       )}
@@ -58,8 +58,8 @@ export const ItemText = (props: Props) => {
           <br />
           <span>
             {`Add ${minusOneCardsAdded < numberAmountToText.length
-                ? numberAmountToText[minusOneCardsAdded]
-                : minusOneCardsAdded
+              ? numberAmountToText[minusOneCardsAdded]
+              : minusOneCardsAdded
               } `}
             {gameType === GameType.Frosthaven ? (
               <GHIcon name={"modifier_minus_one_circle.png"} />
@@ -80,7 +80,7 @@ export const ItemText = (props: Props) => {
           content={faq}
         />
       )}
-      {/* {faqImage && (
+      {faqImage && (
         <Popup
           closeOnDocumentClick
           hideOnScroll
@@ -89,12 +89,12 @@ export const ItemText = (props: Props) => {
           content={
             <img
               className="faqImage"
-              src={require(`../../../../../../worldhaven/images/${faqImage}`)}
+              src={`images/${faqImage}`}
               alt={faqImage}
-            ></img>
+            />
           }
         />
-      )} */}
+      )}
       {summon && <ItemSummon summon={summon} />}
     </>
   );

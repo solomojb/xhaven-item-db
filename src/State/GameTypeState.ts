@@ -1,6 +1,5 @@
-import { atom, selector } from "recoil";
-import { gameDataTypes, GameType } from "../games";
-import { GameData } from "../games/GameData";
+import { atom } from "recoil";
+import { GameType } from "../games";
 import QueryString from "qs";
 
 const getStartingGameType = () => {
@@ -30,12 +29,4 @@ export const gameTypeState = atom<GameType>({
 			});
 		},
 	],
-});
-
-export const gameDataState = selector<GameData>({
-	key: "gameDataState",
-	get: ({ get }) => {
-		const gameType: GameType = get(gameTypeState);
-		return gameDataTypes[gameType];
-	},
 });

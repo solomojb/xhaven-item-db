@@ -1,5 +1,5 @@
 import { createState } from "./CommonState";
-import { ClassesInUse, GloomhavenItem } from "./Types";
+import { ClassesInUse } from "./Types";
 
 export const classToDeleteState = createState<ClassesInUse | undefined>(
 	"classToDelete",
@@ -7,9 +7,5 @@ export const classToDeleteState = createState<ClassesInUse | undefined>(
 );
 export const confirmSpecialUnlockOpenState = createState<string | undefined>(
 	"ConfirmSpecialUnlockOpen",
-	undefined
-);
-export const selectedItemState = createState<GloomhavenItem | undefined>(
-	"SelectedItem",
 	undefined
 );

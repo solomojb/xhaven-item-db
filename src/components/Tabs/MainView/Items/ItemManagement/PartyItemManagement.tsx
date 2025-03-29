@@ -1,8 +1,6 @@
-import { useSetRecoilState } from "recoil";
 import { useRemovePlayerUtils } from "../../../../../hooks/useRemovePlayer";
 import {
 	getLockSpoilerPanelState,
-	selectedItemState,
 } from "../../../../../State";
 import {
 	ClassesInUse,
@@ -24,7 +22,7 @@ type OwnerProps = {
 
 const OwnerButton = (props: OwnerProps) => {
 	const { removeItemsFromOwner } = useRemovePlayerUtils();
-	const setSelectedItem = useSetRecoilState(selectedItemState);
+	const { setSelectedItem } = useXHavenDB();
 	const lockSpoilerPanel = getLockSpoilerPanelState();
 
 	const { item, owner } = props;

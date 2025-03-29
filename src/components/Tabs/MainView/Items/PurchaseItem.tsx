@@ -2,18 +2,16 @@ import { useEffect, useState } from "react";
 import { Button, Form, Modal, Segment } from "semantic-ui-react";
 import { ClassesInUse, ItemsOwnedBy } from "../../../../State/Types";
 import { ClassList } from "../../SpoilerFilters/Party/ClassList";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";
 import {
 	discountState,
-	selectedItemState,
 } from "../../../../State";
 import { ItemCost } from "./Table/ItemCost";
 import { ItemCardImage } from "./Grid/ItemCardImage";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 const PurchaseItem = () => {
-	const { classesInUse, itemsOwnedBy, setItemsOwnedBy } = useXHavenDB();
-	const [selectedItem, setSelectedItem] = useRecoilState(selectedItemState);
+	const { classesInUse, itemsOwnedBy, setItemsOwnedBy, selectedItem, setSelectedItem } = useXHavenDB();
 	const [owners, setOwners] = useState<ClassesInUse[]>([]);
 	const discount = useRecoilValue(discountState);
 

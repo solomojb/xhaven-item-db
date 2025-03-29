@@ -1,9 +1,9 @@
-import { createContext, PropsWithChildren, ReactNode, useCallback, useContext, useMemo, useState } from "react"
+import { createContext, PropsWithChildren, ReactNode, useContext, useMemo } from "react"
 import { ClassesInUse, gameTypeState, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsOwnedBy, SpecialUnlockTypes } from "../../State";
 import { useRecoilValue } from "recoil";
 import { useLocalStateVariable } from "./LocalStateVariable";
 import { gameDataTypes, GameType } from "../../games";
-
+import { useGameStateVariable } from "./GameStateVariable";
 
 const fixItemsOwnedBy = (oldItemsOwnedBy: any) => {
     if (Array.isArray(oldItemsOwnedBy)) {
@@ -47,6 +47,10 @@ interface Data {
     selectedClass: ClassesInUse | undefined;
     setSelectedClass: (newClass: ClassesInUse | undefined) => void;
 
+    selectedItem: GloomhavenItem | undefined;
+    setSelectedItem: (newItem: GloomhavenItem | undefined) => void;
+
+
     items: GloomhavenItem[];
     filterSlots: GloomhavenItemSlot[];
     resources: string[];
@@ -64,31 +68,25 @@ export const useXHavenDB = () => {
 
 const { Provider } = context;
 
+const defaultClassesInUse: ClassesInUse[] = [];
+const defaultItemsOwnedBy: ItemsOwnedBy = {};
+const defaultSpecialUnlocks: SpecialUnlockTypes[] = [];
+
 
 export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
     const { children } = props;
     const gameType = useRecoilValue(gameTypeState);
-    const [itemManagementType, setItemManagementType] = useLocalStateVariable<ItemManagementType>(gameType, "itemManagmentType", ItemManagementType.None);
-    const [classesInUse, setClassesInUse] = useLocalStateVariable<ClassesInUse[]>(gameType, "classesInUse", []);
-    const [itemsOwnedBy, setItemsOwnedBy] = useLocalStateVariable<ItemsOwnedBy>(gameType, "itemsOwnedBy", {}, fixItemsOwnedBy);
-    const [specialUnlocks, setSpecialUnlocks] = useLocalStateVariable<SpecialUnlockTypes[]>(gameType, "specialUnlocks", [], fixSpecialUnlocks);
-    const [selectedClassByGame, setSelectedClassByGame] = useState<Record<GameType, ClassesInUse | undefined>>({ fh: undefined, gh: undefined, jotl: undefined });
+    const [itemManagementType, setItemManagementType] = useLocalStateVariable<ItemManagementType>(gameType, "itemManagementType", ItemManagementType.None);
+    const [classesInUse, setClassesInUse] = useLocalStateVariable<ClassesInUse[]>(gameType, "classesInUse", defaultClassesInUse);
+    const [itemsOwnedBy, setItemsOwnedBy] = useLocalStateVariable<ItemsOwnedBy>(gameType, "itemsOwnedBy", defaultItemsOwnedBy, fixItemsOwnedBy);
+    const [specialUnlocks, setSpecialUnlocks] = useLocalStateVariable<SpecialUnlockTypes[]>(gameType, "specialUnlocks", defaultSpecialUnlocks, fixSpecialUnlocks);
+
+    const [selectedClass, setSelectedClass] = useGameStateVariable<ClassesInUse | undefined>(gameType, undefined)
+    const [selectedItem, setSelectedItem] = useGameStateVariable<GloomhavenItem | undefined>(gameType, undefined)
 
     const { items, resources, filterSlots } = useMemo(() => {
         return gameDataTypes[gameType];
     }, [gameType])
-
-    const selectedClass = useMemo(() => {
-        return selectedClassByGame[gameType];
-    }, [gameType])
-
-    const setSelectedClass = useCallback((newClass: ClassesInUse | undefined) => {
-        setSelectedClassByGame(current => {
-            const copy = { ...current };
-            copy[gameType] = newClass;
-            return copy
-        });
-    }, [gameType]);
 
     const value = useMemo(() => ({
         itemManagementType,
@@ -104,7 +102,20 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         setSpecialUnlocks,
         selectedClass,
         setSelectedClass,
-    }), [itemManagementType, setItemManagementType, classesInUse, setClassesInUse, specialUnlocks, setSpecialUnlocks, selectedClass, setSelectedClass, items])
+        selectedItem,
+        setSelectedItem
+    }), [
+        itemManagementType, setItemManagementType,
+        classesInUse, setClassesInUse,
+        itemsOwnedBy, setItemsOwnedBy,
+        specialUnlocks, setSpecialUnlocks,
+        selectedClass, setSelectedClass,
+        selectedItem, setSelectedItem,
+        items,
+        filterSlots,
+        resources,
+    ])
+
 
     return <Provider value={value}>{children}</Provider>
 }

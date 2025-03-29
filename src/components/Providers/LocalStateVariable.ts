@@ -10,12 +10,12 @@ export function useLocalStateVariable<T>(gameType: GameType, keyName: string, de
     useEffect(() => {
         const defaultFromStorage = getDefaultValue<T>(gameType, keyName, defaultV, fixUp)
         setValue(defaultFromStorage);
-    }, [gameType]);
+    }, [defaultV, fixUp, gameType, keyName]);
 
     const localValue = useCallback((newVal: T) => {
         setValue(newVal);
         storeValue<T>(gameType, keyName, newVal);
-    }, [gameType]);
+    }, [gameType, keyName]);
 
     return useMemo(() => ([value, localValue]), [value, localValue]);
 

@@ -1,7 +1,7 @@
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { useRemovePlayerUtils } from "../../../../../hooks/useRemovePlayer";
 import {
-	lockSpoilerPanelState,
+	getLockSpoilerPanelState,
 	selectedItemState,
 } from "../../../../../State";
 import {
@@ -25,7 +25,7 @@ type OwnerProps = {
 const OwnerButton = (props: OwnerProps) => {
 	const { removeItemsFromOwner } = useRemovePlayerUtils();
 	const setSelectedItem = useSetRecoilState(selectedItemState);
-	const lockSpoilerPanel = useRecoilValue(lockSpoilerPanelState);
+	const lockSpoilerPanel = getLockSpoilerPanelState();
 
 	const { item, owner } = props;
 	const classNames = `ownerButton`;

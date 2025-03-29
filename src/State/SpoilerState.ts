@@ -146,10 +146,9 @@ export const importHashState = atom<string | undefined>({
 	default: undefined,
 });
 
-export const lockSpoilerPanelState = atom({
-	key: "lock-spoiler-panel-state",
-	default: localStorage.getItem("lockSpoilerPanel") === "true",
-});
+export const getLockSpoilerPanelState = () =>
+	localStorage.getItem("lockSpoilerPanel") === "true";
+
 
 export const buildingLevelState = createSpoilerState<Record<string, number>>(
 	"craftsmanBuildingLevel",

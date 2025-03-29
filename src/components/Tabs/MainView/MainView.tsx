@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { Tab } from "semantic-ui-react";
 import { ItemList } from "./Items";
 import SpoilerFilters from "../SpoilerFilters/SpoilerFilters";
@@ -11,7 +11,7 @@ import { useRecoilValue } from "recoil";
 import {
 	allState,
 	dataMismatchState,
-	lockSpoilerPanelState,
+	getLockSpoilerPanelState,
 } from "../../../State";
 import { XHavenDBProvider } from "../../Providers/XHavenDBProvider";
 
@@ -28,7 +28,7 @@ type TabItem = {
 
 const MainView = () => {
 	const all = useRecoilValue(allState);
-	const lockSpoilerPanel = useRecoilValue(lockSpoilerPanelState);
+	const lockSpoilerPanel = getLockSpoilerPanelState();
 	const dataMismatch = useRecoilValue(dataMismatchState);
 
 	const sharingEnabled = isFlagEnabled("sharing");

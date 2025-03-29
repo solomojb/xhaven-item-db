@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Header, Icon, Modal } from "semantic-ui-react";
 import { GameType } from "../../../games";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
@@ -8,8 +8,8 @@ import {
 } from "../../../State/CommonState";
 import {
   dataMismatchState,
+  getLockSpoilerPanelState,
   importHashState,
-  lockSpoilerPanelState,
   remoteDataState,
 } from "../../../State";
 
@@ -51,8 +51,7 @@ const ImportData = () => {
   const [importHash, setImportHash] = useState(qsImportHash);
   const [isOpen, setIsOpen] = useState(false);
 
-  const setLockSpoilerPanel = useSetRecoilState(lockSpoilerPanelState);
-  const lockSpoilerPanel = useRecoilValue(lockSpoilerPanelState);
+  const lockSpoilerPanel = getLockSpoilerPanelState();
   const [dataDirty, setDataDirty] = useRecoilState(dataDirtyState);
   const setDataMismatch = useSetRecoilState(dataMismatchState);
   const remoteData = useRecoilValue(remoteDataState);
@@ -99,7 +98,6 @@ const ImportData = () => {
         });
         setDataDirty(true);
         if (hashConfig["lockSpoilerPanel"]) {
-          setLockSpoilerPanel(hashConfig.lockSpoilerPanel);
           localStorage.setItem(
             "lockSpoilerPanel",
             hashConfig.lockSpoilerPanel.toString()

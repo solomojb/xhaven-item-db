@@ -6,8 +6,6 @@ import {
 import { Table } from "semantic-ui-react";
 import { useRecoilValue } from "recoil";
 import {
-	sortPropertyState,
-	sortDirectionState,
 	discountState,
 } from "../../../../../State";
 import { ItemTableRow } from "./ItemTableRow";
@@ -15,14 +13,14 @@ import { useSetSorting } from "../../../../../hooks/useSetSorting";
 
 import "./itemTable.scss";
 import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
+import { useFilter } from "../../../../Providers/FilterProvider";
 
 type Props = {
 	items: GloomhavenItem[];
 };
 
 export const ItemTable = (props: Props) => {
-	const sortProperty = useRecoilValue(sortPropertyState);
-	const sortDirection = useRecoilValue(sortDirectionState);
+	const { sortDirection, sortProperty } = useFilter();
 	const { itemManagementType } = useXHavenDB();
 	const { items } = props;
 	const discount = useRecoilValue(discountState);

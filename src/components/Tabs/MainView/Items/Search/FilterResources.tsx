@@ -1,19 +1,18 @@
 import { useCallback } from "react";
-import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { resourcesState } from "../../../../../State";
 import { ResourceTypes } from "../../../../../State/Types";
 import { GHIcon } from "../../../../Utils";
 import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
+import { useFilter } from "../../../../Providers/FilterProvider";
 
 export const FilterResources = () => {
-	const [resources, setResourcesState] = useRecoilState(resourcesState);
+	const { resources, setResources } = useFilter();
 	const { resources: gameResource } = useXHavenDB();
 
 	const setFilterResource = useCallback(
 		(resource?: ResourceTypes) => {
 			if (!resource) {
-				setResourcesState([]);
+				setResources([]);
 				return;
 			}
 			const value = Object.assign([], resources);
@@ -23,9 +22,9 @@ export const FilterResources = () => {
 			} else {
 				value.push(resource);
 			}
-			setResourcesState(value);
+			setResources(value);
 		},
-		[resources, setResourcesState]
+		[resources, setResources]
 	);
 
 	if (!gameResource || gameResource.length === 0) {

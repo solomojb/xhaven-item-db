@@ -1,18 +1,17 @@
 import { useCallback } from "react";
-import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { slotsState } from "../../../../../State";
 import { GloomhavenItemSlot } from "../../../../../State/Types";
 import { GHIcon } from "../../../../Utils";
 import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
+import { useFilter } from "../../../../Providers/FilterProvider";
 
 export const FilterSlots = () => {
-	const [slots, setSlotsState] = useRecoilState(slotsState);
 	const { filterSlots } = useXHavenDB();
+	const { slots, setSlots } = useFilter();
 	const setFilterSlot = useCallback(
 		(slot?: GloomhavenItemSlot) => {
 			if (!slot) {
-				setSlotsState([]);
+				setSlots([]);
 				return;
 			}
 			const value = Object.assign([], slots);
@@ -22,9 +21,9 @@ export const FilterSlots = () => {
 			} else {
 				value.push(slot);
 			}
-			setSlotsState(value);
+			setSlots(value);
 		},
-		[slots, setSlotsState]
+		[slots, setSlots]
 	);
 	return (
 		<Form.Group inline>

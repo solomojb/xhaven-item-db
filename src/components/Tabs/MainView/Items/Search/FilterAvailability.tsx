@@ -1,10 +1,9 @@
-import { useRecoilState } from "recoil";
 import { Button, Form } from "semantic-ui-react";
 import {
-	availableOnlyState,
 	ItemManagementType,
 } from "../../../../../State";
 import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
+import { useFilter } from "../../../../Providers/FilterProvider";
 
 type Props = {
 	available: boolean;
@@ -12,8 +11,7 @@ type Props = {
 };
 
 const FilterAvailabilityButton = (props: Props) => {
-	const [availableOnly, setAvailableOnly] =
-		useRecoilState(availableOnlyState);
+	const { availableOnly, setAvailableOnly } = useFilter();
 	const { available, text } = props;
 	return (
 		<Button

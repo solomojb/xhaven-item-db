@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 import { AllGames, Expansions, GameType } from "../games/GameType";
-import { createSpoilerState } from "./CommonState";
+import { createSpoilerState, createState } from "./CommonState";
 import {
 	ClassesInUse,
 	FCClasses,
@@ -158,4 +158,9 @@ export const buildingLevelState = createSpoilerState<Record<string, number>>(
 		jw: -1,
 		en: -1,
 	}
+);
+
+export const removingGameState = createState<AllGames | undefined>(
+	"removingGame",
+	undefined
 );

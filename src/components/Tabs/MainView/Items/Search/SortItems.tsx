@@ -1,23 +1,20 @@
-import React, { useCallback } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useCallback } from "react";
+import { useRecoilValue } from "recoil";
 import { Button, Form, Icon } from "semantic-ui-react";
 import { useSetSorting } from "../../../../../hooks/useSetSorting";
 import {
 	displayItemAsState,
 	ItemViewDisplayType,
 	SortDirection,
-	sortDirectionState,
 	SortProperty,
-	sortPropertyState,
 } from "../../../../../State";
+import { useFilter } from "../../../../Providers/FilterProvider";
 
 export const SortItems = () => {
 	const setSorting = useSetSorting();
 
 	const displayAs = useRecoilValue(displayItemAsState);
-	const sortProperty = useRecoilValue(sortPropertyState);
-	const [sortDirection, setSortDirection] =
-		useRecoilState(sortDirectionState);
+	const { sortDirection, setSortDirection, sortProperty } = useFilter();
 
 	const toggleSortDirection = useCallback(() => {
 		setSortDirection(
@@ -45,7 +42,7 @@ export const SortItems = () => {
 						{ value: "source", text: "Source" },
 						{ value: "use", text: "Use" },
 					]}
-					onChange={(obj, e) => setSorting(e.value as SortProperty)}
+					onChange={(_obj, e) => setSorting(e.value as SortProperty)}
 				/>
 				<Button
 					icon={

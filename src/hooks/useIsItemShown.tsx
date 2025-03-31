@@ -1,27 +1,21 @@
 import { GloomhavenItem } from "../State/Types";
 import { useRecoilValue } from "recoil";
 import {
-  searchState,
-  slotsState,
-  availableOnlyState,
   itemState,
   allState,
   prosperityState,
   soloClassState,
   scenarioCompletedState,
   includeGameState,
-  resourcesState,
   buildingLevelState,
 } from "../State";
 import { useCallback } from "react";
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
+import { useFilter } from "../components/Providers/FilterProvider";
 
 export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
   const { itemsOwnedBy, specialUnlocks, selectedClass } = useXHavenDB();
-  const slots = useRecoilValue(slotsState);
-  const resources = useRecoilValue(resourcesState);
-  const searchString = useRecoilValue(searchState);
-  const availableOnly = useRecoilValue(availableOnlyState);
+  const { slots, resources, availableOnly, searchStr } = useFilter();
   const item = useRecoilValue(itemState);
   const all = useRecoilValue(allState);
   const prosperity = useRecoilValue(prosperityState);
@@ -38,8 +32,8 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
     ({
       id,
       soloItem,
-      unlockProsperity,
-      unlockScenario,
+      unlockProsperity = 0,
+      unlockScenario = 0,
       gameType,
       slot,
       name,
@@ -48,10 +42,10 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
       count,
       specialUnlock,
       alwaysShown = false,
-      unlockCrafstmanLevel,
-      unlockTradingPostLevel,
-      unlockJewelerLevel,
-      unlockEnhancerLevel,
+      unlockCrafstmanLevel = 0,
+      unlockTradingPostLevel = 0,
+      unlockJewelerLevel = 0,
+      unlockEnhancerLevel = 0,
       importedItem,
     }: GloomhavenItem) => {
       if (!includeGames.includes(gameType)) {
@@ -114,10 +108,10 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
             return false;
           }
         }
-        if (searchString.length > 2) {
+        if (searchStr.length > 2) {
           if (
-            !name.match(new RegExp(searchString, "i")) &&
-            !desc.match(new RegExp(searchString, "i"))
+            !name.match(new RegExp(searchStr, "i")) &&
+            !desc.match(new RegExp(searchStr, "i"))
           ) {
             return false;
           }
@@ -148,7 +142,7 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
       prosperity,
       resources,
       scenarioCompleted,
-      searchString,
+      searchStr,
       selectedClass,
       slots,
       soloClass,

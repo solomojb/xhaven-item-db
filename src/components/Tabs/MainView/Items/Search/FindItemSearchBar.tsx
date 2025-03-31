@@ -1,22 +1,20 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Form, Input } from "semantic-ui-react";
-import { searchState } from "../../../../../State";
+import { useFilter } from "../../../../Providers/FilterProvider";
 
 export const FindItemSearchBar = () => {
-	const [searchString, setSearchString] = useRecoilState(searchState);
+	const { searchStr, setSearchStr } = useFilter();
 	return (
 		<Form.Group inline>
 			<label>Find Item:</label>
 			<Input
-				value={searchString}
+				value={searchStr}
 				onChange={(e) => {
-					setSearchString(e.target.value);
+					setSearchStr(e.target.value);
 				}}
 				icon={{
 					name: "close",
 					link: true,
-					onClick: () => setSearchString(""),
+					onClick: () => setSearchStr(""),
 				}}
 				placeholder={"Search..."}
 			/>

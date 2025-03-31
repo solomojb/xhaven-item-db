@@ -1,10 +1,9 @@
 import { GloomhavenItem, SortDirection, SortProperty } from "../State/Types";
-import { useRecoilValue } from "recoil";
-import { sortPropertyState, sortDirectionState } from "../State";
 import { useCallback, useEffect, useState } from "react";
 import { useIsItemShown } from "./useIsItemShown";
 import { useGameSort } from "../games/useGameSort";
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
+import { useFilter } from "../components/Providers/FilterProvider";
 
 export function compareItems<T>(a: T, b: T) {
   if (a === b) {
@@ -30,8 +29,7 @@ const getItemUse = ({ consumed, spent, lost }: GloomhavenItem) => {
 const useItems = (): Array<GloomhavenItem> => {
   const { items } = useXHavenDB();
   const isItemShown = useIsItemShown();
-  const sortProperty = useRecoilValue(sortPropertyState);
-  const sortDirection = useRecoilValue(sortDirectionState);
+  const { sortDirection, sortProperty } = useFilter();
   const { allGames } = useGameSort();
 
   const [sortedItems, setSortedItems] = useState<GloomhavenItem[]>([]);

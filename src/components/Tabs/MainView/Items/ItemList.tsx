@@ -9,6 +9,7 @@ import {
 } from "../../../../State";
 import { ItemsView } from "./ItemsView";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { FilterProvider } from "../../../Providers/FilterProvider";
 
 export const ItemList = () => {
 	const all = useRecoilValue(allState);
@@ -16,7 +17,7 @@ export const ItemList = () => {
 	const dataMismatch = useRecoilValue(dataMismatchState);
 
 	return (
-		<>
+		<FilterProvider>
 			{dataMismatch && (
 				<Message negative>
 					<Message.Header>
@@ -42,6 +43,6 @@ export const ItemList = () => {
 			{itemManagementType === ItemManagementType.Party && (
 				<PurchaseItem />
 			)}
-		</>
+		</FilterProvider>
 	);
 };

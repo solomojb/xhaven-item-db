@@ -1,11 +1,8 @@
-import { useRecoilState } from "recoil";
-import { sortDirectionState, sortPropertyState } from "../State";
 import { SortDirection, SortProperty } from "../State/Types";
+import { useFilter } from "../components/Providers/FilterProvider";
 
 export const useSetSorting = () => {
-	const [sortProperty, setSortProperty] = useRecoilState(sortPropertyState);
-	const [sortDirection, setSortDirection] =
-		useRecoilState(sortDirectionState);
+	const { sortDirection, setSortDirection, sortProperty, setSortProperty } = useFilter();
 
 	const setSorting = (newProperty: SortProperty) => {
 		let newDirection: SortDirection;

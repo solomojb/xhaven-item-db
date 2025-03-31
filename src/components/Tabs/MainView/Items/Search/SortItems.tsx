@@ -1,19 +1,18 @@
 import { useCallback } from "react";
-import { useRecoilValue } from "recoil";
 import { Button, Form, Icon } from "semantic-ui-react";
 import { useSetSorting } from "../../../../../hooks/useSetSorting";
 import {
-	displayItemAsState,
 	ItemViewDisplayType,
 	SortDirection,
 	SortProperty,
 } from "../../../../../State";
 import { useFilter } from "../../../../Providers/FilterProvider";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 export const SortItems = () => {
 	const setSorting = useSetSorting();
 
-	const displayAs = useRecoilValue(displayItemAsState);
+	const { displayAs } = useXHavenDB();
 	const { sortDirection, setSortDirection, sortProperty } = useFilter();
 
 	const toggleSortDirection = useCallback(() => {

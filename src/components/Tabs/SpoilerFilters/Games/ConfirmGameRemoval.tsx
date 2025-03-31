@@ -1,15 +1,12 @@
-import React from "react";
 import { Button, Modal, Form, List } from "semantic-ui-react";
-import { useRecoilState } from "recoil";
-import { removingGameState, includeGameState } from "../../../../State";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { gameInfo } from "../../../../games/GameInfo";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ConfirmGameRemoval = () => {
 	const { removeClasses, getClassesToRemove, getRemovingItemCount } =
 		useRemovePlayerUtils();
-	const [removingGame, setRemovingGame] = useRecoilState(removingGameState);
-	const [includeGames, setIncludeGames] = useRecoilState(includeGameState);
+	const { includeGames, setIncludeGames, removingGame, setRemovingGame } = useXHavenDB();
 
 	const onClose = () => {
 		setRemovingGame(undefined);
@@ -51,11 +48,11 @@ export const ConfirmGameRemoval = () => {
 								<List.Header>Confirming this will:</List.Header>
 								{getClassesToRemove(removingGame).length >
 									0 && (
-									<List.Item>
-										{`Remove this game's classes from the
+										<List.Item>
+											{`Remove this game's classes from the
 										party`}
-									</List.Item>
-								)}
+										</List.Item>
+									)}
 								{getRemovingItemCount(removingGame) > 0 && (
 									<List.Item>
 										{`Put any items owned by this game's

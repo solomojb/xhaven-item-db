@@ -1,14 +1,13 @@
-import { useRecoilValue } from "recoil";
 import { Message } from "semantic-ui-react";
 import useItems from "../../../../hooks/useItems";
-import { displayItemAsState } from "../../../../State";
 import { ItemViewDisplayType } from "../../../../State/Types";
 import { ItemGrid } from "./Grid";
 import { ItemTable } from "./Table";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ItemsView = () => {
 	const items = useItems();
-	const displayAs = useRecoilValue(displayItemAsState);
+	const { displayAs } = useXHavenDB();
 	return (
 		<>
 			{items.length === 0 && (

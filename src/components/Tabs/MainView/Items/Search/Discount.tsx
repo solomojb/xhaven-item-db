@@ -1,15 +1,11 @@
-import React from "react";
-import { useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import {
-	discountState,
-	displayItemAsState,
 	ItemViewDisplayType,
 } from "../../../../../State";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 export const Discount = () => {
-	const discount = useRecoilValue(discountState);
-	const displayAs = useRecoilValue(displayItemAsState);
+	const { discount, displayAs } = useXHavenDB();
 
 	if (displayAs !== ItemViewDisplayType.Images) {
 		return null;

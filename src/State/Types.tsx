@@ -5,6 +5,13 @@ export type ItemsOwnedBy = Record<string, ClassesInUse[]>;
 
 export type ItemsInUse = Record<number, number>;
 
+export type BuildingLevel = {
+	cm: number,
+	tp: number,
+	jw: number,
+	en: number
+}
+
 export enum SortDirection {
 	ascending = "ascending",
 	descending = "descending",

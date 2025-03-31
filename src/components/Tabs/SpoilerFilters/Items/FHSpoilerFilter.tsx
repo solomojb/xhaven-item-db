@@ -1,5 +1,3 @@
-import React from "react";
-import { useRecoilValue } from "recoil";
 import { Segment } from "semantic-ui-react";
 import { Expansions, GameType } from "../../../../games";
 import {
@@ -9,17 +7,13 @@ import {
   sortById,
 } from "../../../../games/fh/FHClass";
 import {
-  buildingLevelState,
-  includeGameState,
-  scenarioCompletedState,
-} from "../../../../State";
-import {
   BuildingLevelFilter,
   BuildingLevelFilterProps,
 } from "./BuildingLevelFilter";
 import { ScenarioCompletedFilter } from "./ScenarioCompletedFilter";
 import { SoloClassFilterBlock } from "./SoloClassFilterBlock";
 import SpoilerFilterItemList, { ItemRange } from "./SpoilerFilterItemList";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 const filterGroups: Record<string, ItemRange[]> = {
   "Random Blueprint": [{ range: [{ start: 51, end: 65 }] }],
@@ -66,9 +60,7 @@ const buildingFilters: BuildingLevelFilterProps[] = [
 ];
 
 export const FHSpoilerFilter = () => {
-  const includedGames = useRecoilValue(includeGameState);
-  const scenariosComplete = useRecoilValue(scenarioCompletedState);
-  const { cm, tp, jw, en } = useRecoilValue(buildingLevelState);
+  const { scenarioCompleted, includeGames, buildingLevel: { cm, tp, jw, en } } = useXHavenDB();
 
   const ghRange = ghImportSets
     .map((items: number[], index: number) => {
@@ -84,7 +76,7 @@ export const FHSpoilerFilter = () => {
     .sort(sortById);
 
   const fcRange = [];
-  if (scenariosComplete.includes(82)) {
+  if (scenarioCompleted.includes(82)) {
     fcRange.push(...fcImportSets[0]);
   }
   if (en >= 4) {
@@ -97,7 +89,7 @@ export const FHSpoilerFilter = () => {
       {buildingFilters.map((filter) => (
         <BuildingLevelFilter key={filter.label} {...filter} />
       ))}
-      {includedGames.includes(Expansions.ForgottenCircles) && (
+      {includeGames.includes(Expansions.ForgottenCircles) && (
         <ScenarioCompletedFilter scenarios={[82]} />
       )}
       <Segment>

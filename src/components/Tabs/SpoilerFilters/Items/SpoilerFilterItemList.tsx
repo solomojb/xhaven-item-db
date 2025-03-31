@@ -1,10 +1,9 @@
 import { JSX, useMemo } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import { AllGames } from "../../../../games/GameType";
 import { isLocalHost } from "../../../../helpers";
-import { includeGameState, itemState } from "../../../../State";
 import FilterCheckbox from "./FilterCheckbox";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Range = {
   start: number;
@@ -52,8 +51,7 @@ const peformAll = (
 
 const SpoilerFilterItemList = (props: Props) => {
   const { ranges, title, filterOn } = props;
-  const includeGames = useRecoilValue(includeGameState);
-  const [item, setItem] = useRecoilState(itemState);
+  const { item, setItem, includeGames } = useXHavenDB();
 
   const turnThemOn = useMemo(() => {
     let offCount = 0;

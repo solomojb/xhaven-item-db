@@ -4,10 +4,6 @@ import {
 	SortProperty,
 } from "../../../../../State/Types";
 import { Table } from "semantic-ui-react";
-import { useRecoilValue } from "recoil";
-import {
-	discountState,
-} from "../../../../../State";
 import { ItemTableRow } from "./ItemTableRow";
 import { useSetSorting } from "../../../../../hooks/useSetSorting";
 
@@ -21,9 +17,8 @@ type Props = {
 
 export const ItemTable = (props: Props) => {
 	const { sortDirection, sortProperty } = useFilter();
-	const { itemManagementType } = useXHavenDB();
+	const { itemManagementType, discount } = useXHavenDB();
 	const { items } = props;
-	const discount = useRecoilValue(discountState);
 	const setSorting = useSetSorting();
 
 	const costClass = discount < 0 ? "blue" : discount > 0 ? "red" : "";

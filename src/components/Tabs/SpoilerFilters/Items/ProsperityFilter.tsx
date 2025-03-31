@@ -1,10 +1,8 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { prosperityState } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ProsperityFilter = () => {
-	const [prosperity, setProsperity] = useRecoilState(prosperityState);
+	const { prosperity, setProsperity } = useXHavenDB();
 	return (
 		<Form.Group inline>
 			<label>Prosperity:</label>

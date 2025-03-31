@@ -1,7 +1,6 @@
-import React from "react";
 import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { scenarioCompletedState } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Props = {
 	scenarios: number[];
@@ -9,9 +8,7 @@ type Props = {
 
 export const ScenarioCompletedFilter = (props: Props) => {
 	const { scenarios } = props;
-	const [scenarioCompleted, setScenarioComplete] = useRecoilState(
-		scenarioCompletedState
-	);
+	const { scenarioCompleted, setScenarioCompleted } = useXHavenDB();
 
 	const toggleScenarioCompleted = (key: number) => {
 		const value = Object.assign([], scenarioCompleted);
@@ -20,7 +17,7 @@ export const ScenarioCompletedFilter = (props: Props) => {
 		} else {
 			value.push(key);
 		}
-		setScenarioComplete(value);
+		setScenarioCompleted(value);
 	};
 
 	if (scenarios.length === 0) {

@@ -1,10 +1,8 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { discountState } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ReputationPulldown = () => {
-	const [discount, setDiscount] = useRecoilState(discountState);
+	const { discount, setDiscount } = useXHavenDB();
 	return (
 		<Form.Group inline>
 			<label>Reputation Discount:</label>
@@ -23,7 +21,7 @@ export const ReputationPulldown = () => {
 					{ value: 4, text: "+4 gold" }, // (-15 - -18)
 					{ value: 5, text: "+5 gold" }, // (-19 - -20)
 				]}
-				onChange={(obj, e) => {
+				onChange={(_obj, e) => {
 					setDiscount(parseInt(e.value as string));
 				}}
 			/>

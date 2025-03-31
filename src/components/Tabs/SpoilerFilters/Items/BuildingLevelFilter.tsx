@@ -1,15 +1,14 @@
-import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import { AllGames } from "../../../../games/GameType";
-import { buildingLevelState, includeGameState } from "../../../../State";
+import { BuildingLevel } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export interface BuildingLevelFilterProps {
 	label: string;
 	lockedLabel?: string;
 	startBuildingLevel?: number;
 	endBuildingLevel?: number;
-	buildingKey: string;
+	buildingKey: keyof BuildingLevel;
 	gameType?: AllGames;
 }
 
@@ -22,15 +21,12 @@ export const BuildingLevelFilter = (props: BuildingLevelFilterProps) => {
 		buildingKey,
 		gameType,
 	} = props;
-	const includedGames = useRecoilValue(includeGameState);
-	const [buildingLevels, setBuildingLevel] =
-		useRecoilState(buildingLevelState);
-
-	if (gameType && !includedGames.includes(gameType)) {
+	const { includeGames, buildingLevel, setBuildingLevel } = useXHavenDB();
+	if (gameType && !includeGames.includes(gameType)) {
 		return null;
 	}
 
-	const currentLevel = buildingLevels[buildingKey];
+	const currentLevel = buildingLevel[buildingKey];
 	const min = startBuildingLevel || 1;
 	let max = endBuildingLevel || min;
 	if (currentLevel < 0) {
@@ -58,11 +54,10 @@ export const BuildingLevelFilter = (props: BuildingLevelFilterProps) => {
 				key={i}
 				label={radioLabel}
 				checked={currentLevel === i}
-				onChange={() =>
-					setBuildingLevel((current) => ({
-						...current,
-						[buildingKey]: i,
-					}))
+				onChange={() => {
+					const copy = { ...buildingLevel, [buildingKey]: i };
+					setBuildingLevel(copy);
+				}
 				}
 			/>
 		);

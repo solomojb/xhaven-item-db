@@ -1,8 +1,6 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Button, Form } from "semantic-ui-react";
-import { displayItemAsState } from "../../../../../State";
 import { ItemViewDisplayType } from "../../../../../State/Types";
+import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
 
 type Props = {
 	type: ItemViewDisplayType;
@@ -10,7 +8,7 @@ type Props = {
 };
 const RenderAsButton = (props: Props) => {
 	const { type, text } = props;
-	const [displayAs, setDisplayAs] = useRecoilState(displayItemAsState);
+	const { displayAs, setDisplayAs } = useXHavenDB();
 	return (
 		<Button
 			color={displayAs === type ? "blue" : undefined}

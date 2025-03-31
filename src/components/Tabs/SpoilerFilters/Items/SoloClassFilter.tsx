@@ -1,12 +1,10 @@
-import React from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
-import { includeGameState, soloClassState } from "../../../../State";
 import { ClassesInUse } from "../../../../State/Types";
 import { ClassList } from "../Party/ClassList";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Props = {
 	gameType: AllGames;
@@ -15,9 +13,8 @@ type Props = {
 export const SoloClassFilter = (props: Props) => {
 	const { gameType } = props;
 	const { soloGameType, title } = gameInfo[gameType];
-	const [soloClass, setSoloClass] = useRecoilState(soloClassState);
+	const { soloClass, setSoloClass, includeGames } = useXHavenDB();
 	const { getClassesForGame } = useRemovePlayerUtils();
-	const includeGames = useRecoilValue(includeGameState);
 	if (!includeGames.includes(gameType)) {
 		return null;
 	}

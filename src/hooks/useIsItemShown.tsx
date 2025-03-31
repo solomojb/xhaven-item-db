@@ -1,39 +1,18 @@
 import { GloomhavenItem } from "../State/Types";
-import { useRecoilValue } from "recoil";
-import {
-  itemState,
-  allState,
-  prosperityState,
-  soloClassState,
-  scenarioCompletedState,
-  includeGameState,
-  buildingLevelState,
-} from "../State";
 import { useCallback } from "react";
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
 import { useFilter } from "../components/Providers/FilterProvider";
 
 export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
-  const { itemsOwnedBy, specialUnlocks, selectedClass } = useXHavenDB();
+  const { itemsOwnedBy, specialUnlocks, selectedClass, all, item, prosperity, soloClass, scenarioCompleted, includeGames, buildingLevel: { cm: craftsmanLevel, jw: jewelerLevel, tp: tradingPostLevel, en: enhancerLevel } } = useXHavenDB();
   const { slots, resources, availableOnly, searchStr } = useFilter();
-  const item = useRecoilValue(itemState);
-  const all = useRecoilValue(allState);
-  const prosperity = useRecoilValue(prosperityState);
-  const soloClass = useRecoilValue(soloClassState);
-  const scenarioCompleted = useRecoilValue(scenarioCompletedState);
-  const includeGames = useRecoilValue(includeGameState);
-  const buildingLevels = useRecoilValue(buildingLevelState);
-  const craftsmanLevel = buildingLevels["cm"];
-  const jewelerLevel = buildingLevels["jw"];
-  const tradingPostLevel = buildingLevels["tp"];
-  const enhancerLevel = buildingLevels["en"];
 
   const isItemShown = useCallback(
     ({
       id,
       soloItem,
-      unlockProsperity = 0,
-      unlockScenario = 0,
+      unlockProsperity,
+      unlockScenario,
       gameType,
       slot,
       name,

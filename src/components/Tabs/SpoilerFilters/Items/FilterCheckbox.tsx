@@ -1,7 +1,5 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Form } from "semantic-ui-react";
-import { itemState } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Props = {
 	id: number;
@@ -11,7 +9,7 @@ type Props = {
 
 const FilterCheckbox = (props: Props) => {
 	const { id, offset = 0, prefix = "" } = props;
-	const [item, setItem] = useRecoilState(itemState);
+	const { item, setItem } = useXHavenDB();
 
 	const toggleItemFilter = (key: number) => {
 		const value = Object.assign([], item);

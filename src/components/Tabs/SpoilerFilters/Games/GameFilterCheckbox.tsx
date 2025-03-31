@@ -1,14 +1,12 @@
-import React from "react";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import { GameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import {
   gameTypeState,
-  includeGameState,
-  removingGameState,
 } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 type Props = {
   allGameType: AllGames;
@@ -17,9 +15,8 @@ type Props = {
 export const GameFilterCheckbox = (props: Props) => {
   const { getClassesToRemove, getRemovingItemCount } = useRemovePlayerUtils();
   const { allGameType, title, gamesToFilterOn } = props;
-  const [includeGames, setIncludeGames] = useRecoilState(includeGameState);
+  const { includeGames, setIncludeGames, setRemovingGame } = useXHavenDB();
   const gameType = useRecoilValue(gameTypeState);
-  const setRemovingGame = useSetRecoilState(removingGameState);
 
   const showConfirmation = (removingGame: AllGames) => {
     return (

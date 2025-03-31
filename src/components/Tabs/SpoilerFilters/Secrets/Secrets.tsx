@@ -5,7 +5,6 @@ import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames, Expansions, GameType } from "../../../../games/GameType";
 import {
   gameTypeState,
-  includeGameState,
   SpecialUnlockTypes,
 } from "../../../../State";
 import { ConfirmSpecialUnlockPanel } from "../Common/ConfirmSpecialUnlockPanel";
@@ -59,8 +58,7 @@ const secretAnswers: Record<SpecialUnlockTypes, SecretData> = {
 };
 
 export const Secrets = () => {
-  const includeGames = useRecoilValue(includeGameState);
-  const { specialUnlocks } = useXHavenDB();
+  const { specialUnlocks, includeGames } = useXHavenDB();
   const currentGameType = useRecoilValue(gameTypeState);
 
   const isButtonShown = (params: any) => {

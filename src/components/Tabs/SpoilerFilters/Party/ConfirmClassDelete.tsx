@@ -9,8 +9,6 @@ import {
 	Icon,
 } from "semantic-ui-react";
 import { ClassIcon } from "../../../Utils";
-import { useRecoilState } from "recoil";
-import { classToDeleteState } from "../../../../State";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { itemGoldValue, OwnedItemList } from "./OwnedItemsList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
@@ -18,11 +16,9 @@ import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 export const ConfirmClassDelete = () => {
 	const { removeClasses, itemsOwnedByClass } = useRemovePlayerUtils();
 	// const isItemShown = useIsItemShown();
-	const [classToDelete, setClassToDelete] =
-		useRecoilState(classToDeleteState);
 	const [itemsOpen, setItemsOpen] = useState(false);
 
-	const { items } = useXHavenDB();
+	const { items, classToDelete, setClassToDelete } = useXHavenDB();
 
 	const onClose = () => {
 		setClassToDelete(undefined);

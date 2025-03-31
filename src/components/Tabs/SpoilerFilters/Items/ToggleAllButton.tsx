@@ -1,10 +1,8 @@
-import React from "react";
-import { useRecoilState } from "recoil";
 import { Button, Form, Icon } from "semantic-ui-react";
-import { allState } from "../../../../State";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ToggleAllButton = () => {
-	const [all, setAll] = useRecoilState(allState);
+	const { all, setAll } = useXHavenDB();
 
 	return (
 		<Form.Group inline>

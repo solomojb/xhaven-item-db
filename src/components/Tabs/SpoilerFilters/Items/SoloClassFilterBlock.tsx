@@ -1,14 +1,14 @@
-import React from "react";
 import { useRecoilValue } from "recoil";
 import { Form, Segment } from "semantic-ui-react";
 import { gameInfo } from "../../../../games/GameInfo";
-import { gameTypeState, includeGameState } from "../../../../State";
+import { gameTypeState } from "../../../../State";
 import { SoloClassFilter } from "./SoloClassFilter";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const SoloClassFilterBlock = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
 	const { soloClassesToInclude } = gameInfo[currentGameType];
-	const includeGames = useRecoilValue(includeGameState);
+	const { includeGames } = useXHavenDB();
 	const includeList =
 		soloClassesToInclude &&
 		soloClassesToInclude.filter((gameType) =>

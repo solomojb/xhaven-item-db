@@ -1,15 +1,13 @@
-import React from "react";
 import { Segment } from "semantic-ui-react";
 import SpoilerFilterItemList from "./SpoilerFilterItemList";
-import { useRecoilValue } from "recoil";
-import { prosperityState } from "../../../../State";
 import { Expansions } from "../../../../games/GameType";
 import { ReputationPulldown } from "./ReputationPulldown";
 import { ProsperityFilter } from "./ProsperityFilter";
 import { SoloClassFilterBlock } from "./SoloClassFilterBlock";
+import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const GHSpoilerFilter = () => {
-	const prosperity = useRecoilValue(prosperityState);
+	const { prosperity } = useXHavenDB();
 
 	return (
 		<Segment>

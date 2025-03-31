@@ -7,9 +7,7 @@ import {
 	Input,
 	InputProps,
 } from "semantic-ui-react";
-import { useRecoilState } from "recoil";
 import {
-	confirmSpecialUnlockOpenState,
 	SpecialUnlockTypes,
 } from "../../../../State";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
@@ -25,9 +23,7 @@ type Props = {
 export const ConfirmSpecialUnlockPanel = (props: Props) => {
 	const { solutions, specialUnlockType, children, title } = props;
 	const [solutionCorrect, setSolutionCorrect] = useState(false);
-	const [confirmSpecialUnlockOpen, setConfirmSpecialUnlockOpen] =
-		useRecoilState(confirmSpecialUnlockOpenState);
-	const { specialUnlocks, setSpecialUnlocks } = useXHavenDB();
+	const { specialUnlocks, setSpecialUnlocks, confirmSpecialUnlockOpen, setConfirmSpecialUnlockOpen } = useXHavenDB();
 
 	const onClose = () => {
 		setConfirmSpecialUnlockOpen(undefined);

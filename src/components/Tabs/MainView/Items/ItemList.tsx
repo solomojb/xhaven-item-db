@@ -4,7 +4,6 @@ import { Message, Icon } from "semantic-ui-react";
 import PurchaseItem from "./PurchaseItem";
 import { useRecoilValue } from "recoil";
 import {
-	allState,
 	dataMismatchState,
 } from "../../../../State";
 import { ItemsView } from "./ItemsView";
@@ -12,8 +11,7 @@ import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { FilterProvider } from "../../../Providers/FilterProvider";
 
 export const ItemList = () => {
-	const all = useRecoilValue(allState);
-	const { itemManagementType } = useXHavenDB();
+	const { itemManagementType, all } = useXHavenDB();
 	const dataMismatch = useRecoilValue(dataMismatchState);
 
 	return (

@@ -13,12 +13,11 @@ import { useRecoilState } from "recoil";
 import { classToDeleteState } from "../../../../State";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { itemGoldValue, OwnedItemList } from "./OwnedItemsList";
-import { useIsItemShown } from "../../../../hooks/useIsItemShown";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 
 export const ConfirmClassDelete = () => {
 	const { removeClasses, itemsOwnedByClass } = useRemovePlayerUtils();
-	const isItemShown = useIsItemShown();
+	// const isItemShown = useIsItemShown();
 	const [classToDelete, setClassToDelete] =
 		useRecoilState(classToDeleteState);
 	const [itemsOpen, setItemsOpen] = useState(false);
@@ -31,8 +30,8 @@ export const ConfirmClassDelete = () => {
 
 	const itemsOwned = itemsOwnedByClass(classToDelete);
 	const itemsToList = itemsOwned
-		.map((id) => items[id - 1])
-		.filter(isItemShown);
+		.map((id) => items[id - 1]);
+	// .filter(isItemShown);
 
 	const goldAmount = () => {
 		let totalGold = 0;

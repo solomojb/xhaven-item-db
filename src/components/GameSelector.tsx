@@ -1,10 +1,11 @@
 import { useRecoilState } from "recoil";
 import { DropdownProps, Form } from "semantic-ui-react";
-import { gamePulldownOptions, GameType } from "../games";
+import { useGamePulldownOptions, GameType } from "../games";
 import { gameTypeState } from "../State";
 
 export const GameSelector = () => {
 	const [gameType, setGameType] = useRecoilState(gameTypeState);
+	const gamePulldownOptions = useGamePulldownOptions();
 
 	return (
 		<Form.Select

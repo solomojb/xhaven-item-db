@@ -1,17 +1,18 @@
 import { useMemo } from "react";
 import { useRecoilValue } from "recoil";
-import { gameDataTypes } from ".";
+import { useGetGames } from ".";
 import { gameTypeState } from "../State";
 
 export const useGameSort = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
+	const games = useGetGames();
 
 	return useMemo(() => {
-		const currentGameInfo = gameDataTypes[currentGameType];
-		const additionalGames = Object.values(gameDataTypes).flatMap((gameData) => {
+		const currentGameInfo = games[currentGameType];
+		const additionalGames = Object.values(games).flatMap((gameData) => {
 			const { gameType } = gameData;
 			if (gameType !== currentGameType) {
-				const gameSpecificInfo = gameDataTypes[gameType];
+				const gameSpecificInfo = games[gameType];
 				return [
 					gameType,
 					...(gameSpecificInfo.linkedGameTypes || [])
@@ -28,5 +29,5 @@ export const useGameSort = () => {
 			allGames,
 			withoutCurrent: allGames.filter((game) => game !== currentGameType),
 		};
-	}, [currentGameType]);
+	}, [currentGameType, games]);
 };

@@ -2,7 +2,7 @@ import { createContext, PropsWithChildren, ReactNode, useContext, useMemo } from
 import { BuildingLevel, ClassesInUse, FCClasses, gameTypeState, GHClasses, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsInUse, ItemsOwnedBy, ItemViewDisplayType, JOTLClasses, SpecialUnlockTypes } from "../../State";
 import { useRecoilValue } from "recoil";
 import { useLocalStateVariable } from "./LocalStateVariable";
-import { gameDataTypes, GameType } from "../../games";
+import { useGetGame, GameType } from "../../games";
 import { useGameStateVariable } from "./GameStateVariable";
 import { AllGames, Expansions } from "../../games/GameType";
 
@@ -240,9 +240,7 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
     const [confirmSpecialUnlockOpen, setConfirmSpecialUnlockOpen] = useGameStateVariable<string | undefined>(gameType, undefined)
     const [removingGame, setRemovingGame] = useGameStateVariable<AllGames | undefined>(gameType, undefined)
 
-    const { items, resources, filterSlots } = useMemo(() => {
-        return gameDataTypes[gameType];
-    }, [gameType])
+    const { items, resources, filterSlots } = useGetGame(gameType);
 
     const value = useMemo(() => ({
         itemManagementType, setItemManagementType,

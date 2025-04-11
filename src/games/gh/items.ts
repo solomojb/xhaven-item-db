@@ -230,8 +230,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-21",
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
-		imgFileNumber: 1,
-		imageNumber: 34,
+		imgFileNumber: 2,
+		imageNumber: 0,
 	},
 	{
 		id: 16,
@@ -244,8 +244,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-21",
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
-		imgFileNumber: 1,
-		imageNumber: 36,
+		imgFileNumber: 2,
+		imageNumber: 2,
 	},
 	{
 		id: 17,
@@ -259,8 +259,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-21",
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
-		imgFileNumber: 1,
-		imageNumber: 38,
+		imgFileNumber: 2,
+		imageNumber: 4,
 	},
 	{
 		id: 18,
@@ -274,8 +274,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-21",
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
-		imgFileNumber: 1,
-		imageNumber: 40,
+		imgFileNumber: 2,
+		imageNumber: 6,
 	},
 	{
 		id: 19,
@@ -289,8 +289,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-21",
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
-		imgFileNumber: 1,
-		imageNumber: 42,
+		imgFileNumber: 2,
+		imageNumber: 8,
 	},
 	{
 		id: 20,
@@ -304,8 +304,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-21",
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
-		imgFileNumber: 1,
-		imageNumber: 44,
+		imgFileNumber: 2,
+		imageNumber: 10,
 	},
 	{
 		id: 21,
@@ -320,7 +320,7 @@ export const items: GloomhavenItem[] = [
 		unlockProsperity: 2,
 		gameType: GameType.Gloomhaven,
 		imgFileNumber: 2,
-		imageNumber: 0,
+		imageNumber: 14,
 	},
 	{
 		id: 22,
@@ -334,6 +334,8 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 0,
 	},
 	{
 		id: 23,
@@ -349,6 +351,8 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 2,
 	},
 	{
 		id: 24,
@@ -362,6 +366,9 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 4,
+
 	},
 	{
 		id: 25,
@@ -375,6 +382,8 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 6,
 	},
 	{
 		id: 26,
@@ -388,6 +397,8 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 8,
 	},
 	{
 		id: 27,
@@ -401,6 +412,8 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 10,
 	},
 	{
 		id: 28,
@@ -414,6 +427,8 @@ export const items: GloomhavenItem[] = [
 		folder: "22-28",
 		unlockProsperity: 3,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 3,
+		imageNumber: 14,
 	},
 	{
 		id: 29,
@@ -426,6 +441,8 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 0,
 	},
 	{
 		id: 30,
@@ -439,6 +456,8 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 2,
 	},
 	{
 		id: 31,
@@ -452,6 +471,9 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 4,
+
 	},
 	{
 		id: 32,
@@ -465,6 +487,8 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 6,
 	},
 	{
 		id: 33,
@@ -478,6 +502,8 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 8,
 	},
 	{
 		id: 34,
@@ -492,6 +518,8 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 10,
 	},
 	{
 		id: 35,
@@ -512,6 +540,8 @@ export const items: GloomhavenItem[] = [
 		folder: "29-35",
 		unlockProsperity: 4,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 4,
+		imageNumber: 14,
 	},
 	{
 		id: 36,
@@ -525,6 +555,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 0,
 	},
 	{
 		id: 37,
@@ -538,6 +570,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 2,
 	},
 	{
 		id: 38,
@@ -551,6 +585,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 4,
 	},
 	{
 		id: 39,
@@ -564,6 +600,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 6,
 	},
 	{
 		id: 40,
@@ -576,6 +614,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 8,
 	},
 	{
 		id: 41,
@@ -589,6 +629,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 10,
 	},
 	{
 		id: 42,
@@ -602,6 +644,8 @@ export const items: GloomhavenItem[] = [
 		folder: "36-42",
 		unlockProsperity: 5,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 5,
+		imageNumber: 14,
 	},
 	{
 		id: 43,
@@ -615,6 +659,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 0,
 	},
 	{
 		id: 44,
@@ -628,6 +674,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 2,
 	},
 	{
 		id: 45,
@@ -642,6 +690,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 4,
 	},
 	{
 		id: 46,
@@ -655,6 +705,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 6,
 	},
 	{
 		id: 47,
@@ -668,6 +720,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 8,
 	},
 	{
 		id: 48,
@@ -681,6 +735,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 10,
 	},
 	{
 		id: 49,
@@ -694,6 +750,8 @@ export const items: GloomhavenItem[] = [
 		folder: "43-49",
 		unlockProsperity: 6,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 6,
+		imageNumber: 14,
 	},
 	{
 		id: 50,
@@ -707,6 +765,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 0,
 	},
 	{
 		id: 51,
@@ -720,6 +780,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 2,
 	},
 	{
 		id: 52,
@@ -732,6 +794,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 4,
 	},
 	{
 		id: 53,
@@ -745,6 +809,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 6,
 	},
 	{
 		id: 54,
@@ -758,6 +824,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 8,
 	},
 	{
 		id: 55,
@@ -771,6 +839,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 10,
 	},
 	{
 		id: 56,
@@ -784,6 +854,8 @@ export const items: GloomhavenItem[] = [
 		folder: "50-56",
 		unlockProsperity: 7,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 7,
+		imageNumber: 14,
 	},
 	{
 		id: 57,
@@ -796,6 +868,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 0,
 	},
 	{
 		id: 58,
@@ -808,6 +882,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 2,
 	},
 	{
 		id: 59,
@@ -821,6 +897,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 4,
 	},
 	{
 		id: 60,
@@ -834,6 +912,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 6,
 	},
 	{
 		id: 61,
@@ -847,6 +927,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 8,
 	},
 	{
 		id: 62,
@@ -860,6 +942,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 10,
 	},
 	{
 		id: 63,
@@ -873,6 +957,8 @@ export const items: GloomhavenItem[] = [
 		folder: "57-63",
 		unlockProsperity: 8,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 8,
+		imageNumber: 12,
 	},
 	{
 		id: 64,
@@ -886,6 +972,8 @@ export const items: GloomhavenItem[] = [
 		folder: "64-151",
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 0,
 	},
 	{
 		id: 65,
@@ -901,6 +989,8 @@ export const items: GloomhavenItem[] = [
 		folder: "64-151",
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 2,
 	},
 	{
 		id: 66,
@@ -913,6 +1003,8 @@ export const items: GloomhavenItem[] = [
 		folder: "64-151",
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 4,
 	},
 	{
 		id: 67,
@@ -925,6 +1017,8 @@ export const items: GloomhavenItem[] = [
 		folder: "64-151",
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 6,
 	},
 	{
 		id: 68,
@@ -937,6 +1031,8 @@ export const items: GloomhavenItem[] = [
 		folder: "64-151",
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 8,
 	},
 	{
 		id: 69,
@@ -950,6 +1046,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 10,
 	},
 	{
 		id: 70,
@@ -963,6 +1061,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		unlockProsperity: 9,
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 9,
+		imageNumber: 12,
 	},
 	{
 		id: 71,
@@ -974,7 +1074,8 @@ export const items: GloomhavenItem[] = [
 		desc: "Gain Flying ^flying^",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 0
 	},
 	{
 		id: 72,
@@ -986,7 +1087,8 @@ export const items: GloomhavenItem[] = [
 		desc: "If you move 6 or more hexes on your turn, gain ^experience_1^.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 1
 	},
 	{
 		id: 73,
@@ -999,7 +1101,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, perform a \"Move ^move^ 4, Jump ^jump^\" action",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 2
 	},
 	{
 		id: 74,
@@ -1013,7 +1116,8 @@ export const items: GloomhavenItem[] = [
 		desc: "On the next three sources of damage from attacks targeting you, gain Shield ^shield^ 1, Retaliate ^retaliate^ 1",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 3
 	},
 	{
 		id: 75,
@@ -1026,7 +1130,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, @x-any@ to create any element. @any@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 4
 	},
 	{
 		id: 76,
@@ -1039,7 +1144,8 @@ export const items: GloomhavenItem[] = [
 		desc: "While you are adjacent to three or more monsters, gain Shield ^shield^ 1",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 5
 	},
 	{
 		id: 77,
@@ -1051,7 +1157,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, @x-ice@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 6
 	},
 	{
 		id: 78,
@@ -1063,7 +1170,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, @x-wind@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 7
 	},
 	{
 		id: 79,
@@ -1075,7 +1183,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, @x-fire@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 8
 	},
 	{
 		id: 80,
@@ -1087,7 +1196,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, @x-earth@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 9
 	},
 	{
 		id: 81,
@@ -1099,7 +1209,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, @x-light@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 10
 	},
 	{
 		id: 82,
@@ -1111,7 +1222,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, @x-dark@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 11
 	},
 	{
 		id: 83,
@@ -1124,7 +1236,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create Ice. @ice@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 12
 	},
 	{
 		id: 84,
@@ -1137,7 +1250,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create Wind. @wind@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 13
 	},
 	{
 		id: 85,
@@ -1150,7 +1264,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create Fire. @fire@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 14
 	},
 	{
 		id: 86,
@@ -1163,7 +1278,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create Earth. @earth@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 15
 	},
 	{
 		id: 87,
@@ -1176,7 +1292,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create Light. @light@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 16
 	},
 	{
 		id: 88,
@@ -1189,7 +1306,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create Dark. @dark@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 17
 	},
 	{
 		id: 89,
@@ -1202,7 +1320,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, remove one negative condition on yourself. This can be used while you have STUN $stun$.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 18
 	},
 	{
 		id: 90,
@@ -1215,7 +1334,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, remove all negative conditions on yourself. This can be used while you have STUN $stun$.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 19
 	},
 	{
 		id: 91,
@@ -1228,7 +1348,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When damaged by an attack targeting you, gain Shield ^shield^ 4 for the attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 20
 	},
 	{
 		id: 92,
@@ -1241,7 +1362,8 @@ export const items: GloomhavenItem[] = [
 		desc: "Before an enemy would consume an element, consume that element instead for no effect",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 21
 	},
 	{
 		id: 93,
@@ -1254,7 +1376,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During an ally's attack, add +1 Attack ^attack^ to their entire attack action",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 22
 	},
 	{
 		id: 94,
@@ -1267,7 +1390,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, perform a \"Heal ^heal^ 3, Range ^range^ 5\" action",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 23,
 	},
 	{
 		id: 95,
@@ -1280,7 +1404,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, an ally within Range ^range^ 5 may Recover ^recover^ up to two of their discarded cards",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
-		imageSuffix: "b"
+		imgFileNumber: 10,
+		imageNumber: 24,
 	},
 	{
 		id: 96,
@@ -1293,6 +1418,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your movement, add +3 Move ^move^ and Jump ^jump^ to a single movement",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 0
 	},
 	{
 		id: 97,
@@ -1304,6 +1431,8 @@ export const items: GloomhavenItem[] = [
 		desc: "If you move 4 or more hexes on your turn, perform a \"\"Heal ^heal^ 1, Self\"\" action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 2
 	},
 	{
 		id: 98,
@@ -1315,6 +1444,8 @@ export const items: GloomhavenItem[] = [
 		desc: "You are unaffected by difficult and hazardous terrain.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 3
 	},
 	{
 		id: 99,
@@ -1326,6 +1457,8 @@ export const items: GloomhavenItem[] = [
 		desc: "Ignore the damaging effects of hazardous terrain and perform a \"Heal ^heal^ 2, Self\" action on any turn in which you have entered a hazardous terrain hex.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 4
 	},
 	{
 		id: 100,
@@ -1338,6 +1471,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, perform a \"Heal ^heal^ 2, target any summoned ally\" action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 5
 	},
 	{
 		id: 101,
@@ -1349,6 +1484,8 @@ export const items: GloomhavenItem[] = [
 		desc: "Remove two ^modifier_minus_one_circle^ from your attack modifier deck.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 6
 	},
 	{
 		id: 102,
@@ -1361,6 +1498,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your ranged attack, suffer 3 damage to add +1 Attack ^attack^ to the entire Attack action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 7
 	},
 	{
 		id: 103,
@@ -1372,6 +1511,8 @@ export const items: GloomhavenItem[] = [
 		desc: "You are immune to POISON $poison$ and WOUND $wound$.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 8
 	},
 	{
 		id: 104,
@@ -1384,6 +1525,8 @@ export const items: GloomhavenItem[] = [
 		desc: "On the next five sources of damage from attacks targeting you, gain Shield ^shield^ 1.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 9
 	},
 	{
 		id: 105,
@@ -1396,6 +1539,8 @@ export const items: GloomhavenItem[] = [
 		faq: "The item does not actually change a character's initiative so it doesn't affect their summons' initiative. It only changes how monster's treat the character during focus evaluation.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 10
 	},
 	{
 		id: 106,
@@ -1407,6 +1552,8 @@ export const items: GloomhavenItem[] = [
 		desc: "Any time you kill an enemy during your turn, perform a \"Heal ^heal^ 1, Self\" action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 11
 	},
 	{
 		id: 107,
@@ -1419,6 +1566,8 @@ export const items: GloomhavenItem[] = [
 		faq: "This bonus must be used on the turn it is gained. It cannot be saved. If you perform multiple move abilities, you may use the item as long as you have moved a total of at least 4 hexes. The item can only be used once during your turn even if you move 4 hexes multiple times during your turn.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 12
 	},
 	{
 		id: 108,
@@ -1430,6 +1579,8 @@ export const items: GloomhavenItem[] = [
 		desc: "Whenever you gain MUDDLE $muddle$, gain STRENGTHEN $strengthen$ instead.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 14
 	},
 	{
 		id: 109,
@@ -1442,6 +1593,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your \"Loot ^loot^ 1\" ability, perform a \"Loot ^loot^ 2\" ability instead.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 15
 	},
 	{
 		id: 110,
@@ -1453,6 +1606,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When attacked, if @earth@ is Strong, IMMOBILIZE $immobilize$ the attacker.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 16
 	},
 	{
 		id: 111,
@@ -1464,6 +1619,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When attacked, if @ice@ is Strong, perform a \"PUSH $push$ 2\" action targeting the attacker.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 17
 	},
 	{
 		id: 112,
@@ -1476,6 +1633,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, add +2 Attack ^attack^ and PIERCE $pierce$ 2 to the entire Attack action",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 18
 	},
 	{
 		id: 113,
@@ -1488,6 +1647,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack targeting a Living Corpse, Living Spirit, or Living Bones, add +5 Attack ^attack^ to a single attack.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 20
 	},
 	{
 		id: 114,
@@ -1500,6 +1661,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your ranged attack, add POISON $poison$ and MUDDLE $muddle$ to the entire Attack action",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 21
 	},
 	{
 		id: 115,
@@ -1519,6 +1682,8 @@ export const items: GloomhavenItem[] = [
 		faq: "The card is treated like a persistent bonus, going in the active area until the summon is killed or the card is removed (removing the summon and consuming the item). If the card is refreshed and there is an active summon from the card, the active summon disappears.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 22
 	},
 	{
 		id: 116,
@@ -1531,6 +1696,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your single-target melee attack, the target and all enemies adjacent to the target suffer 1 damage",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 23
 	},
 	{
 		id: 117,
@@ -1543,6 +1710,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack, suffer 2 damage to add +1 Attack ^attack^ to the entire Attack action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 25
 	},
 	{
 		id: 118,
@@ -1555,6 +1724,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, create any element. @any@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 27
 	},
 	{
 		id: 119,
@@ -1567,6 +1738,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, CURSE $curse$ all adjacent enemies.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 29
 	},
 	{
 		id: 120,
@@ -1579,6 +1752,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, a summoned ally within Range ^range^ 3 performs a \"Move ^move^ 3\" action with you controlling the action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 30
 	},
 	{
 		id: 121,
@@ -1590,6 +1765,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, @x-dark@ to create Light. @light@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 31
 	},
 	{
 		id: 122,
@@ -1601,6 +1778,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, @x-light@ to create Dark. @dark@",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 32
 	},
 	{
 		id: 123,
@@ -1620,6 +1799,8 @@ export const items: GloomhavenItem[] = [
 		faq: "The card is treated like a persistent bonus, going in the active area until the summon is killed or the card is removed (removing the summon and consuming the item). If the card is refreshed and there is an active summon from the card, the active summon disappears.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 33
 	},
 	{
 		id: 124,
@@ -1632,6 +1813,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, force an enemy within Range ^range^ 5 to perform a \"Move ^move^ 2\" action with you controlling the action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 35
 	},
 	{
 		id: 125,
@@ -1644,6 +1827,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, disarm all traps within Range ^range^ 2.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 36
 	},
 	{
 		id: 126,
@@ -1656,6 +1841,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, POISON $poison$ all adjacent enemies.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 37
 	},
 	{
 		id: 127,
@@ -1668,6 +1855,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, perform a \"Loot ^loot^ 1\" action.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 38
 	},
 	{
 		id: 128,
@@ -1680,6 +1869,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, MUDDLE $muddle$ all enemies with Range ^range^ 2.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 39
 	},
 	{
 		id: 129,
@@ -1692,6 +1883,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, place a character token on an adjacent normal or elite enemy. You add +1 Attack ^attack^ to all your attacks targeting this enemy.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 40
 	},
 	{
 		id: 130,
@@ -1704,6 +1897,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, @x-light@ @x-dark@ to perform a \"Heal ^heal^ 25, Self\" action",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 41
 	},
 	{
 		id: 131,
@@ -1717,6 +1912,8 @@ export const items: GloomhavenItem[] = [
 		faq: "This item cannot be used if there is no other enemy in range to be attacked.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 42
 	},
 	{
 		id: 132,
@@ -1736,6 +1933,8 @@ export const items: GloomhavenItem[] = [
 		faq: "The card is treated like a persistent bonus, going in the active area until the summon is killed or the card is removed (removing the summon and consuming the item). If the card is refreshed and there is an active summon from the card, the active summon disappears.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 43
 	},
 	{
 		id: 133,
@@ -1748,6 +1947,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, destroy an adjacent obstacle.",
 		folder: "64-151",
 		gameType: GameType.Gloomhaven,
+		imgFileNumber: 11,
+		imageNumber: 44
 	},
 	{
 		id: 134,
@@ -1760,6 +1961,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.BR,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 0
 	},
 	{
 		id: 135,
@@ -1773,6 +1976,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.TI,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 1
 	},
 	{
 		id: 136,
@@ -1786,6 +1991,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.SW,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 2
 	},
 	{
 		id: 137,
@@ -1798,6 +2005,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.SC,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 3
 	},
 	{
 		id: 138,
@@ -1811,6 +2020,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.CH,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 4
 	},
 	{
 		id: 139,
@@ -1823,6 +2034,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.MT,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 5
 	},
 	{
 		id: 140,
@@ -1835,6 +2048,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.SK,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 6
 	},
 	{
 		id: 141,
@@ -1850,6 +2065,8 @@ export const items: GloomhavenItem[] = [
 		folder: "64-151",
 		lost: true,
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 7
 	},
 	{
 		id: 142,
@@ -1863,6 +2080,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.SU,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 8
 	},
 	{
 		id: 143,
@@ -1876,6 +2095,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.NS,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 9
 	},
 	{
 		id: 144,
@@ -1889,6 +2110,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.PH,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 10
 	},
 	{
 		id: 145,
@@ -1901,6 +2124,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.BE,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 11
 	},
 	{
 		id: 146,
@@ -1913,6 +2138,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.SS,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 12
 	},
 	{
 		id: 147,
@@ -1925,6 +2152,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.DS,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 13
 	},
 	{
 		id: 148,
@@ -1937,6 +2166,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.SB,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 14
 	},
 	{
 		id: 149,
@@ -1950,6 +2181,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.EL,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 15
 	},
 	{
 		id: 150,
@@ -1963,6 +2196,8 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.BT,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
+		imgFileNumber: 1,
+		imageNumber: 16
 	},
 	{
 		id: 151,
@@ -1976,7 +2211,9 @@ export const items: GloomhavenItem[] = [
 		soloItem: GHClasses.XX,
 		folder: "64-151",
 		gameType: Expansions.GHSoloScenarios,
-		specialUnlock: SpecialUnlockTypes.EnvelopeX
+		specialUnlock: SpecialUnlockTypes.EnvelopeX,
+		imgFileNumber: 1,
+		imageNumber: 17
 	},
 	{
 		id: 152,
@@ -1988,7 +2225,9 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "After performing the top action of any ability card, you may immediately perform the bottom action of the same card. This item cannot be used if both actions trigger a lost card icon consumed ^consumed^.",
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 0
 	},
 	{
 		id: 153,
@@ -1999,7 +2238,9 @@ export const items: GloomhavenItem[] = [
 		source: "Reward From Scenario #99",
 		desc: "The next three times you would gain POISON $poison$ prevent the condition.",
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 1
 	},
 	{
 		id: 154,
@@ -2010,7 +2251,9 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Scenario #105",
 		desc: "The next five times you would gain POISON $poison$ prevent the condition.",
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 3
 	},
 	{
 		id: 155,
@@ -2023,7 +2266,9 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		minusOneCardsAdded: 3,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 5
 	},
 	{
 		id: 156,
@@ -2034,7 +2279,9 @@ export const items: GloomhavenItem[] = [
 		source: "Rift Event #5",
 		desc: "During your melee attack, @x-any@ to add +2 Attack ^attack^ to a single attack.",
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 6
 	},
 	{
 		id: 157,
@@ -2046,7 +2293,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your ranged attack, add +2 Attack ^attack^, CURSE $curse$, and WOUND $wound$ to a single attack.",
 		consumed: true,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 8
 	},
 	{
 		id: 158,
@@ -2058,7 +2307,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your movement, add +2 Move ^move^ to the movement and gain REGENERATE $regenerate$.",
 		spent: true,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 10
 	},
 	{
 		id: 159,
@@ -2070,7 +2321,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During any one ally's movement, add +2 Move ^move^ to the movement.",
 		consumed: true,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 12
 	},
 	{
 		id: 160,
@@ -2082,7 +2335,9 @@ export const items: GloomhavenItem[] = [
 		desc: "When you kill a monster during your turn, gain one money token.",
 		spent: true,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 14
 	},
 	{
 		id: 161,
@@ -2094,7 +2349,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your single-target melee attack action, add Range 3 ^range^ to the attack.",
 		consumed: true,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 15
 	},
 	{
 		id: 162,
@@ -2106,7 +2363,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, Teleport ^teleport^ to any unoccupied hex within 4 hexes of you.",
 		consumed: true,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 17
 	},
 	{
 		id: 163,
@@ -2117,7 +2376,9 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Scenario #110",
 		desc: "When you perform a long or short rest, gain STRENGTHEN $strengthen$.",
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 18
 	},
 	{
 		id: 164,
@@ -2129,7 +2390,9 @@ export const items: GloomhavenItem[] = [
 		desc: "When you reveal cards from any deck, reveal one additional card.",
 		soloItem: FCClasses.DR,
 		folder: "152-165",
-		gameType: Expansions.ForgottenCircles
+		gameType: Expansions.ForgottenCircles,
+		imgFileNumber: 1,
+		imageNumber: 19
 	},
 	{
 		id: 165,
@@ -2141,7 +2404,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Attack ability, you may place one characer token on this card to add MUDDLE $muddle$ to one attack.  When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 0
 	},
 	{
 		id: 166,
@@ -2153,7 +2418,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move ability, you may place one characer token on this card to add +1 Move ^move^. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 2
 	},
 	{
 		id: 167,
@@ -2165,7 +2432,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move ability, you may place one characer token on this card to add Jump ^jump^. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 4
 	},
 	{
 		id: 168,
@@ -2177,7 +2446,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Attack ability, you may place one characer token on this card to add +1 Attack ^attack^. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 6
 	},
 	{
 		id: 169,
@@ -2189,7 +2460,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When attacked by an adjacent enemy, you may place one characer token on this card to gain Retaliate ^retaliate^ 1 for the attack. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 8
 	},
 	{
 		id: 170,
@@ -2201,7 +2474,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Attack ability, you may place one characer token on this card to add POISON $poison$ to one attack. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 10
 	},
 	{
 		id: 171,
@@ -2213,7 +2488,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, you may place one characer token on this card to perform \"Heal ^heal^ 1, Self\". When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 12
 	},
 	{
 		id: 172,
@@ -2225,7 +2502,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When damaged by an attack, you may place one characer token on this card to gain Shield ^shield^ 1 for the attack. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 14
 	},
 	{
 		id: 173,
@@ -2237,7 +2516,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Attack ability, you may place one characer token on this card to gain Advantage for one attack. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 16
 	},
 	{
 		id: 174,
@@ -2249,7 +2530,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Attack ability, you may place one characer token on this card to add CURSE $curse$ to one attack. When there are three tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 18
 	},
 	{
 		id: 175,
@@ -2261,7 +2544,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, remove INFECT $infect$ from Self or adjacent ally.",
 		gameType: Expansions.CrimsonScales,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 20
 	},
 	{
 		id: 176,
@@ -2273,6 +2558,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Your attacks are unaffected by Retaliate ^retaliate^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 21
 	},
 	{
 		id: 177,
@@ -2285,7 +2572,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, add PIERCE $pierce$ 4 to one attack.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 22
 	},
 	{
 		id: 178,
@@ -2298,7 +2587,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, perform \"Attack ^attack^ 3, Range ^range^ 2\".",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 24
 	},
 	{
 		id: 179,
@@ -2310,7 +2601,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "At the end of your turn, if you moved four or more hexes during your turn, one adjacent enemy suffers one damage.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 26
 	},
 	{
 		id: 180,
@@ -2322,6 +2615,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move abilities, you may move through enemies.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 28
 	},
 	{
 		id: 181,
@@ -2334,7 +2629,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move ability, add +2 Move ^move^ and Jump ^jump^.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 29
 	},
 	{
 		id: 182,
@@ -2347,7 +2644,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal ability, add +2 Heal ^heal^ and STRENGTHEN $strengthen$ to each heal.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 31
 	},
 	{
 		id: 183,
@@ -2359,6 +2658,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "You are immune to IMMOBILIZE $immobilize$. At the end of your turn, if you moved zeo hexes on your turn, perform \"Move ^move^ 1\"",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 33
 	},
 	{
 		id: 184,
@@ -2372,7 +2673,9 @@ export const items: GloomhavenItem[] = [
 		lost: true,
 		desc: "During your turn, Recover ^recover^ one lost card played this round.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 34
 	},
 	{
 		id: 185,
@@ -2384,6 +2687,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Gain Advantage on all attacks you perform while INVISIBLE $invisible$.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 36
 	},
 	{
 		id: 186,
@@ -2396,7 +2701,9 @@ export const items: GloomhavenItem[] = [
 		desc: "When attacked, consider any ^modifier_plus_1^ modifier card the enemy draws to be a ^modifier_zero_circle^ instead.",
 		gameType: Expansions.CrimsonScales,
 		imageSuffix: "a",
-		minusOneCardsAdded: 1
+		minusOneCardsAdded: 1,
+		imgFileNumber: 1,
+		imageNumber: 38
 	},
 	{
 		id: 187,
@@ -2410,6 +2717,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When attacked, the attacker gains Disadvantage on the attack and you gain Shield ^shield^ 2 for the attack.",
 		imageSuffix: "a",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 40
 	},
 	{
 		id: 188,
@@ -2423,6 +2732,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When you would gain one or more negative conditions, prevent the conditions.",
 		imageSuffix: "a",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 42
 	},
 	{
 		id: 189,
@@ -2436,6 +2747,8 @@ export const items: GloomhavenItem[] = [
 		desc: "On the next two attacks targeting you peformed by adjacent enemies, gain Retaliate ^retaliate^ 2 for the attack.",
 		imageSuffix: "a",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 44
 	},
 	{
 		id: 190,
@@ -2448,6 +2761,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When your hit point would be reduced to 0 by an attack targeting you, instead suffer no damage and gain INVISIBLE $invisible$.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 45
 	},
 	{
 		id: 191,
@@ -2460,6 +2775,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, swap positions with one enemy within Range ^range^ 5.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 46
 	},
 	{
 		id: 192,
@@ -2472,7 +2789,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, replace one adjacent obstacle tile with a money token.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 47
 	},
 	{
 		id: 193,
@@ -2485,6 +2804,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, perform \"Heal ^heal^ 5, POISON $poison$, Self\".",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 1,
+		imageNumber: 49
 	},
 	{
 		id: 194,
@@ -2497,7 +2818,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, create one IMMOBILIZE $immobilize$ trap in an empty hex within Range ^range^ 3.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 0
 	},
 	{
 		id: 195,
@@ -2510,7 +2833,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, create one STUN $stun$ trap in an empty hex within Range ^range^ 3.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 2
 	},
 	{
 		id: 196,
@@ -2523,6 +2848,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, force an enemy within Range ^range^ 5 to perform a \"Move ^move^ 2, Jump ^jump^\" ability with you controlling the ability.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 4
 	},
 	{
 		id: 197,
@@ -2535,6 +2862,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, add MUDDLE $muddle$ and PUSH $push$ 2 to all your attacks.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 5
 	},
 	{
 		id: 198,
@@ -2547,7 +2876,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS3}",
 		desc: "At the end of your turn, create one 4 damage POISON $poison$ trap in an adjacent empty hex.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS3
+		soloItem: CSClasses.CS3,
+		imgFileNumber: 2,
+		imageNumber: 6
 	},
 	{
 		id: 199,
@@ -2560,6 +2891,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When attacked, gain Retaliate ^retaliate^ 1, Range ^range^ 3 for the attack.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 7
 	},
 	{
 		id: 200,
@@ -2572,6 +2905,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, suffer 1 damage to add CURSE $curse$ to all your attacks.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 8
 	},
 	{
 		id: 201,
@@ -2584,7 +2919,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When attacked by an adjacent enemy, gain Retaliate ^retaliate^ 3 for the attack.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 9
 	},
 	{
 		id: 202,
@@ -2597,6 +2934,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, do not draw an attack modifier card for one attack.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 11
 	},
 	{
 		id: 203,
@@ -2609,6 +2948,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, perform \"Attack ^attack^ 2, Range ^range^ 3, PIERCE $pierce$ 2\".",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 12
 	},
 	{
 		id: 204,
@@ -2621,7 +2962,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS11}",
 		desc: "Add +1 Move ^move^ to all your movement while you are at full health.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS11
+		soloItem: CSClasses.CS11,
+		imgFileNumber: 2,
+		imageNumber: 13
 	},
 	{
 		id: 205,
@@ -2634,7 +2977,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS10}",
 		desc: "During your turn remove one damage token from one %Spirit% {cs-spirit-caller-token}. This %Spirit% may immediately take a turn without receiving a damage token.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS10
+		soloItem: CSClasses.CS10,
+		imgFileNumber: 2,
+		imageNumber: 14
 	},
 	{
 		id: 206,
@@ -2646,7 +2991,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS6}",
 		desc: "Whenever you given an ally a %Prayer% ability card, that ally may perform \"Heal ^heal^ 2, Self\".",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS6
+		soloItem: CSClasses.CS6,
+		imgFileNumber: 2,
+		imageNumber: 15
 	},
 	{
 		id: 207,
@@ -2659,6 +3006,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal action, add +2 Heal ^heal^ to each Heal.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 16
 	},
 	{
 		id: 208,
@@ -2671,6 +3020,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your ranged Attack ability, add PIERCE $pierce$ 2 to one attack.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 17
 	},
 	{
 		id: 209,
@@ -2683,7 +3034,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS1}",
 		desc: "During your turn, perform \"PULL $pull$ 2, Self toward one enemy within Range ^range^ 3\".",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS1
+		soloItem: CSClasses.CS1,
+		imgFileNumber: 2,
+		imageNumber: 18
 	},
 	{
 		id: 210,
@@ -2696,6 +3049,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, one summoned ally you own performs Move ^move^ +0 Attack ^attack^ +0 with you controlling the abilities.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 19
 	},
 	{
 		id: 211,
@@ -2707,7 +3062,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS4}",
 		desc: "While %Mounted% on a summon, you can aply your #small# items item effects to the summon instead.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS4
+		soloItem: CSClasses.CS4,
+		imgFileNumber: 2,
+		imageNumber: 20
 	},
 	{
 		id: 212,
@@ -2720,7 +3077,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS2}",
 		desc: "During your turn, @x-any@ to peforme one of the following: Move ^move^ 2, Jump ^jump^, @wind@ | Heal ^heal^ 3, Self, @light@ | Attack ^attack^ 2, @fire@.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS2
+		soloItem: CSClasses.CS2,
+		imgFileNumber: 2,
+		imageNumber: 21
 	},
 	{
 		id: 213,
@@ -2733,6 +3092,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, perform one of the following: Recover ^recover^ one discarded card | Heal ^heal^ 3, Self | Add +2 Attack ^attack^ to your next attack this turn.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 22
 	},
 	{
 		id: 214,
@@ -2745,7 +3106,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS8}",
 		desc: "During your turn, when you @x-any@ an element, do not move the consumed element to the Inert column.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS8
+		soloItem: CSClasses.CS8,
+		imgFileNumber: 2,
+		imageNumber: 23
 	},
 	{
 		id: 215,
@@ -2757,7 +3120,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS5}",
 		desc: "When attacked, you may @x-fire@ to gain Retaliate ^retaliate^ 3 for the attack.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS5
+		soloItem: CSClasses.CS5,
+		imgFileNumber: 2,
+		imageNumber: 24
 	},
 	{
 		id: 216,
@@ -2770,6 +3135,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, add +1 Attack ^attack^ and WOUND $wound$ to all your attacks. @fire@",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 25
 	},
 	{
 		id: 217,
@@ -2781,7 +3148,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS9}",
 		desc: "Once each turn, during your turn, you may remove one condition from an adjacent figure and place that condition on this card if it is not already on this card. During your turn, one adjacent figure gains all conditions on this card, then consume ^consumed^ this item.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS9
+		soloItem: CSClasses.CS9,
+		imgFileNumber: 2,
+		imageNumber: 26
 	},
 	{
 		id: 218,
@@ -2793,6 +3162,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Gain Advantage on all your melee attacks while you are occupying difficult terrain.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 27
 	},
 	{
 		id: 219,
@@ -2805,7 +3176,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Attack ability, add POISON $poison$ 2 to one attack.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 28
 	},
 	{
 		id: 220,
@@ -2818,7 +3191,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS3}",
 		desc: "At the end of your turn create one 3 damage IMMOBILIZE $immobilize$ trap in an adjacent empty hex.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS3
+		soloItem: CSClasses.CS3,
+		imgFileNumber: 2,
+		imageNumber: 30
 	},
 	{
 		id: 221,
@@ -2830,7 +3205,9 @@ export const items: GloomhavenItem[] = [
 		source: "Solo {CS7}",
 		desc: "You are immune to MUDDLE $muddle$. At the end of each round, if you have WOUND $wound$ gain REGENERATE $regenerate$.",
 		gameType: Expansions.CrimsonScales,
-		soloItem: CSClasses.CS7
+		soloItem: CSClasses.CS7,
+		imgFileNumber: 2,
+		imageNumber: 31
 	},
 	{
 		id: 222,
@@ -2843,7 +3220,9 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During you Attack ability, add DISARM $disarm$ to one attack.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 32
 	},
 	{
 		id: 223,
@@ -2856,20 +3235,24 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During your turn, remove all positive conditions from all enemies within Range ^range^ 2.  This can be used on enemies that have INVISIBLE $invisible$.",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 34
 	},
 	{
 		id: 224,
 		displayId: 60,
 		name: "Mana Medicine",
-		count: 1,
+		count: 2,
 		cost: 50,
 		slot: GloomhavenItemSlot.SmallItem,
 		source: "Unknown",
 		spent: true,
 		desc: "During your turn, perform \"Heal ^heal^ 5, Self\". @any@",
 		gameType: Expansions.CrimsonScales,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 2,
+		imageNumber: 36
 	},
 	{
 		id: 225,
@@ -2882,7 +3265,9 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "You are immune to DISARM $disarm$, even if this item is spent. During your turn gain Shield ^shield^ 1 for the round. ^eot^",
 		gameType: Expansions.CrimsonScales,
-		minusOneCardsAdded: 2
+		minusOneCardsAdded: 2,
+		imgFileNumber: 2,
+		imageNumber: 38
 	},
 	{
 		id: 226,
@@ -2895,6 +3280,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "At the end of your turn, all enemies consider all empty hexes within Range ^range^ 2 of you to be difficult terrain for the round. ^eot^",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 39
 	},
 	{
 		id: 227,
@@ -2907,6 +3294,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "When you are damage by an attack targeting you, suffer half (rounded down) the damage instead.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 40
 	},
 	{
 		id: 228,
@@ -2919,6 +3308,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "When an ally targets you with a Heal ability, remove one negative condition from yourself before the Heal and gain STRENGTHEN $strengthen$.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 41
 	},
 	{
 		id: 229,
@@ -2931,6 +3322,9 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "During your melee Attack ability, add +1 Attack ^attack^ and MUDDLE $muddle$ to one attack targeting an enemy adjacent to one of your allies.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 42
+
 	},
 	{
 		id: 230,
@@ -2943,6 +3337,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During your melee Attack ability, add +1 Attack ^attack^ and IMMOBILIZE $immobilize$ to all your attacks.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 43
 	},
 	{
 		id: 231,
@@ -2955,6 +3351,8 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "During your single-target melee Attack ability, add PIERCE $pierce$ 2 and PULL $pull$ 1 to the attack and you may target one enemy within 2 hexes.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 44
 	},
 	{
 		id: 232,
@@ -2967,6 +3365,8 @@ export const items: GloomhavenItem[] = [
 		consume: true,
 		desc: "During your turn, perform: WOUND $wound$ Range ^range^ 3 *cone_1_1*",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 45
 	},
 	{
 		id: 233,
@@ -2979,6 +3379,8 @@ export const items: GloomhavenItem[] = [
 		consume: true,
 		desc: "On the next three Heal abilities targeting you, you may either first remove all negative conditions from yourself or gain STRENGTHEN $strengthen$.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 46
 	},
 	{
 		id: 234,
@@ -2991,6 +3393,8 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "During your turn, perform \"PULL $pull$ 2, Target one ally or enemy within Range ^range^ 3.\"",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 47
 	},
 	{
 		id: 235,
@@ -3002,6 +3406,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Whenever you would suffer damage from WOUND $wound$ instead perform \"Heal ^heal^ 1, Self\"",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 48
 	},
 	{
 		id: 236,
@@ -3013,6 +3419,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Add +1 Range ^range^ to all your ranged abilities peformed while adjacent to an obstacle. Whenever you enter a hex with a trap, you may choose not to spring the trap.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 2,
+		imageNumber: 49
 	},
 	{
 		id: 237,
@@ -3024,6 +3432,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Whenever you use the default top action of an ability card, you may perform a \"Heal ^heal^ 2, Range ^range^ 1\" ability instead of an \"Attack ^attack^ 2\" ability.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 0
 	},
 	{
 		id: 238,
@@ -3036,6 +3446,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal ability targeting at least one ally, add +1 Heal ^heal^ and STRENGTHEN $strengthen$ to each Heal.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 1
 	},
 	{
 		id: 239,
@@ -3048,6 +3460,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When attacked this round, you and all adjacent allies consider any negative and ^modifier_no_damage^ attack modifiers drawn to be ^modifier_zero_circle^ instead.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 2
 	},
 	{
 		id: 240,
@@ -3060,6 +3474,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal ability, add +3 Heal ^heal^ and WOUND $wound$ to each Heal.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 3
 	},
 	{
 		id: 241,
@@ -3072,6 +3488,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal ability, double the value of each Heal. If this Heal ability removes WOUND $wound$, this item is spent ^spent^ instead of consumed.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 4
 	},
 	{
 		id: 242,
@@ -3084,6 +3502,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, one ally within Range ^range^ 2 may perform one of the following: Attack ^attack^ 2| Move ^move^ 2| Heal ^heal^ 2, Self.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 5
+
 	},
 	{
 		id: 243,
@@ -3096,6 +3517,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When an adjacent ally is damage by an attack targeting them, that ally gains Shield ^shield^ 2 for the attack and removes all negative conditions applied by the attack.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 6
 	},
 	{
 		id: 244,
@@ -3108,6 +3531,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When an ally within Range ^range^ 5 would be damaged by an attack targeting them, they suffer no damage instead.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 7
+
 	},
 	{
 		id: 245,
@@ -3120,6 +3546,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal ability targeting at least one ally add +2 Heal ^heal^ STRENGTHEN $strengthen$ and BLESS $bless$ to each Heal.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 8
 	},
 	{
 		id: 246,
@@ -3132,6 +3560,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During you turn one ally within Range ^range^ 3 may perform one of the following: Attack ^attack^ 3 | Move ^move^ 3 | Heal ^heal^ 3, Self.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 9
 	},
 	{
 		id: 247,
@@ -3144,6 +3574,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, create two water difficult terrain tiles in hexes within Range ^range^ 3 that contain no overlay tiles. MUDDLE $muddle$ all figures within Range ^range^ 3 occupying a water tile.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 3,
+		imageNumber: 10
 	},
 	{
 		id: 248,
@@ -3155,6 +3587,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your single-target ranged Attack ability, turn the attack into the following: *line_1_1*.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 0,
 	},
 	{
 		id: 249,
@@ -3167,6 +3601,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your single-targetranged Attack ability, add +1 Attack ^attack^ and turn the attack into the following: *line_1_1*.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 1,
 	},
 	{
 		id: 250,
@@ -3178,6 +3614,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, you and all allies gain Shield ^shield^ 1 for the round. ^eot^",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 2,
 	},
 	{
 		id: 251,
@@ -3190,6 +3628,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, all adjacent allies gain Shield ^shield^ equal to your current Shield value from abilities for the round. ^eot^",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 3,
 	},
 	{
 		id: 252,
@@ -3201,6 +3641,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, open one unlocked closed door within Range ^range^ 2.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 4,
 	},
 	{
 		id: 253,
@@ -3213,6 +3655,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, open one unlocked closed door within Range ^range^ 2.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 5,
 	},
 	{
 		id: 254,
@@ -3224,6 +3668,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move ability, double the value of the movement.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 6,
 	},
 	{
 		id: 255,
@@ -3236,6 +3682,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move ability, add Jump ^jump^ and double the value of the movement.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 7,
 	},
 	{
 		id: 256,
@@ -3247,6 +3695,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, you may @x-earth@ to perform \"Attack ^attack^ 1, Range ^range^ 3, POISON $poison$\".",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 8,
 	},
 	{
 		id: 257,
@@ -3259,6 +3709,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, perform \"Attack ^attack^ 1, Range ^range^ 4, POISON $poison$\". You may @x-earth@ to ADD TARGET $target$.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 9,
 	},
 	{
 		id: 258,
@@ -3271,6 +3723,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @ice@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 10,
 	},
 	{
 		id: 259,
@@ -3283,6 +3737,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @wind@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 11,
 	},
 	{
 		id: 260,
@@ -3295,6 +3751,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @fire@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 12,
 	},
 	{
 		id: 261,
@@ -3307,6 +3765,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @earth@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 13,
 	},
 	{
 		id: 262,
@@ -3319,6 +3779,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @light@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 14,
 	},
 	{
 		id: 263,
@@ -3331,6 +3793,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @dark@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 15,
 	},
 	{
 		id: 264,
@@ -3343,6 +3807,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn you may place one character token on this card to generate: @any@. When there are two tokens on this card it is consumed ^consumed^.",
 		gameType: Expansions.CrimsonScales,
+		imgFileNumber: 4,
+		imageNumber: 16,
 	},
 	{
 		id: 265,
@@ -3355,7 +3821,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "On the next three sources of damage from attacks targeting you or an adjacent ally, the attacked figure gains Shield ^shield^ 1 for the attack.",
 		minusOneCardsAdded: 3,
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 0
 	},
 	{
 		id: 266,
@@ -3367,7 +3835,9 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		source: "Unknown",
 		desc: "During your turn, perform Heal ^heal^ 3 REGENERATE $regenerate$ Affect self and one adjacent ally.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 1
 	},
 	{
 		id: 267,
@@ -3381,6 +3851,8 @@ export const items: GloomhavenItem[] = [
 		desc: "The next two times an enemy suffers damage from attacking you, that enemy gains IMMOBILIZE $immobilize$.",
 		gameType: Expansions.CrimsonScalesAddon,
 		soloItem: CSAClasses.CSA1,
+		imgFileNumber: 1,
+		imageNumber: 2
 	},
 	{
 		id: 268,
@@ -3392,7 +3864,9 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		source: "Unknown",
 		desc: "(X is 1, 2, 3) During your turn, forgo your top action to perform Attack ^attack^ X + 1 Range ^range^ 2 Target ^target^ 4 - X.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 2
 	},
 	{
 		id: 269,
@@ -3405,7 +3879,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, add MUDDLE $muddle$ and PUSH $push$ 1 to a single attack.",
 		gameType: Expansions.CrimsonScalesAddon,
-		imageSuffix: "b"
+		imageSuffix: "b",
+		imgFileNumber: 1,
+		imageNumber: 5
 	},
 	{
 		id: 270,
@@ -3417,7 +3893,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "Your movement may enter and end in hexes containing obstacles as if you had Flying ^flying^.",
 		gameType: Expansions.CrimsonScalesAddon,
-		imageSuffix: "b"
+		imageSuffix: "b",
+		imgFileNumber: 1,
+		imageNumber: 7
 	},
 	{
 		id: 271,
@@ -3429,7 +3907,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		spent: true,
 		desc: "Crate one trap in an empty hex within Range ^range^ 3. If you or an ally trigger this trap, that figure gains Flying ^flying^ for the round. | Any enemy that enters a hex with this trap triggers it and loses Flying ^flying^ for the round.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 8
 	},
 	{
 		id: 272,
@@ -3444,7 +3924,9 @@ export const items: GloomhavenItem[] = [
 		summon: {
 			hp: 1,
 			move: 1
-		}
+		},
+		imgFileNumber: 1,
+		imageNumber: 9
 	},
 	{
 		id: 273,
@@ -3459,6 +3941,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, forgo your top action to play a summon action from a card in your lost pile, ignoring two ^scrapx^.",
 		gameType: Expansions.CrimsonScalesAddon,
 		soloItem: CSAClasses.CSA2,
+		imgFileNumber: 1,
+		imageNumber: 10
 	},
 	{
 		id: 274,
@@ -3471,7 +3955,9 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "During your melee attack ability, add RUPTURE $rupture$ to one attack.",
 		gameType: Expansions.CrimsonScalesAddon,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 11
 	},
 	{
 		id: 275,
@@ -3483,7 +3969,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		spent: true,
 		desc: "After your move ability, perform PUSH $push$ 1 Target one adjacent enemy. Add +1 PUSH $push$ if you have move 4 or more hexes this round.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 13
 	},
 	{
 		id: 276,
@@ -3495,7 +3983,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		spent: true,
 		desc: "During your melee attack ability, add +1 Attack ^attack^ and PIERCE $pierce$ 2 to one attack targeting an enemy with WOUND $wound$ or RUPTURE $rupture$.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 14
 	},
 	{
 		id: 277,
@@ -3507,7 +3997,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		spent: true,
 		desc: "On your next three melee attacks targeting enemies with at least one negative condition, gain Advantage.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 15
 	},
 	{
 		id: 278,
@@ -3521,6 +4013,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your attack ability gain WOUND $wound$ to add +3 Attack ^attack^ to one attack. If you kill the target perform \"Heal ^heal^ 3, Self\".",
 		gameType: Expansions.CrimsonScalesAddon,
 		soloItem: CSAClasses.CSA3,
+		imgFileNumber: 1,
+		imageNumber: 16
 	},
 	{
 		id: 279,
@@ -3532,7 +4026,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		consumed: true,
 		desc: "The next two times you would lose a card from your hand to negate suffering damage, discard it instead and gain WOUND $wound$.",
-		gameType: Expansions.CrimsonScalesAddon
+		gameType: Expansions.CrimsonScalesAddon,
+		imgFileNumber: 1,
+		imageNumber: 17
 	},
 	{
 		id: 280,
@@ -3547,7 +4043,9 @@ export const items: GloomhavenItem[] = [
 		folder: "152-165",
 		specialUnlock: SpecialUnlockTypes.EnvelopeE,
 		faqImage: "FIXME",
-		alwaysShown: true
+		alwaysShown: true,
+		imgFileNumber: 1,
+		imageNumber: 20
 	},
 	{
 		id: 281,
@@ -3559,6 +4057,8 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "You can carry two additional \"Orb\" items.",
 		gameType: Expansions.TrailOfAshes,
+		imgFileNumber: 1,
+		imageNumber: 0
 	},
 	{
 		id: 282,
@@ -3571,7 +4071,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "At the beginning of a round, after al ability cards have been revealed gain INVISIBLE $invisible$",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 1
 	},
 	{
 		id: 283,
@@ -3583,7 +4085,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn perform \"Teleport ^teleport^ 5\". This Teleport must end in a hex containing a treasure tile or money token.",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 3
 	},
 	{
 		id: 284,
@@ -3602,7 +4106,9 @@ export const items: GloomhavenItem[] = [
 		},
 		desc: "Summon Harrower Swarm ^flying^",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 4
 	},
 	{
 		id: 285,
@@ -3614,7 +4120,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your rangedAttack ability, place your character token on one of the target of the attack. That enemy loses Flying ^flying^ after the attack.",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 5
 	},
 	{
 		id: 286,
@@ -3628,7 +4136,10 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee attack ability, add +2 Attack ^attack^ and STUN $stun$ to one attack.",
 		gameType: Expansions.TrailOfAshes,
 		consumed: true,
-		minusOneCardsAdded: 1
+		minusOneCardsAdded: 1,
+		imgFileNumber: 1,
+		imageNumber: 6
+
 	},
 	{
 		id: 287,
@@ -3639,7 +4150,9 @@ export const items: GloomhavenItem[] = [
 		cost: 30,
 		source: "Unknown",
 		desc: "Remove one ^modifier_minus_two_circle^ modifier card from your modifier deck.",
-		gameType: Expansions.TrailOfAshes
+		gameType: Expansions.TrailOfAshes,
+		imgFileNumber: 1,
+		imageNumber: 8
 	},
 	{
 		id: 288,
@@ -3654,7 +4167,9 @@ export const items: GloomhavenItem[] = [
 		gameType: Expansions.TrailOfAshes,
 		consumed: true,
 		minusOneCardsAdded: 1,
-		flippable: true
+		flippable: true,
+		imgFileNumber: 1,
+		imageNumber: 9
 	},
 	{
 		id: 289,
@@ -3666,7 +4181,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Heal, ability targeting Self, affect one ally within Range ^range^ 3 instead.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 10
 	},
 	{
 		id: 290,
@@ -3678,7 +4195,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When you are adjacent to two or more enemies gain Retaliate ^retaliate^ 1.",
 		gameType: Expansions.TrailOfAshes,
-		minusOneCardsAdded: 1
+		minusOneCardsAdded: 1,
+		imgFileNumber: 1,
+		imageNumber: 11
 	},
 	{
 		id: 291,
@@ -3690,7 +4209,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "When damaged by an attack perform a \"Heal ^heal^ X, Range ^range^ 3\" ability after the attack, where X is the damage you suffered.",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 12
 	},
 	{
 		id: 292,
@@ -3702,7 +4223,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, before modifiers are draw, add +2 Attack ^attack^ to one attack if your first modifier drawn is positive.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 13
 	},
 	{
 		id: 293,
@@ -3714,7 +4237,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, add +1 Range ^range^ to your next ranged ability.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 14
 	},
 	{
 		id: 294,
@@ -3726,7 +4251,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your Move ability, perform a Teleport ^teleport^ ability of equal value instead.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 15
 	},
 	{
 		id: 295,
@@ -3738,7 +4265,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, one ally within Range ^range^ 2 may perform \"Attack ^attack^ 2\".",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 16
 	},
 	{
 		id: 296,
@@ -3750,7 +4279,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn, you and all allies within Range ^range^ 2 gain STRENGTHEN $strengthen$, an all enemies within Range ^range^ 2 gain MUDDLE $muddle$.",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 17
 	},
 	{
 		id: 297,
@@ -3763,7 +4294,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your heal ability, add BLESS $bless$, or EMPOWER $empower$, EMPOWER $empower$, EMPOWER $empower$ to a single heal.",
 		gameType: Expansions.TrailOfAshes,
 		consumed: true,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 18
 	},
 	{
 		id: 298,
@@ -3776,7 +4309,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your Attack ability, add CURSE $curse$, or ENFEEBLE $enfeeble$, ENFEEBLE $enfeeble$, ENFEEBLE $enfeeble$ to a one attack.",
 		gameType: Expansions.TrailOfAshes,
 		consumed: true,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 20
 	},
 	{
 		id: 299,
@@ -3789,7 +4324,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your Attack ability, add +1 Attack ^attack^ to one attack. Whenever this item is refreshed, one adjacent enemy suffers 1 damage.",
 		gameType: Expansions.TrailOfAshes,
 		spent: true,
-		soloItem: TOAClasses.TOA1
+		soloItem: TOAClasses.TOA1,
+		imgFileNumber: 1,
+		imageNumber: 22
 	},
 	{
 		id: 300,
@@ -3802,7 +4339,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your melee Attack abilit, gain CHILL $chill$ to add CHILL $chill$ to the attack. After the attack flip, this card.",
 		backDesc: "During your melee Attack ability, if you do not have WOUND $wound$, gain WOUND $wound$ to add WOUND $wound$ to the attack. After the attack flip, this card.",
 		gameType: Expansions.TrailOfAshes,
-		soloItem: TOAClasses.TOA2
+		soloItem: TOAClasses.TOA2,
+		imgFileNumber: 1,
+		imageNumber: 23
 	},
 	{
 		id: 301,
@@ -3815,7 +4354,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, play one level 5 or lower card from your hand or discard pile and immediately perform a %Crystalize% ^Crystalize^ action from that card.",
 		gameType: Expansions.TrailOfAshes,
 		soloItem: TOAClasses.TOA3,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 24
 	},
 	{
 		id: 302,
@@ -3827,7 +4368,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, add PIERCE $pierce$ 1 and WOUND $wound$ to one attack.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 25
 	},
 	{
 		id: 303,
@@ -3840,7 +4383,9 @@ export const items: GloomhavenItem[] = [
 		desc: "Whenever you DODGE $dodge$ an attack, you may spend this item instead of discarding a card from your hand.",
 		gameType: Expansions.TrailOfAshes,
 		spent: true,
-		soloItem: TOAClasses.TOA4
+		soloItem: TOAClasses.TOA4,
+		imgFileNumber: 1,
+		imageNumber: 26
 	},
 	{
 		id: 304,
@@ -3852,7 +4397,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, add WOUND $wound$ and MUDDLE $muddle$ to one attack.  You may consue ^consumed^ this item instead to gain ADD TARGET $target$.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 27
 	},
 	{
 		id: 305,
@@ -3864,7 +4411,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your turn perform \"DODGE $dodge$, Range ^range^ 5\".",
 		gameType: Expansions.TrailOfAshes,
-		consumed: true
+		consumed: true,
+		imgFileNumber: 1,
+		imageNumber: 28
 	},
 	{
 		id: 306,
@@ -3876,7 +4425,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "At the beginning of a round, after all ability cards have been revealed, change your leading initiative value to 100-X where X is the initiative value of your leading card.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 29
 	},
 	{
 		id: 307,
@@ -3888,7 +4439,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "You are immune to IMMOBILIZE $immobilize$, even if this item is spent.  When attacked, the attacker gains Disadvantage on the attack and gain DODGE $dodge$ after the attack.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 30
 	},
 	{
 		id: 308,
@@ -3901,7 +4454,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, perform \"PULL $pull$ 1, MUDDLE $muddle$, Range ^range^ 3\".",
 		gameType: Expansions.TrailOfAshes,
 		spent: true,
-		soloItem: TOAClasses.TOA5
+		soloItem: TOAClasses.TOA5,
+		imgFileNumber: 1,
+		imageNumber: 31
 	},
 	{
 		id: 309,
@@ -3914,7 +4469,9 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, remove negative condition from Self and perform \"HEAL ^heal^ 3, Self\". This can be used while you have STUN $stun$.",
 		gameType: Expansions.TrailOfAshes,
 		consumed: true,
-		imageSuffix: "a"
+		imageSuffix: "a",
+		imgFileNumber: 1,
+		imageNumber: 32
 	},
 	{
 		id: 310,
@@ -3926,7 +4483,9 @@ export const items: GloomhavenItem[] = [
 		source: "Unknown",
 		desc: "During your melee Attack ability, @x-any@ to add +2 Attack ^attack^ and MUDDLE $muddle$ to one attack.",
 		gameType: Expansions.TrailOfAshes,
-		spent: true
+		spent: true,
+		imgFileNumber: 1,
+		imageNumber: 34
 	},
 	{
 		id: 311,
@@ -3940,6 +4499,8 @@ export const items: GloomhavenItem[] = [
 		gameType: Expansions.TrailOfAshes,
 		consume: true,
 		soloItem: TOAClasses.TOA6,
-		specialUnlock: SpecialUnlockTypes.EnvelopeV
+		specialUnlock: SpecialUnlockTypes.EnvelopeV,
+		imgFileNumber: 1,
+		imageNumber: 35
 	}
 ]

@@ -227,8 +227,6 @@ export interface GloomhavenItem {
 	lockToClasses?: ClassesInUse[];
 	importedItem?: boolean;
 	consume?: boolean;
-	flippable?: boolean;
-
 	imgFileNumber?: number;
 	imageNumber?: number;
 }

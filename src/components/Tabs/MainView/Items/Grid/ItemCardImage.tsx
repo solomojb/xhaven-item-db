@@ -1,7 +1,7 @@
 import { Expansions, GameType } from "../../../../../games";
 import { GloomhavenItem } from "../../../../../State";
 
-const getItemPath = (item: GloomhavenItem, _backside?: boolean) => {
+const getItemPath = (item: GloomhavenItem, backside?: boolean) => {
     const { gameType, imgFileNumber } = item;
     let imagesAcross = 0;
     let imagesDown = 0;
@@ -71,7 +71,10 @@ const getItemPath = (item: GloomhavenItem, _backside?: boolean) => {
     const bgHeight = height * imagesDown;
     let path = '';
 
-    if (imgFileNumber) {
+    if (imgFileNumber && backside) {
+        path = `items/${gameType}/${imgFileNumber}b.png`;
+    }
+    else {
         path = `items/${gameType}/${imgFileNumber}.png`;
     }
     return { path, width, height, imagesAcross, bgWidth, bgHeight };

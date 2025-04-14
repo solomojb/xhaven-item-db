@@ -4167,7 +4167,6 @@ export const items: GloomhavenItem[] = [
 		gameType: Expansions.TrailOfAshes,
 		consumed: true,
 		minusOneCardsAdded: 1,
-		flippable: true,
 		imgFileNumber: 1,
 		imageNumber: 9
 	},

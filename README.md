@@ -63,7 +63,6 @@ TODO:
 * Item Size on mobile
 * Flip Card Button Size
 * Back side graphics
-* Remove flippable Boolean
 * Look through Item Members
 * Fix firebase
 * Export from old

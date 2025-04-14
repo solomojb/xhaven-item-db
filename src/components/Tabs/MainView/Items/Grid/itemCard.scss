@@ -17,8 +17,7 @@
     //     max-width: 50%;
     // }
 
-    // @media screen and (max-width: 390px) {
-    //     max-width: 100%;
+    // @media screen and (max-width: 390px) {z
     // }
 
 
@@ -27,8 +26,9 @@
         background: black;
         display: flex;
         justify-content: space-between;
-        height: '20px';
+        height: 30px;
         z-index: 1; // required because of the negative margin-top on .item-card
+        align-items: center;
 
         .item-card-id {
             font-size: 1.1vh;

@@ -232,7 +232,7 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
     const [scenarioCompleted, setScenarioCompleted] = useLocalStateVariable<number[]>(gameType, "scenarioCompleted", defaultScenarioCompleted);
     const [soloClass, setSoloClass] = useLocalStateVariable<ClassesInUse[]>(gameType, "soloClass", defaultSoloClass);
     const [includeGames, setIncludeGames] = useLocalStateVariable<AllGames[]>(gameType, "includeGames", defaultIncludeGames, fixIncludedGames);
-    const [buildingLevel, setBuildingLevel] = useLocalStateVariable<BuildingLevel>(gameType, "includeGames", defaultBuildingLevel, fixIncludedGames);
+    const [buildingLevel, setBuildingLevel] = useLocalStateVariable<BuildingLevel>(gameType, "buildingLevel", defaultBuildingLevel);
 
     const [selectedClass, setSelectedClass] = useGameStateVariable<ClassesInUse | undefined>(gameType, undefined)
     const [selectedItem, setSelectedItem] = useGameStateVariable<GloomhavenItem | undefined>(gameType, undefined)

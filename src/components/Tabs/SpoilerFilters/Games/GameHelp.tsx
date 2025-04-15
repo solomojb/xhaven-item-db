@@ -1,15 +1,14 @@
-import React from "react";
 import { useRecoilValue } from "recoil";
 import { Form, List } from "semantic-ui-react";
 import { gameInfo, GameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
-import { useGameSort } from "../../../../games/useGameSort";
 import { gameTypeState } from "../../../../State";
+import { useGetGame } from "../../../../games";
 
 const constructHelpEntry = (
-  title: string,
+  currentGameType: AllGames,
   gameType: AllGames,
-  { addItemsToGames, gameClasses, soloGameType }: GameInfo
+  { title, addItemsToGames, gameClasses, soloGameType }: GameInfo
 ) => {
   const soloGameTitle = soloGameType ? gameInfo[soloGameType].title : undefined;
   return (
@@ -19,7 +18,7 @@ const constructHelpEntry = (
         {gameClasses().length > 0 && (
           <List.Item>Add classes to party management</List.Item>
         )}
-        {addItemsToGames && addItemsToGames.includes(gameType) && (
+        {addItemsToGames && addItemsToGames.includes(currentGameType) && (
           <List.Item>Add Items for use</List.Item>
         )}
         {soloGameTitle && (
@@ -32,22 +31,15 @@ const constructHelpEntry = (
 
 export const GameHelp = () => {
   const currentGameType = useRecoilValue(gameTypeState);
-  const { withoutCurrent } = useGameSort();
+  const { gameFilters } = useGetGame(currentGameType);
 
   return (
     <Form.Group>
       <List bulleted>
         <List.Header>Which Games/Expansions are you playing with?</List.Header>
-        {withoutCurrent.map((gameType) => {
+        {gameFilters.map((gameType) => {
           const gi = gameInfo[gameType];
-          const { title, gamesToFilterOn } = gi;
-          if (
-            !gamesToFilterOn ||
-            (gamesToFilterOn && !gamesToFilterOn.includes(currentGameType))
-          ) {
-            return constructHelpEntry(title, gameType, gi);
-          }
-          return null;
+          return constructHelpEntry(currentGameType, gameType, gi);
         })}
       </List>
     </Form.Group>

@@ -1,22 +1,18 @@
-import { useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
-import { GameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
-import {
-  gameTypeState,
-} from "../../../../State";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { allGamesTitles } from "../../../../games";
 
 type Props = {
-  allGameType: AllGames;
-} & GameInfo;
+  gameType: AllGames;
+}
 
 export const GameFilterCheckbox = (props: Props) => {
   const { getClassesToRemove, getRemovingItemCount } = useRemovePlayerUtils();
-  const { allGameType, title, gamesToFilterOn } = props;
+  const { gameType } = props;
+  const title = allGamesTitles[gameType];
   const { includeGames, setIncludeGames, setRemovingGame } = useXHavenDB();
-  const gameType = useRecoilValue(gameTypeState);
 
   const showConfirmation = (removingGame: AllGames) => {
     return (
@@ -39,15 +35,12 @@ export const GameFilterCheckbox = (props: Props) => {
     setIncludeGames(value);
   };
 
-  if (gamesToFilterOn && gamesToFilterOn.includes(gameType)) {
-    return null;
-  }
   return (
     <Form.Checkbox
-      key={allGameType}
+      key={gameType}
       label={title}
-      checked={includeGames.includes(allGameType)}
-      onChange={() => toggleItemFilter(allGameType)}
+      checked={includeGames.includes(gameType)}
+      onChange={() => toggleItemFilter(gameType)}
     />
   );
 };

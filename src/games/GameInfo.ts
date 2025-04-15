@@ -12,7 +12,6 @@ import { AllGames, Expansions, GameType } from "./GameType";
 
 export interface GameInfo {
 	addItemsToGames?: AllGames[];
-	gamesToFilterOn?: AllGames[];
 	title: string;
 	gameClasses: () => ClassesInUse[];
 	soloGameType?: GameType;
@@ -53,13 +52,11 @@ export const gameInfo: Record<AllGames, GameInfo> = {
 		gameClasses: () => Object.values(TOAClasses),
 	},
 	[Expansions.GHSoloScenarios]: {
-		gamesToFilterOn: [GameType.JawsOfTheLion],
 		title: "Gloomhaven Solo Scenarios",
 		gameClasses: () => [],
 		soloGameType: GameType.Gloomhaven,
 	},
 	[Expansions.FHSoloScenarios]: {
-		gamesToFilterOn: [GameType.Gloomhaven, GameType.JawsOfTheLion],
 		title: "Frosthaven Solo Scenarios",
 		gameClasses: () => [],
 		soloGameType: GameType.Frosthaven,

@@ -23,6 +23,8 @@ export class GHClass extends GameClass<GHClasses> {
                 Expansions.CrimsonScales,
                 Expansions.CrimsonScalesAddon,
                 Expansions.TrailOfAshes,
+                GameType.JawsOfTheLion,
+                GameType.Frosthaven
             ])
     }
     gameClasses(): GHClasses[] {

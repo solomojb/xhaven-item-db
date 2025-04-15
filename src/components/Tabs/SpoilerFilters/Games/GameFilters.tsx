@@ -1,13 +1,13 @@
-import React from "react";
 import { Form, Icon, Popup, Segment } from "semantic-ui-react";
-import { gameInfo } from "../../../../games/GameInfo";
-import { AllGames } from "../../../../games/GameType";
-import { useGameSort } from "../../../../games/useGameSort";
 import { GameFilterCheckbox } from "./GameFilterCheckbox";
 import { GameHelp } from "./GameHelp";
+import { useRecoilValue } from "recoil";
+import { gameTypeState } from "../../../../State";
+import { useGetGame } from "../../../../games";
 
 export const GameFilters = () => {
-  const { withoutCurrent } = useGameSort();
+  const currentGameType = useRecoilValue(gameTypeState);
+  const game = useGetGame(currentGameType);
 
   return (
     <Segment>
@@ -22,13 +22,11 @@ export const GameFilters = () => {
             content={<GameHelp />}
           />
         </div>
-        {withoutCurrent.map((gameType) => {
-          const gi = gameInfo[gameType];
+        {game.gameFilters.map((gameType) => {
           return (
             <GameFilterCheckbox
               key={gameType}
-              allGameType={gameType as AllGames}
-              {...gi}
+              gameType={gameType}
             />
           );
         })}

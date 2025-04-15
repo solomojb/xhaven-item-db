@@ -2,7 +2,7 @@ import { Helpers } from "../../helpers";
 import { FHClasses, GloomhavenItem } from "../../State/Types";
 import { GameClass } from "../GameClass";
 import { gameInfo } from "../GameInfo";
-import { Expansions } from "../GameType";
+import { Expansions, GameType } from "../GameType";
 
 export const ghImportSets: number[][] = [
     [],
@@ -67,11 +67,13 @@ export class FHClass extends GameClass<FHClasses> {
             [Expansions.FHSoloScenarios],
             [
                 Expansions.FHSoloScenarios,
+                GameType.Gloomhaven,
                 Expansions.GHSoloScenarios,
                 Expansions.ForgottenCircles,
                 Expansions.CrimsonScales,
                 Expansions.CrimsonScalesAddon,
                 Expansions.TrailOfAshes,
+                GameType.JawsOfTheLion,
             ])
         const { filterSlots: ghFilterSlots } = this.getInitialItems(ghItems);
         const filteredGhItems = ghItems

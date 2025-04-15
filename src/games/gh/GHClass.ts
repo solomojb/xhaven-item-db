@@ -9,7 +9,12 @@ export class GHClass extends GameClass<GHClasses> {
         super(
             "Gloomhaven",
             items,
-            [GameType.Frosthaven],
+            [
+                Expansions.ForgottenCircles,
+                Expansions.CrimsonScales,
+                Expansions.CrimsonScalesAddon,
+                Expansions.TrailOfAshes,
+            ],
             [
                 Expansions.GHSoloScenarios,
                 Expansions.ForgottenCircles,

@@ -3,26 +3,31 @@ import { Form, List } from "semantic-ui-react";
 import { gameInfo, GameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { gameTypeState } from "../../../../State";
-import { useGetGame } from "../../../../games";
+import { allGamesTitles, useGetGame } from "../../../../games";
 
-const constructHelpEntry = (
-  currentGameType: AllGames,
-  gameType: AllGames,
-  { title, addItemsToGames, gameClasses, soloGameType }: GameInfo
+interface HelpEntryProps {
+  title: string;
+  addClasses: boolean;
+  addItems: boolean;
+  addSolos: boolean;
+}
+
+const HelpEntry = (
+  props: HelpEntryProps
 ) => {
-  const soloGameTitle = soloGameType ? gameInfo[soloGameType].title : undefined;
+  const { title, addClasses, addItems, addSolos } = props;
   return (
-    <List.Item key={`${title}-${gameType}`}>
+    <List.Item key={`${title}`}>
       <strong>{title}</strong>
       <List.List>
-        {gameClasses().length > 0 && (
+        {addClasses && (
           <List.Item>Add classes to party management</List.Item>
         )}
-        {addItemsToGames && addItemsToGames.includes(currentGameType) && (
+        {addItems && (
           <List.Item>Add Items for use</List.Item>
         )}
-        {soloGameTitle && (
-          <List.Item>{`Add solo scenario items for ${soloGameTitle}`}</List.Item>
+        {addSolos && (
+          <List.Item>Add solo scenario items</List.Item>
         )}
       </List.List>
     </List.Item>
@@ -31,15 +36,20 @@ const constructHelpEntry = (
 
 export const GameHelp = () => {
   const currentGameType = useRecoilValue(gameTypeState);
-  const { gameFilters } = useGetGame(currentGameType);
+  const game = useGetGame(currentGameType);
+  const { gameFilters, soloClassesToInclude, includeItemsFrom } = game;
 
   return (
     <Form.Group>
       <List bulleted>
         <List.Header>Which Games/Expansions are you playing with?</List.Header>
         {gameFilters.map((gameType) => {
-          const gi = gameInfo[gameType];
-          return constructHelpEntry(currentGameType, gameType, gi);
+          const addClasses = gameInfo[gameType].gameClasses().length > 0;
+          return <HelpEntry
+            title={allGamesTitles[gameType]}
+            addClasses={addClasses}
+            addItems={includeItemsFrom.includes(gameType)}
+            addSolos={soloClassesToInclude.includes(gameType)} />
         })}
       </List>
     </Form.Group>

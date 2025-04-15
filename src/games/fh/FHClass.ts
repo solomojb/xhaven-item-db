@@ -63,8 +63,13 @@ export class FHClass extends GameClass<FHClasses> {
         super(
             "Frosthaven",
             items as GloomhavenItem[],
-            [],
-            [Expansions.FHSoloScenarios],
+            [
+                GameType.Gloomhaven,
+                Expansions.ForgottenCircles,
+            ],
+            [
+                Expansions.FHSoloScenarios,
+                Expansions.GHSoloScenarios],
             [
                 Expansions.FHSoloScenarios,
                 GameType.Gloomhaven,

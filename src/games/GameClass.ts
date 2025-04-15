@@ -19,7 +19,7 @@ export abstract class GameClass<T> extends BaseGameClass {
     constructor(
         title: string,
         public items: GloomhavenItem[],
-        public addItemsToGames: AllGames[] = [],
+        public includeItemsFrom: AllGames[] = [],
         public soloClassesToInclude: AllGames[] = [],
         public gameFilters: AllGames[] = [],
     ) {

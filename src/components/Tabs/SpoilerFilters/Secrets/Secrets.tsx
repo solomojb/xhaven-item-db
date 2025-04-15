@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import { useRecoilValue } from "recoil";
 import { Form, ListItem, Segment } from "semantic-ui-react";
-import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames, Expansions, GameType } from "../../../../games/GameType";
 import {
   gameTypeState,
@@ -10,6 +9,7 @@ import {
 import { ConfirmSpecialUnlockPanel } from "../Common/ConfirmSpecialUnlockPanel";
 import { SpecialUnlocksButton } from "../Common/SpecialUnlockButton";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { useGetGame } from "../../../../games";
 
 interface SecretData {
   solutions: string[];
@@ -60,6 +60,7 @@ const secretAnswers: Record<SpecialUnlockTypes, SecretData> = {
 export const Secrets = () => {
   const { specialUnlocks, includeGames } = useXHavenDB();
   const currentGameType = useRecoilValue(gameTypeState);
+  const { includeItemsFrom } = useGetGame(currentGameType);
 
   const isButtonShown = (params: any) => {
     const [key, data] = params;
@@ -67,14 +68,8 @@ export const Secrets = () => {
     if (!shownGames.includes(currentGameType)) {
       return false;
     }
-    if (isItem) {
-      const info = gameInfo[gameType as AllGames];
-      if (
-        info.addItemsToGames &&
-        !info.addItemsToGames.includes(currentGameType)
-      ) {
-        return false;
-      }
+    if (isItem && !includeItemsFrom.includes(gameType)) {
+      return false;
     }
     const specialUnlocked = specialUnlocks.includes(key);
     return !specialUnlocked && includeGames.includes(gameType);

@@ -11,7 +11,6 @@ import {
 import { AllGames, Expansions, GameType } from "./GameType";
 
 export interface GameInfo {
-	addItemsToGames?: AllGames[];
 	title: string;
 	gameClasses: () => ClassesInUse[];
 	soloGameType?: GameType;
@@ -20,7 +19,6 @@ export interface GameInfo {
 export const gameInfo: Record<AllGames, GameInfo> = {
 	[GameType.Gloomhaven]: {
 		title: "Gloomhaven",
-		addItemsToGames: [GameType.Frosthaven],
 		gameClasses: () => Object.values(GHClasses),
 	},
 	[GameType.JawsOfTheLion]: {
@@ -33,22 +31,18 @@ export const gameInfo: Record<AllGames, GameInfo> = {
 	},
 	[Expansions.ForgottenCircles]: {
 		title: "Forgotten Circles",
-		addItemsToGames: [GameType.Gloomhaven, GameType.Frosthaven],
 		gameClasses: () => Object.values(FCClasses),
 	},
 	[Expansions.CrimsonScales]: {
 		title: "Crimson Scales",
-		addItemsToGames: [GameType.Gloomhaven],
 		gameClasses: () => Object.values(CSClasses),
 	},
 	[Expansions.CrimsonScalesAddon]: {
 		title: "Crimson Scales Addon",
-		addItemsToGames: [GameType.Gloomhaven],
 		gameClasses: () => Object.values(CSAClasses),
 	},
 	[Expansions.TrailOfAshes]: {
 		title: "Trail of Ashes",
-		addItemsToGames: [GameType.Gloomhaven],
 		gameClasses: () => Object.values(TOAClasses),
 	},
 	[Expansions.GHSoloScenarios]: {

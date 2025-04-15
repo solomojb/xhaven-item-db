@@ -1,18 +1,13 @@
 import { useCallback, useMemo } from "react";
 import { gameInfo } from "../games/GameInfo";
-import { AllGames, Expansions, GameType } from "../games/GameType";
+import { AllGames } from "../games/GameType";
 import {
   ClassesInUse,
-  GHClasses,
-  SpecialUnlockTypes,
-  TOAClasses,
 } from "../State/Types";
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
 
 export const useRemovePlayerUtils = () => {
   const { classesInUse, setClassesInUse: setClassesInUseBy, itemsOwnedBy, setItemsOwnedBy, specialUnlocks, selectedClass, setSelectedClass, items } = useXHavenDB();
-  const envelopeX = specialUnlocks.includes(SpecialUnlockTypes.EnvelopeX);
-  const envelopeV = specialUnlocks.includes(SpecialUnlockTypes.EnvelopeV);
 
   const itemsOwnedByClass = useCallback(
     (owner: ClassesInUse | undefined) => {
@@ -101,22 +96,9 @@ export const useRemovePlayerUtils = () => {
 
   const getClassesForGame = useCallback(
     (gameType: AllGames) => {
-      let classes = gameInfo[gameType].gameClasses();
-      switch (gameType) {
-        case GameType.Gloomhaven:
-          if (!envelopeX) {
-            classes = classes.filter((c) => c !== GHClasses.XX);
-          }
-          break;
-        case Expansions.TrailOfAshes:
-          if (!envelopeV) {
-            classes = classes.filter((c) => c !== TOAClasses.TOA6);
-          }
-          break;
-      }
-      return classes;
+      return gameInfo[gameType].gameClasses(specialUnlocks);
     },
-    [envelopeX, envelopeV]
+    [specialUnlocks]
   );
 
   const getClassesToRemove = useCallback(

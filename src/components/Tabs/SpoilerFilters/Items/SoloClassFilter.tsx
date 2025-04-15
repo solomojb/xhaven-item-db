@@ -5,6 +5,7 @@ import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { ClassesInUse } from "../../../../State/Types";
 import { ClassList } from "../Party/ClassList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { allGamesTitles } from "../../../../games";
 
 type Props = {
 	gameType: AllGames;
@@ -12,16 +13,16 @@ type Props = {
 
 export const SoloClassFilter = (props: Props) => {
 	const { gameType } = props;
-	const { soloGameType, title } = gameInfo[gameType];
+	const { soloGameType } = gameInfo[gameType];
 	const { soloClass, setSoloClass, includeGames } = useXHavenDB();
 	const { getClassesForGame } = useRemovePlayerUtils();
 	if (!includeGames.includes(gameType)) {
 		return null;
 	}
 	const classes = getClassesForGame(soloGameType || gameType);
-	const soloGameTitle = soloGameType
-		? gameInfo[soloGameType].title
-		: undefined;
+	const titleToUse = soloGameType
+		? allGamesTitles[soloGameType]
+		: allGamesTitles[gameType];
 
 	const toggleClassFilter = (key: ClassesInUse) => {
 		const value = Object.assign([], soloClass);
@@ -39,7 +40,7 @@ export const SoloClassFilter = (props: Props) => {
 					isUsed={(className: ClassesInUse) =>
 						soloClass.includes(className)
 					}
-					label={soloGameTitle || title}
+					label={titleToUse}
 					classes={classes}
 					onClick={toggleClassFilter}
 				/>

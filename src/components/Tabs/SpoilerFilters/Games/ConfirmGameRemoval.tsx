@@ -1,7 +1,7 @@
 import { Button, Modal, Form, List } from "semantic-ui-react";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
-import { gameInfo } from "../../../../games/GameInfo";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { allGamesTitles } from "../../../../games";
 
 export const ConfirmGameRemoval = () => {
 	const { removeClasses, getClassesToRemove, getRemovingItemCount } =
@@ -34,7 +34,7 @@ export const ConfirmGameRemoval = () => {
 		return null;
 	}
 
-	const { title } = gameInfo[removingGame];
+	const title = allGamesTitles[removingGame];
 
 	return (
 		<Modal size="tiny" open={true} onClose={onClose}>

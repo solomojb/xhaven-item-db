@@ -9,6 +9,7 @@ import {
 import { ClassesInUse } from "../../../../State/Types";
 import { ClassList } from "./ClassList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { allGamesTitles } from "../../../../games";
 type Props = {
 	type: AllGames;
 };
@@ -41,7 +42,7 @@ export const PartySpoilerList = (props: Props) => {
 	if (!isGameIncluded()) {
 		return null;
 	}
-	const { title } = gameInfo[type];
+	const title = allGamesTitles[type];
 
 	return (
 		<ClassList

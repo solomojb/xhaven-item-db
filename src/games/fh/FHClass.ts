@@ -1,7 +1,6 @@
 import { Helpers } from "../../helpers";
 import { FHClasses, GloomhavenItem } from "../../State/Types";
 import { GameClass } from "../GameClass";
-import { gameInfo } from "../GameInfo";
 import { Expansions, GameType } from "../GameType";
 
 export const ghImportSets: number[][] = [
@@ -57,6 +56,7 @@ const getEnchancerLevel = (id: number) => {
 
 import { items } from "./items.ts";
 import { items as ghItems } from "../gh/items.ts";
+import { allGamesTitles } from "../index.ts";
 
 export class FHClass extends GameClass<FHClasses> {
     constructor() {
@@ -109,7 +109,7 @@ export class FHClass extends GameClass<FHClasses> {
                     lockToClasses,
                     source: item.soloItem
                         ? item.source
-                        : `${gameInfo[item.gameType].title} Import`,
+                        : `${allGamesTitles[item.gameType]} Import`,
                     importedItem: true,
                 };
             });

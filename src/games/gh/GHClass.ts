@@ -6,11 +6,8 @@ import { items } from "./items";
 
 export class GHClass extends GameClass<GHClasses> {
     constructor() {
-        super(GameType.Gloomhaven,
+        super(
             "Gloomhaven",
-            "gloomhaven",
-            "gh",
-            3,
             items,
             [GameType.Frosthaven],
             [

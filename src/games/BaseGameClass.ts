@@ -1,11 +1,5 @@
-export abstract class BaseGameClass<T> {
+export abstract class BaseGameClass {
     constructor(public title: string,
-        public folderName: string,
-        public prefix: string,
-        public leadingZeroes: number
     ) {
     }
-
-    abstract gameClasses(): T[];
-
 }

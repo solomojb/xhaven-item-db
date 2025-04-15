@@ -2,7 +2,7 @@ import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot } from "../State";
 import { BaseGameClass } from "./BaseGameClass";
-import { AllGames, Expansions, GameType } from "./GameType";
+import { AllGames, Expansions } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
     return source.replace(/{(.{2,})}/, (_m, m1) => {
@@ -12,20 +12,17 @@ const deSpoilerItemSource = (source: string): string => {
 };
 
 
-export abstract class GameClass<T> extends BaseGameClass<T> {
+export abstract class GameClass<T> extends BaseGameClass {
     filterSlots: GloomhavenItemSlot[] = [];
     resources: string[] = [];
 
-    constructor(public gameType: GameType,
+    constructor(
         title: string,
-        folderName: string,
-        prefix: string,
-        leadingZeros: number,
         public items: GloomhavenItem[],
         public addItemsToGames: AllGames[] = [],
         public linkedGameTypes: Expansions[] = [],
         public soloClassesToInclude: AllGames[] = []) {
-        super(title, folderName, prefix, leadingZeros)
+        super(title)
         const { filterSlots, resources } = this.getInitialItems(this.items);
         this.filterSlots = filterSlots;
         this.resources = resources;
@@ -67,4 +64,5 @@ export abstract class GameClass<T> extends BaseGameClass<T> {
         return { filterSlots, resources };
     };
 
+    abstract gameClasses(): T[];
 }

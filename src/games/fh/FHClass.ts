@@ -2,7 +2,7 @@ import { Helpers } from "../../helpers";
 import { FHClasses, GloomhavenItem } from "../../State/Types";
 import { GameClass } from "../GameClass";
 import { gameInfo } from "../GameInfo";
-import { Expansions, GameType } from "../GameType";
+import { Expansions } from "../GameType";
 
 export const ghImportSets: number[][] = [
     [],
@@ -60,11 +60,8 @@ import { items as ghItems } from "../gh/items.ts";
 
 export class FHClass extends GameClass<FHClasses> {
     constructor() {
-        super(GameType.Frosthaven,
+        super(
             "Frosthaven",
-            "frosthaven",
-            "fh",
-            3,
             items as GloomhavenItem[],
             [],
             [Expansions.FHSoloScenarios],

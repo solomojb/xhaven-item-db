@@ -20,7 +20,7 @@ export const useGetGame = (gameType: GameType) => {
 
 export const useGamePulldownOptions = () => {
 	const games = useGetGames();
-	return Object.values(games).map(({ title: text, gameType: value }) => (
+	return Object.entries(games).map(([value, { title: text }]) => (
 		{ text, value }
 	));
 }

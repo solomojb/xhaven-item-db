@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { useRecoilValue } from "recoil";
-import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import {
@@ -9,7 +8,7 @@ import {
 import { ClassesInUse } from "../../../../State/Types";
 import { ClassList } from "./ClassList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
-import { allGamesTitles } from "../../../../games";
+import { useGetGame } from "../../../../games";
 type Props = {
 	type: AllGames;
 };
@@ -19,6 +18,7 @@ export const PartySpoilerList = (props: Props) => {
 	const gameType = useRecoilValue(gameTypeState);
 	const { classesInUse, setClassesInUse, setClassToDelete, includeGames } = useXHavenDB();
 	const { getClassesForGame } = useRemovePlayerUtils();
+	const { title } = useGetGame(type);
 
 	const isGameIncluded = () => {
 		return gameType === type || includeGames.includes(type);
@@ -42,8 +42,6 @@ export const PartySpoilerList = (props: Props) => {
 	if (!isGameIncluded()) {
 		return null;
 	}
-	const title = allGamesTitles[type];
-
 	return (
 		<ClassList
 			classes={classes}

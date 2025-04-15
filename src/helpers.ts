@@ -26,7 +26,7 @@ const parseForIcon = (delimiter: string, text: string) => {
   const matches = text.match(exp);
   if (matches) {
     matches.forEach((match) => {
-      let filename = match.substring(1, match.length - 1);
+      const filename = match.substring(1, match.length - 1);
       const src = `icons/${folderName}/${filename}.png`;
       text = text.replace(
         match,

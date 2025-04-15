@@ -1,7 +1,6 @@
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot } from "../State";
-import { BaseGameClass } from "./BaseGameClass";
 import { AllGames } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
@@ -11,22 +10,41 @@ const deSpoilerItemSource = (source: string): string => {
     });
 };
 
+export interface ClassParams {
+    items: GloomhavenItem[],
+    includeItemsFrom?: AllGames[],
+    soloClassesToInclude?: AllGames[],
+    gameFilters: AllGames[],
 
-export abstract class GameClass<T> extends BaseGameClass {
+}
+
+
+export abstract class GameClass<T> {
     filterSlots: GloomhavenItemSlot[] = [];
     resources: string[] = [];
+    public items: GloomhavenItem[];
+    public gameFilters: AllGames[];
+    public includeItemsFrom: AllGames[];
+    public soloClassesToInclude: AllGames[];
 
     constructor(
-        title: string,
-        public items: GloomhavenItem[],
-        public includeItemsFrom: AllGames[] = [],
-        public soloClassesToInclude: AllGames[] = [],
-        public gameFilters: AllGames[] = [],
+        public title: string,
+        public isSelectable: boolean = false,
+        params?: ClassParams,
     ) {
-        super(title)
-        const { filterSlots, resources } = this.getInitialItems(this.items);
-        this.filterSlots = filterSlots;
-        this.resources = resources;
+        this.items = [];
+        this.gameFilters = [];
+        this.includeItemsFrom = [];
+        this.soloClassesToInclude = [];
+        if (params) {
+            const { filterSlots, resources } = this.getInitialItems(params.items);
+            this.filterSlots = filterSlots;
+            this.resources = resources;
+            this.items = params.items;
+            this.gameFilters = params.gameFilters;
+            this.includeItemsFrom = params.includeItemsFrom ?? [];
+            this.soloClassesToInclude = params.soloClassesToInclude ?? [];
+        }
     }
 
     getInitialItems = (items: GloomhavenItem[]) => {

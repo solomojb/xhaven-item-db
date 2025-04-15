@@ -1,7 +1,7 @@
 import { Helpers } from "../../helpers";
 import { FHClasses, GloomhavenItem } from "../../State/Types";
 import { GameClass } from "../GameClass";
-import { Expansions, GameType } from "../GameType";
+import { AllGames, Expansions, GameType } from "../GameType";
 
 export const ghImportSets: number[][] = [
     [],
@@ -56,30 +56,37 @@ const getEnchancerLevel = (id: number) => {
 
 import { items } from "./items.ts";
 import { items as ghItems } from "../gh/items.ts";
-import { allGamesTitles } from "../index.ts";
+
+export const importText: Partial<Record<AllGames, string>> = {
+    [GameType.Gloomhaven]: "Imported from Gloomhaven",
+    [Expansions.ForgottenCircles]: "Imported from Forgotten Circles",
+}
 
 export class FHClass extends GameClass<FHClasses> {
     constructor() {
         super(
             "Frosthaven",
-            items as GloomhavenItem[],
-            [
-                GameType.Gloomhaven,
-                Expansions.ForgottenCircles,
-            ],
-            [
-                Expansions.FHSoloScenarios,
-                Expansions.GHSoloScenarios],
-            [
-                Expansions.FHSoloScenarios,
-                GameType.Gloomhaven,
-                Expansions.GHSoloScenarios,
-                Expansions.ForgottenCircles,
-                Expansions.CrimsonScales,
-                Expansions.CrimsonScalesAddon,
-                Expansions.TrailOfAshes,
-                GameType.JawsOfTheLion,
-            ])
+            true,
+            {
+                items,
+                includeItemsFrom: [
+                    GameType.Gloomhaven,
+                    Expansions.ForgottenCircles,
+                ],
+                soloClassesToInclude: [
+                    Expansions.FHSoloScenarios,
+                    Expansions.GHSoloScenarios],
+                gameFilters: [
+                    Expansions.FHSoloScenarios,
+                    GameType.Gloomhaven,
+                    Expansions.GHSoloScenarios,
+                    Expansions.ForgottenCircles,
+                    Expansions.CrimsonScales,
+                    Expansions.CrimsonScalesAddon,
+                    Expansions.TrailOfAshes,
+                    GameType.JawsOfTheLion,
+                ]
+            })
         const { filterSlots: ghFilterSlots } = this.getInitialItems(ghItems);
         const filteredGhItems = ghItems
             .filter(
@@ -109,7 +116,7 @@ export class FHClass extends GameClass<FHClasses> {
                     lockToClasses,
                     source: item.soloItem
                         ? item.source
-                        : `${allGamesTitles[item.gameType]} Import`,
+                        : `${importText[item.gameType]}`,
                     importedItem: true,
                 };
             });

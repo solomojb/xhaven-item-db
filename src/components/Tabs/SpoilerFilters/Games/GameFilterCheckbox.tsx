@@ -2,7 +2,7 @@ import { Form } from "semantic-ui-react";
 import { AllGames } from "../../../../games/GameType";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
-import { allGamesTitles } from "../../../../games";
+import { useGetGame } from "../../../../games";
 
 type Props = {
   gameType: AllGames;
@@ -11,7 +11,7 @@ type Props = {
 export const GameFilterCheckbox = (props: Props) => {
   const { getClassesToRemove, getRemovingItemCount } = useRemovePlayerUtils();
   const { gameType } = props;
-  const title = allGamesTitles[gameType];
+  const { title } = useGetGame(gameType);
   const { includeGames, setIncludeGames, setRemovingGame } = useXHavenDB();
 
   const showConfirmation = (removingGame: AllGames) => {

@@ -6,26 +6,18 @@ import {
 	FHClasses,
 	GHClasses,
 	JOTLClasses,
-	SpecialUnlockTypes,
 	TOAClasses,
 } from "../State";
 import { AllGames, Expansions, GameType } from "./GameType";
 
 export interface GameInfo {
-	gameClasses: (specialUnlocks?: SpecialUnlockTypes[]) => ClassesInUse[];
+	gameClasses: () => ClassesInUse[];
 	soloGameType?: GameType;
 }
 
 export const gameInfo: Record<AllGames, GameInfo> = {
 	[GameType.Gloomhaven]: {
-		gameClasses: (specialUnlocks?: SpecialUnlockTypes[]) => {
-			const envelopeX = specialUnlocks?.includes(SpecialUnlockTypes.EnvelopeX);
-			const classes = Object.values(GHClasses);
-			if (envelopeX) {
-				return classes
-			}
-			return classes.filter(c => c !== GHClasses.XX);
-		},
+		gameClasses: () => Object.values(GHClasses),
 	},
 	[GameType.JawsOfTheLion]: {
 		gameClasses: () => Object.values(JOTLClasses),
@@ -43,14 +35,7 @@ export const gameInfo: Record<AllGames, GameInfo> = {
 		gameClasses: () => Object.values(CSAClasses),
 	},
 	[Expansions.TrailOfAshes]: {
-		gameClasses: (specialUnlocks?: SpecialUnlockTypes[]) => {
-			const envelopeV = specialUnlocks?.includes(SpecialUnlockTypes.EnvelopeV);
-			const classes = Object.values(TOAClasses);
-			if (envelopeV) {
-				return classes
-			}
-			return classes.filter(c => c !== TOAClasses.TOA6);
-		},
+		gameClasses: () => Object.values(TOAClasses),
 	},
 	[Expansions.GHSoloScenarios]: {
 		gameClasses: () => [],

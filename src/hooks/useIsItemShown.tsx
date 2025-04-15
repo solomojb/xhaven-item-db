@@ -11,8 +11,8 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
     ({
       id,
       soloItem,
-      unlockProsperity,
-      unlockScenario,
+      unlockProsperity = Number.MAX_VALUE,
+      unlockScenario = Number.MAX_VALUE,
       gameType,
       slot,
       name,
@@ -21,10 +21,10 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
       count,
       specialUnlock,
       alwaysShown = false,
-      unlockCrafstmanLevel = 0,
-      unlockTradingPostLevel = 0,
-      unlockJewelerLevel = 0,
-      unlockEnhancerLevel = 0,
+      unlockCrafstmanLevel = Number.MAX_VALUE,
+      unlockTradingPostLevel = Number.MAX_VALUE,
+      unlockJewelerLevel = Number.MAX_VALUE,
+      unlockEnhancerLevel = Number.MAX_VALUE,
       importedItem,
     }: GloomhavenItem) => {
       if (!includeGames.includes(gameType)) {

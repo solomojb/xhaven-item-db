@@ -1,5 +1,4 @@
 import { Form } from "semantic-ui-react";
-import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { ClassesInUse } from "../../../../State/Types";
@@ -13,16 +12,15 @@ type Props = {
 
 export const SoloClassFilter = (props: Props) => {
 	const { gameType } = props;
-	const { soloGameType } = gameInfo[gameType];
 	const { soloClass, setSoloClass, includeGames } = useXHavenDB();
 	const { getClassesForGame } = useRemovePlayerUtils();
 	const games = useGetGames();
-	const gameTypeToUse = soloGameType || gameType;
 	if (!includeGames.includes(gameType)) {
 		return null;
 	}
+	const { soloFilterTitle, soloGameType } = games[gameType];
+	const gameTypeToUse = soloGameType || gameType;
 	const classes = getClassesForGame(gameTypeToUse);
-	const { title } = games[gameTypeToUse];
 
 	const toggleClassFilter = (key: ClassesInUse) => {
 		const value = Object.assign([], soloClass);
@@ -40,7 +38,7 @@ export const SoloClassFilter = (props: Props) => {
 					isUsed={(className: ClassesInUse) =>
 						soloClass.includes(className)
 					}
-					label={title}
+					label={soloFilterTitle}
 					classes={classes}
 					onClick={toggleClassFilter}
 				/>

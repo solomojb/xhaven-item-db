@@ -1,7 +1,7 @@
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../State";
-import { AllGames } from "./GameType";
+import { AllGames, GameType } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
     return source.replace(/{(.{2,})}/, (_m, m1) => {
@@ -26,12 +26,15 @@ export abstract class GameClass<T> {
     public gameFilters: AllGames[];
     public includeItemsFrom: AllGames[];
     public soloClassesToInclude: AllGames[];
+    public soloFilterTitle: string;
+    public soloGameType?: GameType;
 
     constructor(
         public title: string,
         public isSelectable: boolean = false,
         params?: ClassParams,
     ) {
+        this.soloFilterTitle = title;
         this.items = [];
         this.gameFilters = [];
         this.includeItemsFrom = [];

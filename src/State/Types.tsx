@@ -226,7 +226,6 @@ export interface GloomhavenItem {
 	consumption?: Consumption;
 	lockToClasses?: ClassesInUse[];
 	importedItem?: boolean;
-	consume?: boolean;
 	imgFileNumber?: number;
 	imageNumber?: number;
 }

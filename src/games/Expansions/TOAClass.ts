@@ -1,5 +1,5 @@
 import { SpecialUnlockTypes, TOAClasses } from "../../State";
-import { GameClass } from "../GameClass";
+import { GameClass, ItemImageData } from "../GameClass";
 
 export class TOAClass extends GameClass<TOAClasses> {
     constructor() {
@@ -13,6 +13,12 @@ export class TOAClass extends GameClass<TOAClasses> {
             return classes
         }
         return classes.filter(c => c !== TOAClasses.TOA6);
+    }
+    getImageDimensions(): ItemImageData {
+        return {
+            imagesAcross: 10,
+            imagesDown: 4,
+        }
     }
 }
 

@@ -1,70 +1,9 @@
-import { Expansions, GameType } from "../../../../../games";
+import { useGetGame } from "../../../../../games";
+import { ItemImageData } from "../../../../../games/GameClass";
 import { GloomhavenItem } from "../../../../../State";
 
-const getItemPath = (item: GloomhavenItem, backside?: boolean) => {
+const getItemPath = (item: GloomhavenItem, { imagesAcross, imagesDown }: ItemImageData, backside?: boolean) => {
     const { gameType, imgFileNumber } = item;
-    let imagesAcross = 0;
-    let imagesDown = 0;
-
-
-    switch (gameType) {
-        case GameType.Gloomhaven:
-            switch (item.imgFileNumber) {
-                case 1:
-                    imagesAcross = 9;
-                    imagesDown = 4;
-                    break;
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                case 8:
-                case 9:
-                    imagesAcross = 6;
-                    imagesDown = 3;
-                    break;
-                case 10:
-                    imagesAcross = 6;
-                    imagesDown = 5;
-                    break;
-                case 11:
-                    imagesAcross = 8;
-                    imagesDown = 6;
-                    break;
-            }
-            break;
-        case Expansions.GHSoloScenarios:
-            imagesAcross = 5;
-            imagesDown = 4;
-            break;
-        case Expansions.ForgottenCircles:
-            imagesAcross = 6;
-            imagesDown = 4;
-            break;
-        case Expansions.CrimsonScales:
-            if (imgFileNumber === 3) {
-                imagesAcross = 6;
-                imagesDown = 2;
-            } else if (imgFileNumber === 4) {
-                imagesAcross = 9;
-                imagesDown = 2;
-            }
-            else {
-                imagesAcross = 10;
-                imagesDown = 5;
-            }
-            break;
-        case Expansions.CrimsonScalesAddon:
-            imagesAcross = 5;
-            imagesDown = 4;
-            break;
-        case Expansions.TrailOfAshes:
-            imagesAcross = 10;
-            imagesDown = 4;
-            break;
-    }
     const width = 531;
     const height = 815;
     const bgWidth = width * imagesAcross;
@@ -77,7 +16,7 @@ const getItemPath = (item: GloomhavenItem, backside?: boolean) => {
     else {
         path = `items/${gameType}/${imgFileNumber}.png`;
     }
-    return { path, width, height, imagesAcross, bgWidth, bgHeight };
+    return { path, width, height, bgWidth, bgHeight };
 }
 
 type Props = {
@@ -89,7 +28,10 @@ const CARD_SCALE = 0.40;
 
 export const ItemCardImage = (props: Props) => {
     const { item, showBackside } = props;
-    const { path, width, height, imagesAcross, bgWidth, bgHeight } = getItemPath(item, showBackside);
+    const game = useGetGame(item.gameType);
+    const itemImageData = game.getImageDimensions(item);
+    const { imagesAcross } = itemImageData;
+    const { path, width, height, bgWidth, bgHeight } = getItemPath(item, itemImageData, showBackside);
     const styles = {
         container: {
             width: width * CARD_SCALE * 531 / width, /* width of individual sprite */

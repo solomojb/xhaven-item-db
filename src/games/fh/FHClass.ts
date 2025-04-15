@@ -1,6 +1,6 @@
 import { Helpers } from "../../helpers";
 import { FHClasses, GloomhavenItem } from "../../State/Types";
-import { GameClass } from "../GameClass";
+import { GameClass, ItemImageData } from "../GameClass";
 import { AllGames, Expansions, GameType } from "../GameType";
 
 export const ghImportSets: number[][] = [
@@ -126,5 +126,14 @@ export class FHClass extends GameClass<FHClasses> {
     gameClasses(): FHClasses[] {
         return Object.values(FHClasses);
     }
+
+
+    getImageDimensions(): ItemImageData {
+        return {
+            imagesAcross: 0,
+            imagesDown: 0,
+        }
+    }
+
 }
 

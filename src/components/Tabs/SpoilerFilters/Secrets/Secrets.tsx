@@ -25,7 +25,7 @@ const secretAnswers: Record<SpecialUnlockTypes, SecretData> = {
   [SpecialUnlockTypes.EnvelopeX]: {
     solutions: ["eHh4", "YmxhZGVzd2FybQ=="],
     title: "Envelope X",
-    line1: "Have solved Envelope X?",
+    line1: "Have you solved Envelope X?",
     line2: "Enter the solution:",
     gameType: GameType.Gloomhaven,
     shownGames: [

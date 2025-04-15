@@ -1,5 +1,5 @@
 import { CSAClasses } from "../../State";
-import { GameClass } from "../GameClass";
+import { GameClass, ItemImageData } from "../GameClass";
 
 export class CSAClass extends GameClass<CSAClasses> {
     constructor() {
@@ -8,6 +8,13 @@ export class CSAClass extends GameClass<CSAClasses> {
 
     gameClasses(): CSAClasses[] {
         return Object.values(CSAClasses);
+    }
+
+    getImageDimensions(): ItemImageData {
+        return {
+            imagesAcross: 5,
+            imagesDown: 4,
+        }
     }
 }
 

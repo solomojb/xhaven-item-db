@@ -1,5 +1,5 @@
 import { FHClasses } from "../../State";
-import { GameClass } from "../GameClass";
+import { GameClass, ItemImageData } from "../GameClass";
 import { GameType } from "../GameType";
 
 export class FHSSClass extends GameClass<FHClasses> {
@@ -11,6 +11,13 @@ export class FHSSClass extends GameClass<FHClasses> {
 
     gameClasses(): FHClasses[] {
         return [];
+    }
+
+    getImageDimensions(): ItemImageData {
+        return {
+            imagesAcross: 0,
+            imagesDown: 0,
+        }
     }
 }
 

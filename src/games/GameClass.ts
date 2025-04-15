@@ -18,6 +18,11 @@ export interface ClassParams {
 
 }
 
+export interface ItemImageData {
+    imagesAcross: number;
+    imagesDown: number;
+}
+
 
 export abstract class GameClass<T> {
     filterSlots: GloomhavenItemSlot[] = [];
@@ -91,4 +96,6 @@ export abstract class GameClass<T> {
     hasClasses = () => {
         return this.gameClasses().length > 0;
     }
+
+    abstract getImageDimensions(item: GloomhavenItem): ItemImageData;
 }

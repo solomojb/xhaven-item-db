@@ -1,5 +1,4 @@
 import { Form, Popup, Icon, Segment } from "semantic-ui-react";
-import { gameInfo } from "../../../../games/GameInfo";
 import { AllGames } from "../../../../games/GameType";
 import { ItemManagementType } from "../../../../State/Types";
 import PartyManagementFilter from "./PartyManagementFilter";
@@ -7,11 +6,12 @@ import { PartySpoilerList } from "./PartySpoilerList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { useRecoilValue } from "recoil";
 import { gameTypeState } from "../../../../State";
-import { useGetGame } from "../../../../games";
+import { useGetGames } from "../../../../games";
 
 export const PartySpoiler = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
-	const game = useGetGame(currentGameType);
+	const games = useGetGames();
+	const game = games[currentGameType];
 	const { gameFilters } = game;
 	const { itemManagementType } = useXHavenDB();
 	const allGames = [currentGameType, ...gameFilters];
@@ -41,9 +41,8 @@ export const PartySpoiler = () => {
 						</div>
 					</Form.Group>
 					{allGames.map((gameType) => {
-						const gi = gameInfo[gameType];
-						const hasClasses = gi.gameClasses().length > 0;
-						if (!hasClasses) {
+						const { hasClasses } = games[gameType];
+						if (!hasClasses()) {
 							return null;
 						}
 						return (

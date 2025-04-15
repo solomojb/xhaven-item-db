@@ -1,6 +1,6 @@
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
-import { GloomhavenItem, GloomhavenItemSlot } from "../State";
+import { GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../State";
 import { AllGames } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
@@ -83,5 +83,9 @@ export abstract class GameClass<T> {
         return { filterSlots, resources };
     };
 
-    abstract gameClasses(): T[];
+    abstract gameClasses(specialUnlocks?: SpecialUnlockTypes[]): T[];
+
+    hasClasses = () => {
+        return this.gameClasses().length > 0;
+    }
 }

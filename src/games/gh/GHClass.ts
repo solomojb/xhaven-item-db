@@ -1,4 +1,4 @@
-import { GHClasses } from "../../State";
+import { GHClasses, SpecialUnlockTypes } from "../../State";
 import { GameClass } from "../GameClass";
 import { Expansions, GameType } from "../GameType";
 
@@ -35,8 +35,13 @@ export class GHClass extends GameClass<GHClasses> {
                 ]
             })
     }
-    gameClasses(): GHClasses[] {
-        return Object.values(GHClasses);
+    gameClasses(specialUnlocks?: SpecialUnlockTypes[]) {
+        const envelopeX = specialUnlocks?.includes(SpecialUnlockTypes.EnvelopeX);
+        const classes = Object.values(GHClasses);
+        if (envelopeX) {
+            return classes
+        }
+        return classes.filter(c => c !== GHClasses.XX);
     }
 }
 

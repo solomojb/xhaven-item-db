@@ -42,11 +42,10 @@ export const GameHelp = () => {
       <List bulleted>
         <List.Header>Which Games/Expansions are you playing with?</List.Header>
         {gameFilters.map((gameType) => {
-          const { gameClasses, title } = games[gameType];
-          const addClasses = gameClasses().length > 0;
+          const { hasClasses, title } = games[gameType];
           return <HelpEntry
             title={title}
-            addClasses={addClasses}
+            addClasses={hasClasses()}
             addItems={includeItemsFrom.includes(gameType)}
             addSolos={soloClassesToInclude.includes(gameType)} />
         })}

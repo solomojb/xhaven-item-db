@@ -1,13 +1,14 @@
 import { useCallback, useMemo } from "react";
-import { gameInfo } from "../games/GameInfo";
 import { AllGames } from "../games/GameType";
 import {
   ClassesInUse,
 } from "../State/Types";
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
+import { useGetGames } from "../games";
 
 export const useRemovePlayerUtils = () => {
   const { classesInUse, setClassesInUse: setClassesInUseBy, itemsOwnedBy, setItemsOwnedBy, specialUnlocks, selectedClass, setSelectedClass, items } = useXHavenDB();
+  const games = useGetGames();
 
   const itemsOwnedByClass = useCallback(
     (owner: ClassesInUse | undefined) => {
@@ -96,9 +97,9 @@ export const useRemovePlayerUtils = () => {
 
   const getClassesForGame = useCallback(
     (gameType: AllGames) => {
-      return gameInfo[gameType].gameClasses(specialUnlocks);
+      return games[gameType].gameClasses(specialUnlocks);
     },
-    [specialUnlocks]
+    [games, specialUnlocks]
   );
 
   const getClassesToRemove = useCallback(

@@ -95,10 +95,10 @@ export class FHClass extends GameClass<FHClasses> {
                     fcItemToImport.includes(item.id) ||
                     item.soloItem
             )
-            .map((item: GloomhavenItem) => {
-                let lockToClasses = undefined;
+            .map((item: GloomhavenItem): GloomhavenItem => {
+                let lockToClass = undefined;
                 if (item.soloItem) {
-                    lockToClasses = [item.soloItem];
+                    lockToClass = true;
                 }
                 const unlockTradingPostLevel =
                     getTradingPostLevel(item.id) || Number.MAX_VALUE;
@@ -113,7 +113,7 @@ export class FHClass extends GameClass<FHClasses> {
                     unlockTradingPostLevel,
                     unlockEnhancerLevel,
                     unlockScenario,
-                    lockToClasses,
+                    lockToClass,
                     source: item.soloItem
                         ? item.source
                         : `${importText[item.gameType]}`,

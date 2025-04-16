@@ -122,7 +122,6 @@ export enum SpecialUnlockTypes {
 	EnvelopeV = "envelopeV",
 }
 
-export type SoloClasses = GHClasses | FCClasses | FHClasses | CSClasses | CSAClasses | TOAClasses;
 
 export type ClassesInUse =
 	| GHClasses
@@ -132,6 +131,7 @@ export type ClassesInUse =
 	| CSClasses
 	| CSAClasses
 	| TOAClasses;
+export type SoloClasses = ClassesInUse;
 
 export enum GloomhavenItemSlot {
 	Head = "head",
@@ -221,7 +221,7 @@ export interface GloomhavenItem {
 	unlockJewelerLevel?: number;
 	unlockEnhancerLevel?: number;
 	consumption?: Consumption;
-	lockToClasses?: ClassesInUse[];
+	lockToClass?: boolean;
 	importedItem?: boolean;
 	imgFileNumber?: number;
 	imageNumber?: number;

@@ -62,17 +62,9 @@ const PurchaseItem = () => {
 		return null;
 	}
 
-	const { name, cost, count } = selectedItem;
+	const { name, cost, count, lockToClass, soloItem } = selectedItem;
 
-	let classes = classesInUse;
-	if (selectedItem.lockToClasses) {
-		const classesCount = selectedItem.lockToClasses.filter((c) =>
-			classesInUse.includes(c)
-		).length;
-		if (classesCount) {
-			classes = [...selectedItem.lockToClasses];
-		}
-	}
+	const classes = lockToClass && soloItem && classesInUse.includes(soloItem) ? [soloItem] : classesInUse;
 
 	return (
 		<Modal

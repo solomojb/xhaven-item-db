@@ -1,3 +1,4 @@
+import { FilterSlots } from "../components/Tabs/MainView/Items/Search";
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../State";
@@ -77,7 +78,7 @@ export abstract class GameClass<T> {
                 .replace(/ ?\((Treasure #\d+)\)/gi, "\n$1")
                 .replace(/Solo Scenario #\d+ — /i, "Solo ");
             item.source = deSpoilerItemSource(source);
-            if (item.slot && !filterSlots.includes(item.slot)) {
+            if (item.slot && item.slot !== GloomhavenItemSlot.None && !filterSlots.includes(item.slot)) {
                 filterSlots.push(item.slot);
             }
             if (item.resources) {

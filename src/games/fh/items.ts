@@ -3929,9 +3929,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #01 — {FH1}",
     desc: "During your attack ability, move one character token on one of your persistent abilities backward one slot and add +X ^attack^ to one attack, where X is the number of active persistent abilities.",
     soloItem: FHClasses.FH1,
-    lockToClasses: [
-      FHClasses.FH1
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 13,
@@ -3946,9 +3944,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #02 — {FH2}",
     desc: "During our turn, perform one of the two following abilities: Lose one card from your hand to gain 3 ^fh-hourglass^. ~@-2 ^fh-hourglass^ : ^recover^ up to two of your discarded cards@~",
     soloItem: FHClasses.FH2,
-    lockToClasses: [
-      FHClasses.FH2,
-    ],
+    lockToClass: true,
     lost: true,
     consumed: true,
     imgFileNumber: 5,
@@ -3964,9 +3960,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #03 — {FH3}",
     desc: "During your turn perform: ^attack^ 2 ~!^fh-range^ 3!~. All your banners are treated as additionally occupying the hex of the attack target of their bonuses and that hex is treated as occupied by an ally this round. ^eot^",
     soloItem: FHClasses.FH3,
-    lockToClasses: [
-      FHClasses.FH3,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 15,
@@ -3981,9 +3975,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #04 — {FH4}",
     desc: "Place one ^fh-shadow^ in an adjacent hex. @wfh-dark@",
     soloItem: FHClasses.FH4,
-    lockToClasses: [
-      FHClasses.FH4,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 16,
@@ -4011,9 +4003,7 @@ export const items: GloomhavenItem[] = [
       effect: "and perform: ^fh-heal^ 2 ~!self!~"
     },
     soloItem: FHClasses.FH5,
-    lockToClasses: [
-      FHClasses.FH5,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 17,
@@ -4029,9 +4019,7 @@ export const items: GloomhavenItem[] = [
     desc: "During your ranged attack ability while in ^fh-geminate-right^, gain advantage for one attack, then flip this card over.",
     backDesc: "When an enemy performs an attack targeting you while you are in ^fh-geminate-left^, the attacker gains disadvantage, then flip this card over.",
     soloItem: FHClasses.FH6,
-    lockToClasses: [
-      FHClasses.FH6,
-    ],
+    lockToClass: true,
     imgFileNumber: 5,
     imageNumber: 18,
   },
@@ -4045,9 +4033,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #07 — {FH7}",
     desc: "During your turn, activate all your ^fh-astral^ as if you just performed a ^fh-astral^ action.",
     soloItem: FHClasses.FH7,
-    lockToClasses: [
-      FHClasses.FH7,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 19,
@@ -4074,9 +4060,7 @@ export const items: GloomhavenItem[] = [
       ]
     },
     soloItem: FHClasses.FH8,
-    lockToClasses: [
-      FHClasses.FH8,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 20,
@@ -4091,9 +4075,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #09 — {FH9}",
     desc: "Gain 3 ^fh-shards^",
     soloItem: FHClasses.FH9,
-    lockToClasses: [
-      FHClasses.FH9,
-    ],
+    lockToClass: true,
     consumption: {
       elements: [
         {
@@ -4121,9 +4103,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #10 — {FH10}",
     desc: "When you create a trap, place a character token on it.  Monsters do not treat the trap as negative. Remove the token when you ^recover^ this item. ^ongoing^",
     soloItem: FHClasses.FH10,
-    lockToClasses: [
-      FHClasses.FH10,
-    ],
+    lockToClass: true,
     spent: true,
     imgFileNumber: 5,
     imageNumber: 22,
@@ -4138,9 +4118,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #11 — {FH11}",
     desc: "When you suffer damage, if your hit point value is reduced to below half your maximum, perform: ^fh-heal^ 7 ~!self, $wfh-curse$!~ This heal is not affect by and cannot remove negative conditions.",
     soloItem: FHClasses.FH11,
-    lockToClasses: [
-      FHClasses.FH11,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 23,
@@ -4156,9 +4134,7 @@ export const items: GloomhavenItem[] = [
     desc: "During an attack ability you grant an ally, add $wfh-push$ 2 to one of their attacks, then flip this card over.",
     backDesc: "During your attack ability you, add $wfh-pull$ 2 to one attack, then flip this card over.",
     soloItem: FHClasses.FH12,
-    lockToClasses: [
-      FHClasses.FH12,
-    ],
+    lockToClass: true,
     imgFileNumber: 5,
     imageNumber: 24,
   },
@@ -4172,9 +4148,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #13 — {FH13}",
     desc: "During your attack ability, add $wfh-brittle$ to one attack and create one 1-hex icy terrain tile in the featureless hex occupied by the target.",
     soloItem: FHClasses.FH13,
-    lockToClasses: [
-      FHClasses.FH13,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 25,
@@ -4189,9 +4163,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #14 — {FH14}",
     desc: "Remove all damage and negative conditions from one of your summons, then ^fh-prism^ to that summon.",
     soloItem: FHClasses.FH14,
-    lockToClasses: [
-      FHClasses.FH14,
-    ],
+    lockToClass: true,
     consumed: true,
     imgFileNumber: 5,
     imageNumber: 26,
@@ -4207,9 +4179,7 @@ export const items: GloomhavenItem[] = [
     desc: "During your move ability, when you have ^fh-meter-yellow^ or ^fh-meter-red^, add +1 ^fh-move^, then flip this card over at the end of your turn.",
     backDesc: "During your turn when you have ^fh-meter-blue^, perform: $wfh-muddle$ ~!^fh-range^ 1!~ then flip this card over at the end of your turn.",
     soloItem: FHClasses.FH15,
-    lockToClasses: [
-      FHClasses.FH15,
-    ],
+    lockToClass: true,
     imgFileNumber: 5,
     imageNumber: 27,
   },
@@ -4223,9 +4193,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #16 — {FH16}",
     desc: "Whenever you gain $wfh-invisible$ or perform a teleport ability while you have $wfh-invisible$, after the ability perform: $wfh-muddle$ ~!^fh-range^ 1!~",
     soloItem: FHClasses.FH16,
-    lockToClasses: [
-      FHClasses.FH16,
-    ],
+    lockToClass: true,
     imgFileNumber: 5,
     imageNumber: 28,
   },
@@ -4239,9 +4207,7 @@ export const items: GloomhavenItem[] = [
     source: "Reward from Solo Scenario #17 — {FH17}",
     desc: "When you rest, you may keep up to three ^fh-anemone^ cards in your active area.",
     soloItem: FHClasses.FH17,
-    lockToClasses: [
-      FHClasses.FH17,
-    ],
+    lockToClass: true,
     lost: true,
     consumed: true,
     consumption: {

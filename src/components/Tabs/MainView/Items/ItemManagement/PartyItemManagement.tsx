@@ -58,14 +58,10 @@ export const PartyItemManagement = (props: Props) => {
 
 	const { item } = props;
 
-	if (item.lockToClasses) {
-		const classesCount = item.lockToClasses.filter((c) =>
-			classesInUse.includes(c)
-		).length;
-		if (classesCount === 0) {
-			return null;
-		}
+	if (item.lockToClass && item.soloItem && !classesInUse.includes(item.soloItem)) {
+		return null;
 	}
+
 	const owners = (itemsOwnedBy && itemsOwnedBy[item.id]) || [];
 	const ownersLength = owners ? owners.length : 0;
 	const classesAvailable = ownersLength

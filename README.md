@@ -55,7 +55,6 @@ export default tseslint.config({
 
 TODO:
 * FAQ Image Paths
-* Lock to class as a boolean instead of a list of class names
 * Optimize Task Switching (Remove Recoil)
 * Fix Linting errors
 * Item Size on mobile
@@ -70,4 +69,6 @@ TODO:
 * Collapse FHSS items to different files
 * Combine Images?
 * Add card slider?
+* Fix Discount showing up on FH
+* Fix SOLO bug in heisch
 

@@ -57,6 +57,9 @@ export const useIsItemShown = (): ((item: GloomhavenItem) => boolean) => {
         ) {
           return false;
         }
+        if (soloItem) {
+          return soloClass.includes(soloItem);
+        }
         if (!item.includes(id)) {
           return false;
         }

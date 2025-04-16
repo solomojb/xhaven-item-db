@@ -14,6 +14,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 0,
 	},
 	{
 		id: 2,
@@ -26,6 +28,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 2,
 	},
 	{
 		id: 3,
@@ -39,6 +43,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 4,
 	},
 	{
 		id: 4,
@@ -52,6 +58,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 6,
 	},
 	{
 		id: 5,
@@ -65,6 +73,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 8,
 	},
 	{
 		id: 6,
@@ -79,6 +89,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 10,
 	},
 	{
 		id: 7,
@@ -92,6 +104,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 12,
 	},
 	{
 		id: 8,
@@ -105,6 +119,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 14,
 	},
 	{
 		id: 9,
@@ -118,6 +134,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 16,
 	},
 	{
 		id: 10,
@@ -131,6 +149,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 18,
 	},
 	{
 		id: 11,
@@ -144,6 +164,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 20,
 	},
 	{
 		id: 12,
@@ -157,6 +179,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 22,
 	},
 	{
 		id: 13,
@@ -170,6 +194,8 @@ export const items: GloomhavenItem[] = [
 		folder: "1-13",
 		unlockScenario: 2,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 24,
 	},
 	{
 		id: 14,
@@ -182,6 +208,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, infuse any one element. @any@",
 		folder: "14",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 26,
 	},
 	{
 		id: 15,
@@ -195,6 +223,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-20",
 		unlockScenario: 9,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 28,
 	},
 	{
 		id: 16,
@@ -208,6 +238,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-20",
 		unlockScenario: 9,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 29,
 	},
 	{
 		id: 17,
@@ -220,6 +252,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-20",
 		unlockScenario: 9,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 30,
 	},
 	{
 		id: 18,
@@ -233,6 +267,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-20",
 		unlockScenario: 9,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 31,
 	},
 	{
 		id: 19,
@@ -246,6 +282,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-20",
 		unlockScenario: 9,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 32,
 	},
 	{
 		id: 20,
@@ -259,6 +297,8 @@ export const items: GloomhavenItem[] = [
 		folder: "15-20",
 		unlockScenario: 9,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 33,
 	},
 	{
 		id: 21,
@@ -272,6 +312,8 @@ export const items: GloomhavenItem[] = [
 		folder: "21-26",
 		unlockScenario: 15,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 35,
 	},
 	{
 		id: 22,
@@ -285,6 +327,8 @@ export const items: GloomhavenItem[] = [
 		folder: "21-26",
 		unlockScenario: 15,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 36,
 	},
 	{
 		id: 23,
@@ -298,6 +342,8 @@ export const items: GloomhavenItem[] = [
 		folder: "21-26",
 		unlockScenario: 15,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 37,
 	},
 	{
 		id: 24,
@@ -311,6 +357,8 @@ export const items: GloomhavenItem[] = [
 		folder: "21-26",
 		unlockScenario: 15,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 38,
 	},
 	{
 		id: 25,
@@ -324,6 +372,8 @@ export const items: GloomhavenItem[] = [
 		folder: "21-26",
 		unlockScenario: 15,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 39,
 	},
 	{
 		id: 26,
@@ -337,6 +387,8 @@ export const items: GloomhavenItem[] = [
 		folder: "21-26",
 		unlockScenario: 15,
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 40,
 	},
 	{
 		id: 27,
@@ -349,6 +401,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, force one enemy within Range ^range^ 3 to perform a \"Move ^move^ 2\" action with you controlling the action.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 42,
 	},
 	{
 		id: 28,
@@ -361,6 +415,8 @@ export const items: GloomhavenItem[] = [
 		faq: "The item does not actually change a character's initiative so it doesn't affect their summons' initiative. It only changes how monster's treat the character during focus evaluation.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 43,
 	},
 	{
 		id: 29,
@@ -373,6 +429,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When damaged by an attack, gain Shield ^shield^ 2 for the attack.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 44,
 	},
 	{
 		id: 30,
@@ -385,6 +443,8 @@ export const items: GloomhavenItem[] = [
 		desc: "At the end of your turn, play one card from your hand and immediately perform the bottom action of that card.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 45,
 	},
 	{
 		id: 31,
@@ -397,6 +457,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, gain STRENGTHEN $strengthen$.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 46,
 	},
 	{
 		id: 32,
@@ -409,6 +471,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, perform a \"Heal ^heal^ 3, Range ^range^ 5\" action.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 47,
 	},
 	{
 		id: 33,
@@ -421,6 +485,8 @@ export const items: GloomhavenItem[] = [
 		desc: "When damaged by an attack, gain Shield ^shield^ 4 for the attack.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 48,
 	},
 	{
 		id: 34,
@@ -433,6 +499,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your attack, add WOUND $wound$ to the entire Attack Action.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 49,
 	},
 	{
 		id: 35,
@@ -445,6 +513,8 @@ export const items: GloomhavenItem[] = [
 		desc: "During your turn, one adjacent ally may perform and \"Attack ^attack^ 2\" Action.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 50,
 	},
 	{
 		id: 36,
@@ -457,5 +527,7 @@ export const items: GloomhavenItem[] = [
 		desc: "During your movement, add +1 Move ^move^ and Jump ^jump^ to a single movement.",
 		folder: "27-36",
 		gameType: GameType.JawsOfTheLion,
+		imgFileNumber: 1,
+		imageNumber: 51,
 	}
 ]

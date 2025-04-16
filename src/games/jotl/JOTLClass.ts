@@ -28,8 +28,8 @@ export class JOTLClass extends GameClass<JOTLClasses> {
 
     getImageDimensions(): ItemImageData {
         return {
-            imagesAcross: 0,
-            imagesDown: 0
+            imagesAcross: 8,
+            imagesDown: 7
         }
     }
 }

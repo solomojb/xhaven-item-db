@@ -211,12 +211,9 @@ export interface GloomhavenItem {
 	faqImage?: string;
 	summon?: Summon;
 	soloItem?: SoloClasses;
-	folder?: string;
 	unlockScenario?: number;
 	unlockProsperity?: number;
 	resources?: Resources;
-	imagePrefix?: string;
-	imageSuffix?: string;
 	specialUnlock?: SpecialUnlockTypes;
 	alwaysShown?: boolean;
 	unlockCrafstmanLevel?: number;

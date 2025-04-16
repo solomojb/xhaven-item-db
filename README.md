@@ -56,20 +56,18 @@ export default tseslint.config({
 TODO:
 * FAQ Image Paths
 * Lock to class as a boolean instead of a list of class names
-* Item Images
 * Optimize Task Switching (Remove Recoil)
 * Fix Linting errors
 * Item Size on mobile
-* Look through Item Members
 * Fix firebase
 * Export from old
 * Remove Semantic UI
-* Remove Item Name From Cards
 * Add Pretifiy
 * Move Selected Class out of Remove Player? (Is this done)
 * Split XHavenDB Provider into smaller providers
 * Split Is ItemShown to Is Item Shown is Item Filtered?
 * Reduce Image sizes
+* Collapse FHSS items to different files
 * Combine Images?
 * Add card slider?
 

@@ -14,7 +14,7 @@ type Props = {
 const ItemId = (props: Props) => {
 	const { item } = props;
 	const id = getItemIdString(item);
-	return <div className="item-card-id"> {`${id} - ${item.name}`} </div>;
+	return <div className="item-card-id"> {id} </div>;
 };
 
 const ItemCardContainer = (props: Props) => {

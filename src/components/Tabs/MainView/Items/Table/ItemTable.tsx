@@ -110,10 +110,10 @@ export const ItemTable = (props: Props) => {
 				</Table.Row>
 			</Table.Header>
 			<Table.Body>
-				{items.map((item) => {
+				{items.map((item, index) => {
 					return (
 						<ItemTableRow
-							key={`${item.id}-${item.imageSuffix}`}
+							key={`${item.id}-${index}`}
 							item={item}
 						/>
 					);

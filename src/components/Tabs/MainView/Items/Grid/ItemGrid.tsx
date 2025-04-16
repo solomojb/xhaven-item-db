@@ -1,4 +1,3 @@
-import React from "react";
 import { GloomhavenItem } from "../../../../../State/Types";
 import ItemCard from "./ItemCard";
 
@@ -12,12 +11,8 @@ export const ItemGrid = (props: Props) => {
 	const { items } = props;
 	return (
 		<div className="item-grid">
-			{items.map((item) => {
-				let key = `${item.id}`;
-				if (item.imageSuffix) {
-					key += `-${item.imageSuffix}`;
-				}
-				return <ItemCard key={key} item={item} />;
+			{items.map((item, index) => {
+				return <ItemCard key={`${item.id}-${index}`} item={item} />;
 			})}
 		</div>
 	);

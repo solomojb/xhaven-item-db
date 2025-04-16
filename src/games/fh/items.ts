@@ -15,7 +15,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack ability, gain advantage on one attack.",
     folder: "001-010",
     unlockCrafstmanLevel: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 0,
   },
   {
     id: 2,
@@ -29,7 +31,9 @@ export const items: GloomhavenItem[] = [
     source: "Craftsman 1",
     desc: "When you are attacked, treat any ^modifier_2x_circle^ attack modifier card the enemy draws as a ^modifier_plus_1^ instead.",
     folder: "001-010",
-    unlockCrafstmanLevel: 1
+    unlockCrafstmanLevel: 1,
+    imgFileNumber: 1,
+    imageNumber: 1,
   },
   {
     id: 3,
@@ -43,7 +47,9 @@ export const items: GloomhavenItem[] = [
     source: "Craftsman 1",
     desc: "At the start of the scenario increase your maximum hit point value by 1.",
     folder: "001-010",
-    unlockCrafstmanLevel: 1
+    unlockCrafstmanLevel: 1,
+    imgFileNumber: 1,
+    imageNumber: 2,
   },
   {
     id: 4,
@@ -59,7 +65,9 @@ export const items: GloomhavenItem[] = [
     folder: "001-010",
     unlockCrafstmanLevel: 1,
     spent: true,
-    minusOneCardsAdded: 1
+    minusOneCardsAdded: 1,
+    imgFileNumber: 1,
+    imageNumber: 3,
   },
   {
     id: 5,
@@ -74,7 +82,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your move ability, add +1 ^fh-move^",
     folder: "001-010",
     unlockCrafstmanLevel: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 4,
   },
   {
     id: 6,
@@ -89,7 +99,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your end-of-turn looting, loot an adjacent hex instead of the hex you occupy.",
     folder: "001-010",
     unlockCrafstmanLevel: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 5,
   },
   {
     id: 7,
@@ -104,7 +116,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, add +1 ^fh-range^ to one of your ranged attacks.",
     folder: "001-010",
     unlockCrafstmanLevel: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 6,
   },
   {
     id: 8,
@@ -120,7 +134,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, one of your single-target melee attack abilities may target an enemy two hexes away.",
     folder: "001-010",
     unlockCrafstmanLevel: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 7,
   },
   {
     id: 9,
@@ -136,7 +152,9 @@ export const items: GloomhavenItem[] = [
     desc: "During you turn, grant one ally within ^fh-range^ 2: ^fh-shield^ 1. ^eot^",
     folder: "001-010",
     unlockCrafstmanLevel: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 8,
   },
   {
     id: 10,
@@ -152,7 +170,9 @@ export const items: GloomhavenItem[] = [
     folder: "001-010",
     unlockCrafstmanLevel: 1,
     minusOneCardsAdded: 1,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 9,
   },
   {
     id: 11,
@@ -166,7 +186,9 @@ export const items: GloomhavenItem[] = [
     source: "Craftsman 2",
     desc: "At the start of the scenario remove one ^modifier_minus_one_circle^ modifier card from your attack modifier deck.",
     folder: "011-015",
-    unlockCrafstmanLevel: 2
+    unlockCrafstmanLevel: 2,
+    imgFileNumber: 1,
+    imageNumber: 10,
   },
   {
     id: 12,
@@ -182,7 +204,9 @@ export const items: GloomhavenItem[] = [
     folder: "011-015",
     unlockCrafstmanLevel: 2,
     spent: true,
-    minusOneCardsAdded: 1
+    minusOneCardsAdded: 1,
+    imgFileNumber: 1,
+    imageNumber: 11,
   },
   {
     id: 13,
@@ -198,7 +222,9 @@ export const items: GloomhavenItem[] = [
     desc: "After you suffer ^damage^ from an attack, perform: ^fh-move^ 2",
     folder: "011-015",
     unlockCrafstmanLevel: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 12,
   },
   {
     id: 14,
@@ -214,7 +240,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your melee attack ability, add +1 ^attack^ to one attack.",
     folder: "011-015",
     unlockCrafstmanLevel: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 13,
   },
   {
     id: 15,
@@ -233,7 +261,9 @@ export const items: GloomhavenItem[] = [
     folder: "011-015",
     unlockCrafstmanLevel: 2,
     spent: true,
-    minusOneCardsAdded: 2
+    minusOneCardsAdded: 2,
+    imgFileNumber: 1,
+    imageNumber: 14,
   },
   {
     id: 16,
@@ -252,7 +282,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, grant all adjacent allies: ^fh-move^ 2",
     folder: "016-020",
     unlockCrafstmanLevel: 3,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 15,
   },
   {
     id: 17,
@@ -270,7 +302,9 @@ export const items: GloomhavenItem[] = [
     desc: "On the next two attacks targeting you, the attacker gains disadvantage.",
     folder: "016-020",
     unlockCrafstmanLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 16,
   },
   {
     id: 18,
@@ -288,7 +322,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn add +1 ^fh-move^ to all your move abilities.",
     folder: "016-020",
     unlockCrafstmanLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 17,
   },
   {
     id: 19,
@@ -306,7 +342,9 @@ export const items: GloomhavenItem[] = [
     folder: "016-020",
     unlockCrafstmanLevel: 3,
     minusOneCardsAdded: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 18,
   },
   {
     id: 20,
@@ -324,7 +362,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, add +1 ^fh-range^ to all your ranged attacks.",
     folder: "016-020",
     unlockCrafstmanLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 19,
   },
   {
     id: 21,
@@ -340,7 +380,9 @@ export const items: GloomhavenItem[] = [
     desc: "While you are adjacent to tree or more enemies, gain ^fh-shield^ 1.",
     folder: "021-025",
     unlockCrafstmanLevel: 4,
-    minusOneCardsAdded: 1
+    minusOneCardsAdded: 1,
+    imgFileNumber: 1,
+    imageNumber: 20,
   },
   {
     id: 22,
@@ -359,7 +401,9 @@ export const items: GloomhavenItem[] = [
     folder: "021-025",
     unlockCrafstmanLevel: 4,
     minusOneCardsAdded: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 21,
   },
   {
     id: 23,
@@ -376,7 +420,9 @@ export const items: GloomhavenItem[] = [
     folder: "021-025",
     unlockCrafstmanLevel: 4,
     minusOneCardsAdded: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 22,
   },
   {
     id: 24,
@@ -394,7 +440,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your melee attack ability, add $wfh-wound$, $wfh-poison$, $wfh-muddle$ to one attack.",
     folder: "021-025",
     unlockCrafstmanLevel: 4,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 23,
   },
   {
     id: 25,
@@ -411,7 +459,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, perform $wfh-regenerate$ ~!^target^ 1 ally, ^fh-range^ 2!~",
     folder: "021-025",
     unlockCrafstmanLevel: 4,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 24,
   },
   {
     id: 26,
@@ -427,7 +477,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack ability, treat all negative and ^modifier_no_damage^ modifier cards as ^modifier_zero_circle^ instead.",
     folder: "026-030",
     unlockCrafstmanLevel: 5,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 25,
   },
   {
     id: 27,
@@ -446,7 +498,9 @@ export const items: GloomhavenItem[] = [
     desc: "Immediately after an enemy ends its move ability adjacent to you, perform $wfh-push$ 1 ~!^target^ the enemy!~",
     folder: "026-030",
     unlockCrafstmanLevel: 5,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 26,
   },
   {
     id: 28,
@@ -464,7 +518,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn add +1 ^fh-move^ to all your move abilities and ignore difficult terrain.",
     folder: "026-030",
     unlockCrafstmanLevel: 5,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 27,
   },
   {
     id: 29,
@@ -480,7 +536,9 @@ export const items: GloomhavenItem[] = [
     desc: "After your melee attack, one enemy adjacent to the target suffers ^damage^ 2.",
     folder: "026-030",
     unlockCrafstmanLevel: 5,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 28,
   },
   {
     id: 30,
@@ -496,7 +554,9 @@ export const items: GloomhavenItem[] = [
     desc: "Immediately after an enemy ends its move ability adjacent to you, perform ^attack^ 3 ~!^target^ the enemy!~",
     folder: "026-030",
     unlockCrafstmanLevel: 5,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 29,
   },
   {
     id: 31,
@@ -514,7 +574,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you suffer ^damage^ from any source, negate the ^damage^.",
     folder: "031-035",
     unlockCrafstmanLevel: 6,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 30,
   },
   {
     id: 32,
@@ -531,7 +593,9 @@ export const items: GloomhavenItem[] = [
     desc: "During yur turn, perform $wfh-ward$ ~!self!~",
     folder: "031-035",
     unlockCrafstmanLevel: 6,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 31,
   },
   {
     id: 33,
@@ -550,7 +614,9 @@ export const items: GloomhavenItem[] = [
     desc: "Up to once each turn during your move ability, add +1 ^fh-move^, then flip this card over at the end of your turn.",
     backDesc: "Up to once each turn during your move ability, suffer ^damage^ 1, then flip this card over at the end of your turn.",
     folder: "031-035",
-    unlockCrafstmanLevel: 6
+    unlockCrafstmanLevel: 6,
+    imgFileNumber: 1,
+    imageNumber: 32,
   },
   {
     id: 34,
@@ -568,7 +634,9 @@ export const items: GloomhavenItem[] = [
     desc: "After your ranged attack, all enemies adjacent to the target suffer ^damage^ 2.",
     folder: "031-035",
     unlockCrafstmanLevel: 6,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 33,
   },
   {
     id: 35,
@@ -585,7 +653,9 @@ export const items: GloomhavenItem[] = [
     folder: "031-035",
     unlockCrafstmanLevel: 6,
     minusOneCardsAdded: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 34,
   },
   {
     id: 36,
@@ -603,7 +673,9 @@ export const items: GloomhavenItem[] = [
     source: "Craftsman 7",
     desc: "When you are attacked by an attack with disadvantage, treat all ^modifier_zero_circle^ and ^modifier_plus_1^ attack modifier cards as ^modifier_minus_one_circle^.",
     folder: "036-040",
-    unlockCrafstmanLevel: 7
+    unlockCrafstmanLevel: 7,
+    imgFileNumber: 1,
+    imageNumber: 35,
   },
   {
     id: 37,
@@ -622,7 +694,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn suffer ^damage^ 3 to perform $invisible$ ~!self!~",
     folder: "036-040",
     unlockCrafstmanLevel: 7,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 1,
+    imageNumber: 36,
   },
   {
     id: 38,
@@ -640,7 +714,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, perform: ^fh-move^ 2 This movement must end adjacent to an enemy.",
     folder: "036-040",
     unlockCrafstmanLevel: 7,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 37,
   },
   {
     id: 39,
@@ -659,7 +735,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack ability, add +3 ^attack^ and $wfh-pierce$ 1 to one attack targeting a Frozen Corpse, Ice Wraith, or Living Doom.",
     folder: "036-040",
     unlockCrafstmanLevel: 7,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 38,
   },
   {
     id: 40,
@@ -678,7 +756,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, add +1 ^attack^ and +2 ^fh-range^ to one of your ranged attacks.",
     folder: "036-040",
     unlockCrafstmanLevel: 7,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 39,
   },
   {
     id: 41,
@@ -696,7 +776,9 @@ export const items: GloomhavenItem[] = [
     source: "Craftsman 8",
     desc: "At the start of the scenario remove one ^modifier_zero_circle^ and one ^modifier_minus_one_circle^ modifier card from your attack modifier deck.",
     folder: "041-045",
-    unlockCrafstmanLevel: 8
+    unlockCrafstmanLevel: 8,
+    imgFileNumber: 1,
+    imageNumber: 40,
   },
   {
     id: 42,
@@ -715,7 +797,9 @@ export const items: GloomhavenItem[] = [
     folder: "041-045",
     unlockCrafstmanLevel: 8,
     minusOneCardsAdded: 4,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 41,
   },
   {
     id: 43,
@@ -734,7 +818,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your melee attack ability, add $wfh-push$ 2 to one attack.",
     folder: "041-045",
     unlockCrafstmanLevel: 8,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 42,
   },
   {
     id: 44,
@@ -752,7 +838,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you would gain $wfh-poison$ or $wfh-curse$, gain $wfh-bless$ instead.",
     folder: "041-045",
     unlockCrafstmanLevel: 8,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 43,
   },
   {
     id: 45,
@@ -770,7 +858,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, perform: ^fh-heal^ 1 ~!^target^ 1 ally, ^fh-range^ 2, $wfh-ward$!~ ",
     folder: "041-045",
     unlockCrafstmanLevel: 8,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 44,
   },
   {
     id: 46,
@@ -789,7 +879,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack ability, gain advantage on all attacks and treat all ^modifier_zero_circle^ and ^modifier_minus_one_circle^ modifier cards as ^modifier_plus_1^ instead.",
     folder: "046-050",
     unlockCrafstmanLevel: 9,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 45,
   },
   {
     id: 47,
@@ -808,7 +900,9 @@ export const items: GloomhavenItem[] = [
     desc: "On the next two sources of ^damage^ from attacks targeting you, suffer ^damage^ 3 to give the attacker $wfh-brittle$.",
     folder: "046-050",
     unlockCrafstmanLevel: 9,
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 46,
   },
   {
     id: 48,
@@ -826,7 +920,9 @@ export const items: GloomhavenItem[] = [
     source: "Craftsman 9",
     desc: "After an ally's heal ability targeting you, perform: ^fh-move^ 2",
     folder: "046-050",
-    unlockCrafstmanLevel: 9
+    unlockCrafstmanLevel: 9,
+    imgFileNumber: 1,
+    imageNumber: 47,
   },
   {
     id: 49,
@@ -846,7 +942,9 @@ export const items: GloomhavenItem[] = [
     folder: "046-050",
     unlockCrafstmanLevel: 9,
     spent: true,
-    faq: "There is a misprint in the first edition of the game. This item should be spent"
+    faq: "There is a misprint in the first edition of the game. This item should be spent",
+    imgFileNumber: 1,
+    imageNumber: 48,
   },
   {
     id: 50,
@@ -867,7 +965,9 @@ export const items: GloomhavenItem[] = [
     backDesc: "During your melee attack ability, add $wfh-pierce$ 1 to one attack and flip this card over.",
     folder: "046-050",
     unlockCrafstmanLevel: 9,
-    minusOneCardsAdded: 3
+    minusOneCardsAdded: 3,
+    imgFileNumber: 1,
+    imageNumber: 49,
   },
   {
     id: 51,

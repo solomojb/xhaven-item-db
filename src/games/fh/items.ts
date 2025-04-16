@@ -985,7 +985,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn perform $wfh-wound$ ~!self!~",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 50,
   },
   {
     id: 52,
@@ -1003,7 +1005,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, @wfh-fire-consume@ to cause up to two enemies within ^fh-range^ 4 to suffer ^damage^ 1.",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 52,
   },
   {
     id: 53,
@@ -1021,7 +1025,9 @@ export const items: GloomhavenItem[] = [
     source: "Random Blueprint",
     desc: "After you move 4 or more hexes during your turn, gain ^retaliate^ 1 for the round.",
     folder: "051-065",
-    imageSuffix: "a"
+    imageSuffix: "a",
+    imgFileNumber: 1,
+    imageNumber: 54,
   },
   {
     id: 54,
@@ -1040,7 +1046,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your short rest, instead of randomly losing one card from your discard pile, randomly draw three cards from your discard pile and choose one to lose.",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 56,
   },
   {
     id: 55,
@@ -1059,7 +1067,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you are attacked by an adjacent enemy, gain ^retaliate^ 2 for the attack.",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 58,
   },
   {
     id: 56,
@@ -1075,7 +1085,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, @wfh-earth-consume@ to loot one adjacent loot token.",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 1,
+    imageNumber: 60,
   },
   {
     id: 57,
@@ -1091,7 +1103,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, destroy one adjacent obstacle, hazardous terrain, difficult terrain, icy terrain, or trap tile.",
     folder: "051-065",
     imageSuffix: "a",
-    consumed: false
+    consumed: false,
+    imgFileNumber: 1,
+    imageNumber: 62,
   },
   {
     id: 58,
@@ -1110,7 +1124,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your melee attack ability, add +2 ^attack^ to one attack. After the ability, gain $wfh-disarm$.",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 1,
   },
   {
     id: 59,
@@ -1127,7 +1143,9 @@ export const items: GloomhavenItem[] = [
     source: "Random Blueprint",
     desc: "At the start of the scenario, for the scenario, gain one 1-mark perk from your character sheet which you have not yet gained.",
     folder: "051-065",
-    imageSuffix: "a"
+    imageSuffix: "a",
+    imgFileNumber: 2,
+    imageNumber: 3,
   },
   {
     id: 60,
@@ -1144,7 +1162,9 @@ export const items: GloomhavenItem[] = [
     source: "Random Blueprint",
     desc: "At the start of the scenario, bring up to two additional #small# items.",
     folder: "051-065",
-    imageSuffix: "a"
+    imageSuffix: "a",
+    imgFileNumber: 2,
+    imageNumber: 5,
   },
   {
     id: 61,
@@ -1163,7 +1183,9 @@ export const items: GloomhavenItem[] = [
     desc: "Immediately after you are attacked by an adjacent enemy, that enemy suffers ^damage^ X, where is X is your ^fh-shield^ value for the attack.",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 7,
   },
   {
     id: 62,
@@ -1181,7 +1203,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your move ability, add +1 ^fh-move^ and gain $wfh-regenerate$",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 9,
   },
   {
     id: 63,
@@ -1199,7 +1223,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your move ability, @wfh-dark-consume@ add +2 ^fh-move^",
     folder: "051-065",
     imageSuffix: "a",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 11,
   },
   {
     id: 64,
@@ -1218,7 +1244,9 @@ export const items: GloomhavenItem[] = [
     desc: "When one of your summons is killed, all enemies adjacent to it suffer ^damage^ 2 and gain $wfh-wound$.",
     folder: "051-065",
     imageSuffix: "a",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 13,
   },
   {
     id: 65,
@@ -1236,7 +1264,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, place a character token on one normal or elite enemy within ^fh-range^ 3.  That enemy gains -1 ^fh-shield^ for the scenario. ^ongoing^",
     folder: "051-065",
     imageSuffix: "a",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 15,
   },
   {
     id: 66,
@@ -1252,7 +1282,9 @@ export const items: GloomhavenItem[] = [
     slot: GloomhavenItemSlot.Head,
     source: "Scenario 188",
     desc: "At the start of your rest, perform: ^fh-heal^ 1 ~!self!~",
-    folder: "066-082"
+    folder: "066-082",
+    imgFileNumber: 2,
+    imageNumber: 17,
   },
   {
     id: 67,
@@ -1270,7 +1302,9 @@ export const items: GloomhavenItem[] = [
     source: "unknown",
     desc: "When you are attacked, add +1 ^attack^ to attack to instead of drawing an attack modifier card and flip this card over.",
     backDesc: "During you attack ability add +1 ^attack^ to one attack instead of drawing an attack modifier card and flip this card over.",
-    folder: "066-082"
+    folder: "066-082",
+    imgFileNumber: 2,
+    imageNumber: 18,
   },
   {
     id: 68,
@@ -1287,7 +1321,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 22",
     desc: "On the next three sources of 2 or fewer ^damage^ you would suffer, negate the ^damage^.",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 19,
   },
   {
     id: 69,
@@ -1304,7 +1340,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 32",
     desc: "When you suffer ^damage^ from an attack, @wfh-air-consume@ to gain ^fh-shield^ 3 for the attack.",
     folder: "066-082",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 20,
   },
   {
     id: 70,
@@ -1320,7 +1358,9 @@ export const items: GloomhavenItem[] = [
     slot: GloomhavenItemSlot.Body,
     source: "Scenario 81",
     desc: "When you suffer ^damage^ from ^retaliate^, reduce the ^damage^ to 1. If it already 1, reduce it to 0 instead.",
-    folder: "066-082"
+    folder: "066-082",
+    imgFileNumber: 2,
+    imageNumber: 21,
   },
   {
     id: 71,
@@ -1337,7 +1377,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 49",
     desc: "After your ability where you kill an enemy, perform: ^fh-move^ 4",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 22,
   },
   {
     id: 72,
@@ -1354,7 +1396,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 82",
     desc: "During you turn, @wfh-light-consume@ to perform: $wfh-bless$ ~!^fh-range^ 3!~",
     folder: "066-082",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 23,
   },
   {
     id: 73,
@@ -1371,7 +1415,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 44",
     desc: "When you apply a positive condition to an ally, a different ally within ^fh-range^ 3 gains the same condition.",
     folder: "066-082",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 24,
   },
   {
     id: 74,
@@ -1388,7 +1434,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 51",
     desc: "During your turn, perform $wfh-muddle$ ~!^fh-range^ 2!~ *cone_1_1*",
     folder: "066-082",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 25,
   },
   {
     id: 75,
@@ -1406,7 +1454,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 110",
     desc: "After any ally within ^fh-range^ 2 suffers ^damage^ from an attack, remove all negative conditions from the ally then perform: ^fh-heal^ 3 ~!^target^ the ally, $wfh-pull$ 1!~",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 26,
   },
   {
     id: 76,
@@ -1422,7 +1472,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 70",
     desc: "During one of your summons' turns, decide how it performs its abilities.",
     folder: "066-082",
-    spent: true
+    spent: true,
+    imgFileNumber: 2,
+    imageNumber: 27,
   },
   {
     id: 77,
@@ -1439,7 +1491,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 40",
     desc: "During you turn, replace one 1-hex obstacle, hazardous terrain, difficult terrain, or icy terrain tile in an unoccupied hex within ^fh-range^ 2 with a different type of tile listed above.",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 28,
   },
   {
     id: 78,
@@ -1458,7 +1512,9 @@ export const items: GloomhavenItem[] = [
     desc: "Once each turn, during your attack ability, gain advantage on one attack, then flip this card over at the end of your turn.",
     backDesc: "Once each turn, during your attack ability, gain disadvantage on one attack, then flip this card over at the end of your turn.",
     folder: "066-082",
-    faq: "In Scenario 122, both treasures are listed as 31. This might be an error. As such, the source might not be accurate."
+    faq: "In Scenario 122, both treasures are listed as 31. This might be an error. As such, the source might not be accurate.",
+    imgFileNumber: 2,
+    imageNumber: 29,
   },
   {
     id: 79,
@@ -1474,7 +1530,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 93",
     desc: "During you turn, add +1 ^attack^ to all your attacks and perform: ^fh-heal^ 2 ~!self!~",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 30,
   },
   {
     id: 80,
@@ -1492,7 +1550,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 72",
     desc: "When you would suffer 4 or fewer ^damage^ from attack, negate the ^damage^ and perform ^fh-heal^ X ~!self!~ where x is the amount of damage you would have suffered.",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 31,
   },
   {
     id: 81,
@@ -1509,7 +1569,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 59",
     desc: "When you suffer 5 or fewer ^damage^ from an attack, one enemy within ^fh-range^ 2 also suffers the same amount of ^damage^.",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 32,
   },
   {
     id: 82,
@@ -1526,7 +1588,9 @@ export const items: GloomhavenItem[] = [
     source: "Both Treasure 62 and 69",
     desc: "During your move ability, after you enter any one hex, give $wfh-immobilize$ to all adjacent enemies.",
     folder: "066-082",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 33,
   },
   {
     id: 83,
@@ -1541,7 +1605,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform ^fh-heal^ 3 ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 34,
   },
   {
     id: 84,
@@ -1557,7 +1623,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, ^recover^ one level 1 card from your discard pile.",
     folder: "083-119",
     consumed: true,
-    lost: true
+    lost: true,
+    imgFileNumber: 2,
+    imageNumber: 35,
   },
   {
     id: 85,
@@ -1572,7 +1640,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, add +1 ^attack^ to all your attacks.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 36,
   },
   {
     id: 86,
@@ -1587,7 +1657,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, @wfh-wild@",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 37,
   },
   {
     id: 87,
@@ -1602,7 +1674,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, remove one negative condition you have.  This item can be used while you have $wfh-impair$ or $wfh-stun$.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 38,
   },
   {
     id: 88,
@@ -1617,7 +1691,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn perform ^retaliate^ 1 ~!^fh-range^ 3!~ ^eot^",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 39,
   },
   {
     id: 89,
@@ -1632,7 +1708,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-ward$ ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 40,
   },
   {
     id: 90,
@@ -1647,7 +1725,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-strengthen$ ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 41,
   },
   {
     id: 91,
@@ -1662,7 +1742,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-bless$ ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 42,
   },
   {
     id: 92,
@@ -1677,7 +1759,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, ^recover^ up to two of your spent items.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 43,
   },
   {
     id: 93,
@@ -1692,7 +1776,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "When you reveal a ^modifier_no_damage^ attack modifier card from your attack modifier deck, treat it as a ^modifier_zero_circle^ instead.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 44,
   },
   {
     id: 94,
@@ -1707,7 +1793,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform: ^attack^ 2",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 45,
   },
   {
     id: 95,
@@ -1722,7 +1810,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy\nSR-14",
     desc: "During your turn, perform $wfh-poison$ ~!^fh-range^ 1!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 46,
   },
   {
     id: 96,
@@ -1737,7 +1827,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-wound$ ~!^fh-range^ 1!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 47,
   },
   {
     id: 97,
@@ -1752,7 +1844,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, one enemy within ^fh-range^ 2 suffers ^damage^ 2.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 48,
   },
   {
     id: 98,
@@ -1764,7 +1858,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy\nWO-10",
     desc: "During your turn, perform $wfh-wound$, $wfh-poison$ ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 49,
   },
   {
     id: 99,
@@ -1780,7 +1876,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform ^fh-heal^ 6 ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 50,
   },
   {
     id: 100,
@@ -1797,7 +1895,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, ^recover^ one card from your discard pile.",
     folder: "083-119",
     consumed: true,
-    lost: true
+    lost: true,
+    imgFileNumber: 2,
+    imageNumber: 51,
   },
   {
     id: 101,
@@ -1813,7 +1913,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, add +2 ^attack^ to all your attacks.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 52,
   },
   {
     id: 102,
@@ -1829,7 +1931,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, @wfh-wild@ @wfh-wild@",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 53,
   },
   {
     id: 103,
@@ -1845,7 +1949,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, remove all negative conditions you have.  This item can be used while you have $wfh-impair$ or $wfh-stun$.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 54,
   },
   {
     id: 104,
@@ -1861,7 +1967,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your move ability, add +3 ^fh-move^ and ^fh-jump^.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 55,
   },
   {
     id: 105,
@@ -1877,7 +1985,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform, ^retaliate^ 2 ~!^fh-range^ 3!~ ^eot^",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 56,
   },
   {
     id: 106,
@@ -1893,7 +2003,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-ward$ ~!^target^ 2 adjacent allies and self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 57,
   },
   {
     id: 107,
@@ -1909,7 +2021,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-strengthen$ ~!^target^ 2 adjacent allies and self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 58,
   },
   {
     id: 108,
@@ -1925,7 +2039,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform $wfh-bless$ ~!^target^ 2 adjacent allies and self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 59,
   },
   {
     id: 109,
@@ -1941,7 +2057,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, ^recover^ up to one of your lost 2-herb potions.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 60,
   },
   {
     id: 110,
@@ -1957,7 +2075,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "When you reveal a ^modifier_no_damage^ attack modifier card from your attack modifier deck, treat it as a ^modifier_plus_2^ instead.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 61,
   },
   {
     id: 111,
@@ -1973,7 +2093,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform: ^attack^ 4",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 2,
+    imageNumber: 62,
   },
   {
     id: 112,
@@ -1989,7 +2111,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn suffer ^damage^ 10.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 0,
   },
   {
     id: 113,
@@ -2005,7 +2129,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "At the start of your turn, discard one of your played cards to perform both the top and bottom actions of your other played card. At most one action can trigger a ^consumed^ icon.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 1,
   },
   {
     id: 114,
@@ -2021,7 +2147,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, reveal the top card of one monster ability deck. You may place the card on the bottom of the deck.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 2,
   },
   {
     id: 115,
@@ -2037,7 +2165,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, ignore one elemental consumption symbol on an action you played and gain its effect.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 3,
   },
   {
     id: 116,
@@ -2053,7 +2183,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn perform, $wfh-poison$ ~!^fh-range^ 1!~ *cone_1_1*",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 4,
   },
   {
     id: 117,
@@ -2069,7 +2201,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn perform, $wfh-wound$ ~!^fh-range^ 1!~ *cone_1_1*",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 5,
   },
   {
     id: 118,
@@ -2085,7 +2219,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, one enemy within ^fh-range^ 2 suffers ^damage^ 4.",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 6,
   },
   {
     id: 119,
@@ -2102,7 +2238,9 @@ export const items: GloomhavenItem[] = [
     source: "Alchemy",
     desc: "During your turn, perform: $wfh-wound$, $wfh-poison$, $wfh-immobilize$, $wfh-disarm$ ~!self!~",
     folder: "083-119",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 7,
   },
   {
     id: 120,
@@ -2115,7 +2253,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, perform ^fh-heal^ 1 ~!self!~",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 8,
   },
   {
     id: 121,
@@ -2137,7 +2277,9 @@ export const items: GloomhavenItem[] = [
         }
       ],
       effect: "@wfh-wild@"
-    }
+    },
+    imgFileNumber: 3,
+    imageNumber: 9,
   },
   {
     id: 122,
@@ -2150,7 +2292,9 @@ export const items: GloomhavenItem[] = [
     desc: "When one of your summons suffers ^damage^ from an attack, that summons gains ^fh-shield^ 2 for the attack.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 10,
   },
   {
     id: 123,
@@ -2163,7 +2307,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you are attacked, before drawing an attack modifier car, the attacker gains disadvantage on the attack.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 11,
   },
   {
     id: 124,
@@ -2176,7 +2322,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, add ^fh-jump^ to all your move abilities.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 12,
   },
   {
     id: 125,
@@ -2189,7 +2337,9 @@ export const items: GloomhavenItem[] = [
     desc: "During ordering of initiative after all ability card have been revealed, increase or decrease your initiative by 10.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 13,
   },
   {
     id: 126,
@@ -2202,7 +2352,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your ranged attack ability, add $wfh-immobilize$ to one attack.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 14,
   },
   {
     id: 127,
@@ -2215,7 +2367,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your melee attack ability, add $wfh-poison$ to one attack.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 15,
   },
   {
     id: 128,
@@ -2228,7 +2382,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you suffer ^damage^ from an attack, gain ^fh-shield^ 1 for the attack.",
     folder: "120-128",
     unlockTradingPostLevel: -1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 16,
   },
   {
     id: 129,
@@ -2241,7 +2397,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack ability, gain advantage on all attacks.",
     folder: "129-167",
     unlockTradingPostLevel: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 17,
   },
   {
     id: 130,
@@ -2254,7 +2412,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you are attacked, treat any ^modifier_2x_circle^ attack modifier card the enemy draws as a ^modifier_zero_circle^ instead.",
     folder: "129-167",
     unlockTradingPostLevel: 2,
-    minusOneCardsAdded: 1
+    minusOneCardsAdded: 1,
+    imgFileNumber: 3,
+    imageNumber: 18,
   },
   {
     id: 131,
@@ -2268,7 +2428,9 @@ export const items: GloomhavenItem[] = [
     folder: "129-167",
     unlockTradingPostLevel: 2,
     spent: true,
-    minusOneCardsAdded: 3
+    minusOneCardsAdded: 3,
+    imgFileNumber: 3,
+    imageNumber: 19,
   },
   {
     id: 132,
@@ -2280,7 +2442,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 2",
     desc: "At the start of the scenario, bring one additional #small# items.",
     folder: "129-167",
-    unlockTradingPostLevel: 2
+    unlockTradingPostLevel: 2,
+    imgFileNumber: 3,
+    imageNumber: 20,
   },
   {
     id: 133,
@@ -2293,7 +2457,9 @@ export const items: GloomhavenItem[] = [
     desc: "When an adjacent ally would be targeted by an attack, you are targeted instead, regardless of range and line-of-sight.",
     folder: "129-167",
     unlockTradingPostLevel: 2,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 21,
   },
   {
     id: 134,
@@ -2305,7 +2471,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 2",
     desc: "When you use the basic bottom action of an ability card, perform ^fh-move^ 3 instead of ^fh-move^ 2.",
     folder: "129-167",
-    unlockTradingPostLevel: 2
+    unlockTradingPostLevel: 2,
+    imgFileNumber: 3,
+    imageNumber: 22,
   },
   {
     id: 135,
@@ -2318,7 +2486,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack, add $wfh-pierce$ 3 to all your ranged attacks.",
     folder: "129-167",
     unlockTradingPostLevel: 2,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 23,
   },
   {
     id: 136,
@@ -2331,7 +2501,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your single-target melee attack ability, change the targeting of the ability to: *cone_0_1*",
     folder: "129-167",
     unlockTradingPostLevel: 2,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 24,
   },
   {
     id: 137,
@@ -2345,7 +2517,9 @@ export const items: GloomhavenItem[] = [
     folder: "129-167",
     unlockTradingPostLevel: 2,
     minusOneCardsAdded: 1,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 25,
   },
   {
     id: 138,
@@ -2358,7 +2532,9 @@ export const items: GloomhavenItem[] = [
     desc: "When an enemy would give you $wfh-disarm$, $wfh-stun$, or $wfh-muddle$, prevent the condition.",
     folder: "129-167",
     unlockTradingPostLevel: 3,
-    minusOneCardsAdded: 2
+    minusOneCardsAdded: 2,
+    imgFileNumber: 3,
+    imageNumber: 26,
   },
   {
     id: 139,
@@ -2370,7 +2546,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 3",
     desc: "After your move 4 or more hexes on your turn, add +1 ^attack^ to your next melee attack this turn.",
     folder: "129-167",
-    unlockTradingPostLevel: 3
+    unlockTradingPostLevel: 3,
+    imgFileNumber: 3,
+    imageNumber: 27,
   },
   {
     id: 140,
@@ -2383,7 +2561,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, grant one of your summons: ^fh-shield^ 2. ^eot^",
     folder: "129-167",
     unlockTradingPostLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 28,
   },
   {
     id: 141,
@@ -2396,7 +2576,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you are attacked, before drawing an attack modifier car, the attacker gains disadvantage on the attack and you gain ^fh-shield^ 1 for the attack.",
     folder: "129-167",
     unlockTradingPostLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 29,
   },
   {
     id: 142,
@@ -2409,7 +2591,9 @@ export const items: GloomhavenItem[] = [
     desc: "During ordering of initiative after all ability card have been revealed, increase or decrease your initiative by 20.",
     folder: "129-167",
     unlockTradingPostLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 30,
   },
   {
     id: 143,
@@ -2421,7 +2605,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 3",
     desc: "After you move 4 or more hexes during your turn, after the move ability perform: ^fh-heal^ 1 ~!self!~.",
     folder: "129-167",
-    unlockTradingPostLevel: 3
+    unlockTradingPostLevel: 3,
+    imgFileNumber: 3,
+    imageNumber: 31,
   },
   {
     id: 144,
@@ -2434,7 +2620,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, @wfh-wild-consume@ to add +1 ^attack^ to all your attacks.",
     folder: "129-167",
     unlockTradingPostLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 32,
   },
   {
     id: 145,
@@ -2446,7 +2634,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 3",
     desc: "When you use the basic top action of an ability card, perform ^attack^ 3 instead of ^attack^ 2.",
     folder: "129-167",
-    unlockTradingPostLevel: 3
+    unlockTradingPostLevel: 3,
+    imgFileNumber: 3,
+    imageNumber: 33,
   },
   {
     id: 146,
@@ -2459,7 +2649,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your attack, add $wfh-pull$ 2 to all your ranged attacks.",
     folder: "129-167",
     unlockTradingPostLevel: 3,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 34,
   },
   {
     id: 147,
@@ -2471,7 +2663,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 4",
     desc: "During your melee attack, add $wfh-push$ 1.",
     folder: "129-167",
-    unlockTradingPostLevel: 4
+    unlockTradingPostLevel: 4,
+    imgFileNumber: 3,
+    imageNumber: 35,
   },
   {
     id: 148,
@@ -2484,7 +2678,9 @@ export const items: GloomhavenItem[] = [
     desc: "After the next three attacks targeting an ally within ^fh-range^ 2, flip this card over.",
     backDesc: "During your turn, perform: $wfh-ward$ ~!^fh-range^3!~ then flip this card over.",
     folder: "129-167",
-    unlockTradingPostLevel: 4
+    unlockTradingPostLevel: 4,
+    imgFileNumber: 3,
+    imageNumber: 36,
   },
   {
     id: 149,
@@ -2498,7 +2694,9 @@ export const items: GloomhavenItem[] = [
     folder: "129-167",
     unlockTradingPostLevel: 4,
     spent: true,
-    minusOneCardsAdded: 5
+    minusOneCardsAdded: 5,
+    imgFileNumber: 3,
+    imageNumber: 37,
   },
   {
     id: 150,
@@ -2511,7 +2709,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, perform: ^fh-heal^ 3 ~!^target^ 1 ally, ^fh-range^ 1!~ ",
     folder: "129-167",
     unlockTradingPostLevel: 4,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 38,
   },
   {
     id: 151,
@@ -2523,7 +2723,9 @@ export const items: GloomhavenItem[] = [
     source: "Trading Post 4",
     desc: "When you use the basic bottom action of an ability card, perform ^fh-move^ 4 instead of ^fh-move^ 2.",
     folder: "129-167",
-    unlockTradingPostLevel: 4
+    unlockTradingPostLevel: 4,
+    imgFileNumber: 3,
+    imageNumber: 39,
   },
   {
     id: 152,
@@ -2536,7 +2738,9 @@ export const items: GloomhavenItem[] = [
     desc: "At the end of your turn, if you have moved 1 or fewer hexes during your turn, gain ^fh-shield^ 1 for the round.",
     folder: "129-167",
     unlockTradingPostLevel: 4,
-    minusOneCardsAdded: 2
+    minusOneCardsAdded: 2,
+    imgFileNumber: 3,
+    imageNumber: 40,
   },
   {
     id: 153,
@@ -2549,7 +2753,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your single-target melee attack ability, change the targeting of the ability to: *line_0_1_1*",
     folder: "129-167",
     unlockTradingPostLevel: 4,
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 41,
   },
   {
     id: 154,
@@ -2562,7 +2768,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your single-target ranged attack ability, change the targeting of the ability to: *cone_1_1*",
     folder: "129-167",
     unlockTradingPostLevel: 4,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 42,
   },
   {
     id: 155,
@@ -2576,7 +2784,9 @@ export const items: GloomhavenItem[] = [
     folder: "129-167",
     unlockTradingPostLevel: 4,
     spent: true,
-    minusOneCardsAdded: 2
+    minusOneCardsAdded: 2,
+    imgFileNumber: 3,
+    imageNumber: 43,
   },
   {
     id: 156,
@@ -2589,7 +2799,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you short rest, ^recover^ up to three of your spent items.",
     folder: "129-167",
     unlockJewelerLevel: 1,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 44,
   },
   {
     id: 157,
@@ -2602,7 +2814,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you suffer ^damage^ from an attack, gain ^fh-shield^ 4 for the attack.",
     folder: "129-167",
     unlockJewelerLevel: 1,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 45,
   },
   {
     id: 158,
@@ -2629,7 +2843,9 @@ export const items: GloomhavenItem[] = [
         }
       ],
       effect: "^fh-heal^ 3 ~!self, $wfh-ward$!~"
-    }
+    },
+    imgFileNumber: 3,
+    imageNumber: 46,
   },
   {
     id: 159,
@@ -2642,7 +2858,9 @@ export const items: GloomhavenItem[] = [
     desc: "After your attack ability during which one enemy suffered at least ^damage^ 6, perform: $wfh-bless$, $wfh-bless$ ~!self!~",
     folder: "129-167",
     unlockJewelerLevel: 1,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 47
   },
   {
     id: 160,
@@ -2655,7 +2873,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you short rest, ^recover^ up to three of your spent items, and perform ^fh-heal^ 2 ~!self!~.",
     folder: "129-167",
     unlockJewelerLevel: 2,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 48,
   },
   {
     id: 161,
@@ -2668,7 +2888,9 @@ export const items: GloomhavenItem[] = [
     desc: "At the end of your turn, play one card from your hand and perform all persistent and mandatory abilities on either the top or bottom action of the card.",
     folder: "129-167",
     unlockJewelerLevel: 2,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 49,
   },
   {
     id: 162,
@@ -2695,7 +2917,9 @@ export const items: GloomhavenItem[] = [
         }
       ],
       effect: "^attack^ 3 ~!^fh-range^ 3, $wfh-immobilize$!~"
-    }
+    },
+    imgFileNumber: 3,
+    imageNumber: 50,
   },
   {
     id: 163,
@@ -2708,7 +2932,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, give $wfh-stun$ to half (rounded up) the enemies adjacent to you.",
     folder: "129-167",
     unlockJewelerLevel: 2,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 51,
   },
   {
     id: 164,
@@ -2721,7 +2947,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you short rest, ^recover^ up to three of your spent items, choose which card to lose during the rest, and perform ^fh-heal^ 2 ~!self!~.",
     folder: "129-167",
     unlockJewelerLevel: 3,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 52,
   },
   {
     id: 165,
@@ -2734,7 +2962,9 @@ export const items: GloomhavenItem[] = [
     desc: "At the end of you turn, play one card from your hand and perform the bottom action of the card.",
     folder: "129-167",
     unlockJewelerLevel: 3,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 53,
   },
   {
     id: 166,
@@ -2761,7 +2991,9 @@ export const items: GloomhavenItem[] = [
         }
       ],
       effect: "^attack^ 3 ~!$wfh-disarm$!~"
-    }
+    },
+    imgFileNumber: 3,
+    imageNumber: 54,
   },
   {
     id: 167,
@@ -2774,7 +3006,9 @@ export const items: GloomhavenItem[] = [
     desc: "At the start of the enemy's turn, before it determines its focus, perform: $wfh-pull$ 4 ~!^target^ the enemy, ^fh-range^ 5, $wfh-muddle$!~",
     folder: "129-167",
     unlockJewelerLevel: 3,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 55,
   },
   {
     id: 168,
@@ -2786,7 +3020,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your ranged attack ability, add +1 ^target^.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 56,
   },
   {
     id: 169,
@@ -2798,7 +3034,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, reveal the top card of your attack modifier deck.  You may place the card on the bottom of the deck.",
     folder: "168-192",
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 57,
   },
   {
     id: 170,
@@ -2810,7 +3048,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, reveal the top card of each monster ability deck.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 58,
   },
   {
     id: 171,
@@ -2821,7 +3061,9 @@ export const items: GloomhavenItem[] = [
     slot: GloomhavenItemSlot.Head,
     source: "Loot Deck Random",
     desc: "Whenever you lose a card to negate ^damage^, ^recover^ up to one card from your discard pile and gain $wfh-regenerate$.",
-    folder: "168-192"
+    folder: "168-192",
+    imgFileNumber: 3,
+    imageNumber: 59,
   },
   {
     id: 172,
@@ -2833,7 +3075,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, look at the top four cards of your attack modifier deck and put them back in any order.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 60,
   },
   {
     id: 173,
@@ -2845,7 +3089,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "When attacked: @wfh-wild@.",
     folder: "168-192",
-    spent: true
+    spent: true,
+    imgFileNumber: 3,
+    imageNumber: 61,
   },
   {
     id: 174,
@@ -2857,7 +3103,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, perform: ^teleport^ 20 This teleport must end in a hex adjacent to one of your allies.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 3,
+    imageNumber: 62,
   },
   {
     id: 175,
@@ -2870,7 +3118,9 @@ export const items: GloomhavenItem[] = [
     desc: "When you suffer ^damage^ from an attack, the attacker suffers and equal amount of ^damage^.",
     folder: "168-192",
     consumed: true,
-    minusOneCardsAdded: 2
+    minusOneCardsAdded: 2,
+    imgFileNumber: 4,
+    imageNumber: 0,
   },
   {
     id: 176,
@@ -2882,7 +3132,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, perform: ^teleport^ 4 This teleport must end in a hex adjacent to one of your enemies.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 1,
   },
   {
     id: 177,
@@ -2894,7 +3146,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "When you spring a trap by entering its hex, you may apply its effects to a figure within ^fh-range^ 3 instead of yourself.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 2,
   },
   {
     id: 178,
@@ -2905,7 +3159,9 @@ export const items: GloomhavenItem[] = [
     slot: GloomhavenItemSlot.Legs,
     source: "Loot Deck Random",
     desc: "At the start of your turn in which your initiative is 60 or higher and you are not performing a long rest, perform ^fh-heal^ 1 ~!self!~.",
-    folder: "168-192"
+    folder: "168-192",
+    imgFileNumber: 4,
+    imageNumber: 3,
   },
   {
     id: 179,
@@ -2917,7 +3173,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your move ability, add +4 ^fh-move^.  After the move ability gain $wfh-immobilize$.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 4,
   },
   {
     id: 180,
@@ -2928,7 +3186,9 @@ export const items: GloomhavenItem[] = [
     slot: GloomhavenItemSlot.Legs,
     source: "Loot Deck Random",
     desc: "When you loot two or more tokens at once, perform: $wfh-bless$ ~!self!~.",
-    folder: "168-192"
+    folder: "168-192",
+    imgFileNumber: 4,
+    imageNumber: 5,
   },
   {
     id: 181,
@@ -2940,7 +3200,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, designate two allies or any two normal or elite monsters. Each designated figure simultaneously ^teleport^ to the hex occupied by the other designated figure.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 6,
   },
   {
     id: 182,
@@ -2952,7 +3214,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "After your melee attack, place a character token on the target. The target loses ^fh-flying^. ^ongoing^",
     folder: "168-192",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 7,
   },
   {
     id: 183,
@@ -2964,7 +3228,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random\nTreasure 16",
     desc: "During your turn, all figures gain disadvantage on and add 1 ^fh-range^ to all ranged attacks this round. ^eot^",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 8,
   },
   {
     id: 184,
@@ -2976,7 +3242,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your multi-target melee attack ability, add +1 ^target^.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 9,
   },
   {
     id: 185,
@@ -2988,7 +3256,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your melee attack ability, add all negative conditions you have except $wfh-brittle$, $wfh-bane$ and $wfh-stun$ to one attack.",
     folder: "168-192",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 10,
   },
   {
     id: 186,
@@ -3000,7 +3270,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, create one 1-hex obstacle in an adjacent empty hex.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 11,
   },
   {
     id: 187,
@@ -3012,7 +3284,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, create one ^damage^ 3 trap in an adjacent empty hex.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 12,
   },
   {
     id: 188,
@@ -3024,7 +3298,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, create one 1-hex hazardous terrain, icy terrain, or water tile in an adjacent featureless hex.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 13,
   },
   {
     id: 189,
@@ -3049,7 +3325,9 @@ export const items: GloomhavenItem[] = [
         }
       ],
       effect: "$wfh-invisible$ ~!self!~"
-    }
+    },
+    imgFileNumber: 4,
+    imageNumber: 14,
   },
   {
     id: 190,
@@ -3061,7 +3339,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your turn, place a character token on one normal or elite enemy within ^fh-range^ 3. This enemy adds -1 ^attack^ to all its attacks. ^ongoing^.",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 15,
   },
   {
     id: 191,
@@ -3073,7 +3353,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "During your, perform ^fh-heal^ 5 ~!^fh-range^ 5!~ $wfh-poison$ ~@!~!^target^ the target of the heal ability@~",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 16,
   },
   {
     id: 192,
@@ -3085,7 +3367,9 @@ export const items: GloomhavenItem[] = [
     source: "Loot Deck Random",
     desc: "At the end of your turn, designate one enemy within ^fh-range^ 3. You are its primary focus and it does not avoid negative hexes when determining movement this round. ^eot^",
     folder: "168-192",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 17,
   },
   {
     id: 193,
@@ -3097,7 +3381,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 121",
     desc: "During your turn, control one enemy within ^fh-range^ 3: ^attack^ 3",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 18,
   },
   {
     id: 194,
@@ -3108,7 +3394,9 @@ export const items: GloomhavenItem[] = [
     slot: GloomhavenItemSlot.Head,
     source: "Scenario 125",
     desc: "During ordering of initiative after all ability card have been revealed, increase or decrease a monster set's initiative by 30.",
-    folder: "193-247"
+    folder: "193-247",
+    imgFileNumber: 4,
+    imageNumber: 19,
   },
   {
     id: 195,
@@ -3120,7 +3408,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 83\nScenario 127",
     desc: "During your turn add +1 ^fh-range^ and $wfh-pierce$ 1 to one of your ranged attacks.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 20,
   },
   {
     id: 196,
@@ -3132,7 +3422,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-26",
     desc: "During your turn, discard one loot card except Random Item to perform: ^fh-heal^ 5 ~!^fh-range^ 2, $wfh-ward$!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 21,
   },
   {
     id: 197,
@@ -3144,7 +3436,9 @@ export const items: GloomhavenItem[] = [
     source: "WO-77",
     desc: "After ordering of initiative, exchange a card in your hand for one which you have played. Your initiative is unaffected.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 22,
   },
   {
     id: 198,
@@ -3156,7 +3450,9 @@ export const items: GloomhavenItem[] = [
     source: "WR-36",
     desc: "During your turn, perform $wfh-pull$ 3 ~!^fh-range^ 4!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 23,
   },
   {
     id: 199,
@@ -3168,7 +3464,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 6\nTreasure 78",
     desc: "At the start of the scenario, consider yourself to be your summons in initiative order when determining monster focus for the remainder of the scenario.",
     folder: "193-247",
-    faq: "In Scenario 122, both treasures are listed as 31. This might be an error. As such, the source might not be accurate."
+    faq: "In Scenario 122, both treasures are listed as 31. This might be an error. As such, the source might not be accurate.",
+    imgFileNumber: 4,
+    imageNumber: 24,
   },
   {
     id: 200,
@@ -3180,7 +3478,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 4",
     desc: "During your heal ability targeting an ally, @wfh-light-consume@ to add $wfh-regenerate$ to one heal and flip this card over.",
     backDesc: "During your attack ability, @wfh-dark-consume@ to add $wfh-curse$ to one attack and flip this card over.",
-    folder: "193-247"
+    folder: "193-247",
+    imgFileNumber: 4,
+    imageNumber: 25,
   },
   {
     id: 201,
@@ -3192,7 +3492,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 76\nScenario 77",
     desc: "During your attack ability performed while occupying or adjacent to a hex with a water tile, add $wfh-push$ 1 and $wfh-immobilize$ to one attack.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 26,
   },
   {
     id: 202,
@@ -3204,7 +3506,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 83",
     desc: "During your melee attack ability, add $wfh-pierce$ 2 and $wfh-wound$ to one attack.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 27,
   },
   {
     id: 203,
@@ -3216,7 +3520,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 119",
     desc: "After your ability control one target: ^fh-move^ 2",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 28,
   },
   {
     id: 204,
@@ -3229,7 +3535,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your turn, one adjacent normal or elite enemy suffers ^damage^ to their ^fh-shield^ value.",
     folder: "193-247",
     consumed: true,
-    minusOneCardsAdded: 1
+    minusOneCardsAdded: 1,
+    imgFileNumber: 4,
+    imageNumber: 29,
   },
   {
     id: 205,
@@ -3241,7 +3549,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 55",
     desc: "During your, perform ^attack^ 2 ~!^fh-range^, $wfh-pull$ 2!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 30,
   },
   {
     id: 206,
@@ -3254,7 +3564,9 @@ export const items: GloomhavenItem[] = [
     desc: "During your melee attack ability, if you have not move this round, add +2 ^attack^ to one attack, and you may perform no move abilities this turn.",
     folder: "193-247",
     spent: true,
-    minusOneCardsAdded: 3
+    minusOneCardsAdded: 3,
+    imgFileNumber: 4,
+    imageNumber: 31,
   },
   {
     id: 207,
@@ -3266,7 +3578,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 13",
     desc: "After your attack, if the target's current hit point is 3 or less, give the target $wfh-bane$",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 32,
   },
   {
     id: 208,
@@ -3278,7 +3592,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 52",
     desc: "During your attack ability add $wfh-pierce$ 3 to one attack targeting an enemy whose current hit point value is 4 or less.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 33,
   },
   {
     id: 209,
@@ -3290,7 +3606,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-35",
     desc: "During your melee attack ability, give advantage on one attack.  For each mastery you have completed, also add one of the following to the attack: +1 ^attack^, $wfh-wound$, or $wfh-poison$. ",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 34,
   },
   {
     id: 210,
@@ -3302,7 +3620,9 @@ export const items: GloomhavenItem[] = [
     source: "SO-39",
     desc: "During your turn, add +3 ^attack^ to all your attacks performed by Lurkers targeting you this round. ^eot^",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 35,
   },
   {
     id: 211,
@@ -3314,7 +3634,9 @@ export const items: GloomhavenItem[] = [
     source: "Boat Event 11",
     desc: "During your turn, designate one adjacent hex.  At the end of your turn, all figures within ^fh-range^ 2 of the designated hex suffer ^damage^ 1.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 36,
   },
   {
     id: 212,
@@ -3326,7 +3648,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 66",
     desc: "After ordering of initiative, choose one element. This element cannot be infused or consume by any monster this round. ^eot^",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 37,
   },
   {
     id: 213,
@@ -3338,7 +3662,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 106",
     desc: "During your attack ability @wfh-ice-consume@ to add $wfh-immobilize$ to one attack, then flip this card over at the end of your turn.",
     backDesc: "During your attack ability @wfh-fire-consume@ to add $wfh-wound$ to one attack, then flip this card over at the end of your turn.",
-    folder: "193-247"
+    folder: "193-247",
+    imgFileNumber: 4,
+    imageNumber: 38,
   },
   {
     id: 214,
@@ -3350,7 +3676,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 107",
     desc: "During your heal ability add one positive condition you have to one heal.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 39,
   },
   {
     id: 215,
@@ -3362,7 +3690,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 128",
     desc: "During your, add +1 ^attack^ and $wfh-muddle$ to all your attacks. At the end of your turn, perform: $wfh-muddle$ ~!self!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 40,
   },
   {
     id: 216,
@@ -3374,7 +3704,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-48 or WR-46 Event Chain",
     desc: "During your turn, @wfh-fire@ @wfh-ice@ @wfh-air@ @wfh-earth@ @wfh-light@ @wfh-dark@ Elements do not move from strong to waning at the end of this round. ^eot^",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 41,
   },
   {
     id: 217,
@@ -3386,7 +3718,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-49 or WR-47 Event Chain",
     desc: "During ordering of initiative after all ability card have been revealed, shuffle all monster ability decks and draw a new card for each active monster set.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 42,
   },
   {
     id: 218,
@@ -3398,7 +3732,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-47 or WR-45 Event Chain",
     desc: "During your turn, remove all conditions from all figures then grant all figures: ^fh-heal^ 2 ~!self!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 43,
   },
   {
     id: 219,
@@ -3410,7 +3746,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 134\n",
     desc: "During your turn all figures gain $wfh-strengthen$. Until any monster is killed, the first attack modifier card drawn for every attack is treated as rolling. ^ongoing^",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 44,
   },
   {
     id: 220,
@@ -3422,7 +3760,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 135",
     desc: "During your turn, ^recover^ up to one Tome item.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 45,
   },
   {
     id: 221,
@@ -3434,7 +3774,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 84",
     desc: "During your melee attack ability, @wfh-ice-consume@ to add $wfh-pierce$ 3 to one attack.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 46,
   },
   {
     id: 222,
@@ -3446,7 +3788,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 36",
     desc: "During yor turn, discard two cards from your hand to perform: ^fh-heal^ 6 ~!self!~",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 47,
   },
   {
     id: 223,
@@ -3458,7 +3802,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 26",
     desc: "After ordering of initiative, all monsters consider you to be first in initiative order when determining focus this round. ^eot^",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 48,
   },
   {
     id: 224,
@@ -3470,7 +3816,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 60",
     desc: "After the next three attacks targeting you, flip this card over.",
     backDesc: "During your turn, perform ^fh-heal^ 3 ~!^target^ 1 ally, ^fh-range^ 3, $wfh-bless$!~ then flip this card over.",
-    folder: "193-247"
+    folder: "193-247",
+    imgFileNumber: 4,
+    imageNumber: 49,
   },
   {
     id: 225,
@@ -3482,7 +3830,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 41",
     desc: "During your melee attack ability, @wfh-earth-consume@ to add +1 ^attack^ to one attack and flip this card over.",
     backDesc: "During your melee attack ability, @wfh-air-consume@ to add $wfh-push$ 2 to one attack and flip this card over.",
-    folder: "193-247"
+    folder: "193-247",
+    imgFileNumber: 4,
+    imageNumber: 50,
   },
   {
     id: 226,
@@ -3494,7 +3844,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 81\nWR-22",
     desc: "During your attack ability, double the numerical value of the next attack modifier card you draw. ^modifier_2x_circle^ and ^modifier_no_damage^ modifier cards are unaffected.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 51,
   },
   {
     id: 227,
@@ -3506,7 +3858,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 7",
     desc: "When you short rest, place half (rounded down) of your discard pile on this item, lose of the remaining cards randomly as normal, then draw the cards on this item.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 52,
   },
   {
     id: 228,
@@ -3518,7 +3872,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 35",
     desc: "During your turn, open one unlocked door while within ^fh-range^ 2.",
     folder: "193-247",
-    spent: true
+    spent: true,
+    imgFileNumber: 4,
+    imageNumber: 53,
   },
   {
     id: 229,
@@ -3530,7 +3886,9 @@ export const items: GloomhavenItem[] = [
     source: "SO-42",
     desc: "During your turn grant one ally within ^fh-range^ 3: ^fh-move^ 3",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 54,
   },
   {
     id: 230,
@@ -3542,7 +3900,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-26",
     desc: "After you draw one loot card, draw one additional card, keep one, and place the other on either the top or bottom of the loot deck.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 55,
   },
   {
     id: 231,
@@ -3554,7 +3914,9 @@ export const items: GloomhavenItem[] = [
     source: "WR-16",
     desc: "When you gain a loot token, gain 3 `hide` instead of drawing a loot card.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 56,
   },
   {
     id: 232,
@@ -3566,7 +3928,9 @@ export const items: GloomhavenItem[] = [
     source: "WR-12",
     desc: "During your turn lose 1 morale to perform: $wfh-bless$ ~!^target^ all allies and self!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 57,
   },
   {
     id: 233,
@@ -3578,7 +3942,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 13",
     desc: "During you ally's ranged attack ability, add $wfh-muddle$ and $wfh-curse$ to one attack.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 58,
   },
   {
     id: 234,
@@ -3590,7 +3956,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 84",
     desc: "During your turn, create one $wfh-poison$, $wfh-immobilize$ trap in an empty hex within ^fh-range^ 2.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 59,
   },
   {
     id: 235,
@@ -3602,7 +3970,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 93",
     desc: "During your turn, loot one loot token within ^fh-range^ 2.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 60,
   },
   {
     id: 236,
@@ -3614,7 +3984,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 111",
     desc: "During your turn, lose one card from your hand to ^recover^ one card from your lost pile of equal or lower level.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 61,
   },
   {
     id: 237,
@@ -3626,7 +3998,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 131",
     desc: "During your turn, choose one of six directions. You and all figures within ^fh-range^ 2 are forced to simultaneously move 2 hexes in the chosen direction.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 4,
+    imageNumber: 62,
   },
   {
     id: 238,
@@ -3638,7 +4012,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 133",
     desc: "When you would become exhausted from suffering ^damage^, set your hit point value to 1 instead.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 0,
   },
   {
     id: 239,
@@ -3650,7 +4026,9 @@ export const items: GloomhavenItem[] = [
     source: "Treasure 53",
     desc: "During your turn, all allies and enemies within ^fh-range^ 2 suffer ^damage^ 1.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 1,
   },
   {
     id: 240,
@@ -3662,7 +4040,9 @@ export const items: GloomhavenItem[] = [
     source: "SO-53 event chain",
     desc: "When you fail a scenario, still earn all ^checkmark^ from your battle goal if it was completed.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 2,
   },
   {
     id: 241,
@@ -3674,7 +4054,9 @@ export const items: GloomhavenItem[] = [
     source: "SR-26",
     desc: "After you draw one loot card, draw one additional loot card.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 3,
   },
   {
     id: 242,
@@ -3686,7 +4068,9 @@ export const items: GloomhavenItem[] = [
     source: "SO-4",
     desc: "During your attack ability, treat the next three attack modifier cards you draw as rolling",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 4,
   },
   {
     id: 243,
@@ -3698,7 +4082,9 @@ export const items: GloomhavenItem[] = [
     source: "WR-3",
     desc: "This item cannot be sold and must be brought into and used every scenario. At the start of the scenario perform: $wfh-curse$, $wfh-bless$ ~!self!~",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 5,
   },
   {
     id: 244,
@@ -3710,7 +4096,9 @@ export const items: GloomhavenItem[] = [
     source: "Scenario 33",
     desc: "During your turn, increase the printed ^attack^, ^fh-move^, ^target^, or ^fh-range^ numerical value on one of your abilities by 1.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 6,
   },
   {
     id: 245,
@@ -3724,6 +4112,8 @@ export const items: GloomhavenItem[] = [
     imageSuffix: "a",
     faqImage: "FIXME",
     slot: GloomhavenItemSlot.None,
+    imgFileNumber: 5,
+    imageNumber: 7,
   },
   {
     id: 245,
@@ -3737,6 +4127,8 @@ export const items: GloomhavenItem[] = [
     imageSuffix: "b",
     faqImage: "FIXME",
     slot: GloomhavenItemSlot.None,
+    imgFileNumber: 5,
+    imageNumber: 8,
   },
   {
     id: 245,
@@ -3750,6 +4142,8 @@ export const items: GloomhavenItem[] = [
     imageSuffix: "c",
     faqImage: "FIXME",
     slot: GloomhavenItemSlot.None,
+    imgFileNumber: 5,
+    imageNumber: 9,
   },
   {
     id: 245,
@@ -3763,6 +4157,8 @@ export const items: GloomhavenItem[] = [
     imageSuffix: "d",
     faqImage: "FIXME",
     slot: GloomhavenItemSlot.None,
+    imgFileNumber: 5,
+    imageNumber: 10,
   },
   {
     id: 246,
@@ -3775,6 +4171,8 @@ export const items: GloomhavenItem[] = [
     folder: "193-247",
     faqImage: "FIXME",
     slot: GloomhavenItemSlot.None,
+    imgFileNumber: 5,
+    imageNumber: 11,
   },
   {
     id: 247,
@@ -3786,7 +4184,9 @@ export const items: GloomhavenItem[] = [
     source: "Stables",
     desc: "During your turn, capture an adjacent enemy whose hit point value is 1 or 2.",
     folder: "193-247",
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 12,
   },
   {
     id: 248,
@@ -3802,7 +4202,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH1
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 13,
   },
   {
     id: 249,
@@ -3819,7 +4221,9 @@ export const items: GloomhavenItem[] = [
       FHClasses.FH2,
     ],
     lost: true,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 14,
   },
   {
     id: 250,
@@ -3835,7 +4239,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH3,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 15,
   },
   {
     id: 251,
@@ -3851,7 +4257,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH4,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 16,
   },
   {
     id: 252,
@@ -3880,7 +4288,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH5,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 17,
   },
   {
     id: 253,
@@ -3896,7 +4306,9 @@ export const items: GloomhavenItem[] = [
     soloItem: FHClasses.FH6,
     lockToClasses: [
       FHClasses.FH6,
-    ]
+    ],
+    imgFileNumber: 5,
+    imageNumber: 18,
   },
   {
     id: 254,
@@ -3912,7 +4324,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH7,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 19,
   },
   {
     id: 255,
@@ -3940,7 +4354,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH8,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 20,
   },
   {
     id: 256,
@@ -3969,7 +4385,9 @@ export const items: GloomhavenItem[] = [
       ]
     },
     lost: true,
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 21,
   },
   {
     id: 257,
@@ -3985,7 +4403,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH10,
     ],
-    spent: true
+    spent: true,
+    imgFileNumber: 5,
+    imageNumber: 22,
   },
   {
     id: 258,
@@ -4001,7 +4421,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH11,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 23,
   },
   {
     id: 259,
@@ -4017,7 +4439,9 @@ export const items: GloomhavenItem[] = [
     soloItem: FHClasses.FH12,
     lockToClasses: [
       FHClasses.FH12,
-    ]
+    ],
+    imgFileNumber: 5,
+    imageNumber: 24,
   },
   {
     id: 260,
@@ -4033,7 +4457,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH13,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 25,
   },
   {
     id: 261,
@@ -4049,7 +4475,9 @@ export const items: GloomhavenItem[] = [
     lockToClasses: [
       FHClasses.FH14,
     ],
-    consumed: true
+    consumed: true,
+    imgFileNumber: 5,
+    imageNumber: 26,
   },
   {
     id: 262,
@@ -4065,7 +4493,9 @@ export const items: GloomhavenItem[] = [
     soloItem: FHClasses.FH15,
     lockToClasses: [
       FHClasses.FH15,
-    ]
+    ],
+    imgFileNumber: 5,
+    imageNumber: 27,
   },
   {
     id: 263,
@@ -4080,7 +4510,9 @@ export const items: GloomhavenItem[] = [
     soloItem: FHClasses.FH16,
     lockToClasses: [
       FHClasses.FH16,
-    ]
+    ],
+    imgFileNumber: 5,
+    imageNumber: 28,
   },
   {
     id: 264,
@@ -4109,6 +4541,8 @@ export const items: GloomhavenItem[] = [
           colorize: true
         }
       ]
-    }
+    },
+    imgFileNumber: 5,
+    imageNumber: 29,
   }
 ]

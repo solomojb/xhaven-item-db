@@ -128,7 +128,10 @@ export class FHClass extends GameClass<FHClasses> {
     }
 
 
-    getImageDimensions(): ItemImageData {
+    getImageDimensions({ imgFileNumber }: GloomhavenItem): ItemImageData {
+        if (imgFileNumber === 5) {
+            return { imagesAcross: 10, imagesDown: 4 };
+        }
         return {
             imagesAcross: 10,
             imagesDown: 7,

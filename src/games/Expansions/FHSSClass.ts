@@ -15,8 +15,8 @@ export class FHSSClass extends GameClass<FHClasses> {
 
     getImageDimensions(): ItemImageData {
         return {
-            imagesAcross: 0,
-            imagesDown: 0,
+            imagesAcross: 10,
+            imagesDown: 4,
         }
     }
 }

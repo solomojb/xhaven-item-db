@@ -17,17 +17,16 @@ export const GHIcon = (props: Props) => {
 		style,
 	} = props;
 
-	let filename = name;
 	const src = `icons/${folder}/${name}`;
 
 	return (
 		<img
 			src={src}
 			className={className}
-			alt={filename}
+			alt={name}
 			onClick={onClick}
 			style={style}
-			title={filename}
+			title={name}
 		/>
 	);
 };

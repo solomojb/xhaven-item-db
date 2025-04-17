@@ -54,7 +54,7 @@ export default tseslint.config({
 ```
 
 TODO:
-* FAQ Image Paths
+* Add tooltips
 * Optimize Task Switching (Remove Recoil)
 * Fix Linting errors
 * Item Size on mobile
@@ -70,5 +70,4 @@ TODO:
 * Combine Images?
 * Add card slider?
 * Fix Discount showing up on FH
-* Fix SOLO bug in heisch
 

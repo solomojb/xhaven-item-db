@@ -3846,7 +3846,7 @@ export const items: GloomhavenItem[] = [
 		desc: "You are immune to POISON and !enchantment-circle!. When damage by an attack, gain Shield ^shield^ 0 !enchantment-circle! for the attack.",
 		gameType: Expansions.ForgottenCircles,
 		specialUnlock: SpecialUnlockTypes.EnvelopeE,
-		faqImage: "FIXME",
+		faqImage: { imageNumber: 0, imgFileNumber: 2 },
 		alwaysShown: true,
 		imgFileNumber: 1,
 		imageNumber: 20

@@ -1,5 +1,5 @@
-import { GHClasses, GloomhavenItem, SpecialUnlockTypes } from "../../State";
-import { GameClass, ItemImageData } from "../GameClass";
+import { GHClasses, SpecialUnlockTypes } from "../../State";
+import { GameClass, SpriteImageDimensions } from "../GameClass";
 import { Expansions, GameType } from "../GameType";
 
 import { items } from "./items";
@@ -45,7 +45,7 @@ export class GHClass extends GameClass<GHClasses> {
         return classes.filter(c => c !== GHClasses.XX);
     }
 
-    getImageDimensions({ imgFileNumber }: GloomhavenItem): ItemImageData {
+    getImageDimensions(imgFileNumber: number): SpriteImageDimensions {
         let imagesAcross = 0;
         let imagesDown = 0;
         switch (imgFileNumber) {

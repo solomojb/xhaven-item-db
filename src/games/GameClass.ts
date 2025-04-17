@@ -1,4 +1,3 @@
-import { FilterSlots } from "../components/Tabs/MainView/Items/Search";
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../State";
@@ -19,7 +18,7 @@ export interface ClassParams {
 
 }
 
-export interface ItemImageData {
+export interface SpriteImageDimensions {
     imagesAcross: number;
     imagesDown: number;
 }
@@ -98,5 +97,5 @@ export abstract class GameClass<T> {
         return this.gameClasses().length > 0;
     }
 
-    abstract getImageDimensions(item: GloomhavenItem): ItemImageData;
+    abstract getImageDimensions(imageFileNumber: number): SpriteImageDimensions;
 }

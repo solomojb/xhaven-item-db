@@ -1,5 +1,5 @@
-import { CSClasses, GloomhavenItem } from "../../State";
-import { GameClass, ItemImageData } from "../GameClass";
+import { CSClasses } from "../../State";
+import { GameClass, SpriteImageDimensions } from "../GameClass";
 
 export class CSClass extends GameClass<CSClasses> {
     constructor() {
@@ -10,7 +10,7 @@ export class CSClass extends GameClass<CSClasses> {
         return Object.values(CSClasses);
     }
 
-    getImageDimensions({ imgFileNumber }: GloomhavenItem): ItemImageData {
+    getImageDimensions(imgFileNumber: number): SpriteImageDimensions {
         let imagesAcross = 0;
         let imagesDown = 0;
         switch (imgFileNumber) {

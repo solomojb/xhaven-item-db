@@ -1,22 +1,18 @@
 import { useGetGame } from "../../../../../games";
-import { ItemImageData } from "../../../../../games/GameClass";
-import { GloomhavenItem } from "../../../../../State";
+import { SpriteImageDimensions } from "../../../../../games/GameClass";
+import { AllGames } from "../../../../../games/GameType";
+import { GloomhavenItem, SpriteImageData } from "../../../../../State";
 
-const getItemPath = (item: GloomhavenItem, { imagesAcross, imagesDown }: ItemImageData, backside?: boolean) => {
-    const { gameType, imgFileNumber } = item;
+const getItemDimensions = ({ imagesAcross, imagesDown }: SpriteImageDimensions) => {
     const width = 531;
     const height = 815;
     const bgWidth = width * imagesAcross;
     const bgHeight = height * imagesDown;
-    let path = '';
+    return { width, height, bgWidth, bgHeight };
+}
 
-    if (imgFileNumber && backside) {
-        path = `items/${gameType}/${imgFileNumber}b.png`;
-    }
-    else {
-        path = `items/${gameType}/${imgFileNumber}.png`;
-    }
-    return { path, width, height, bgWidth, bgHeight };
+const getItemPath = (gameType: AllGames, imgFileNumber: number, backside?: boolean) => {
+    return `items/${gameType}/${imgFileNumber}${backside ? 'b' : ''}.png`;
 }
 
 type Props = {
@@ -26,12 +22,18 @@ type Props = {
 
 const CARD_SCALE = 0.40;
 
-export const ItemCardImage = (props: Props) => {
-    const { item, showBackside } = props;
-    const game = useGetGame(item.gameType);
-    const itemImageData = game.getImageDimensions(item);
+interface Props2 extends SpriteImageData {
+    showBackside?: boolean
+    gameType: AllGames;
+}
+
+export const SpriteItemCardImage = (props: Props2) => {
+    const { gameType, imgFileNumber, showBackside, imageNumber } = props;
+    const game = useGetGame(gameType);
+    const itemImageData = game.getImageDimensions(imgFileNumber);
     const { imagesAcross } = itemImageData;
-    const { path, width, height, bgWidth, bgHeight } = getItemPath(item, itemImageData, showBackside);
+    const path = getItemPath(gameType, imgFileNumber, showBackside);
+    const { width, height, bgWidth, bgHeight } = getItemDimensions(itemImageData);
     const styles = {
         container: {
             width: width * CARD_SCALE * 531 / width, /* width of individual sprite */
@@ -55,8 +57,8 @@ export const ItemCardImage = (props: Props) => {
         }),
     };
 
-    const xPos = (width * CARD_SCALE * 531 / width) * (item.imageNumber !== undefined ? item.imageNumber % imagesAcross : 0);
-    const yPos = (height * CARD_SCALE * 815 / height) * (item.imageNumber !== undefined ? Math.floor(item.imageNumber / imagesAcross) : 0);
+    const xPos = (width * CARD_SCALE * 531 / width) * (imageNumber !== undefined ? imageNumber % imagesAcross : 0);
+    const yPos = (height * CARD_SCALE * 815 / height) * (imageNumber !== undefined ? Math.floor(imageNumber / imagesAcross) : 0);
 
     return (
         <div style={styles.container}>
@@ -69,4 +71,10 @@ export const ItemCardImage = (props: Props) => {
         </div>
     );
 
+}
+
+
+export const ItemCardImage = (props: Props) => {
+    const { item, ...rest } = props
+    return <SpriteItemCardImage {...item} {...rest} />
 }

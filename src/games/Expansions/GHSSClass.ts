@@ -1,5 +1,5 @@
 import { GHClasses } from "../../State";
-import { GameClass, ItemImageData } from "../GameClass";
+import { GameClass, SpriteImageDimensions } from "../GameClass";
 import { GameType } from "../GameType";
 
 export class GHSSClass extends GameClass<GHClasses> {
@@ -13,7 +13,7 @@ export class GHSSClass extends GameClass<GHClasses> {
         return [];
     }
 
-    getImageDimensions(): ItemImageData {
+    getImageDimensions(): SpriteImageDimensions {
         return {
             imagesAcross: 5,
             imagesDown: 4,

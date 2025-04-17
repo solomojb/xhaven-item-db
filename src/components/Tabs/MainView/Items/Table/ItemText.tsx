@@ -1,10 +1,10 @@
-import React from "react";
 import { Icon, Popup } from "semantic-ui-react";
 import { GameType } from "../../../../../games";
 import { GloomhavenItem } from "../../../../../State";
 import { GHIcon } from "../../../../Utils";
 import { ConsumptionPanel } from "./ConsumptionPanel";
 import { ItemSummon } from "./ItemSummon";
+import { FaqImage } from "./FaqImage";
 
 interface Props {
   item: GloomhavenItem;
@@ -14,13 +14,13 @@ const numberAmountToText = ["zero", "one", "two", "three", "four", "five"];
 
 export const ItemText = (props: Props) => {
   const {
+    item,
     item: {
       gameType,
       descHTML,
       backDescHTML,
       minusOneCardsAdded,
       faq,
-      faqImage,
       summon,
       consumption,
     },
@@ -80,21 +80,7 @@ export const ItemText = (props: Props) => {
           content={faq}
         />
       )}
-      {faqImage && (
-        <Popup
-          closeOnDocumentClick
-          hideOnScroll
-          trigger={<Icon name={"question circle"} className={"pink"} />}
-          header={"FAQ"}
-          content={
-            <img
-              className="faqImage"
-              src={`images/${faqImage}`}
-              alt={faqImage}
-            />
-          }
-        />
-      )}
+      <FaqImage item={item} />
       {summon && <ItemSummon summon={summon} />}
     </>
   );

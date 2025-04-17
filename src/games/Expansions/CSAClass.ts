@@ -1,5 +1,5 @@
 import { CSAClasses } from "../../State";
-import { GameClass, ItemImageData } from "../GameClass";
+import { GameClass, SpriteImageDimensions } from "../GameClass";
 
 export class CSAClass extends GameClass<CSAClasses> {
     constructor() {
@@ -10,7 +10,7 @@ export class CSAClass extends GameClass<CSAClasses> {
         return Object.values(CSAClasses);
     }
 
-    getImageDimensions(): ItemImageData {
+    getImageDimensions(): SpriteImageDimensions {
         return {
             imagesAcross: 5,
             imagesDown: 4,

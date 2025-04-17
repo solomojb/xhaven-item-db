@@ -1,6 +1,6 @@
 import { Helpers } from "../../helpers";
 import { FHClasses, GloomhavenItem } from "../../State/Types";
-import { GameClass, ItemImageData } from "../GameClass";
+import { GameClass, SpriteImageDimensions } from "../GameClass";
 import { AllGames, Expansions, GameType } from "../GameType";
 
 export const ghImportSets: number[][] = [
@@ -128,7 +128,7 @@ export class FHClass extends GameClass<FHClasses> {
     }
 
 
-    getImageDimensions({ imgFileNumber }: GloomhavenItem): ItemImageData {
+    getImageDimensions(imgFileNumber: number): SpriteImageDimensions {
         if (imgFileNumber === 5) {
             return { imagesAcross: 10, imagesDown: 4 };
         }

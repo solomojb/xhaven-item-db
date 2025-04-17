@@ -189,7 +189,12 @@ interface Consumption {
 	effectHtml?: string;
 }
 
-export interface GloomhavenItem {
+export type SpriteImageData = {
+	imgFileNumber: number;
+	imageNumber: number;
+}
+
+export interface GloomhavenItem extends SpriteImageData {
 	id: number;
 	displayId?: string | number;
 	gameType: AllGames;
@@ -208,7 +213,7 @@ export interface GloomhavenItem {
 	descHTML?: string;
 	backDescHTML?: string;
 	faq?: string;
-	faqImage?: string;
+	faqImage?: SpriteImageData | "self";
 	summon?: Summon;
 	soloItem?: SoloClasses;
 	unlockScenario?: number;
@@ -223,6 +228,4 @@ export interface GloomhavenItem {
 	consumption?: Consumption;
 	lockToClass?: boolean;
 	importedItem?: boolean;
-	imgFileNumber?: number;
-	imageNumber?: number;
 }

@@ -26,7 +26,9 @@ export const ConfirmClassDelete = () => {
 
 	const itemsOwned = itemsOwnedByClass(classToDelete);
 	const itemsToList = itemsOwned
-		.map((id) => items[id - 1]);
+		.map((id) => {
+			return items.find(item => item.id === id)!;
+		});
 	// .filter(isItemShown);
 
 	const goldAmount = () => {

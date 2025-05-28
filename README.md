@@ -70,4 +70,4 @@ TODO:
 * Combine Images?
 * Add card slider?
 * Fix Discount showing up on FH
-
+* Fix use is item shown on ConfirmClassDelete

@@ -40,7 +40,7 @@ type Data = {
   passwordReset: (email: string) => void;
   passwordUpdate: (newPassword: string) => void;
   exportData: (configHash: string) => void;
-  googleSignIn: () => void;
+  googleSignIn: () => Promise<void>;
   user: User | undefined;
   error: any;
 };
@@ -57,16 +57,14 @@ export function useFirebase() {
 
 const { Provider } = FirebaseContext;
 const app = initializeApp(firebaseConfig);
-console.log(firebaseConfig);
-console.log(app);
-export const auth = getAuth(app);
-console.log(auth);
+const auth = getAuth(app);
 
-// const db = getDatabase(app);
-// console.log(db);
+const db = getDatabase(app);
 
 
 const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ display: 'popup', prompt: 'select_account' });
+
 
 interface Props {
   children: ReactNode | ReactNode[];
@@ -85,23 +83,14 @@ export const FirebaseProvider = ({ children }: Props) => {
       .catch(setError);
   }, []);
 
-  const googleSignIn = useCallback(() => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        if (credential) {
-          //   const token = credential.accessToken;
-          // The signed-in user info.
-          //   const user = result.user;
-          // IdP data available using getAdditionalUserInfo(result)
-          // ...
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error);
-      });
+  const googleSignIn = useCallback(async () => {
+    try {
+      await signInWithPopup(auth, provider)
+    }
+    catch (error) {
+      console.error("Error signing in with Google", error);
+      // setError(Error(error));
+    }
   }, []);
 
   const signIn = useCallback((email: string, password: string) => {
@@ -143,7 +132,7 @@ export const FirebaseProvider = ({ children }: Props) => {
         const updates = {
           [`spoilerFilter/${user.uid}`]: { configHash },
         };
-        // update(ref(db), updates);
+        update(ref(db), updates);
       } catch (e) {
         //@ts-ignore
         setError(e);
@@ -169,9 +158,9 @@ export const FirebaseProvider = ({ children }: Props) => {
     onAuthStateChanged(auth, (authUser) => {
       setUser(authUser || undefined);
       if (authUser) {
-        // get(child(ref(db), `spoilerFilter/${authUser.uid}`)).then(
-        //   updateRemoteData
-        // );
+        get(child(ref(db), `spoilerFilter/${authUser.uid}`)).then(
+          updateRemoteData
+        );
       } else {
         setRemoteData(undefined);
       }
@@ -185,19 +174,19 @@ export const FirebaseProvider = ({ children }: Props) => {
       return;
     }
 
-    // onValue(ref(db, `spoilerFilter/${importUserId}`), (snapshot) => {
-    //   if (snapshot.val()) {
-    //     setImportHash(snapshot.val()["configHash"]);
-    //   }
-    //   return;
-    // });
+    onValue(ref(db, `spoilerFilter/${importUserId}`), (snapshot) => {
+      if (snapshot.val()) {
+        setImportHash(snapshot.val()["configHash"]);
+      }
+      return;
+    });
   }, [setImportHash, user]);
 
   useEffect(() => {
     if (!user) {
       return;
     }
-    // onValue(ref(db, `spoilerFilter/${user.uid}`), updateRemoteData);
+    onValue(ref(db, `spoilerFilter/${user.uid}`), updateRemoteData);
   }, [user, updateRemoteData]);
 
   const value = useMemo(

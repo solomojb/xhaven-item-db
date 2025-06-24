@@ -1,25 +1,20 @@
-import React, {
+import {
   useState,
   useContext,
   createContext,
   useMemo,
   useCallback,
   useEffect,
-  ReactNode,
+  PropsWithChildren,
 } from "react";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./config";
 import {
-  createUserWithEmailAndPassword,
   getAuth,
-  signInWithEmailAndPassword,
   User,
   signOut as firebaseSignOut,
-  sendPasswordResetEmail,
-  updatePassword,
   onAuthStateChanged,
   GoogleAuthProvider,
-  signInWithPopup,
 } from "firebase/auth";
 import {
   getDatabase,
@@ -33,16 +28,10 @@ import { useSetRecoilState } from "recoil";
 import { importHashState, remoteDataState } from "../../State";
 import QueryString from "qs";
 
-type Data = {
-  createUser: (email: string, password: string) => void;
-  signIn: (email: string, password: string) => void;
+interface Data {
   signOut: () => void;
-  passwordReset: (email: string) => void;
-  passwordUpdate: (newPassword: string) => void;
   exportData: (configHash: string) => void;
-  googleSignIn: () => Promise<void>;
   user: User | undefined;
-  error: any;
 };
 
 const FirebaseContext = createContext<Data | undefined>(undefined);
@@ -57,7 +46,7 @@ export function useFirebase() {
 
 const { Provider } = FirebaseContext;
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 const db = getDatabase(app);
 
@@ -67,65 +56,19 @@ provider.setCustomParameters({ display: 'popup', prompt: 'select_account' });
 
 
 interface Props {
-  children: ReactNode | ReactNode[];
 }
 
-export const FirebaseProvider = ({ children }: Props) => {
+export const FirebaseProvider = ({ children }: PropsWithChildren<Props>) => {
   const [user, setUser] = useState<User | undefined>();
-  const [error, setError] = useState<Error>();
-
-  const createUser = useCallback((email: string, password: string) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        setUser(user);
-      })
-      .catch(setError);
-  }, []);
-
-  const googleSignIn = useCallback(async () => {
-    try {
-      await signInWithPopup(auth, provider)
-    }
-    catch (error) {
-      console.error("Error signing in with Google", error);
-      // setError(Error(error));
-    }
-  }, []);
-
-  const signIn = useCallback((email: string, password: string) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        setUser(user);
-        // ...
-      })
-      .catch(setError);
-  }, []);
 
   const signOut = useCallback(() => {
     firebaseSignOut(auth);
   }, []);
 
-  const passwordReset = useCallback((email: string) => {
-    sendPasswordResetEmail(auth, email).catch(setError);
-  }, []);
-
-  const passwordUpdate = useCallback(
-    (newPassword: string) => {
-      if (!user) {
-        return;
-      }
-      updatePassword(user, newPassword).catch(setError);
-    },
-    [user]
-  );
-
   const exportData = useCallback(
     (configHash: string) => {
       if (!user) {
-        setError(new Error("No firebase or auth user"));
+        console.error(new Error("No firebase or auth user"));
         return;
       }
       try {
@@ -134,8 +77,7 @@ export const FirebaseProvider = ({ children }: Props) => {
         };
         update(ref(db), updates);
       } catch (e) {
-        //@ts-ignore
-        setError(e);
+        console.error(e)
       }
     },
     [user]
@@ -191,26 +133,14 @@ export const FirebaseProvider = ({ children }: Props) => {
 
   const value = useMemo(
     () => ({
-      createUser,
-      signIn,
       signOut,
-      passwordReset,
-      passwordUpdate,
       exportData,
-      googleSignIn,
-      error,
       user,
     }),
     [
-      createUser,
-      signIn,
       signOut,
-      passwordReset,
-      passwordUpdate,
       exportData,
-      googleSignIn,
-      error,
-      user,
+      user
     ]
   );
 

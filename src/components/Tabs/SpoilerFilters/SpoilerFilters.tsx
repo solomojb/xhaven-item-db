@@ -1,20 +1,22 @@
-import React from "react";
 import { Form } from "semantic-ui-react";
 import { ToggleAllButton, GameFilter } from "./Items";
 import { PartySpoiler, ConfirmClassDelete } from "./Party";
 import { GameFilters, ConfirmGameRemoval } from "./Games";
 import { Secrets } from "./Secrets/Secrets";
+import { FilterProvider } from "../../Providers/FilterProvider";
 
 const SpoilerFilters = () => {
 	return (
 		<Form>
-			<ToggleAllButton />
-			<GameFilters />
-			<Secrets />
-			<PartySpoiler />
-			<GameFilter />
-			<ConfirmGameRemoval />
-			<ConfirmClassDelete />
+			<FilterProvider>
+				<ToggleAllButton />
+				<GameFilters />
+				<Secrets />
+				<PartySpoiler />
+				<GameFilter />
+				<ConfirmGameRemoval />
+				<ConfirmClassDelete />
+			</FilterProvider>
 		</Form>
 	);
 };

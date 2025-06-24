@@ -58,16 +58,13 @@ TODO:
 * Optimize Task Switching (Remove Recoil)
 * Fix Linting errors
 * Item Size on mobile
-* Fix firebase
 * Export from old
 * Remove Semantic UI
 * Add Pretifiy
-* Move Selected Class out of Remove Player? (Is this done)
+* Move Selected Class out of Remove Player? (Is this done) (Destroy useRemovePlayerUtils)
 * Split XHavenDB Provider into smaller providers
 * Split Is ItemShown to Is Item Shown is Item Filtered?
 * Reduce Image sizes
 * Collapse FHSS items to different files
 * Combine Images?
 * Add card slider?
-* Fix Discount showing up on FH
-* Fix use is item shown on ConfirmClassDelete

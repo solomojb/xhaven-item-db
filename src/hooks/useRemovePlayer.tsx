@@ -2,12 +2,28 @@ import { useCallback, useMemo } from "react";
 import { AllGames } from "../games/GameType";
 import {
   ClassesInUse,
+  CSAClasses,
+  CSClasses,
+  FCClasses,
+  FHClasses,
+  GHClasses,
+  JOTLClasses,
+  TOAClasses,
 } from "../State/Types";
 import { useXHavenDB } from "../components/Providers/XHavenDBProvider";
 import { useGetGames } from "../games";
 
-export const useRemovePlayerUtils = () => {
-  const { classesInUse, setClassesInUse: setClassesInUseBy, itemsOwnedBy, setItemsOwnedBy, specialUnlocks, selectedClass, setSelectedClass, items } = useXHavenDB();
+interface Return {
+  removeClasses: (classes: ClassesInUse | ClassesInUse[], removingGame?: AllGames) => void,
+  removeItemsFromOwner: (itemsId: number[] | number, owner: ClassesInUse, removingGame?: AllGames) => void,
+  itemsOwnedByClass: (owner: ClassesInUse | undefined) => number[],
+  getClassesForGame: (gameType: AllGames) => GHClasses[] | JOTLClasses[] | FHClasses[] | FCClasses[] | CSClasses[] | CSAClasses[] | TOAClasses[]
+  getClassesToRemove: (removingGame: AllGames) => ClassesInUse[],
+  getRemovingItemCount: (removingGame: AllGames) => number,
+}
+
+export const useRemovePlayerUtils = (): Return => {
+  const { classesInUse, setClassesInUse: setClassesInUseBy, itemsOwnedBy, setItemsOwnedBy, specialUnlocks, items } = useXHavenDB();
   const games = useGetGames();
 
   const itemsOwnedByClass = useCallback(
@@ -63,7 +79,6 @@ export const useRemovePlayerUtils = () => {
     (classes: ClassesInUse | ClassesInUse[], removingGame?: AllGames) => {
       const classesToRemove = !Array.isArray(classes) ? [classes] : classes;
       const newClassesInUse = Object.assign([], classesInUse);
-      let clearClassSelection = false;
       classesToRemove.forEach((classToRemove) => {
         removeItemsFromOwner(
           itemsOwnedByClass(classToRemove),
@@ -74,24 +89,14 @@ export const useRemovePlayerUtils = () => {
         if (index !== -1) {
           newClassesInUse.splice(index, 1);
         }
-
-        const newSelectedClass = selectedClass;
-        if (newSelectedClass === classToRemove) {
-          clearClassSelection = true;
-        }
       });
-      if (clearClassSelection) {
-        setSelectedClass(undefined);
-      }
       setClassesInUseBy(newClassesInUse);
     },
     [
       classesInUse,
       itemsOwnedByClass,
       removeItemsFromOwner,
-      selectedClass,
       setClassesInUseBy,
-      setSelectedClass,
     ]
   );
 
@@ -123,17 +128,7 @@ export const useRemovePlayerUtils = () => {
     [getClassesToRemove, itemsOwnedByClass]
   );
 
-  const anyGameItemsOwned = useCallback(
-    (gameType: AllGames) => {
-      const gameItemIds = items
-        .filter((item) => item.gameType === gameType)
-        .map((item) => item.id.toString());
-      return gameItemIds.filter((id) => itemsOwnedBy[id]).length;
-    },
-    [itemsOwnedBy, items]
-  );
-
-  const functions = useMemo(
+  return useMemo(
     () => ({
       removeClasses,
       removeItemsFromOwner,
@@ -141,7 +136,6 @@ export const useRemovePlayerUtils = () => {
       getClassesForGame,
       getClassesToRemove,
       getRemovingItemCount,
-      anyGameItemsOwned,
     }),
     [
       removeClasses,
@@ -150,8 +144,6 @@ export const useRemovePlayerUtils = () => {
       getClassesForGame,
       getClassesToRemove,
       getRemovingItemCount,
-      anyGameItemsOwned,
     ]
   );
-  return functions;
 };

@@ -33,7 +33,8 @@ export class GHClass extends GameClass<GHClasses> {
                     Expansions.TrailOfAshes,
                     GameType.JawsOfTheLion,
                     GameType.Frosthaven
-                ]
+                ],
+                usesDiscount: true,
             })
     }
     gameClasses(specialUnlocks?: SpecialUnlockTypes[]) {
@@ -76,4 +77,3 @@ export class GHClass extends GameClass<GHClasses> {
         return { imagesAcross, imagesDown };
     }
 }
-

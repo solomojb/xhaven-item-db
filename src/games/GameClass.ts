@@ -15,7 +15,7 @@ export interface ClassParams {
     includeItemsFrom?: AllGames[],
     soloClassesToInclude?: AllGames[],
     gameFilters: AllGames[],
-
+    usesDiscount?: boolean;
 }
 
 export interface SpriteImageDimensions {
@@ -33,6 +33,7 @@ export abstract class GameClass<T> {
     public soloClassesToInclude: AllGames[];
     public soloFilterTitle: string;
     public soloGameType?: GameType;
+    public usesDiscount: boolean;
 
     constructor(
         public title: string,
@@ -44,6 +45,7 @@ export abstract class GameClass<T> {
         this.gameFilters = [];
         this.includeItemsFrom = [];
         this.soloClassesToInclude = [];
+        this.usesDiscount = false;
         if (params) {
             const { filterSlots, resources } = this.getInitialItems(params.items);
             this.filterSlots = filterSlots;
@@ -52,6 +54,7 @@ export abstract class GameClass<T> {
             this.gameFilters = params.gameFilters;
             this.includeItemsFrom = params.includeItemsFrom ?? [];
             this.soloClassesToInclude = params.soloClassesToInclude ?? [];
+            this.usesDiscount = params.usesDiscount ?? false;
         }
     }
 

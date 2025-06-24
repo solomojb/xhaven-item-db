@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { Form } from "semantic-ui-react";
 import { dataMismatchState } from "../../../State";
@@ -8,9 +7,8 @@ type Props = {
   configHash: string;
 };
 
-const UploadForm = (props: Props) => {
+export const UploadForm = (props: Props) => {
   const { configHash } = props;
-  const [error, setError] = useState<Error | undefined>(undefined);
   const { user, exportData } = useFirebase();
   const dataMismatch = useRecoilValue(dataMismatchState);
 
@@ -56,9 +54,6 @@ const UploadForm = (props: Props) => {
           </p>
         )}
       </Form.Group>
-      {error && <Form.Field>{error.message}</Form.Field>}
     </>
   );
 };
-
-export default UploadForm;

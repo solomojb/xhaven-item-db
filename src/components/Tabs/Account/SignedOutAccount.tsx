@@ -1,8 +1,24 @@
 import { Form } from "semantic-ui-react";
-import { useFirebase } from "../../Firebase";
+import { auth, useFirebase } from "../../Firebase";
+import { StyledFirebaseAuth } from "react-firebaseui";
+import { EmailAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
 
+
+const uiConfig = {
+	signInFlow: "popup",
+	signInOptions: [
+		{
+			provider: GoogleAuthProvider.PROVIDER_ID,
+			customParameters: {
+				prompt: "select_account",
+				auth_type: "reauthenticate",
+			},
+		},
+		EmailAuthProvider.PROVIDER_ID,
+	],
+};
 export const SignedOutAccount = (): JSX.Element | null => {
-	const { user, googleSignIn } = useFirebase();
+	const { user } = useFirebase();
 
 	if (user) {
 		return null;
@@ -10,7 +26,11 @@ export const SignedOutAccount = (): JSX.Element | null => {
 	return (
 		<Form>
 			<h1>Sign In</h1>
-			<button onClick={googleSignIn}>Sign in with Google</button>
+			<StyledFirebaseAuth
+				uiConfig={uiConfig}
+				firebaseAuth={auth}
+				className="login-screen"
+			/>
 		</Form>
 	);
 };

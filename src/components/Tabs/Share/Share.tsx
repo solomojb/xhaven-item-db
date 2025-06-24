@@ -1,10 +1,10 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { Form, Message, Icon } from "semantic-ui-react";
 import { isFlagEnabled } from "../../../helpers";
 import { getShareHash } from "../MainView/ImportData";
-import UploadForm from "./UploadForm";
+import { UploadForm } from "./UploadForm";
 
-const Share = () => {
+export const Share = () => {
   const [lockSpoilerPanel, setLockSpoilerPanel] = useState(false);
   const shareEnabled = isFlagEnabled("sharing");
 
@@ -60,5 +60,3 @@ const Share = () => {
     </>
   );
 };
-
-export default Share;

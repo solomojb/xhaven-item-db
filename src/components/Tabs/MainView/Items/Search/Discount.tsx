@@ -1,13 +1,18 @@
 import { Form } from "semantic-ui-react";
 import {
+	gameTypeState,
 	ItemViewDisplayType,
 } from "../../../../../State";
 import { useXHavenDB } from "../../../../Providers/XHavenDBProvider";
+import { useRecoilValue } from "recoil";
+import { useGetGame } from "../../../../../games";
 
 export const Discount = () => {
 	const { discount, displayAs } = useXHavenDB();
+	const gameType = useRecoilValue(gameTypeState);
+	const game = useGetGame(gameType);
 
-	if (displayAs !== ItemViewDisplayType.Images) {
+	if (!game.usesDiscount || displayAs !== ItemViewDisplayType.Images) {
 		return null;
 	}
 	return (

@@ -12,10 +12,11 @@ import { ClassIcon } from "../../../Utils";
 import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { itemGoldValue, OwnedItemList } from "./OwnedItemsList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
+import { useIsItemShown } from "../../../../hooks/useIsItemShown";
 
 export const ConfirmClassDelete = () => {
 	const { removeClasses, itemsOwnedByClass } = useRemovePlayerUtils();
-	// const isItemShown = useIsItemShown();
+	const isItemShown = useIsItemShown();
 	const [itemsOpen, setItemsOpen] = useState(false);
 
 	const { items, classToDelete, setClassToDelete } = useXHavenDB();
@@ -28,8 +29,8 @@ export const ConfirmClassDelete = () => {
 	const itemsToList = itemsOwned
 		.map((id) => {
 			return items.find(item => item.id === id)!;
-		});
-	// .filter(isItemShown);
+		})
+		.filter(isItemShown);
 
 	const goldAmount = () => {
 		let totalGold = 0;

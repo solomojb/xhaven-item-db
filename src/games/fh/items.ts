@@ -424,7 +424,7 @@ export const items: GloomhavenItem[] = [
     id: 25,
     gameType: GameType.Frosthaven,
     name: "Soothing Scepter",
-    count: 1,
+    count: 2,
     resources: {
       lumber: 1,
       hide: 1,

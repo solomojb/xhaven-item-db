@@ -9,18 +9,15 @@ import {
 	Icon,
 } from "semantic-ui-react";
 import { ClassIcon } from "../../../Utils";
-import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { itemGoldValue, OwnedItemList } from "./OwnedItemsList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { useIsItemShown } from "../../../../hooks/useIsItemShown";
 
 export const ConfirmClassDelete = () => {
-	const { removeClasses, itemsOwnedByClass } = useRemovePlayerUtils();
 	const isItemShown = useIsItemShown();
 	const [itemsOpen, setItemsOpen] = useState(false);
 
-	const { items, classToDelete, setClassToDelete } = useXHavenDB();
-
+	const { removeClasses, items, classToDelete, setClassToDelete, itemsOwnedByClass } = useXHavenDB();
 	const onClose = () => {
 		setClassToDelete(undefined);
 	};

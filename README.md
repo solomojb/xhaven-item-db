@@ -61,7 +61,6 @@ TODO:
 * Export from old
 * Remove Semantic UI
 * Add Pretifiy
-* Move Selected Class out of Remove Player? (Is this done) (Destroy useRemovePlayerUtils)
 * Split XHavenDB Provider into smaller providers
 * Split Is ItemShown to Is Item Shown is Item Filtered?
 * Reduce Image sizes

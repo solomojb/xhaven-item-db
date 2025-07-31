@@ -1,6 +1,5 @@
 import { Form } from "semantic-ui-react";
 import { AllGames } from "../../../../games/GameType";
-import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { ClassesInUse } from "../../../../State/Types";
 import { ClassList } from "../Party/ClassList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
@@ -12,8 +11,7 @@ type Props = {
 
 export const SoloClassFilter = (props: Props) => {
 	const { gameType } = props;
-	const { soloClass, setSoloClass, includeGames } = useXHavenDB();
-	const { getClassesForGame } = useRemovePlayerUtils();
+	const { soloClass, setSoloClass, includeGames, getClassesForGame } = useXHavenDB();
 	const games = useGetGames();
 	if (!includeGames.includes(gameType)) {
 		return null;

@@ -1,4 +1,3 @@
-import { useRemovePlayerUtils } from "../../../../../hooks/useRemovePlayer";
 import {
 	getLockSpoilerPanelState,
 } from "../../../../../State";
@@ -21,8 +20,7 @@ type OwnerProps = {
 };
 
 const OwnerButton = (props: OwnerProps) => {
-	const { removeItemsFromOwner } = useRemovePlayerUtils();
-	const { setSelectedItem } = useXHavenDB();
+	const { removeItemsFromOwner, setSelectedItem } = useXHavenDB();
 	const lockSpoilerPanel = getLockSpoilerPanelState();
 
 	const { item, owner } = props;

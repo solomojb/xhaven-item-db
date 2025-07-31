@@ -1,8 +1,8 @@
-import { createContext, PropsWithChildren, ReactNode, useContext, useMemo } from "react"
+import { createContext, PropsWithChildren, ReactNode, useCallback, useContext, useMemo } from "react"
 import { BuildingLevel, ClassesInUse, FCClasses, gameTypeState, GHClasses, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsInUse, ItemsOwnedBy, ItemViewDisplayType, JOTLClasses, SpecialUnlockTypes } from "../../State";
 import { useRecoilValue } from "recoil";
 import { useLocalStateVariable } from "./LocalStateVariable";
-import { useGetGame, GameType } from "../../games";
+import { useGetGame, GameType, useGetGames } from "../../games";
 import { useGameStateVariable } from "./GameStateVariable";
 import { AllGames, Expansions } from "../../games/GameType";
 
@@ -184,6 +184,16 @@ interface Data {
     items: GloomhavenItem[];
     filterSlots: GloomhavenItemSlot[];
     resources: string[];
+
+    itemsOwnedByClass: (owner: ClassesInUse | undefined) => number[];
+
+    getClassesForGame: (gameType: AllGames) => ClassesInUse[];
+
+    removeClasses: (classes: ClassesInUse | ClassesInUse[], removingGame?: AllGames) => void,
+    removeItemsFromOwner: (itemsId: number[] | number, owner: ClassesInUse, removingGame?: AllGames) => void,
+    getClassesToRemove: (removingGame: AllGames) => ClassesInUse[],
+    getRemovingItemCount: (removingGame: AllGames) => number,
+
 }
 
 const context = createContext<Data | undefined>(undefined);
@@ -241,6 +251,106 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
     const [removingGame, setRemovingGame] = useGameStateVariable<AllGames | undefined>(gameType, undefined)
 
     const { items, resources, filterSlots } = useGetGame(gameType);
+    const games = useGetGames();
+
+    const itemsOwnedByClass = useCallback(
+        (owner: ClassesInUse | undefined) => {
+            if (!owner) {
+                return [];
+            }
+            return Object.entries(itemsOwnedBy).filter(([, owners]) => owners && owners.includes(owner)).map(([itemId]) => {
+                return parseInt(itemId);
+            });
+        },
+        [itemsOwnedBy]
+    );
+
+    const getClassesForGame = useCallback(
+        (gameType: AllGames) => {
+            return games[gameType].gameClasses(specialUnlocks);
+        },
+        [games, specialUnlocks]
+    );
+
+    const removeItemsFromOwner = useCallback(
+        (
+            itemsId: number[] | number,
+            owner: ClassesInUse,
+            removingGame?: AllGames
+        ) => {
+            const newItemsOwnedBy = Object.assign({}, itemsOwnedBy);
+            const itemsToRemove = !Array.isArray(itemsId) ? [itemsId] : itemsId;
+            itemsToRemove.forEach((itemId) => {
+                const owners = newItemsOwnedBy[itemId];
+                const copyOwners = Object.assign([], owners);
+                if (copyOwners.includes(owner)) {
+                    copyOwners.splice(copyOwners.indexOf(owner), 1);
+                }
+                if (copyOwners.length) {
+                    newItemsOwnedBy[itemId] = copyOwners;
+                } else {
+                    delete newItemsOwnedBy[itemId];
+                }
+            });
+            if (removingGame) {
+                const gameItems = items.filter(
+                    (item) => item.gameType === removingGame
+                );
+                gameItems.forEach(({ id }) => {
+                    delete newItemsOwnedBy[id];
+                });
+            }
+            setItemsOwnedBy(newItemsOwnedBy);
+        },
+        [itemsOwnedBy, setItemsOwnedBy, items]
+    );
+
+    const removeClasses = useCallback(
+        (classes: ClassesInUse | ClassesInUse[], removingGame?: AllGames) => {
+            const classesToRemove = !Array.isArray(classes) ? [classes] : classes;
+            const newClassesInUse = Object.assign([], classesInUse);
+            classesToRemove.forEach((classToRemove) => {
+                removeItemsFromOwner(
+                    itemsOwnedByClass(classToRemove),
+                    classToRemove,
+                    removingGame
+                );
+                const index = newClassesInUse.indexOf(classToRemove);
+                if (index !== -1) {
+                    newClassesInUse.splice(index, 1);
+                }
+            });
+            setClassesInUse(newClassesInUse);
+        },
+        [
+            classesInUse,
+            itemsOwnedByClass,
+            removeItemsFromOwner,
+            setClassesInUse,
+        ]
+    );
+
+    const getClassesToRemove = useCallback(
+        (removingGame: AllGames) => {
+            const classes: ClassesInUse[] = getClassesForGame(removingGame);
+            return classes.filter((c) => classesInUse.includes(c));
+        },
+        [classesInUse, getClassesForGame]
+    );
+
+    const getRemovingItemCount = useCallback(
+        (removingGame: AllGames) => {
+            const classesToRemove = getClassesToRemove(removingGame);
+            let itemCount = 0;
+            classesToRemove.forEach((classToRemove) => {
+                const items = itemsOwnedByClass(classToRemove);
+                itemCount += items.length;
+            });
+            return itemCount;
+        },
+        [getClassesToRemove, itemsOwnedByClass]
+    );
+
 
     const value = useMemo(() => ({
         itemManagementType, setItemManagementType,
@@ -265,6 +375,12 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         classToDelete, setClassToDelete,
         confirmSpecialUnlockOpen, setConfirmSpecialUnlockOpen,
         removingGame, setRemovingGame,
+        itemsOwnedByClass,
+        getClassesForGame,
+        removeClasses,
+        removeItemsFromOwner,
+        getClassesToRemove,
+        getRemovingItemCount,
     }), [
         itemManagementType, setItemManagementType,
         classesInUse, setClassesInUse,
@@ -288,6 +404,12 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         items,
         filterSlots,
         resources,
+        itemsOwnedByClass,
+        getClassesForGame,
+        removeClasses,
+        removeItemsFromOwner,
+        getClassesToRemove,
+        getRemovingItemCount
     ])
 
 

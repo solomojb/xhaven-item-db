@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { useRecoilValue } from "recoil";
 import { AllGames } from "../../../../games/GameType";
-import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import {
 	gameTypeState,
 } from "../../../../State";
@@ -16,8 +15,7 @@ type Props = {
 export const PartySpoilerList = (props: Props) => {
 	const { type } = props;
 	const gameType = useRecoilValue(gameTypeState);
-	const { classesInUse, setClassesInUse, setClassToDelete, includeGames } = useXHavenDB();
-	const { getClassesForGame } = useRemovePlayerUtils();
+	const { classesInUse, setClassesInUse, setClassToDelete, includeGames, getClassesForGame } = useXHavenDB();
 	const { title } = useGetGame(type);
 
 	const isGameIncluded = () => {

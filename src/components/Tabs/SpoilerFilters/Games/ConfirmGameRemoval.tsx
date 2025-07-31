@@ -1,12 +1,9 @@
 import { Button, Modal, Form, List } from "semantic-ui-react";
-import { useRemovePlayerUtils } from "../../../../hooks/useRemovePlayer";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { useGetGames } from "../../../../games";
 
 export const ConfirmGameRemoval = () => {
-	const { removeClasses, getClassesToRemove, getRemovingItemCount } =
-		useRemovePlayerUtils();
-	const { includeGames, setIncludeGames, removingGame, setRemovingGame } = useXHavenDB();
+	const { removeClasses, getClassesToRemove, getRemovingItemCount, includeGames, setIncludeGames, removingGame, setRemovingGame } = useXHavenDB();
 	const games = useGetGames();
 
 	const onClose = () => {

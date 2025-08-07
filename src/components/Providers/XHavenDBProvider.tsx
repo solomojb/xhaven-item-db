@@ -54,7 +54,7 @@ const fixedItemsInUseCount = (
             if (value & Math.pow(2, 3)) {
                 count += 1;
             }
-            console.log(id, value, count);
+            // console.log(id, value, count);
             newItemsInUseCount[id] = count;
         });
         delete spoilerObj["itemsInUse"];

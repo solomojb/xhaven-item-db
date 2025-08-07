@@ -9,6 +9,7 @@ type Props = {
 
 export const ItemGrid = (props: Props) => {
 	const { items } = props;
+
 	return (
 		<div className="item-grid">
 			{items.map((item, index) => {

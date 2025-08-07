@@ -68,7 +68,7 @@ export const OwnedItemList = (props: Props) => {
                       hideOnScroll
                       trigger={<Icon name={"info"} className={"black"} />}
                       content={
-                        <ItemCardImage item={item} />
+                        <ItemCardImage item={item} imageWidth={100} />
                       }
                     />
                     <label>{name}</label>

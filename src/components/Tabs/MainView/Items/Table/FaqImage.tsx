@@ -27,7 +27,7 @@ export const FaqImage = (props: Props) => {
         trigger={<Icon name={"question circle"} className={"pink"} />}
         header={"FAQ"}
         content={
-            <SpriteItemCardImage gameType={gameType} {...spriteImageData} />
+            <SpriteItemCardImage gameType={gameType} {...spriteImageData} imageWidth={100} />
         }
     />
 }

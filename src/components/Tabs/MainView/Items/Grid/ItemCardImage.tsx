@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useGetGame } from "../../../../../games";
 import { SpriteImageDimensions } from "../../../../../games/GameClass";
 import { AllGames } from "../../../../../games/GameType";
@@ -15,20 +16,30 @@ const getItemPath = (gameType: AllGames, imgFileNumber: number, backside?: boole
     return `items/${gameType}/${imgFileNumber}${backside ? 'b' : ''}.png`;
 }
 
-type Props = {
-    item: GloomhavenItem;
+interface CommonProps {
     showBackside?: boolean
+    imageWidth: number;
+}
+
+interface Props extends CommonProps {
+    item: GloomhavenItem;
 };
 
-const CARD_SCALE = 0.40;
 
-interface Props2 extends SpriteImageData {
-    showBackside?: boolean
+interface Props2 extends SpriteImageData, CommonProps {
     gameType: AllGames;
 }
 
 export const SpriteItemCardImage = (props: Props2) => {
-    const { gameType, imgFileNumber, showBackside, imageNumber } = props;
+    const { gameType, imgFileNumber, showBackside, imageNumber, imageWidth } = props;
+
+    const { CARD_WIDTH, CARD_HEIGHT } = useMemo(() => {
+        const CARD_WIDTH = (imageWidth);
+        const CARD_HEIGHT = CARD_WIDTH * (815 / 531);
+        return { CARD_WIDTH, CARD_HEIGHT };
+
+    }, [imageWidth]);
+
     const game = useGetGame(gameType);
     const itemImageData = game.getImageDimensions(imgFileNumber);
     const { imagesAcross } = itemImageData;
@@ -36,10 +47,9 @@ export const SpriteItemCardImage = (props: Props2) => {
     const { width, height, bgWidth, bgHeight } = getItemDimensions(itemImageData);
     const styles = {
         container: {
-            width: width * CARD_SCALE * 531 / width, /* width of individual sprite */
-            height: height * CARD_SCALE * 815 / height, /* height of individual sprite */
+            width: CARD_WIDTH, /* width of individual sprite */
+            height: CARD_HEIGHT, /* height of individual sprite */
             overflow: 'hidden', // Prevents other sprites from being visible
-            // borderRadius: `8px`,
         },
         sprite: {
             backgroundImage: `url(${path})`,
@@ -47,18 +57,15 @@ export const SpriteItemCardImage = (props: Props2) => {
             display: 'block',
             width: '100%',
             height: '100%',
-            // backgroundSize: `${width}px ${height}px`,
-            backgroundSize: `${bgWidth * CARD_SCALE * 531 / width}px ${bgHeight * CARD_SCALE * 815 / height}px`,
-            // width: width * CARD_SCALE,
-            // height: height * CARD_SCALE,
+            backgroundSize: `${bgWidth * CARD_WIDTH / width}px ${bgHeight * CARD_HEIGHT / height}px`,
         },
         spritePosition: (x: number, y: number) => ({
             backgroundPosition: `-${x}px -${y}px`, // Shifts the background to show the desired sprite
         }),
     };
 
-    const xPos = (width * CARD_SCALE * 531 / width) * (imageNumber !== undefined ? imageNumber % imagesAcross : 0);
-    const yPos = (height * CARD_SCALE * 815 / height) * (imageNumber !== undefined ? Math.floor(imageNumber / imagesAcross) : 0);
+    const xPos = (CARD_WIDTH) * (imageNumber !== undefined ? imageNumber % imagesAcross : 0);
+    const yPos = (CARD_HEIGHT) * (imageNumber !== undefined ? Math.floor(imageNumber / imagesAcross) : 0);
 
     return (
         <div style={styles.container}>
@@ -75,6 +82,6 @@ export const SpriteItemCardImage = (props: Props2) => {
 
 
 export const ItemCardImage = (props: Props) => {
-    const { item, ...rest } = props
-    return <SpriteItemCardImage {...item} {...rest} />
+    const { item, imageWidth = 0, ...rest } = props
+    return <SpriteItemCardImage {...item} imageWidth={imageWidth} {...rest} />
 }

@@ -105,7 +105,7 @@ const PurchaseItem = () => {
 						</Segment>
 					</Form>
 					<Form style={{ width: "50%" }}>
-						<ItemCardImage item={selectedItem} />
+						<ItemCardImage item={selectedItem} imageWidth={150} />
 					</Form>
 				</div>
 			</Modal.Content>

@@ -32,6 +32,15 @@ const OwnerButton = (props: OwnerProps) => {
 			setSelectedItem(item);
 		}
 	};
+	if (!owner) {
+		return <button
+			className={`${classNames} addIcon`}
+			onClick={onClick}
+			disabled={lockSpoilerPanel}
+		>
+			+
+		</button>
+	}
 
 	return (
 		<button
@@ -39,14 +48,8 @@ const OwnerButton = (props: OwnerProps) => {
 			onClick={onClick}
 			disabled={lockSpoilerPanel}
 		>
-			{owner ? (
-				<>
-					<GHIcon className="deleteIcon" name="circle_x.png" />
-					<ClassIcon className="ownerIcon" name={owner} />
-				</>
-			) : (
-				<div className="addIcon">+</div>
-			)}
+			<GHIcon className="deleteIcon" name="circle_x.png" />
+			<ClassIcon className="ownerIcon" name={owner} />
 		</button>
 	);
 };

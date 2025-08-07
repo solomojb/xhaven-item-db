@@ -1,9 +1,11 @@
-.item-card-container  {
+.item-card-container {
     .party-management-container {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
+        padding: 2px;
 
         .ownerButton {
             padding: 0;
@@ -12,7 +14,6 @@
             aspect-ratio: 1;
             border-radius: 50%;
             border: unset;
-            margin: 5px;
             position: relative;
         }
     }
@@ -26,7 +27,7 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .deleteIcon {
         height: 40%;
         width: 40%;

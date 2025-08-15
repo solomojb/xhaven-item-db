@@ -27,9 +27,9 @@ export const MainViewTabs = () => {
     const sharingEnabled = isFlagEnabled("sharing");
 
     const tabData: TabItem[] = [
-        { menuItem: "Item List", component: <ItemList />, shouldShow: true },
+        { menuItem: "Items", component: <ItemList />, shouldShow: true },
         {
-            menuItem: "Spoiler Configuration",
+            menuItem: "Config",
             component: <SpoilerFilters />,
             shouldShow: !lockSpoilerPanel,
         },
@@ -62,13 +62,14 @@ export const MainViewTabs = () => {
 
     const outlineClass = useMemo(() => {
         if (all || dataMismatch) {
-            return "spoiler";
+            return "spoiler tabs";
         }
-        return "";
+        return "tabs";
     }, [all, dataMismatch]);
 
     return <div className={outlineClass}>
         <Tab
+            menu={{ widths: panes.length, borderless: true, compact: false, tabular: true }}
             panes={panes}
             defaultActiveIndex={
                 parseInt(

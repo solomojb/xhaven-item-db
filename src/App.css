@@ -4,16 +4,16 @@
 }
 
 .action {
-    background-color: lightgray;
-    border-radius: 12px;
-    padding: 5px;
+	background-color: lightgray;
+	border-radius: 12px;
+	padding: 5px;
 }
 
 .consume-action {
-    background-color: rgba(211, 211, 211, 0.5);
-    border-radius: 12px;
+	background-color: rgba(211, 211, 211, 0.5);
+	border-radius: 12px;
 	border: 2px rgba(211, 211, 211, 1) dotted;
-    padding: 2px;
+	padding: 2px;
 }
 
 .Command {
@@ -31,12 +31,12 @@
 	font-weight: bold;
 }
 
-.Crystalize{
+.Crystalize {
 	color: #facf4e;
 	font-weight: bold;
 }
 
-.Rage{
+.Rage {
 	color: #e04341;
 	font-weight: bold;
 }
@@ -250,11 +250,16 @@ div.spoiler .ui.tabular.menu {
 	display: initial;
 }
 
-.ui.form .inline.inline-break.fields > label {
+.ui.form .inline.inline-break.fields>label {
 	display: block;
 }
-.ui.form .inline.inline-break.fields > .field {
+
+.ui.form .inline.inline-break.fields>.field {
 	display: inline-block;
+}
+
+.tabs div .ui.menu {
+	margin-bottom: 0;
 }
 
 .item-summon {
@@ -265,17 +270,19 @@ div.spoiler .ui.tabular.menu {
 	color: #555;
 }
 
-.item-summon > div {
+.item-summon>div {
 	display: inline-block;
 	white-space: nowrap;
 	padding: 0 2px;
 	border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.item-summon > div:last-child {
+
+.item-summon>div:last-child {
 	border-right: none;
 }
 
 @media screen and (max-width: 768px) {
+
 	.ui.table,
 	.ui.basic.table,
 	.items-table,
@@ -284,7 +291,7 @@ div.spoiler .ui.tabular.menu {
 		border: none;
 	}
 
-	.ui.table thead tr:first-child > th:first-child {
+	.ui.table thead tr:first-child>th:first-child {
 		border-radius: unset;
 		border-bottom: unset;
 	}
@@ -297,6 +304,7 @@ div.spoiler .ui.tabular.menu {
 	.items-table thead tr th:last-child {
 		border-bottom: none !important;
 	}
+
 	.items-table tbody tr td:first-child,
 	.items-table tbody tr td:last-child {
 		border-top: none !important;
@@ -365,7 +373,9 @@ div.spoiler .ui.tabular.menu {
 		grid-row: 1/3;
 	}
 }
+
 @media screen and (max-width: 414px) {
+
 	.items-table thead tr th.use-col,
 	.items-table tbody tr td.use-col,
 	.items-table thead tr th.text-col,
@@ -445,7 +455,7 @@ img.ui.image.soloClass {
 	opacity: 1;
 }
 
-.soloClass{
+.soloClass {
 	width: auto;
 	height: 30px;
 	background-color: white;
@@ -477,20 +487,20 @@ button.ui.deleteUser .delete.icon {
 	display: flex;
 	flex-direction: row;
 }
- .enchantment-circle:before {
+
+.enchantment-circle:before {
 	content: ' \25CF';
 	font-size: 12px;
-  }
+}
 
-  .faqImage {
+.faqImage {
 	width: 100%;
-  }
+}
 
-  .search-options {
+.search-options {
 	margin-bottom: 10px;
-  }
+}
 
-  .login-screen {
+.login-screen {
 	display: inline-block;
-  }
-  
+}

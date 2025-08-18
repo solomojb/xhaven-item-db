@@ -1,6 +1,7 @@
 import { GHClasses, SpecialUnlockTypes } from "../../State";
 import { GameClass, SpriteImageDimensions } from "../GameClass";
 import { Expansions, GameType } from "../GameType";
+import { GHSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/GHSpoilerFilter";
 
 import { items } from "./items";
 
@@ -35,6 +36,7 @@ export class GHClass extends GameClass<GHClasses> {
                     GameType.Frosthaven
                 ],
                 usesDiscount: true,
+                spoilerFilter: <GHSpoilerFilter />
             })
     }
     gameClasses(specialUnlocks?: SpecialUnlockTypes[]) {

@@ -5,7 +5,7 @@ import { GameFilters, ConfirmGameRemoval } from "./Games";
 import { Secrets } from "./Secrets/Secrets";
 import { FilterProvider } from "../../Providers/FilterProvider";
 
-const SpoilerFilters = () => {
+export const SpoilerFilters = () => {
 	return (
 		<Form>
 			<FilterProvider>
@@ -20,5 +20,3 @@ const SpoilerFilters = () => {
 		</Form>
 	);
 };
-
-export default SpoilerFilters;

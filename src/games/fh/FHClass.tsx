@@ -1,7 +1,7 @@
-import { Helpers } from "../../helpers";
-import { FHClasses, GloomhavenItem } from "../../State/Types";
-import { GameClass, SpriteImageDimensions } from "../GameClass";
-import { AllGames, Expansions, GameType } from "../GameType";
+import { Helpers } from "../../helpers.ts";
+import { FHClasses, GloomhavenItem } from "../../State/Types.tsx";
+import { GameClass, SpriteImageDimensions } from "../GameClass.ts";
+import { AllGames, Expansions, GameType } from "../GameType.ts";
 
 export const ghImportSets: number[][] = [
     [],
@@ -56,6 +56,7 @@ const getEnchancerLevel = (id: number) => {
 
 import { items } from "./items.ts";
 import { items as ghItems } from "../gh/items.ts";
+import { FHSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/FHSpoilerFilter.tsx";
 
 export const importText: Partial<Record<AllGames, string>> = {
     [GameType.Gloomhaven]: "Imported from Gloomhaven",
@@ -85,7 +86,8 @@ export class FHClass extends GameClass<FHClasses> {
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
                     GameType.JawsOfTheLion,
-                ]
+                ],
+                spoilerFilter: <FHSpoilerFilter />
             })
         const { filterSlots: ghFilterSlots } = this.getInitialItems(ghItems);
         const filteredGhItems = ghItems
@@ -139,4 +141,3 @@ export class FHClass extends GameClass<FHClasses> {
     }
 
 }
-

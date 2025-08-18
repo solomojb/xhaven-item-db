@@ -1,9 +1,6 @@
-import { useRecoilValue } from "recoil";
 import { Divider } from "semantic-ui-react";
-import { GameType } from "../../../../../games";
 import { formatId } from "../../../../../helpers";
 import {
-	gameTypeState,
 	GloomhavenItem,
 } from "../../../../../State";
 import { GHIcon } from "../../../../Utils";
@@ -22,7 +19,6 @@ export const ItemCost = (props: Props) => {
 		hideDivider
 	} = props;
 	const { discount } = useXHavenDB();
-	const gameType = useRecoilValue(gameTypeState);
 
 	const costClass = discount < 0 ? "blue" : discount > 0 ? "red" : "";
 
@@ -37,8 +33,7 @@ export const ItemCost = (props: Props) => {
 					{showDiscount ? `${cost + discount}g (${discount}g)` : `${cost + discount}g`}
 				</strong>
 			)}
-			{gameType === GameType.Frosthaven &&
-				resources &&
+			{resources &&
 				Object.entries(resources).map(([resource, value], index) => {
 					if (resource === "item") {
 						return value.map(

@@ -57,7 +57,6 @@ TODO:
 * Add tooltips
 * Optimize Task Switching (Remove Recoil)
 * Fix Linting errors
-* Item Size on mobile
 * Export from old
 * Remove Semantic UI
 * Add Pretifiy

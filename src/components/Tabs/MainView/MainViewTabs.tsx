@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Tab } from "semantic-ui-react";
 import { ItemList } from "./Items";
-import SpoilerFilters from "../SpoilerFilters/SpoilerFilters";
+import { SpoilerFilters } from "../SpoilerFilters/SpoilerFilters";
 import { Share } from "../Share/Share";
 import { isFlagEnabled } from "../../../helpers";
 import { Account } from "../Account/Account";

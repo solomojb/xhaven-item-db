@@ -1,6 +1,7 @@
-import { JOTLClasses } from "../../State";
-import { GameClass, SpriteImageDimensions } from "../GameClass";
-import { Expansions, GameType } from "../GameType";
+import { JOTLSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/JOTLSpoilerFilter.js";
+import { JOTLClasses } from "../../State/index.js";
+import { GameClass, SpriteImageDimensions } from "../GameClass.js";
+import { Expansions, GameType } from "../GameType.js";
 
 import { items } from "./items.js";
 
@@ -18,7 +19,8 @@ export class JOTLClass extends GameClass<JOTLClasses> {
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
                     GameType.Frosthaven
-                ]
+                ],
+                spoilerFilter: <JOTLSpoilerFilter />
             }
         )
     }
@@ -33,4 +35,3 @@ export class JOTLClass extends GameClass<JOTLClasses> {
         }
     }
 }
-

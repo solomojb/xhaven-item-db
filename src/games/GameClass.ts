@@ -16,6 +16,8 @@ export interface ClassParams {
     soloClassesToInclude?: AllGames[],
     gameFilters: AllGames[],
     usesDiscount?: boolean;
+    spoilerFilter?: JSX.Element;
+
 }
 
 export interface SpriteImageDimensions {
@@ -34,6 +36,7 @@ export abstract class GameClass<T> {
     public soloFilterTitle: string;
     public soloGameType?: GameType;
     public usesDiscount: boolean;
+    public spoilerFilter?: JSX.Element;
 
     constructor(
         public title: string,
@@ -55,6 +58,7 @@ export abstract class GameClass<T> {
             this.includeItemsFrom = params.includeItemsFrom ?? [];
             this.soloClassesToInclude = params.soloClassesToInclude ?? [];
             this.usesDiscount = params.usesDiscount ?? false;
+            this.spoilerFilter = params.spoilerFilter;
         }
     }
 

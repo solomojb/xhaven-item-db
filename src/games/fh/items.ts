@@ -1614,7 +1614,7 @@ export const items: GloomhavenItem[] = [
     name: "Muscle Potion",
     count: 2,
     resources: {
-      rockroot: 1,
+      axenut: 1,
       flamefruit: 1
     },
     slot: GloomhavenItemSlot.SmallItem,

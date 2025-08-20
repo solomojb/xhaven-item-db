@@ -57,6 +57,27 @@ export enum GHClasses {
 	XX = "XX",
 }
 
+export enum GH2eClasses {
+	BR = "BR2e",
+	TI = "TI2e",
+	SW = "SW2e",
+	SC = "SC2e",
+	CH = "CH2e",
+	MT = "MT2e",
+	SK = "SK2e",
+	QM = "QM2e",
+	SU = "SU2e",
+	NS = "NS2e",
+	PH = "PH2e",
+	BE = "BE2e",
+	SS = "SS2e",
+	DS = "DS2e",
+	SB = "SB2e",
+	EL = "EL2e",
+	BT = "BT2e",
+	XX = "XX2e",
+}
+
 export enum FCClasses {
 	DR = "DR",
 }
@@ -130,7 +151,8 @@ export type ClassesInUse =
 	| FHClasses
 	| CSClasses
 	| CSAClasses
-	| TOAClasses;
+	| TOAClasses
+	| GH2eClasses;
 export type SoloClasses = ClassesInUse;
 
 export enum GloomhavenItemSlot {

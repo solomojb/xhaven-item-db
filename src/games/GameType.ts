@@ -2,6 +2,8 @@ export enum GameType {
 	Gloomhaven = "gh",
 	JawsOfTheLion = "jotl",
 	Frosthaven = "fh",
+	Gloomhaven2e = "gh2e",
+
 }
 
 export enum Expansions {
@@ -11,6 +13,7 @@ export enum Expansions {
 	GHSoloScenarios = "ghss",
 	FHSoloScenarios = "fhss",
 	TrailOfAshes = "toa",
+	GH2eSoloScenarios = "gh2ess",
 }
 
 export type AllGames = GameType | Expansions;

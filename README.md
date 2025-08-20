@@ -66,3 +66,6 @@ TODO:
 * Collapse FHSS items to different files
 * Combine Images?
 * Add card slider?
+* Split item files
+* solo items only show for current party
+* split games into games, solo scenarios, expansions and mercanary packs

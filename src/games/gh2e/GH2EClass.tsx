@@ -4,13 +4,15 @@ import { GameType, SoloScenarioPacks } from "../GameType";
 
 import { items } from "./items";
 import { GH2eSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/GH2eSpoilerFilter";
+import { isFlagEnabled } from "../../helpers";
 
+const isGH2eEnabled = isFlagEnabled("gh2e");
 export class GH2EClass extends GameClass<GH2eClasses> {
 
     constructor() {
         super(
             "Gloomhaven 2nd Edition",
-            true,
+            isGH2eEnabled,
             {
                 items,
                 soloClassesToInclude: [

@@ -1,7 +1,7 @@
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../State";
-import { AllGames, Expansions, GameType, MercanariesPacks, SoloScenarioPacks } from "./GameType";
+import { AllGames, Expansions, GameType, SoloScenarioPacks } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
     return source.replace(/{(.{2,})}/, (_m, m1) => {
@@ -17,7 +17,6 @@ export interface ClassParams {
     gameFilters: GameType[],
     expansionFilters?: Expansions[],
     soloScenarioFilters?: SoloScenarioPacks[],
-    mercanariesFilters?: MercanariesPacks[],
     usesDiscount?: boolean;
     spoilerFilter?: JSX.Element;
 
@@ -38,7 +37,6 @@ export abstract class GameClass<T> {
     public soloClassesToInclude: AllGames[];
     public soloScenarioFilters: SoloScenarioPacks[];
     public expansionFilters: Expansions[];
-    public mercanariesFilters: MercanariesPacks[];
     public soloGameType?: GameType;
     public usesDiscount: boolean;
     public spoilerFilter?: JSX.Element;
@@ -53,7 +51,6 @@ export abstract class GameClass<T> {
         this.includeItemsFrom = [];
         this.soloClassesToInclude = [];
         this.expansionFilters = [];
-        this.mercanariesFilters = [];
         this.soloScenarioFilters = [];
         this.usesDiscount = false;
         if (params) {
@@ -67,7 +64,6 @@ export abstract class GameClass<T> {
             this.usesDiscount = params.usesDiscount ?? false;
             this.spoilerFilter = params.spoilerFilter;
             this.soloScenarioFilters = params.soloScenarioFilters ?? [];
-            this.mercanariesFilters = params.mercanariesFilters ?? [];
             this.expansionFilters = params.expansionFilters ?? [];
         }
     }

@@ -5,11 +5,12 @@ import { JOTLClass } from "./jotl/JOTLClass";
 import { FCClass } from "./Expansions/FCClass";
 import { CSClass } from "./Expansions/CSClass";
 import { CSAClass } from "./Expansions/CSAClass";
-import { GHSSClass } from "./Expansions/GHSSClass";
-import { FHSSClass } from "./Expansions/FHSSClass";
+import { GHSSClass } from "./SoloScenarios/GHSSClass";
+import { FHSSClass } from "./SoloScenarios/FHSSClass";
 import { TOAClass } from "./Expansions/TOAClass";
 import { GH2EClass } from "./gh2e/GH2EClass";
-import { GH2eSSClass } from "./Expansions/GH2eSSClass";
+import { GH2eSSClass } from "./SoloScenarios/GH2eSSClass";
+import { MPClass } from "./MercenaryPacks/MPClass";
 
 const games = {
 	[GameType.Gloomhaven]: new GHClass(),
@@ -23,7 +24,7 @@ const games = {
 	[SoloScenarioPacks.FHSoloScenarios]: new FHSSClass(),
 	[Expansions.TrailOfAshes]: new TOAClass(),
 	[SoloScenarioPacks.GH2eSoloScenarios]: new GH2eSSClass(),
-
+	[Expansions.MP]: new MPClass(),
 }
 
 export const useGetGames = () => games;

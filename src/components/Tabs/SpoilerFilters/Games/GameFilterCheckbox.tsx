@@ -9,6 +9,7 @@ type Props = {
 
 export const GameFilterCheckbox = (props: Props) => {
   const { gameType } = props;
+  console.log(gameType);
   const { title } = useGetGame(gameType);
   const { getClassesToRemove, getRemovingItemCount, includeGames, setIncludeGames, setRemovingGame } = useXHavenDB();
 

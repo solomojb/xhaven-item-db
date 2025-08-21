@@ -143,6 +143,13 @@ export enum SpecialUnlockTypes {
 	EnvelopeV = "envelopeV",
 }
 
+export enum MPClasses {
+	MP1 = "MP1",
+	MP2 = "MP2",
+	MP3 = "MP3",
+	MP4 = "MP4",
+}
+
 
 export type ClassesInUse =
 	| GHClasses

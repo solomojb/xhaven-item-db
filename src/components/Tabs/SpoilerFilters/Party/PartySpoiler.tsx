@@ -12,9 +12,9 @@ export const PartySpoiler = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
 	const games = useGetGames();
 	const game = games[currentGameType];
-	const { gameFilters } = game;
+	const { gameFilters, expansionFilters } = game;
 	const { itemManagementType } = useXHavenDB();
-	const allGames = [currentGameType, ...gameFilters];
+	const allGames = [currentGameType, ...gameFilters, ...expansionFilters];
 
 	return (
 		<Segment>

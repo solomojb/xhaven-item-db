@@ -5,11 +5,7 @@ import { useRecoilValue } from "recoil";
 import { gameTypeState } from "../../../../State";
 import { useGetGame } from "../../../../games";
 
-interface Props extends HelpProps {
-  label: string;
-}
-
-const GameFilterList = (props: Props) => {
+const GameFilterList = (props: HelpProps) => {
   const { label, gameList } = props;
   if (!gameList.length) {
     return null;
@@ -45,7 +41,6 @@ export const GameFilters = () => {
       <GameFilterList label="Games" gameList={game.gameFilters} />
       <GameFilterList label="Solo Scenarios" gameList={game.soloScenarioFilters} />
       <GameFilterList label="Expansions" gameList={game.expansionFilters} />
-      {/* <GameFilterList label="Mercanary Packs" games={game.mercanariesFilters} /> */}
 
     </Segment>
   );

@@ -10,13 +10,12 @@ export const SoloClassFilterBlock = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
 	const games = useGetGames();
 	const { soloClassesToInclude, includeMercenaryPacksSoloItems } = games[currentGameType];
-	const { includeGames } = useXHavenDB();
+	const { includeGames, selectedMercenaryPacks } = useXHavenDB();
 	const includeList =
-		soloClassesToInclude &&
-		soloClassesToInclude.filter((gameType) =>
+		soloClassesToInclude?.filter((gameType) =>
 			includeGames.includes(gameType)
-		);
-	if (!includeList || includeList.length === 0) {
+		) ?? [];
+	if (includeList.length === 0 && selectedMercenaryPacks.length === 0) {
 		return null;
 	}
 

@@ -2,7 +2,7 @@ import { useRecoilValue } from "recoil";
 import { Form, List } from "semantic-ui-react";
 import { gameTypeState } from "../../../../State";
 import { useGetGames } from "../../../../games";
-import { AllGames } from "../../../../games/GameType";
+import { AllGames, MercenariesPacks } from "../../../../games/GameType";
 
 interface HelpEntryProps {
   title: string;
@@ -42,19 +42,19 @@ export const GameHelp = (props: HelpProps) => {
   const { gameList, label } = props;
   const currentGameType = useRecoilValue(gameTypeState);
   const games = useGetGames();
-  const { soloClassesToInclude, includeItemsFrom } = games[currentGameType];
+  const { soloClassesToInclude, includeItemsFrom, includeMercenaryPacksSoloItems } = games[currentGameType];
 
   return (
     <Form.Group>
       <List bulleted>
         <List.Header>{`Which ${label} are you playing with?`}</List.Header>
         {gameList.map((gameType) => {
-          const { hasClasses, title } = games[gameType];
+          const { hasClasses, title, } = games[gameType];
           return <HelpEntry
             title={title}
             addClasses={hasClasses()}
             addItems={includeItemsFrom.includes(gameType)}
-            addSolos={soloClassesToInclude.includes(gameType)} />
+            addSolos={soloClassesToInclude.includes(gameType) || (includeMercenaryPacksSoloItems && label === 'Mercenary Packs')} />
         })}
       </List>
     </Form.Group>

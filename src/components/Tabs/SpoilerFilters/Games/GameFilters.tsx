@@ -4,6 +4,7 @@ import { GameHelp, HelpProps } from "./GameHelp";
 import { useRecoilValue } from "recoil";
 import { gameTypeState } from "../../../../State";
 import { useGetGame } from "../../../../games";
+import { MercenariesPacks } from "../../../../games/GameType";
 
 const GameFilterList = (props: HelpProps) => {
   const { label, gameList } = props;
@@ -32,6 +33,8 @@ const GameFilterList = (props: HelpProps) => {
   </Form.Group>
 }
 
+const mercenaryList = Object.keys(MercenariesPacks).map(key => key as MercenariesPacks);
+
 export const GameFilters = () => {
   const currentGameType = useRecoilValue(gameTypeState);
   const game = useGetGame(currentGameType);
@@ -41,7 +44,7 @@ export const GameFilters = () => {
       <GameFilterList label="Games" gameList={game.gameFilters} />
       <GameFilterList label="Solo Scenarios" gameList={game.soloScenarioFilters} />
       <GameFilterList label="Expansions" gameList={game.expansionFilters} />
-
+      {game.includeMercenaryPacks && <GameFilterList label="Mercenary Packs" gameList={mercenaryList} />}
     </Segment>
   );
 };

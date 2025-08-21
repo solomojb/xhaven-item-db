@@ -7,6 +7,7 @@ import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { useRecoilValue } from "recoil";
 import { gameTypeState } from "../../../../State";
 import { useGetGames } from "../../../../games";
+import { MPPartyList } from "./MPPartyList";
 
 export const PartySpoiler = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
@@ -52,6 +53,7 @@ export const PartySpoiler = () => {
 							/>
 						);
 					})}
+					<MPPartyList/>
 				</Form.Group>
 			)}
 		</Segment>

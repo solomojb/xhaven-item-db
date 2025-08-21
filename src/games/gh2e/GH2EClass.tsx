@@ -1,6 +1,6 @@
 import { GH2eClasses, SpecialUnlockTypes } from "../../State";
 import { GameClass, SpriteImageDimensions } from "../GameClass";
-import { Expansions, GameType, SoloScenarioPacks } from "../GameType";
+import { GameType, SoloScenarioPacks } from "../GameType";
 
 import { items } from "./items";
 import { GH2eSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/GH2eSpoilerFilter";
@@ -15,7 +15,6 @@ export class GH2EClass extends GameClass<GH2eClasses> {
                 items,
                 soloClassesToInclude: [
                     SoloScenarioPacks.GH2eSoloScenarios,
-                    Expansions.MP,
                 ],
                 gameFilters: [
                     GameType.JawsOfTheLion,
@@ -24,11 +23,11 @@ export class GH2EClass extends GameClass<GH2eClasses> {
                 soloScenarioFilters: [
                     SoloScenarioPacks.GH2eSoloScenarios,
                 ],
-                expansionFilters: [
-                    Expansions.MP,
-                ],
+
                 usesDiscount: true,
-                spoilerFilter: <GH2eSpoilerFilter />
+                spoilerFilter: <GH2eSpoilerFilter />,
+                includeMercenaryPacks: true,
+                includeMercenaryPacksSoloItems: true,
             })
     }
     gameClasses(specialUnlocks?: SpecialUnlockTypes[]) {

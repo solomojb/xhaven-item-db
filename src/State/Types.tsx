@@ -159,7 +159,8 @@ export type ClassesInUse =
 	| CSClasses
 	| CSAClasses
 	| TOAClasses
-	| GH2eClasses;
+	| GH2eClasses
+	| MPClasses;
 export type SoloClasses = ClassesInUse;
 
 export enum GloomhavenItemSlot {

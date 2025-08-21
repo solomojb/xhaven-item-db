@@ -19,6 +19,8 @@ export interface ClassParams {
     soloScenarioFilters?: SoloScenarioPacks[],
     usesDiscount?: boolean;
     spoilerFilter?: JSX.Element;
+    includeMercenaryPacks?: boolean;
+    includeMercenaryPacksSoloItems?: boolean;
 
 }
 
@@ -40,7 +42,8 @@ export abstract class GameClass<T> {
     public soloGameType?: GameType;
     public usesDiscount: boolean;
     public spoilerFilter?: JSX.Element;
-
+    public includeMercenaryPacks: boolean;
+    public includeMercenaryPacksSoloItems: boolean;
     constructor(
         public title: string,
         public isSelectable: boolean = false,
@@ -53,6 +56,8 @@ export abstract class GameClass<T> {
         this.expansionFilters = [];
         this.soloScenarioFilters = [];
         this.usesDiscount = false;
+        this.includeMercenaryPacks = false;
+        this.includeMercenaryPacksSoloItems = false;
         if (params) {
             const { filterSlots, resources } = this.getInitialItems(params.items);
             this.filterSlots = filterSlots;
@@ -65,6 +70,8 @@ export abstract class GameClass<T> {
             this.spoilerFilter = params.spoilerFilter;
             this.soloScenarioFilters = params.soloScenarioFilters ?? [];
             this.expansionFilters = params.expansionFilters ?? [];
+            this.includeMercenaryPacks = params.includeMercenaryPacks ?? false;
+            this.includeMercenaryPacksSoloItems = params.includeMercenaryPacksSoloItems ?? false;
         }
     }
 

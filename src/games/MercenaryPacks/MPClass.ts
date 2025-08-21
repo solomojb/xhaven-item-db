@@ -1,13 +1,13 @@
 import { MPClasses } from "../../State";
 import { GameClass, SpriteImageDimensions } from "../GameClass";
 
-export class MPClass extends GameClass<MPClasses> {
-    constructor() {
-        super("Mercenary Packs");
+export abstract class MPClass extends GameClass<MPClasses> {
+    constructor(title: string, private mpClass: MPClasses) {
+        super(title);
     }
 
     gameClasses(): MPClasses[] {
-        return Object.values(MPClasses);
+        return [this.mpClass];
     }
 
     getImageDimensions(): SpriteImageDimensions {

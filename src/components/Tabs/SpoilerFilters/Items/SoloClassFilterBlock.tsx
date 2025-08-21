@@ -4,11 +4,12 @@ import { gameTypeState } from "../../../../State";
 import { SoloClassFilter } from "./SoloClassFilter";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { useGetGames } from "../../../../games";
+import { MPSoloClassFilter } from "./MPSoloClassFilter";
 
 export const SoloClassFilterBlock = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
 	const games = useGetGames();
-	const { soloClassesToInclude } = games[currentGameType];
+	const { soloClassesToInclude, includeMercenaryPacksSoloItems } = games[currentGameType];
 	const { includeGames } = useXHavenDB();
 	const includeList =
 		soloClassesToInclude &&
@@ -30,6 +31,7 @@ export const SoloClassFilterBlock = () => {
 					gameType={gameType}
 				/>
 			))}
+			{includeMercenaryPacksSoloItems && <MPSoloClassFilter />}
 		</Segment>
 	);
 };

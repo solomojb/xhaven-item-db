@@ -1,10 +1,10 @@
 import { createContext, PropsWithChildren, ReactNode, useCallback, useContext, useMemo } from "react"
-import { BuildingLevel, ClassesInUse, FCClasses, gameTypeState, GHClasses, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsInUse, ItemsOwnedBy, ItemViewDisplayType, JOTLClasses, SpecialUnlockTypes } from "../../State";
+import { BuildingLevel, ClassesInUse, FCClasses, gameTypeState, GHClasses, GloomhavenItem, GloomhavenItemSlot, ItemManagementType, ItemsInUse, ItemsOwnedBy, ItemViewDisplayType, JOTLClasses, MPClasses, SpecialUnlockTypes } from "../../State";
 import { useRecoilValue } from "recoil";
 import { useLocalStateVariable } from "./LocalStateVariable";
 import { useGetGame, GameType, useGetGames } from "../../games";
 import { useGameStateVariable } from "./GameStateVariable";
-import { AllGames, Expansions } from "../../games/GameType";
+import { AllGames, Expansions, MercenariesPacks, SoloScenarioPacks } from "../../games/GameType";
 
 const fixItemsOwnedBy = (oldItemsOwnedBy: any) => {
     if (Array.isArray(oldItemsOwnedBy)) {
@@ -112,7 +112,7 @@ const fixIncludedGames = (old: any, gameType: GameType, spoilerObj: any) => {
         }
         const soloClass = spoilerObj["soloClass"];
         if (gameType === GameType.Gloomhaven && soloClass && soloClass.length) {
-            newGames.push(Expansions.GHSoloScenarios);
+            newGames.push(SoloScenarioPacks.GHSoloScenarios);
         }
     }
     if (!newGames.includes(gameType)) {
@@ -193,6 +193,9 @@ interface Data {
     removeItemsFromOwner: (itemsId: number[] | number, owner: ClassesInUse, removingGame?: AllGames) => void,
     getClassesToRemove: (removingGame: AllGames) => ClassesInUse[],
     getRemovingItemCount: (removingGame: AllGames) => number,
+    toggleClassFilter: (key: ClassesInUse) => void;
+    toggleSoloClass: (key: ClassesInUse) => void;
+    selectedMercenaryPacks: MPClasses[];
 
 }
 
@@ -351,6 +354,32 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         [getClassesToRemove, itemsOwnedByClass]
     );
 
+    const toggleClassFilter = useCallback((key: ClassesInUse) => {
+        if (classesInUse.includes(key)) {
+            setClassToDelete(key);
+        } else {
+            const newClassesInUse = Object.assign([], classesInUse);
+            newClassesInUse.push(key);
+            setClassesInUse(newClassesInUse);
+        }
+    }, [classesInUse, setClassToDelete, setClassesInUse]);
+
+    const toggleSoloClass = useCallback((key: ClassesInUse) => {
+        const value = Object.assign([], soloClass);
+        if (value.includes(key)) {
+            value.splice(value.indexOf(key), 1);
+        } else {
+            value.push(key);
+        }
+        setSoloClass(value);
+    }, [setSoloClass, soloClass]);
+
+    const selectedMercenaryPacks = useMemo(() => {
+        return Object.entries(MercenariesPacks).filter(([, value]) => includeGames.includes(value)).map(([key]) => {
+            return key as MPClasses;
+        });
+    }, [includeGames])
+
 
     const value = useMemo(() => ({
         itemManagementType, setItemManagementType,
@@ -381,6 +410,10 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         removeItemsFromOwner,
         getClassesToRemove,
         getRemovingItemCount,
+        toggleClassFilter,
+        toggleSoloClass,
+        selectedMercenaryPacks,
+
     }), [
         itemManagementType, setItemManagementType,
         classesInUse, setClassesInUse,
@@ -409,7 +442,10 @@ export const XHavenDBProvider = (props: PropsWithChildren<ReactNode>) => {
         removeClasses,
         removeItemsFromOwner,
         getClassesToRemove,
-        getRemovingItemCount
+        getRemovingItemCount,
+        toggleClassFilter,
+        toggleSoloClass,
+        selectedMercenaryPacks
     ])
 
 

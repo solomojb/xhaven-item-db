@@ -1,6 +1,6 @@
 import { GH2eClasses, SpecialUnlockTypes } from "../../State";
 import { GameClass, SpriteImageDimensions } from "../GameClass";
-import { Expansions, GameType } from "../GameType";
+import { GameType, SoloScenarioPacks } from "../GameType";
 
 import { items } from "./items";
 import { GH2eSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/GH2eSpoilerFilter";
@@ -9,21 +9,19 @@ export class GH2EClass extends GameClass<GH2eClasses> {
 
     constructor() {
         super(
-            "Gloomhaven 2e",
+            "Gloomhaven 2nd Edition",
             true,
             {
                 items,
-                includeItemsFrom: [
-                    Expansions.ForgottenCircles,
-                ],
                 soloClassesToInclude: [
-                    Expansions.GH2eSoloScenarios,
-                    Expansions.ForgottenCircles,
+                    SoloScenarioPacks.GH2eSoloScenarios,
                 ],
                 gameFilters: [
-                    Expansions.GH2eSoloScenarios,
                     GameType.JawsOfTheLion,
                     GameType.Frosthaven
+                ],
+                soloScenarioFilters: [
+                    SoloScenarioPacks.GH2eSoloScenarios,
                 ],
                 usesDiscount: true,
                 spoilerFilter: <GH2eSpoilerFilter />

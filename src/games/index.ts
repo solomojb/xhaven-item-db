@@ -1,4 +1,4 @@
-import { GameType, Expansions, AllGames } from "./GameType";
+import { GameType, Expansions, AllGames, SoloScenarioPacks } from "./GameType";
 import { FHClass } from "./fh/FHClass";
 import { GHClass } from "./gh/GHClass";
 import { JOTLClass } from "./jotl/JOTLClass";
@@ -19,10 +19,10 @@ const games = {
 	[Expansions.ForgottenCircles]: new FCClass(),
 	[Expansions.CrimsonScales]: new CSClass(),
 	[Expansions.CrimsonScalesAddon]: new CSAClass(),
-	[Expansions.GHSoloScenarios]: new GHSSClass(),
-	[Expansions.FHSoloScenarios]: new FHSSClass(),
+	[SoloScenarioPacks.GHSoloScenarios]: new GHSSClass(),
+	[SoloScenarioPacks.FHSoloScenarios]: new FHSSClass(),
 	[Expansions.TrailOfAshes]: new TOAClass(),
-	[Expansions.GH2eSoloScenarios]: new GH2eSSClass(),
+	[SoloScenarioPacks.GH2eSoloScenarios]: new GH2eSSClass(),
 
 }
 

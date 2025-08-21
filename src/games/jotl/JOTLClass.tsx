@@ -14,13 +14,15 @@ export class JOTLClass extends GameClass<JOTLClasses> {
                 items: items,
                 gameFilters: [
                     GameType.Gloomhaven,
+                    GameType.Frosthaven
+                ],
+                spoilerFilter: <JOTLSpoilerFilter />,
+                expansionFilters: [
                     Expansions.ForgottenCircles,
                     Expansions.CrimsonScales,
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
-                    GameType.Frosthaven
-                ],
-                spoilerFilter: <JOTLSpoilerFilter />
+                ]
             }
         )
     }

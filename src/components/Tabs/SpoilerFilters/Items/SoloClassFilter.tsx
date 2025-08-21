@@ -16,7 +16,7 @@ export const SoloClassFilter = (props: Props) => {
 	if (!includeGames.includes(gameType)) {
 		return null;
 	}
-	const { soloFilterTitle, soloGameType } = games[gameType];
+	const { title, soloGameType } = games[gameType];
 	const gameTypeToUse = soloGameType || gameType;
 	const classes = getClassesForGame(gameTypeToUse);
 
@@ -36,7 +36,7 @@ export const SoloClassFilter = (props: Props) => {
 					isUsed={(className: ClassesInUse) =>
 						soloClass.includes(className)
 					}
-					label={soloFilterTitle}
+					label={title}
 					classes={classes}
 					onClick={toggleClassFilter}
 				/>

@@ -1,7 +1,7 @@
 import { Helpers } from "../../helpers.ts";
 import { FHClasses, GloomhavenItem } from "../../State/Types.tsx";
 import { GameClass, SpriteImageDimensions } from "../GameClass.ts";
-import { AllGames, Expansions, GameType } from "../GameType.ts";
+import { AllGames, Expansions, GameType, SoloScenarioPacks } from "../GameType.ts";
 
 export const ghImportSets: number[][] = [
     [],
@@ -75,17 +75,22 @@ export class FHClass extends GameClass<FHClasses> {
                     Expansions.ForgottenCircles,
                 ],
                 soloClassesToInclude: [
-                    Expansions.FHSoloScenarios,
-                    Expansions.GHSoloScenarios],
+                    SoloScenarioPacks.FHSoloScenarios,
+                    SoloScenarioPacks.GHSoloScenarios
+                ],
                 gameFilters: [
-                    Expansions.FHSoloScenarios,
                     GameType.Gloomhaven,
-                    Expansions.GHSoloScenarios,
+                    GameType.JawsOfTheLion,
+                ],
+                soloScenarioFilters: [
+                    SoloScenarioPacks.FHSoloScenarios,
+                    SoloScenarioPacks.GHSoloScenarios
+                ],
+                expansionFilters: [
                     Expansions.ForgottenCircles,
                     Expansions.CrimsonScales,
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
-                    GameType.JawsOfTheLion,
                 ],
                 spoilerFilter: <FHSpoilerFilter />
             })

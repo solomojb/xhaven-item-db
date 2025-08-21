@@ -10,10 +10,20 @@ export enum Expansions {
 	ForgottenCircles = "fc",
 	CrimsonScales = "cs",
 	CrimsonScalesAddon = "csa",
+	TrailOfAshes = "toa",
+}
+
+export enum SoloScenarioPacks {
 	GHSoloScenarios = "ghss",
 	FHSoloScenarios = "fhss",
-	TrailOfAshes = "toa",
 	GH2eSoloScenarios = "gh2ess",
 }
 
-export type AllGames = GameType | Expansions;
+export enum MercanariesPacks {
+	Hail = 'hail',
+	B = 'B',
+	C = 'C',
+	D = 'D',
+}
+
+export type AllGames = GameType | Expansions | SoloScenarioPacks;// | MercanariesPacks;

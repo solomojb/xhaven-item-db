@@ -1,6 +1,6 @@
 import { GHClasses, SpecialUnlockTypes } from "../../State";
 import { GameClass, SpriteImageDimensions } from "../GameClass";
-import { Expansions, GameType } from "../GameType";
+import { Expansions, GameType, SoloScenarioPacks } from "../GameType";
 import { GHSpoilerFilter } from "../../components/Tabs/SpoilerFilters/Items/GHSpoilerFilter";
 
 import { items } from "./items";
@@ -20,20 +20,24 @@ export class GHClass extends GameClass<GHClasses> {
                     Expansions.TrailOfAshes,
                 ],
                 soloClassesToInclude: [
-                    Expansions.GHSoloScenarios,
+                    SoloScenarioPacks.GHSoloScenarios,
                     Expansions.ForgottenCircles,
                     Expansions.CrimsonScales,
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
                 ],
                 gameFilters: [
-                    Expansions.GHSoloScenarios,
+                    GameType.JawsOfTheLion,
+                    GameType.Frosthaven
+                ],
+                soloScenarioFilters: [
+                    SoloScenarioPacks.GHSoloScenarios,
+                ],
+                expansionFilters: [
                     Expansions.ForgottenCircles,
                     Expansions.CrimsonScales,
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
-                    GameType.JawsOfTheLion,
-                    GameType.Frosthaven
                 ],
                 usesDiscount: true,
                 spoilerFilter: <GHSpoilerFilter />

@@ -1,7 +1,7 @@
 import { getClassIcon } from "../components/Utils";
 import { Helpers } from "../helpers";
 import { GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../State";
-import { AllGames, GameType } from "./GameType";
+import { AllGames, Expansions, GameType, MercanariesPacks, SoloScenarioPacks } from "./GameType";
 
 const deSpoilerItemSource = (source: string): string => {
     return source.replace(/{(.{2,})}/, (_m, m1) => {
@@ -14,7 +14,10 @@ export interface ClassParams {
     items: GloomhavenItem[],
     includeItemsFrom?: AllGames[],
     soloClassesToInclude?: AllGames[],
-    gameFilters: AllGames[],
+    gameFilters: GameType[],
+    expansionFilters?: Expansions[],
+    soloScenarioFilters?: SoloScenarioPacks[],
+    mercanariesFilters?: MercanariesPacks[],
     usesDiscount?: boolean;
     spoilerFilter?: JSX.Element;
 
@@ -30,10 +33,12 @@ export abstract class GameClass<T> {
     filterSlots: GloomhavenItemSlot[] = [];
     resources: string[] = [];
     public items: GloomhavenItem[];
-    public gameFilters: AllGames[];
+    public gameFilters: GameType[];
     public includeItemsFrom: AllGames[];
     public soloClassesToInclude: AllGames[];
-    public soloFilterTitle: string;
+    public soloScenarioFilters: SoloScenarioPacks[];
+    public expansionFilters: Expansions[];
+    public mercanariesFilters: MercanariesPacks[];
     public soloGameType?: GameType;
     public usesDiscount: boolean;
     public spoilerFilter?: JSX.Element;
@@ -43,11 +48,13 @@ export abstract class GameClass<T> {
         public isSelectable: boolean = false,
         params?: ClassParams,
     ) {
-        this.soloFilterTitle = title;
         this.items = [];
         this.gameFilters = [];
         this.includeItemsFrom = [];
         this.soloClassesToInclude = [];
+        this.expansionFilters = [];
+        this.mercanariesFilters = [];
+        this.soloScenarioFilters = [];
         this.usesDiscount = false;
         if (params) {
             const { filterSlots, resources } = this.getInitialItems(params.items);
@@ -59,6 +66,9 @@ export abstract class GameClass<T> {
             this.soloClassesToInclude = params.soloClassesToInclude ?? [];
             this.usesDiscount = params.usesDiscount ?? false;
             this.spoilerFilter = params.spoilerFilter;
+            this.soloScenarioFilters = params.soloScenarioFilters ?? [];
+            this.mercanariesFilters = params.mercanariesFilters ?? [];
+            this.expansionFilters = params.expansionFilters ?? [];
         }
     }
 

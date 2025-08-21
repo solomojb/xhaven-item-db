@@ -4,8 +4,7 @@ import { GameType } from "../GameType";
 
 export class FHSSClass extends GameClass<FHClasses> {
     constructor() {
-        super("Frosthaven Solo Scenarios");
-        this.soloFilterTitle = 'Frosthaven';
+        super("Frosthaven");
         this.soloGameType = GameType.Frosthaven;
     }
 
@@ -20,4 +19,3 @@ export class FHSSClass extends GameClass<FHClasses> {
         }
     }
 }
-

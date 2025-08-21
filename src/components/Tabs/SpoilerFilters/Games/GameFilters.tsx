@@ -1,9 +1,40 @@
 import { Form, Icon, Popup, Segment } from "semantic-ui-react";
 import { GameFilterCheckbox } from "./GameFilterCheckbox";
-import { GameHelp } from "./GameHelp";
+import { GameHelp, HelpProps } from "./GameHelp";
 import { useRecoilValue } from "recoil";
 import { gameTypeState } from "../../../../State";
 import { useGetGame } from "../../../../games";
+
+interface Props extends HelpProps {
+  label: string;
+}
+
+const GameFilterList = (props: Props) => {
+  const { label, gameList } = props;
+  if (!gameList.length) {
+    return null;
+  }
+  return <Form.Group inline>
+    <label>{`${label}:`}</label>
+    <div style={{ margin: "5px 8px" }}>
+      <Popup
+        closeOnDocumentClick
+        hideOnScroll
+        trigger={<Icon name={"question circle"} className={"blue"} />}
+        header={`${label}`}
+        content={<GameHelp {...props} />}
+      />
+    </div>
+    {gameList.map((gameType) => {
+      return (
+        <GameFilterCheckbox
+          key={gameType}
+          gameType={gameType}
+        />
+      );
+    })}
+  </Form.Group>
+}
 
 export const GameFilters = () => {
   const currentGameType = useRecoilValue(gameTypeState);
@@ -11,26 +42,11 @@ export const GameFilters = () => {
 
   return (
     <Segment>
-      <Form.Group inline>
-        <label>Games:</label>
-        <div style={{ margin: "5px 8px" }}>
-          <Popup
-            closeOnDocumentClick
-            hideOnScroll
-            trigger={<Icon name={"question circle"} className={"blue"} />}
-            header={"Game Types"}
-            content={<GameHelp />}
-          />
-        </div>
-        {game.gameFilters.map((gameType) => {
-          return (
-            <GameFilterCheckbox
-              key={gameType}
-              gameType={gameType}
-            />
-          );
-        })}
-      </Form.Group>
+      <GameFilterList label="Games" gameList={game.gameFilters} />
+      <GameFilterList label="Solo Scenarios" gameList={game.soloScenarioFilters} />
+      <GameFilterList label="Expansions" gameList={game.expansionFilters} />
+      {/* <GameFilterList label="Mercanary Packs" games={game.mercanariesFilters} /> */}
+
     </Segment>
   );
 };

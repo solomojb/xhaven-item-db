@@ -4,8 +4,7 @@ import { GameType } from "../GameType";
 
 export class GH2eSSClass extends GameClass<GH2eClasses> {
     constructor() {
-        super("Gloomhaven 2e Solo Scenarios");
-        this.soloFilterTitle = 'Gloomhaven 2e';
+        super("Gloomhaven 2nd Edition");
         this.soloGameType = GameType.Gloomhaven2e;
     }
 

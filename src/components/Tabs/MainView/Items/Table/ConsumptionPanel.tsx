@@ -1,4 +1,3 @@
-import React from "react";
 import { ElementData } from "../../../../../State";
 import { GHIcon } from "../../../../Utils";
 

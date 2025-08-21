@@ -5,7 +5,7 @@ import {
   useMemo,
   useCallback,
   useEffect,
-  PropsWithChildren,
+  ReactNode,
 } from "react";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./config";
@@ -55,10 +55,7 @@ const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ display: 'popup', prompt: 'select_account' });
 
 
-interface Props {
-}
-
-export const FirebaseProvider = ({ children }: PropsWithChildren<Props>) => {
+export const FirebaseProvider = ({ children }: { children?: ReactNode | undefined }) => {
   const [user, setUser] = useState<User | undefined>();
 
   const signOut = useCallback(() => {

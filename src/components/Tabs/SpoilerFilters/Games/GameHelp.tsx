@@ -2,7 +2,7 @@ import { useRecoilValue } from "recoil";
 import { Form, List } from "semantic-ui-react";
 import { gameTypeState } from "../../../../State";
 import { useGetGames } from "../../../../games";
-import { AllGames, MercenariesPacks } from "../../../../games/GameType";
+import { AllGames } from "../../../../games/GameType";
 
 interface HelpEntryProps {
   title: string;

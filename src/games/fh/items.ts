@@ -1,5 +1,5 @@
 import { FHClasses, GloomhavenItem, GloomhavenItemSlot } from "../../State"
-import { Expansions, GameType, SoloScenarioPacks } from "../GameType"
+import { GameType, SoloScenarioPacks } from "../GameType"
 
 export const items: GloomhavenItem[] = [
   {

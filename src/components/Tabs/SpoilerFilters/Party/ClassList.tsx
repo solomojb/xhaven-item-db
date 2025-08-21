@@ -1,4 +1,3 @@
-import React from "react";
 import { Form } from "semantic-ui-react";
 import { ClassesInUse } from "../../../../State/Types";
 import { ClassIcon } from "../../../Utils";
@@ -22,9 +21,8 @@ export const ClassList = (props: Props) => {
 					<ClassIcon
 						key={name}
 						name={name}
-						className={`icon ${!isUsed(name) ? "unused" : ""} ${
-							isEnabled && !isEnabled(name) ? "disabled" : ""
-						}`}
+						className={`icon ${!isUsed(name) ? "unused" : ""} ${isEnabled && !isEnabled(name) ? "disabled" : ""
+							}`}
 						onClick={onClick}
 					/>
 				);

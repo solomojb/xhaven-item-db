@@ -25,6 +25,7 @@ const ItemCardContainer = (props: Props) => {
 	const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
 	useEffect(() => {
+		const internalRef = ref.current;
 		const observer = new ResizeObserver((entries) => {
 			// Loop through entries to handle multiple observed elements if needed
 			for (const entry of entries) {
@@ -38,14 +39,14 @@ const ItemCardContainer = (props: Props) => {
 		});
 
 		// Start observing the div element
-		if (ref.current) {
-			observer.observe(ref.current);
+		if (internalRef) {
+			observer.observe(internalRef);
 		}
 
 		// Clean up the observer when the component unmounts
 		return () => {
-			if (ref.current) {
-				observer.unobserve(ref.current);
+			if (internalRef) {
+				observer.unobserve(internalRef);
 			}
 		};
 	}, []); // Empty dependency array ensures it runs only once on mount

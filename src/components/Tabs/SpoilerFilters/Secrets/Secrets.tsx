@@ -55,6 +55,16 @@ const secretAnswers: Record<SpecialUnlockTypes, SecretData> = {
       GameType.Frosthaven,
     ],
   },
+  [SpecialUnlockTypes.EnvelopeX2e]: {
+    solutions: ["eHh4", "YmxhZGVzd2FybQ=="],
+    title: "Envelope X",
+    line1: "Have you solved Envelope X?",
+    line2: "Enter the solution:",
+    gameType: GameType.Gloomhaven2e,
+    shownGames: [
+      GameType.Gloomhaven2e,
+    ],
+  },
 };
 
 export const Secrets = () => {

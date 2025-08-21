@@ -1,5 +1,5 @@
 import { FHClasses, GloomhavenItem, GloomhavenItemSlot } from "../../State"
-import { Expansions, GameType } from "../GameType"
+import { Expansions, GameType, SoloScenarioPacks } from "../GameType"
 
 export const items: GloomhavenItem[] = [
   {
@@ -3921,7 +3921,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 248,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Wanderer's Club",
     count: 1,
     cost: 0,
@@ -3936,7 +3936,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 249,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Recalibration Trigger",
     count: 1,
     cost: 0,
@@ -3952,7 +3952,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 250,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Spear of Justice",
     count: 1,
     cost: 0,
@@ -3967,7 +3967,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 251,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Soul Urn",
     count: 1,
     cost: 0,
@@ -3982,7 +3982,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 252,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Black Earth Codex",
     count: 1,
     cost: 0,
@@ -4010,7 +4010,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 253,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Mask of Duality",
     count: 1,
     cost: 0,
@@ -4025,7 +4025,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 254,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Ancestral Blade",
     count: 1,
     cost: 0,
@@ -4040,7 +4040,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 255,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Mountain's Heart",
     count: 1,
     cost: 0,
@@ -4067,7 +4067,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 256,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Sonorous Shard",
     count: 1,
     cost: 0,
@@ -4095,7 +4095,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 257,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Sly Camouflage",
     count: 1,
     cost: 0,
@@ -4110,7 +4110,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 258,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Skull of Agony",
     count: 1,
     cost: 0,
@@ -4125,7 +4125,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 259,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Storm Carving",
     count: 1,
     cost: 0,
@@ -4140,7 +4140,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 260,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Freezing Orb",
     count: 1,
     cost: 0,
@@ -4155,7 +4155,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 261,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Energized Module",
     count: 1,
     cost: 0,
@@ -4170,7 +4170,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 262,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Exhaust Boots",
     count: 1,
     cost: 0,
@@ -4185,7 +4185,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 263,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Warlords Skull",
     count: 1,
     cost: 0,
@@ -4199,7 +4199,7 @@ export const items: GloomhavenItem[] = [
   },
   {
     id: 264,
-    gameType: Expansions.FHSoloScenarios,
+    gameType: SoloScenarioPacks.FHSoloScenarios,
     name: "Spiraled Medallion",
     count: 1,
     cost: 0,

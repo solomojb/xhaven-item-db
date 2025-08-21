@@ -139,6 +139,7 @@ export enum TOAClasses {
 
 export enum SpecialUnlockTypes {
 	EnvelopeX = "envelopeX",
+	EnvelopeX2e = "envelopeX2e",
 	EnvelopeE = "envelopeE",
 	EnvelopeV = "envelopeV",
 }

@@ -33,7 +33,7 @@ export class GH2EClass extends GameClass<GH2eClasses> {
             })
     }
     gameClasses(specialUnlocks?: SpecialUnlockTypes[]) {
-        const envelopeX = specialUnlocks?.includes(SpecialUnlockTypes.EnvelopeX);
+        const envelopeX = specialUnlocks?.includes(SpecialUnlockTypes.EnvelopeX2e);
         const classes = Object.values(GH2eClasses);
         if (envelopeX) {
             return classes

@@ -1,5 +1,5 @@
 import { GHClasses, GloomhavenItem, GloomhavenItemSlot, SpecialUnlockTypes } from "../../State";
-import { Expansions, GameType } from "../GameType";
+import { GameType, SoloScenarioPacks } from "../GameType";
 
 export const items: GloomhavenItem[] = [
 	{
@@ -1826,7 +1826,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #01 — {BR}",
 		desc: "Any time you kill an enemy during your turn, gain Shield ^shield^ 1 for the rest of the round.",
 		soloItem: GHClasses.BR,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 0
 	},
@@ -1840,7 +1840,7 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During your Heal action, double the value of the Heal.",
 		soloItem: GHClasses.TI,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 1
 	},
@@ -1854,7 +1854,7 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During your ranged attack, add +2 Attack ^attack^ and gain Advantage on the entire Attack action, but suffer 2 damage for each attack made.",
 		soloItem: GHClasses.SW,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 2
 	},
@@ -1867,7 +1867,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #04 — {SC}",
 		desc: "Any time you perform a melee attack, add PIERCE $pierce$ 1 to the Attack.",
 		soloItem: GHClasses.SC,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 3
 	},
@@ -1881,7 +1881,7 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "During your action where an obstacle is created, create one additional obstacle and apply all effects of the action to it.",
 		soloItem: GHClasses.CH,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 4
 	},
@@ -1894,7 +1894,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #06 — {MT}",
 		desc: "Any time you perform an %Augment% action, add +1 Attack ^attack^ to the entire action.",
 		soloItem: GHClasses.MT,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 5
 	},
@@ -1907,7 +1907,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #07 — {SK}",
 		desc: "When damaged by an attack, you may @x-light@ to gain Shield ^shield^ 3 for the attack.",
 		soloItem: GHClasses.SK,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 6
 	},
@@ -1923,7 +1923,7 @@ export const items: GloomhavenItem[] = [
 		faq: "This item cannot be refreshed.",
 		soloItem: GHClasses.QM,
 		lost: true,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 7
 	},
@@ -1937,7 +1937,7 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "When a summon you own is damaged by an attack, it suffers no damage instead.",
 		soloItem: GHClasses.SU,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 8
 	},
@@ -1951,7 +1951,7 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During your turn, gain INVISIBLE $invisible$ and create dark. @dark@",
 		soloItem: GHClasses.NS,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 9
 	},
@@ -1965,7 +1965,7 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "During your turn, POISON $poison$ and CURSE $curse$ one enemy within Range ^range^ 3.",
 		soloItem: GHClasses.PH,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 10
 	},
@@ -1978,7 +1978,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #08 — {BE}",
 		desc: "Any time you perform a melee attack and you have exactly 1 hit point, add +2 Attack ^attack^ to the Attack.",
 		soloItem: GHClasses.BE,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 11
 	},
@@ -1991,7 +1991,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #13 — {SS}",
 		desc: "After performing any %song% action, immediately perform an Attack ^attack^ 2 or Move ^move^ 2 action.",
 		soloItem: GHClasses.SS,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 12
 	},
@@ -2004,7 +2004,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #14 — {DS}",
 		desc: "Any time you perform a %Doom% action, MUDDLE $muddle$ the target of the %Doom%.",
 		soloItem: GHClasses.DS,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 13
 	},
@@ -2017,7 +2017,7 @@ export const items: GloomhavenItem[] = [
 		source: "Reward from Solo Scenario #15 — {SB}",
 		desc: "Any time an ally performs a Medical Pack or Large Medical Pack action, they add +1 Heal ^heal^ to their Heal.",
 		soloItem: GHClasses.SB,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 14
 	},
@@ -2031,7 +2031,7 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "If you move 5 or more hexes on your turn, create any element. @any@",
 		soloItem: GHClasses.EL,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 15
 	},
@@ -2045,7 +2045,7 @@ export const items: GloomhavenItem[] = [
 		spent: true,
 		desc: "After performing a %Command% action, play one card from your hand and immediately perform the same side of the card (top or bottom) as the %Command% action.",
 		soloItem: GHClasses.BT,
-		gameType: Expansions.GH2eSoloScenarios,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
 		imgFileNumber: 1,
 		imageNumber: 16
 	},
@@ -2059,8 +2059,8 @@ export const items: GloomhavenItem[] = [
 		consumed: true,
 		desc: "During your melee attack, add POISON $poison$ and WOUND $wound$ to the entire action.",
 		soloItem: GHClasses.XX,
-		gameType: Expansions.GH2eSoloScenarios,
-		specialUnlock: SpecialUnlockTypes.EnvelopeX,
+		gameType: SoloScenarioPacks.GH2eSoloScenarios,
+		specialUnlock: SpecialUnlockTypes.EnvelopeX2e,
 		imgFileNumber: 1,
 		imageNumber: 17
 	},

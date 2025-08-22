@@ -3,6 +3,6 @@ import { MPClass } from "./MPClass";
 
 export class MP3Class extends MPClass {
     constructor() {
-        super("Mercenary Pack 3", MPClasses.MP3);
+        super("Hail", MPClasses.MP3);
     }
 }

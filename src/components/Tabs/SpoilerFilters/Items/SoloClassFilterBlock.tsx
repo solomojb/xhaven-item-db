@@ -9,13 +9,13 @@ import { MPSoloClassFilter } from "./MPSoloClassFilter";
 export const SoloClassFilterBlock = () => {
 	const currentGameType = useRecoilValue(gameTypeState);
 	const games = useGetGames();
-	const { soloClassesToInclude, includeMercenaryPacksSoloItems } = games[currentGameType];
-	const { includeGames, selectedMercenaryPacks } = useXHavenDB();
+	const { soloClassesToInclude, includeMercenaryPacksSoloItems, lockSoloScenarioItems } = games[currentGameType];
+	const { includeGames, selectedMercenaryPacks, classesInUse } = useXHavenDB();
 	const includeList =
 		soloClassesToInclude?.filter((gameType) =>
 			includeGames.includes(gameType)
 		) ?? [];
-	if (includeList.length === 0 && selectedMercenaryPacks.length === 0) {
+	if (includeList.length === 0 && selectedMercenaryPacks.length === 0 || lockSoloScenarioItems && classesInUse.length === 0) {
 		return null;
 	}
 
@@ -28,6 +28,7 @@ export const SoloClassFilterBlock = () => {
 				<SoloClassFilter
 					key={`solo-class-filter-${gameType}`}
 					gameType={gameType}
+					lockSoloScenarioItems={lockSoloScenarioItems}
 				/>
 			))}
 			{includeMercenaryPacksSoloItems && <MPSoloClassFilter />}

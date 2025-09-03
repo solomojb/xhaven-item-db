@@ -92,7 +92,8 @@ export class FHClass extends GameClass<FHClasses> {
                     Expansions.CrimsonScalesAddon,
                     Expansions.TrailOfAshes,
                 ],
-                spoilerFilter: <FHSpoilerFilter />
+                spoilerFilter: <FHSpoilerFilter />,
+                lockSoloScenarioItems: true
             })
         const { filterSlots: ghFilterSlots } = this.getInitialItems(ghItems);
         const filteredGhItems = ghItems

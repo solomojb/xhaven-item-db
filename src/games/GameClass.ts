@@ -21,6 +21,7 @@ export interface ClassParams {
     spoilerFilter?: JSX.Element;
     includeMercenaryPacks?: boolean;
     includeMercenaryPacksSoloItems?: boolean;
+    lockSoloScenarioItems?: boolean;
 
 }
 
@@ -44,6 +45,8 @@ export abstract class GameClass<T> {
     public spoilerFilter?: JSX.Element;
     public includeMercenaryPacks: boolean;
     public includeMercenaryPacksSoloItems: boolean;
+    public lockSoloScenarioItems: boolean;
+
     constructor(
         public title: string,
         public isSelectable: boolean = false,
@@ -58,6 +61,7 @@ export abstract class GameClass<T> {
         this.usesDiscount = false;
         this.includeMercenaryPacks = false;
         this.includeMercenaryPacksSoloItems = false;
+        this.lockSoloScenarioItems = false;
         if (params) {
             const { filterSlots, resources } = this.getInitialItems(params.items);
             this.filterSlots = filterSlots;
@@ -72,6 +76,7 @@ export abstract class GameClass<T> {
             this.expansionFilters = params.expansionFilters ?? [];
             this.includeMercenaryPacks = params.includeMercenaryPacks ?? false;
             this.includeMercenaryPacksSoloItems = params.includeMercenaryPacksSoloItems ?? false;
+            this.lockSoloScenarioItems = params.lockSoloScenarioItems ?? false;
         }
     }
 

@@ -4,21 +4,29 @@ import { ClassesInUse } from "../../../../State/Types";
 import { ClassList } from "../Party/ClassList";
 import { useXHavenDB } from "../../../Providers/XHavenDBProvider";
 import { useGetGames } from "../../../../games";
+import { useMemo } from "react";
 
 type Props = {
 	gameType: AllGames;
+	lockSoloScenarioItems: boolean;
 };
 
 export const SoloClassFilter = (props: Props) => {
-	const { gameType } = props;
-	const { soloClass, toggleSoloClass, includeGames, getClassesForGame } = useXHavenDB();
+	const { gameType, lockSoloScenarioItems } = props;
+	const { soloClass, toggleSoloClass, includeGames, getClassesForGame, classesInUse } = useXHavenDB();
 	const games = useGetGames();
-	if (!includeGames.includes(gameType)) {
-		return null;
-	}
 	const { title, soloGameType } = games[gameType];
 	const gameTypeToUse = soloGameType || gameType;
-	const classes = getClassesForGame(gameTypeToUse);
+	const classes = useMemo(() => {
+		const classes = getClassesForGame(gameTypeToUse);
+		if (lockSoloScenarioItems) {
+			return classes.filter(c => classesInUse.includes(c));
+		}
+		return classes;
+	}, [getClassesForGame, gameTypeToUse, lockSoloScenarioItems, classesInUse]);
+	if (!classes.length || !includeGames.includes(gameType)) {
+		return null;
+	}
 
 	return (
 		<Form.Field>

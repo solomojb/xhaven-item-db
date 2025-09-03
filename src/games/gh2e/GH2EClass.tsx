@@ -30,6 +30,7 @@ export class GH2EClass extends GameClass<GH2eClasses> {
                 spoilerFilter: <GH2eSpoilerFilter />,
                 includeMercenaryPacks: true,
                 includeMercenaryPacksSoloItems: true,
+                lockSoloScenarioItems: true
             })
     }
     gameClasses(specialUnlocks?: SpecialUnlockTypes[]) {
